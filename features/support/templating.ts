@@ -5,13 +5,13 @@ declare global {
     }
     
     interface Object {
-        lookup(path: string): any;
+        pathLookup(path: string): any;
     }
 }
 
 interface IIndexable<T = any> { [key: string]: T }
 
-Object.prototype.lookup = function (dottedPath: string): any {
+Object.prototype.pathLookup = function (dottedPath: string): any {
     let result = this;
     for (let dotPath of dottedPath.split('.')) {
         for (let part of dotPath.split('[')) {

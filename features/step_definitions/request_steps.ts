@@ -29,7 +29,7 @@ Given(/body (.*)/, function (this: World, body: string) {
 });
 
 Given('request contains {string} parameter from {string}', function (this: World, parameterName: string, fixturePath: string) {
-    this.opts[parameterName] = this.fixtures.lookup(fixturePath);
+    this.opts[parameterName] = this.fixtures.pathLookup(fixturePath);
 });
 
 
@@ -38,11 +38,9 @@ Given(/request contains "([^"]+)" parameter with value (.*)/, function (this: Wo
 });
 
 
-Given('new {string} request', async function (this: World, operationId: string) {
-    this.operationId = operationId;
-    let f = await this.apiInstance[operationId.toOperationName()]({});
-    console.log(f);
-    this.method = this.apiInstance[operationId.toOperationName()];
+Given('new {string} request', function (this: World, operationId: string) {
+    this.operationId = operationId.toOperationName();
+
     console.log(operationId.toOperationName());
     console.log(this.method);
     this.request = {}
@@ -50,7 +48,7 @@ Given('new {string} request', async function (this: World, operationId: string) 
 
 
 When('the request is sent', async function (this: World) {
-    this.response = await this.method(this.request);
+    this.response = await this.apiInstance[this.operationId](this.request);
 });
 
 Then(/^the response status is (\d+) (.*)/, function (this: World, status: number, msg: string) {

@@ -6,7 +6,10 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "declaration": true,
- 
+
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+
     /* Additional Checks */
      "noUnusedLocals": false,                /* Report errors on unused locals. */ // TODO: reenable (unused imports!)
      "noUnusedParameters": false,            /* Report errors on unused parameters. */ // TODO: set to true again
@@ -17,7 +20,7 @@
     "sourceMap": true,
     "outDir": "./dist",
     "noLib": false,
-    "lib": [ "es6", "dom" ],
+    "lib": [ "es6" ],
   },
   "exclude": [
   	"dist",

@@ -12,7 +12,7 @@ export class World {
 
     public apiName?: string
     public apiInstance?: any
-    public operationId?: string
+    public operationId: string = ''
     public request?: any
     public method?: any
     public response?: any

@@ -17,14 +17,19 @@
     "test": "tsc && cucumber-js features/"
   },
   "dependencies": {
-    "whatwg-fetch": "^3.0.0",
+    "@types/node": "*",
+    "@types/node-fetch": "^2.5.7",
+    "btoa": "^1.2.1",
     "es6-promise": "^4.2.4",
+    "form-data": "^3.0.0",
+    "node-fetch": "^2.6.0",
     "url-parse": "^1.4.3"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^7.0.0",
     "@types/chai": "^4.2.14",
     "@types/lodash": "^4.14.168",
+    "@types/url-parse": "^1.4.3",
     "chai": "^4.2.0",
     "dd-trace": "^0.30.5",
     "typescript": "^3.9.3"
