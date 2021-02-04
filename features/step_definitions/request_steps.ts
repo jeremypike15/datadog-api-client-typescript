@@ -15,6 +15,7 @@ Given('a valid "appKeyAuth" key in the system', function (this: World) {
 
 Given('an instance of {string} API', function (this: World, apiName: string) {
     // TODO add support for DEBUG=true when supported in configuration
+    this.apiName = apiName;
     this.apiInstance = new (this.api()[`${apiName}Api`])(this.configuration());
 });
 
@@ -37,17 +38,19 @@ Given(/request contains "([^"]+)" parameter with value (.*)/, function (this: Wo
 });
 
 
-Given('new {string} request', function (this: World, request: string) {
-    // Write code here that turns the phrase above into concrete actions
-    return 'ok';
+Given('new {string} request', async function (this: World, operationId: string) {
+    this.operationId = operationId;
+    let f = await this.apiInstance[operationId.toOperationName()]({});
+    console.log(f);
+    this.method = this.apiInstance[operationId.toOperationName()];
+    console.log(operationId.toOperationName());
+    console.log(this.method);
+    this.request = {}
 });
 
 
-
-
-
-When('the request is sent', function (this: World) {
-    return true;
+When('the request is sent', async function (this: World) {
+    this.response = await this.method(this.request);
 });
 
 Then(/^the response status is (\d+) (.*)/, function (this: World, status: number, msg: string) {

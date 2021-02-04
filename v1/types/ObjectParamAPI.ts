@@ -1614,6 +1614,7 @@ export class ObjectIPRangesApi {
      * @param param the request object
      */
     public getIPRanges(param: IPRangesApiGetIPRangesRequest, options?: Configuration): Promise<IPRanges> {
+        console.log(param);
         return this.api.getIPRanges( options).toPromise();
     }
 	

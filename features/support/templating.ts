@@ -1,6 +1,7 @@
 declare global {
     interface String {
         templated(data: Object): string;
+        toOperationName(): string;
     }
     
     interface Object {
@@ -28,6 +29,11 @@ Object.prototype.lookup = function (dottedPath: string): any {
 String.prototype.templated = function (data: Object): string {
     let s = String(this)
     return s;
+};
+
+String.prototype.toOperationName = function (): string {
+    let s = String(this)
+    return s.charAt(0).toLowerCase() + s.slice(1);
 };
 
 export { }
