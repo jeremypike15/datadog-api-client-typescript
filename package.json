@@ -1,5 +1,5 @@
 {
-  "name": "datadog-api-client",
+  "name": "@datadog/datadog-api-client",
   "description": "OpenAPI client for Datadog APIs",
   "author": "Datadog Inc",
   "keywords": [
@@ -13,7 +13,7 @@
   "typings": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
     "test": "tsc && cucumber-js features/"
   },
   "dependencies": {
@@ -23,6 +23,10 @@
   },
   "devDependencies": {
     "@cucumber/cucumber": "^7.0.0",
+    "@types/chai": "^4.2.14",
+    "@types/lodash": "^4.14.168",
+    "chai": "^4.2.0",
+    "dd-trace": "^0.30.5",
     "typescript": "^3.9.3"
   },
   "version": "1.0.0"
