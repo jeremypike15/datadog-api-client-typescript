@@ -14,9 +14,10 @@
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
-    "test": "tsc && cucumber-js features/"
+    "test": "tsc && cucumber-js features/v2/users.feature:110"
   },
   "dependencies": {
+    "@cucumber/messages": "^13.2.1",
     "@types/node": "*",
     "@types/node-fetch": "^2.5.7",
     "btoa": "^1.2.1",
@@ -28,6 +29,7 @@
   "devDependencies": {
     "@cucumber/cucumber": "^7.0.0",
     "@types/chai": "^4.2.14",
+    "@types/cucumber": "^7.0.0",
     "@types/lodash": "^4.14.168",
     "@types/url-parse": "^1.4.3",
     "chai": "^4.2.0",

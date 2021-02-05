@@ -1,11 +1,11 @@
 // TODO: better import syntax?
 import { BaseAPIRequestFactory, RequiredError } from './baseapi';
-import { Configuration } from '../configuration';
-import { RequestContext, HttpMethod, ResponseContext, HttpFile } from '../http/http';
-//import * as FormData from 'form-data';
-import { ObjectSerializer } from '../models/ObjectSerializer';
-import { ApiException } from './exception';
-import { isCodeInRange } from '../util';
+import {Configuration} from '../configuration';
+import { RequestContext, HttpMethod, ResponseContext, HttpFile} from '../http/http';
+import FormData from "form-data";
+import {ObjectSerializer} from '../models/ObjectSerializer';
+import {ApiException} from './exception';
+import {isCodeInRange} from '../util';
 
 import { APIErrorResponse } from '../models/APIErrorResponse';
 import { IdpResponse } from '../models/IdpResponse';
@@ -19,36 +19,36 @@ import { OrganizationResponse } from '../models/OrganizationResponse';
  * no description
  */
 export class OrganizationsApiRequestFactory extends BaseAPIRequestFactory {
-
+	
     /**
      * Create a child organization.  This endpoint requires the [multi-organization account](https://docs.datadoghq.com/account_management/multi_organization/) feature and must be enabled by [contacting support](https://docs.datadoghq.com/help/).  Once a new child organization is created, you can interact with it by using the `org.public_id`, `pi_key.key`, and `application_key.hash` provided in the response.
      * Create a child organization
      * @param body Organization object that needs to be created
      */
     public async createChildOrg(body: OrganizationCreateBody, options?: Configuration): Promise<RequestContext> {
-        let config = options || this.configuration;
-
+		let config = options || this.configuration;
+		
         // verify required parameter 'body' is not null or undefined
         if (body === null || body === undefined) {
             throw new RequiredError('Required parameter body was null or undefined when calling createChildOrg.');
         }
 
+		
+		// Path Params
+    	const localVarPath = '/api/v1/org';
 
-        // Path Params
-        const localVarPath = '/api/v1/org';
-
-        // Make Request Context
-        const requestContext = config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+		// Make Request Context
+    	const requestContext = config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
         requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
 
         // Query Params
+	
+		// Header Params
+	
+		// Form Params
 
-        // Header Params
 
-        // Form Params
-
-
-        // Body Params
+		// Body Params
         const contentType = ObjectSerializer.getPreferredMediaType([
             "application/json"
         ]);
@@ -79,30 +79,30 @@ export class OrganizationsApiRequestFactory extends BaseAPIRequestFactory {
      * @param publicId The &#x60;public_id&#x60; of the organization you are operating within.
      */
     public async getOrg(publicId: string, options?: Configuration): Promise<RequestContext> {
-        let config = options || this.configuration;
-
+		let config = options || this.configuration;
+		
         // verify required parameter 'publicId' is not null or undefined
         if (publicId === null || publicId === undefined) {
             throw new RequiredError('Required parameter publicId was null or undefined when calling getOrg.');
         }
 
-
-        // Path Params
-        const localVarPath = '/api/v1/org/{public_id}'
+		
+		// Path Params
+    	const localVarPath = '/api/v1/org/{public_id}'
             .replace('{' + 'public_id' + '}', encodeURIComponent(String(publicId)));
 
-        // Make Request Context
-        const requestContext = config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+		// Make Request Context
+    	const requestContext = config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
         requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
 
         // Query Params
+	
+		// Header Params
+	
+		// Form Params
 
-        // Header Params
 
-        // Form Params
-
-
-        // Body Params
+		// Body Params
 
         let authMethod = null;
         // Apply auth methods
@@ -123,23 +123,23 @@ export class OrganizationsApiRequestFactory extends BaseAPIRequestFactory {
      * List your managed organizations
      */
     public async listOrgs(options?: Configuration): Promise<RequestContext> {
-        let config = options || this.configuration;
+		let config = options || this.configuration;
+		
+		// Path Params
+    	const localVarPath = '/api/v1/org';
 
-        // Path Params
-        const localVarPath = '/api/v1/org';
-
-        // Make Request Context
-        const requestContext = config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+		// Make Request Context
+    	const requestContext = config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
         requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
 
         // Query Params
+	
+		// Header Params
+	
+		// Form Params
 
-        // Header Params
 
-        // Form Params
-
-
-        // Body Params
+		// Body Params
 
         let authMethod = null;
         // Apply auth methods
@@ -162,36 +162,36 @@ export class OrganizationsApiRequestFactory extends BaseAPIRequestFactory {
      * @param body 
      */
     public async updateOrg(publicId: string, body: Organization, options?: Configuration): Promise<RequestContext> {
-        let config = options || this.configuration;
-
+		let config = options || this.configuration;
+		
         // verify required parameter 'publicId' is not null or undefined
         if (publicId === null || publicId === undefined) {
             throw new RequiredError('Required parameter publicId was null or undefined when calling updateOrg.');
         }
 
-
+		
         // verify required parameter 'body' is not null or undefined
         if (body === null || body === undefined) {
             throw new RequiredError('Required parameter body was null or undefined when calling updateOrg.');
         }
 
-
-        // Path Params
-        const localVarPath = '/api/v1/org/{public_id}'
+		
+		// Path Params
+    	const localVarPath = '/api/v1/org/{public_id}'
             .replace('{' + 'public_id' + '}', encodeURIComponent(String(publicId)));
 
-        // Make Request Context
-        const requestContext = config.baseServer.makeRequestContext(localVarPath, HttpMethod.PUT);
+		// Make Request Context
+    	const requestContext = config.baseServer.makeRequestContext(localVarPath, HttpMethod.PUT);
         requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
 
         // Query Params
+	
+		// Header Params
+	
+		// Form Params
 
-        // Header Params
 
-        // Form Params
-
-
-        // Body Params
+		// Body Params
         const contentType = ObjectSerializer.getPreferredMediaType([
             "application/json"
         ]);
@@ -223,43 +223,42 @@ export class OrganizationsApiRequestFactory extends BaseAPIRequestFactory {
      * @param idpFile The path to the XML metadata file you wish to upload.
      */
     public async uploadIdPForOrg(publicId: string, idpFile: HttpFile, options?: Configuration): Promise<RequestContext> {
-        let config = options || this.configuration;
-
+		let config = options || this.configuration;
+		
         // verify required parameter 'publicId' is not null or undefined
         if (publicId === null || publicId === undefined) {
             throw new RequiredError('Required parameter publicId was null or undefined when calling uploadIdPForOrg.');
         }
 
-
+		
         // verify required parameter 'idpFile' is not null or undefined
         if (idpFile === null || idpFile === undefined) {
             throw new RequiredError('Required parameter idpFile was null or undefined when calling uploadIdPForOrg.');
         }
 
-
-        // Path Params
-        const localVarPath = '/api/v1/org/{public_id}/idp_metadata'
+		
+		// Path Params
+    	const localVarPath = '/api/v1/org/{public_id}/idp_metadata'
             .replace('{' + 'public_id' + '}', encodeURIComponent(String(publicId)));
 
-        // Make Request Context
-        const requestContext = config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+		// Make Request Context
+    	const requestContext = config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
         requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
 
         // Query Params
-
-        // Header Params
-
-        // Form Params
-        /*
-        let localVarFormParams = new FormData();
+	
+		// Header Params
+	
+		// Form Params
+		let localVarFormParams = new FormData();
 
         if (idpFile !== undefined) {
-            // TODO: replace .append with .set
-            localVarFormParams.append('idp_file', idpFile.data, idpFile.name);
+        // TODO: replace .append with .set
+             localVarFormParams.append('idp_file', idpFile.data, idpFile.name);
         }
-        requestContext.setBody(localVarFormParams);
-        */
-        // Body Params
+		requestContext.setBody(localVarFormParams);
+
+		// Body Params
 
         let authMethod = null;
         // Apply auth methods
@@ -288,7 +287,7 @@ export class OrganizationsApiResponseProcessor {
      * @params response Response returned by the server for a request to createChildOrg
      * @throws ApiException if the response code was not in [200, 299]
      */
-    public async createChildOrg(response: ResponseContext): Promise<OrganizationCreateResponse> {
+     public async createChildOrg(response: ResponseContext): Promise<OrganizationCreateResponse > {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: OrganizationCreateResponse = ObjectSerializer.deserialize(
@@ -322,9 +321,9 @@ export class OrganizationsApiResponseProcessor {
         }
 
         let body = response.body || "";
-        throw new ApiException<string>(response.httpStatusCode, "Unknown API Status Code!\nBody: \"" + body + "\"");
+    	throw new ApiException<string>(response.httpStatusCode, "Unknown API Status Code!\nBody: \"" + body + "\"");
     }
-
+			
     /**
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
@@ -332,7 +331,7 @@ export class OrganizationsApiResponseProcessor {
      * @params response Response returned by the server for a request to getOrg
      * @throws ApiException if the response code was not in [200, 299]
      */
-    public async getOrg(response: ResponseContext): Promise<OrganizationResponse> {
+     public async getOrg(response: ResponseContext): Promise<OrganizationResponse > {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: OrganizationResponse = ObjectSerializer.deserialize(
@@ -366,9 +365,9 @@ export class OrganizationsApiResponseProcessor {
         }
 
         let body = response.body || "";
-        throw new ApiException<string>(response.httpStatusCode, "Unknown API Status Code!\nBody: \"" + body + "\"");
+    	throw new ApiException<string>(response.httpStatusCode, "Unknown API Status Code!\nBody: \"" + body + "\"");
     }
-
+			
     /**
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
@@ -376,7 +375,7 @@ export class OrganizationsApiResponseProcessor {
      * @params response Response returned by the server for a request to listOrgs
      * @throws ApiException if the response code was not in [200, 299]
      */
-    public async listOrgs(response: ResponseContext): Promise<OrganizationListResponse> {
+     public async listOrgs(response: ResponseContext): Promise<OrganizationListResponse > {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: OrganizationListResponse = ObjectSerializer.deserialize(
@@ -403,9 +402,9 @@ export class OrganizationsApiResponseProcessor {
         }
 
         let body = response.body || "";
-        throw new ApiException<string>(response.httpStatusCode, "Unknown API Status Code!\nBody: \"" + body + "\"");
+    	throw new ApiException<string>(response.httpStatusCode, "Unknown API Status Code!\nBody: \"" + body + "\"");
     }
-
+			
     /**
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
@@ -413,7 +412,7 @@ export class OrganizationsApiResponseProcessor {
      * @params response Response returned by the server for a request to updateOrg
      * @throws ApiException if the response code was not in [200, 299]
      */
-    public async updateOrg(response: ResponseContext): Promise<OrganizationResponse> {
+     public async updateOrg(response: ResponseContext): Promise<OrganizationResponse > {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: OrganizationResponse = ObjectSerializer.deserialize(
@@ -447,9 +446,9 @@ export class OrganizationsApiResponseProcessor {
         }
 
         let body = response.body || "";
-        throw new ApiException<string>(response.httpStatusCode, "Unknown API Status Code!\nBody: \"" + body + "\"");
+    	throw new ApiException<string>(response.httpStatusCode, "Unknown API Status Code!\nBody: \"" + body + "\"");
     }
-
+			
     /**
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
@@ -457,7 +456,7 @@ export class OrganizationsApiResponseProcessor {
      * @params response Response returned by the server for a request to uploadIdPForOrg
      * @throws ApiException if the response code was not in [200, 299]
      */
-    public async uploadIdPForOrg(response: ResponseContext): Promise<IdpResponse> {
+     public async uploadIdPForOrg(response: ResponseContext): Promise<IdpResponse > {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: IdpResponse = ObjectSerializer.deserialize(
@@ -498,7 +497,7 @@ export class OrganizationsApiResponseProcessor {
         }
 
         let body = response.body || "";
-        throw new ApiException<string>(response.httpStatusCode, "Unknown API Status Code!\nBody: \"" + body + "\"");
+    	throw new ApiException<string>(response.httpStatusCode, "Unknown API Status Code!\nBody: \"" + body + "\"");
     }
-
+			
 }

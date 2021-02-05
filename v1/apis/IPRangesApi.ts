@@ -8,6 +8,7 @@ import {ApiException} from './exception';
 import {isCodeInRange} from '../util';
 
 import { IPRanges } from '../models/IPRanges';
+import { ServerConfiguration } from '../servers';
 
 /**
  * no description
@@ -19,13 +20,15 @@ export class IPRangesApiRequestFactory extends BaseAPIRequestFactory {
      * List IP Ranges
      */
     public async getIPRanges(options?: Configuration): Promise<RequestContext> {
-		let config = options || this.configuration;
+        let config = options || this.configuration;
+        
+        const server1 = new ServerConfiguration<{  "site": "datadoghq.com" | "datadoghq.eu" | "ddog-gov.com",  "subdomain": string  }>("https://{subdomain}.{site}", {  "site": "datadoghq.com" , "subdomain": "ip-ranges"  })
 		
 		// Path Params
     	const localVarPath = '/';
 
 		// Make Request Context
-    	const requestContext = config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+    	const requestContext = server1.makeRequestContext(localVarPath, HttpMethod.GET);
         requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
 
         // Query Params
