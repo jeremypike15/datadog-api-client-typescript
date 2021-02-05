@@ -5,6 +5,7 @@ import path from 'path'
 
 import { World } from '../support/world'
 import { Store } from './store';
+import { pathLookup } from './templating';
 import { UndoActions, buildUndoFor } from './undo';
 
 
@@ -58,7 +59,7 @@ for (let apiVersion of ['v1', 'v2']) {
                     opts[p.name.toAttributeName()] = JSON.parse(p.value?.templated(this.fixtures));
                 }
                 if (p.source !== undefined) {
-                    opts[p.name.toAttributeName()] = this.fixtures.lookup(p.source)
+                    opts[p.name.toAttributeName()] = pathLookup(this.fixtures, p.source)
                 }
             }
 
@@ -72,7 +73,7 @@ for (let apiVersion of ['v1', 'v2']) {
 
             // optional re-shaping
             if (operation['source'] !== undefined) {
-                result = result.lookup(operation['source']);
+                result = pathLookup(result, operation['source']);
             }
 
             // store response in fixtures
