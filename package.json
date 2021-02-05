@@ -14,7 +14,7 @@
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
-    "test": "tsc && cucumber-js features/v2/users.feature:110"
+    "test": "tsc && cucumber-js features/"
   },
   "dependencies": {
     "@cucumber/messages": "^13.2.1",
