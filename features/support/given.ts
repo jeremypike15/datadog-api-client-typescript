@@ -47,19 +47,22 @@ for (let apiVersion of ['v1', 'v2']) {
             if (undoAction === undefined) {
                 throw new Error(`missing undo for ${operation.operationId} in ${apiVersion}`);
             }
-            
+
             // enable unstable operation
             // TODO given_configuration.unstable_operations[operation_name.to_sym] = true
 
             // perform operation
             let opts: { [key: string]: any } = {};
-            for (let p of operation.parameters) {
-                let value: any
-                if (p.value !== undefined) {
-                    opts[p.name.toAttributeName()] = JSON.parse(p.value?.templated(this.fixtures));
-                }
-                if (p.source !== undefined) {
-                    opts[p.name.toAttributeName()] = pathLookup(this.fixtures, p.source)
+            
+            if (operation.parameters !== undefined) {
+                for (let p of operation.parameters) {
+                    let value: any
+                    if (p.value !== undefined) {
+                        opts[p.name.toAttributeName()] = JSON.parse(p.value?.templated(this.fixtures));
+                    }
+                    if (p.source !== undefined) {
+                        opts[p.name.toAttributeName()] = pathLookup(this.fixtures, p.source)
+                    }
                 }
             }
 
