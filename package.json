@@ -14,13 +14,13 @@
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
-    "test": "tsc && cucumber-js features/"
+    "test": "tsc && cucumber-js features/v1/ip_ranges.feature"
   },
   "dependencies": {
-    "@cucumber/messages": "^13.2.1",
     "@types/node": "*",
     "@types/node-fetch": "^2.5.7",
     "btoa": "^1.2.1",
+    "durations": "^3.4.2",
     "es6-promise": "^4.2.4",
     "form-data": "^3.0.0",
     "node-fetch": "^2.6.0",
@@ -28,8 +28,8 @@
   },
   "devDependencies": {
     "@cucumber/cucumber": "^7.0.0",
+    "@cucumber/messages": "^13.2.1",
     "@types/chai": "^4.2.14",
-    "@types/cucumber": "^7.0.0",
     "@types/lodash": "^4.14.168",
     "@types/url-parse": "^1.4.3",
     "chai": "^4.2.0",
