@@ -33,11 +33,9 @@ Given('request contains {string} parameter from {string}', function (this: World
     this.opts[parameterName.toAttributeName()] = pathLookup(this.fixtures, fixturePath);
 });
 
-
 Given(/request contains "([^"]+)" parameter with value (.*)/, function (this: World, parameterName: string, value: string) {
     this.opts[parameterName.toAttributeName()] = JSON.parse(value.templated(this.fixtures));
 });
-
 
 Given('new {string} request', function (this: World, operationId: string) {
     this.operationId = operationId;

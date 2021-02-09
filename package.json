@@ -29,11 +29,18 @@
   "devDependencies": {
     "@cucumber/cucumber": "^7.0.0",
     "@cucumber/messages": "^13.2.1",
+    "@pollyjs/adapter-node-http": "^5.1.0",
+    "@pollyjs/core": "^5.1.0",
+    "@pollyjs/persister-fs": "^5.0.0",
     "@types/chai": "^4.2.14",
     "@types/lodash": "^4.14.168",
+    "@types/pollyjs__adapter-node-http": "^2.0.1",
+    "@types/pollyjs__core": "^4.3.2",
+    "@types/pollyjs__persister-fs": "^2.0.1",
+    "@types/pollyjs__utils": "^2.6.1",
     "@types/url-parse": "^1.4.3",
     "chai": "^4.2.0",
-    "dd-trace": "^0.30.5",
+    "dd-trace": "git+https://github.com/DataDog/dd-trace-js.git",
     "typescript": "^3.9.3"
   },
   "version": "1.0.0"

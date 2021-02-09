@@ -59,7 +59,6 @@ async function handleRun(this: void, ...args: any[]) {
 
 async function handleRunStep(this: void, ...args: any[]) {
     let step = (this as any)
-    console.log(args)
     let resource = args[0].isHook ? 'hook' : args[0].pickleStep?.text
     return await tracer.trace(
         'cucumber.step',
