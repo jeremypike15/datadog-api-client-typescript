@@ -31,7 +31,6 @@ Before(function (this: World, { gherkinDocument, pickle }: ITestCaseHookParamete
             }
         },
         mode: RecordMode[process.env.RECORD as string] || MODES.REPLAY,
-        recordFailedRequests: true,
         logging: false,
         persisterOptions: {
             fs: {
@@ -51,7 +50,7 @@ Before(function (this: World, { gherkinDocument, pickle }: ITestCaseHookParamete
     });
 })
 
-After(async function (this: World, { gherkinDocument, pickle }: ITestCaseHookParameter) {
+After(async function (this: World) {
     if (this.polly !== undefined) {
         await this.polly.stop();
     }

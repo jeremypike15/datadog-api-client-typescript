@@ -4,7 +4,7 @@ const feature = [
     `--format ${
       process.env.CI || !process.stdout.isTTY ? 'progress' : 'progress-bar'
     }`,
-    '--format rerun:rerun.txt',
+    '--format rerun:@rerun.txt',
     '--publish-quiet'
   ].join(' ')
   
