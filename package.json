@@ -14,7 +14,7 @@
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
-    "test": "tsc && cucumber-js features/v1/ip_ranges.feature"
+    "test": "tsc && cucumber-js features/"
   },
   "dependencies": {
     "@types/node": "*",
