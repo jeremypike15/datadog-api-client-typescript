@@ -31,6 +31,8 @@ Before(function (this: World, { gherkinDocument, pickle }: ITestCaseHookParamete
             }
         },
         mode: RecordMode[process.env.RECORD as string] || MODES.REPLAY,
+        recordIfMissing: false,  // make sure that we match body exactly
+        recordFailedRequests: true,  // make sure we can replay responses with 4xx codes
         logging: false,
         persisterOptions: {
             fs: {

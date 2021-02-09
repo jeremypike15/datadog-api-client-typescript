@@ -1,6 +1,5 @@
 import { After, Before } from '@cucumber/cucumber'
 import { ITestCaseHookParameter } from '@cucumber/cucumber/lib/support_code_library_builder/types'
-import { uniq, words } from 'lodash';
 
 import { World } from './world'
 
