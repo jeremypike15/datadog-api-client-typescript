@@ -5,6 +5,7 @@ import { World } from "../support/world";
 import { pathLookup } from "../support/templating";
 import { Store } from "../support/store";
 import { buildUndoFor, UndoActions } from "../support/undo";
+import * as datadogApiClient from '../../index'
 
 Given('a valid "apiKeyAuth" key in the system', function (this: World) {
   this.authMethods["apiKeyAuth"] = process.env.DD_TEST_CLIENT_API_KEY;
@@ -56,7 +57,7 @@ Given("new {string} request", function (this: World, operationId: string) {
 
 When("the request is sent", async function (this: World) {
   // build request from scenario
-  const api = require(`../../${this.apiVersion}`);
+  const api = (datadogApiClient as any)[this.apiVersion];
   const configuration = api.createConfiguration({
     authMethods: this.authMethods,
   });

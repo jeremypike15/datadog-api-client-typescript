@@ -4,9 +4,9 @@ import fs from "fs";
 import path from "path";
 
 import { World } from "../support/world";
-import { Store } from "./store";
 import { pathLookup } from "./templating";
 import { UndoActions, buildUndoFor } from "./undo";
+import * as datadogApiClient from '../../index'
 
 interface IOperationParameter {
   name: string;
@@ -34,7 +34,7 @@ for (const apiVersion of ["v1", "v2"]) {
       const operationName = operation.operationId.toOperationName();
 
       // make sure we have a fresh instance of API client and configuration
-      const api = require(`../../${apiVersion}`);
+      const api = (datadogApiClient as any)[apiVersion];
       const configuration = api.createConfiguration({
         authMethods: {
           apiKeyAuth: process.env.DD_TEST_CLIENT_API_KEY,

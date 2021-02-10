@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { pathLookup } from "./templating";
+import * as datadogApiClient from '../../index'
 
 interface iOperationParameter {
   name: string;
@@ -39,7 +40,7 @@ function buildUndoFor(
     const apiName = operation.tag.replace(/\s/, "");
     const operationName = operation.undo.operationId.toOperationName();
 
-    const api = require(`../../${apiVersion}`);
+    const api = (datadogApiClient as any)[apiVersion];
     const configuration = api.createConfiguration({
       authMethods: {
         apiKeyAuth: process.env.DD_TEST_CLIENT_API_KEY,
