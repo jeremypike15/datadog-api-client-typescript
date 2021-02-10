@@ -4,7 +4,7 @@ import { Polly } from "@pollyjs/core";
 export class World {
     public document?: messages.IGherkinDocument
     public polly?: Polly
-    
+
     public apiVersion: string = ''
     public authMethods: any = {}
 
@@ -19,7 +19,7 @@ export class World {
 
     public fixtures: { [key: string]: any } = {}
     public opts: { [key: string]: any } = {}
-    
+
     cleanup() {
         let undo = this.undo;
         undo.reverse();

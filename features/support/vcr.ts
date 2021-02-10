@@ -1,4 +1,5 @@
 import tracer from "./tracer";
+import fs from 'fs';
 import path from 'path';
 
 import NodeHttpAdapter from '@pollyjs/adapter-node-http';
@@ -19,7 +20,9 @@ const RecordMode: { [value: string]: any } = {
 }
 
 Before(function (this: World, { gherkinDocument, pickle }: ITestCaseHookParameter) {
-    this.polly = new Polly(`${gherkinDocument.feature?.name as string}/${pickle.name}`, {
+    let recordingsDir = path.resolve(__dirname, `../../cassettes/${this.apiVersion}`);
+    let recordingName = `${gherkinDocument.feature?.name as string}/${pickle.name}`
+    this.polly = new Polly(recordingName, {
         adapters: ['node-http'],
         flushRequestsOnStop: true,
         persister: 'fs',
@@ -36,11 +39,28 @@ Before(function (this: World, { gherkinDocument, pickle }: ITestCaseHookParamete
         logging: false,
         persisterOptions: {
             fs: {
-                recordingsDir: path.resolve(__dirname, `../../cassettes/${this.apiVersion}`)
+                recordingsDir: recordingsDir
             }
         }
     });
     const { server } = this.polly;
+   
+    let date: Date;
+    let frozen = path.join(recordingsDir, this.polly?.recordingId, 'frozen.json');
+    if (this.polly?.mode == MODES.REPLAY) {
+        date = new Date(JSON.parse(fs.readFileSync(frozen).toString()));
+    } else {
+        date = new Date();
+        if (this.polly?.mode == MODES.RECORD) {
+            fs.writeFileSync(frozen, JSON.stringify(date));
+        }
+    }
+    
+    let now = date.getTime()
+    let name = pickle.name?.replace(/[^A-Za-z0-9]+/g, '_').substr(0, 100);
+    let unique = `Typescript-${name}-${now}`;
+    this.fixtures['unique'] = unique;
+    this.fixtures['unique_lower'] = unique.toLowerCase();
 
     // make sure that we are not recording APM traces
     server.any((tracer as any)._tracer._url.host).passthrough();
