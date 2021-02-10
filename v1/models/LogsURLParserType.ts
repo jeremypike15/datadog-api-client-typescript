@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of logs URL parser.
-*/
-export type LogsURLParserType = "url-parser" ;
+ * Type of logs URL parser.
+ */
+export type LogsURLParserType = "url-parser";

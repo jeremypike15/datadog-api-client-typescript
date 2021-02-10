@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of logs service remapper.
-*/
-export type LogsServiceRemapperType = "service-remapper" ;
+ * Type of logs service remapper.
+ */
+export type LogsServiceRemapperType = "service-remapper";

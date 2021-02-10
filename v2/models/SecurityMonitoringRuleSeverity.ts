@@ -10,9 +10,14 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Severity of the Security Signal.
-*/
-export type SecurityMonitoringRuleSeverity = "info" | "low" | "medium" | "high" | "critical" ;
+ * Severity of the Security Signal.
+ */
+export type SecurityMonitoringRuleSeverity =
+  | "info"
+  | "low"
+  | "medium"
+  | "high"
+  | "critical";

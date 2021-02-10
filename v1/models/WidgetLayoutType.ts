@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Layout type of the group.
-*/
-export type WidgetLayoutType = "ordered" ;
+ * Layout type of the group.
+ */
+export type WidgetLayoutType = "ordered";

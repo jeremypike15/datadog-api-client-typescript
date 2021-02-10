@@ -10,100 +10,104 @@
  * Do not edit the class manually.
  */
 
-import { UsageBillableSummaryKeys } from './UsageBillableSummaryKeys';
-import { HttpFile } from '../http/http';
+import { UsageBillableSummaryKeys } from "./UsageBillableSummaryKeys";
+import { HttpFile } from "../http/http";
 
 /**
-* Response with monthly summary of data billed by Datadog.
-*/
+ * Response with monthly summary of data billed by Datadog.
+ */
 export class UsageBillableSummaryHour {
-    /**
-    * The billing plan.
-    */
-    'billingPlan'?: string;
-    /**
-    * Shows the last date of usage.
-    */
-    'endDate'?: Date;
-    /**
-    * The number of organizations.
-    */
-    'numOrgs'?: number;
-    /**
-    * The organization name.
-    */
-    'orgName'?: string;
-    /**
-    * The organization public ID.
-    */
-    'publicId'?: string;
-    /**
-    * Shows usage aggregation for a billing period.
-    */
-    'ratioInMonth'?: number;
-    /**
-    * Shows the first date of usage.
-    */
-    'startDate'?: Date;
-    'usage'?: UsageBillableSummaryKeys;
+  /**
+   * The billing plan.
+   */
+  "billingPlan"?: string;
+  /**
+   * Shows the last date of usage.
+   */
+  "endDate"?: Date;
+  /**
+   * The number of organizations.
+   */
+  "numOrgs"?: number;
+  /**
+   * The organization name.
+   */
+  "orgName"?: string;
+  /**
+   * The organization public ID.
+   */
+  "publicId"?: string;
+  /**
+   * Shows usage aggregation for a billing period.
+   */
+  "ratioInMonth"?: number;
+  /**
+   * Shows the first date of usage.
+   */
+  "startDate"?: Date;
+  "usage"?: UsageBillableSummaryKeys;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "billingPlan",
-            "baseName": "billing_plan",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "endDate",
-            "baseName": "end_date",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "numOrgs",
-            "baseName": "num_orgs",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "orgName",
-            "baseName": "org_name",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "publicId",
-            "baseName": "public_id",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "ratioInMonth",
-            "baseName": "ratio_in_month",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "startDate",
-            "baseName": "start_date",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "usage",
-            "baseName": "usage",
-            "type": "UsageBillableSummaryKeys",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "billingPlan",
+      baseName: "billing_plan",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "endDate",
+      baseName: "end_date",
+      type: "Date",
+      format: "date-time",
+    },
+    {
+      name: "numOrgs",
+      baseName: "num_orgs",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "orgName",
+      baseName: "org_name",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "publicId",
+      baseName: "public_id",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "ratioInMonth",
+      baseName: "ratio_in_month",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "startDate",
+      baseName: "start_date",
+      type: "Date",
+      format: "date-time",
+    },
+    {
+      name: "usage",
+      baseName: "usage",
+      type: "UsageBillableSummaryKeys",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UsageBillableSummaryHour.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UsageBillableSummaryHour.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

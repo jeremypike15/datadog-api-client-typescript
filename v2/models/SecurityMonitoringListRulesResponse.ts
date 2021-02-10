@@ -10,41 +10,45 @@
  * Do not edit the class manually.
  */
 
-import { ResponseMetaAttributes } from './ResponseMetaAttributes';
-import { SecurityMonitoringRuleResponse } from './SecurityMonitoringRuleResponse';
-import { HttpFile } from '../http/http';
+import { ResponseMetaAttributes } from "./ResponseMetaAttributes";
+import { SecurityMonitoringRuleResponse } from "./SecurityMonitoringRuleResponse";
+import { HttpFile } from "../http/http";
 
 /**
-* List of rules.
-*/
+ * List of rules.
+ */
 export class SecurityMonitoringListRulesResponse {
-    /**
-    * TODO.
-    */
-    'data'?: Array<SecurityMonitoringRuleResponse>;
-    'meta'?: ResponseMetaAttributes;
+  /**
+   * TODO.
+   */
+  "data"?: Array<SecurityMonitoringRuleResponse>;
+  "meta"?: ResponseMetaAttributes;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "Array<SecurityMonitoringRuleResponse>",
-            "format": ""
-        },
-        {
-            "name": "meta",
-            "baseName": "meta",
-            "type": "ResponseMetaAttributes",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "data",
+      baseName: "data",
+      type: "Array<SecurityMonitoringRuleResponse>",
+      format: "",
+    },
+    {
+      name: "meta",
+      baseName: "meta",
+      type: "ResponseMetaAttributes",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SecurityMonitoringListRulesResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SecurityMonitoringListRulesResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

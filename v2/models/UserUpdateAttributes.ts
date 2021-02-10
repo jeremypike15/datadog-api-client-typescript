@@ -10,52 +10,56 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Attributes of the edited user.
-*/
+ * Attributes of the edited user.
+ */
 export class UserUpdateAttributes {
-    /**
-    * If the user is enabled or disabled.
-    */
-    'disabled'?: boolean;
-    /**
-    * The email of the user.
-    */
-    'email'?: string;
-    /**
-    * The name of the user.
-    */
-    'name'?: string;
+  /**
+   * If the user is enabled or disabled.
+   */
+  "disabled"?: boolean;
+  /**
+   * The email of the user.
+   */
+  "email"?: string;
+  /**
+   * The name of the user.
+   */
+  "name"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "disabled",
-            "baseName": "disabled",
-            "type": "boolean",
-            "format": ""
-        },
-        {
-            "name": "email",
-            "baseName": "email",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "disabled",
+      baseName: "disabled",
+      type: "boolean",
+      format: "",
+    },
+    {
+      name: "email",
+      baseName: "email",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "name",
+      baseName: "name",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UserUpdateAttributes.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UserUpdateAttributes.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Whether to display the Alert Graph as a timeseries or a top list.
-*/
-export type WidgetVizType = "timeseries" | "toplist" ;
+ * Whether to display the Alert Graph as a timeseries or a top list.
+ */
+export type WidgetVizType = "timeseries" | "toplist";

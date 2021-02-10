@@ -10,33 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { UsageLogsByIndexHour } from './UsageLogsByIndexHour';
-import { HttpFile } from '../http/http';
+import { UsageLogsByIndexHour } from "./UsageLogsByIndexHour";
+import { HttpFile } from "../http/http";
 
 /**
-* Response containing the number of indexed logs for each hour and index for a given organization.
-*/
+ * Response containing the number of indexed logs for each hour and index for a given organization.
+ */
 export class UsageLogsByIndexResponse {
-    /**
-    * An array of objects regarding hourly usage of logs by index response.
-    */
-    'usage'?: Array<UsageLogsByIndexHour>;
+  /**
+   * An array of objects regarding hourly usage of logs by index response.
+   */
+  "usage"?: Array<UsageLogsByIndexHour>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "usage",
-            "baseName": "usage",
-            "type": "Array<UsageLogsByIndexHour>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "usage",
+      baseName: "usage",
+      type: "Array<UsageLogsByIndexHour>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UsageLogsByIndexResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UsageLogsByIndexResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

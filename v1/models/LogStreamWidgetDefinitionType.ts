@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of the log stream widget.
-*/
-export type LogStreamWidgetDefinitionType = "log_stream" ;
+ * Type of the log stream widget.
+ */
+export type LogStreamWidgetDefinitionType = "log_stream";

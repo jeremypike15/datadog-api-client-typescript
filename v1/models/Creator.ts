@@ -10,52 +10,56 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Object describing the creator of the shared element.
-*/
+ * Object describing the creator of the shared element.
+ */
 export class Creator {
-    /**
-    * Email of the creator.
-    */
-    'email'?: string;
-    /**
-    * Handle of the creator.
-    */
-    'handle'?: string;
-    /**
-    * Name of the creator.
-    */
-    'name'?: string;
+  /**
+   * Email of the creator.
+   */
+  "email"?: string;
+  /**
+   * Handle of the creator.
+   */
+  "handle"?: string;
+  /**
+   * Name of the creator.
+   */
+  "name"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "email",
-            "baseName": "email",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "handle",
-            "baseName": "handle",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "email",
+      baseName: "email",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "handle",
+      baseName: "handle",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "name",
+      baseName: "name",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return Creator.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return Creator.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

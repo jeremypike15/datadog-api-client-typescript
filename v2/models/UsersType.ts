@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Users resource type.
-*/
-export type UsersType = "users" ;
+ * Users resource type.
+ */
+export type UsersType = "users";

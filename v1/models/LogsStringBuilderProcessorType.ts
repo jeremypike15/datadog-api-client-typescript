@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of logs string builder processor.
-*/
-export type LogsStringBuilderProcessorType = "string-builder-processor" ;
+ * Type of logs string builder processor.
+ */
+export type LogsStringBuilderProcessorType = "string-builder-processor";

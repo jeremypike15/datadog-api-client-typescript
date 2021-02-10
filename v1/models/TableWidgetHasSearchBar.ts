@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Controls the display of the search bar.
-*/
-export type TableWidgetHasSearchBar = "always" | "never" | "auto" ;
+ * Controls the display of the search bar.
+ */
+export type TableWidgetHasSearchBar = "always" | "never" | "auto";

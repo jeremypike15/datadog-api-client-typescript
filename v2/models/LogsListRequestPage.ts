@@ -10,42 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Paging attributes for listing logs.
-*/
+ * Paging attributes for listing logs.
+ */
 export class LogsListRequestPage {
-    /**
-    * List following results with a cursor provided in the previous query.
-    */
-    'cursor'?: string;
-    /**
-    * Maximum number of logs in the response.
-    */
-    'limit'?: number;
+  /**
+   * List following results with a cursor provided in the previous query.
+   */
+  "cursor"?: string;
+  /**
+   * Maximum number of logs in the response.
+   */
+  "limit"?: number;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "cursor",
-            "baseName": "cursor",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "limit",
-            "baseName": "limit",
-            "type": "number",
-            "format": "int32"
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "cursor",
+      baseName: "cursor",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "limit",
+      baseName: "limit",
+      type: "number",
+      format: "int32",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return LogsListRequestPage.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return LogsListRequestPage.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

@@ -10,48 +10,52 @@
  * Do not edit the class manually.
  */
 
-import { LogAttributes } from './LogAttributes';
-import { LogType } from './LogType';
-import { HttpFile } from '../http/http';
+import { LogAttributes } from "./LogAttributes";
+import { LogType } from "./LogType";
+import { HttpFile } from "../http/http";
 
 /**
-* Object description of a log after being processed and stored by Datadog.
-*/
+ * Object description of a log after being processed and stored by Datadog.
+ */
 export class Log {
-    'attributes'?: LogAttributes;
-    /**
-    * Unique ID of the Log.
-    */
-    'id'?: string;
-    'type'?: LogType;
+  "attributes"?: LogAttributes;
+  /**
+   * Unique ID of the Log.
+   */
+  "id"?: string;
+  "type"?: LogType;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "attributes",
-            "baseName": "attributes",
-            "type": "LogAttributes",
-            "format": ""
-        },
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "LogType",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "attributes",
+      baseName: "attributes",
+      type: "LogAttributes",
+      format: "",
+    },
+    {
+      name: "id",
+      baseName: "id",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "LogType",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return Log.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return Log.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

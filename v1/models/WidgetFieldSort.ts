@@ -10,40 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { WidgetSort } from './WidgetSort';
-import { HttpFile } from '../http/http';
+import { WidgetSort } from "./WidgetSort";
+import { HttpFile } from "../http/http";
 
 /**
-* Which column and order to sort by
-*/
+ * Which column and order to sort by
+ */
 export class WidgetFieldSort {
-    /**
-    * Facet path for the column
-    */
-    'column': string;
-    'order': WidgetSort;
+  /**
+   * Facet path for the column
+   */
+  "column": string;
+  "order": WidgetSort;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "column",
-            "baseName": "column",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "order",
-            "baseName": "order",
-            "type": "WidgetSort",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "column",
+      baseName: "column",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "order",
+      baseName: "order",
+      type: "WidgetSort",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return WidgetFieldSort.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return WidgetFieldSort.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

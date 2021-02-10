@@ -10,88 +10,92 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsGlobalVariableParseTestOptions } from './SyntheticsGlobalVariableParseTestOptions';
-import { SyntheticsGlobalVariableValue } from './SyntheticsGlobalVariableValue';
-import { HttpFile } from '../http/http';
+import { SyntheticsGlobalVariableParseTestOptions } from "./SyntheticsGlobalVariableParseTestOptions";
+import { SyntheticsGlobalVariableValue } from "./SyntheticsGlobalVariableValue";
+import { HttpFile } from "../http/http";
 
 /**
-* Synthetics global variable.
-*/
+ * Synthetics global variable.
+ */
 export class SyntheticsGlobalVariable {
-    /**
-    * Description of the global variable.
-    */
-    'description': string;
-    /**
-    * Unique identifier of the global variable.
-    */
-    'id'?: string;
-    /**
-    * Name of the global variable.
-    */
-    'name': string;
-    'parseTestOptions'?: SyntheticsGlobalVariableParseTestOptions;
-    /**
-    * A Synthetic test ID to use as a test to generate the variable value.
-    */
-    'parseTestPublicId'?: string;
-    /**
-    * Tags of the global variable.
-    */
-    'tags': Array<string>;
-    'value': SyntheticsGlobalVariableValue;
+  /**
+   * Description of the global variable.
+   */
+  "description": string;
+  /**
+   * Unique identifier of the global variable.
+   */
+  "id"?: string;
+  /**
+   * Name of the global variable.
+   */
+  "name": string;
+  "parseTestOptions"?: SyntheticsGlobalVariableParseTestOptions;
+  /**
+   * A Synthetic test ID to use as a test to generate the variable value.
+   */
+  "parseTestPublicId"?: string;
+  /**
+   * Tags of the global variable.
+   */
+  "tags": Array<string>;
+  "value": SyntheticsGlobalVariableValue;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "description",
-            "baseName": "description",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "parseTestOptions",
-            "baseName": "parse_test_options",
-            "type": "SyntheticsGlobalVariableParseTestOptions",
-            "format": ""
-        },
-        {
-            "name": "parseTestPublicId",
-            "baseName": "parse_test_public_id",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "tags",
-            "baseName": "tags",
-            "type": "Array<string>",
-            "format": ""
-        },
-        {
-            "name": "value",
-            "baseName": "value",
-            "type": "SyntheticsGlobalVariableValue",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "description",
+      baseName: "description",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "id",
+      baseName: "id",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "name",
+      baseName: "name",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "parseTestOptions",
+      baseName: "parse_test_options",
+      type: "SyntheticsGlobalVariableParseTestOptions",
+      format: "",
+    },
+    {
+      name: "parseTestPublicId",
+      baseName: "parse_test_public_id",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "tags",
+      baseName: "tags",
+      type: "Array<string>",
+      format: "",
+    },
+    {
+      name: "value",
+      baseName: "value",
+      type: "SyntheticsGlobalVariableValue",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SyntheticsGlobalVariable.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SyntheticsGlobalVariable.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

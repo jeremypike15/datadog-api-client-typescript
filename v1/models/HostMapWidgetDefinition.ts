@@ -10,143 +10,147 @@
  * Do not edit the class manually.
  */
 
-import { HostMapWidgetDefinitionRequests } from './HostMapWidgetDefinitionRequests';
-import { HostMapWidgetDefinitionStyle } from './HostMapWidgetDefinitionStyle';
-import { HostMapWidgetDefinitionType } from './HostMapWidgetDefinitionType';
-import { WidgetCustomLink } from './WidgetCustomLink';
-import { WidgetNodeType } from './WidgetNodeType';
-import { WidgetTextAlign } from './WidgetTextAlign';
-import { HttpFile } from '../http/http';
+import { HostMapWidgetDefinitionRequests } from "./HostMapWidgetDefinitionRequests";
+import { HostMapWidgetDefinitionStyle } from "./HostMapWidgetDefinitionStyle";
+import { HostMapWidgetDefinitionType } from "./HostMapWidgetDefinitionType";
+import { WidgetCustomLink } from "./WidgetCustomLink";
+import { WidgetNodeType } from "./WidgetNodeType";
+import { WidgetTextAlign } from "./WidgetTextAlign";
+import { HttpFile } from "../http/http";
 
 /**
-* The host map widget graphs any metric across your hosts using the same visualization available from the main Host Map page.
-*/
+ * The host map widget graphs any metric across your hosts using the same visualization available from the main Host Map page.
+ */
 export class HostMapWidgetDefinition {
-    /**
-    * List of custom links.
-    */
-    'customLinks'?: Array<WidgetCustomLink>;
-    /**
-    * List of tag prefixes to group by.
-    */
-    'group'?: Array<string>;
-    /**
-    * Whether to show the hosts that don’t fit in a group.
-    */
-    'noGroupHosts'?: boolean;
-    /**
-    * Whether to show the hosts with no metrics.
-    */
-    'noMetricHosts'?: boolean;
-    'nodeType'?: WidgetNodeType;
-    /**
-    * Notes on the title.
-    */
-    'notes'?: string;
-    'requests': HostMapWidgetDefinitionRequests;
-    /**
-    * List of tags used to filter the map.
-    */
-    'scope'?: Array<string>;
-    'style'?: HostMapWidgetDefinitionStyle;
-    /**
-    * Title of the widget.
-    */
-    'title'?: string;
-    'titleAlign'?: WidgetTextAlign;
-    /**
-    * Size of the title.
-    */
-    'titleSize'?: string;
-    'type': HostMapWidgetDefinitionType;
+  /**
+   * List of custom links.
+   */
+  "customLinks"?: Array<WidgetCustomLink>;
+  /**
+   * List of tag prefixes to group by.
+   */
+  "group"?: Array<string>;
+  /**
+   * Whether to show the hosts that don’t fit in a group.
+   */
+  "noGroupHosts"?: boolean;
+  /**
+   * Whether to show the hosts with no metrics.
+   */
+  "noMetricHosts"?: boolean;
+  "nodeType"?: WidgetNodeType;
+  /**
+   * Notes on the title.
+   */
+  "notes"?: string;
+  "requests": HostMapWidgetDefinitionRequests;
+  /**
+   * List of tags used to filter the map.
+   */
+  "scope"?: Array<string>;
+  "style"?: HostMapWidgetDefinitionStyle;
+  /**
+   * Title of the widget.
+   */
+  "title"?: string;
+  "titleAlign"?: WidgetTextAlign;
+  /**
+   * Size of the title.
+   */
+  "titleSize"?: string;
+  "type": HostMapWidgetDefinitionType;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "customLinks",
-            "baseName": "custom_links",
-            "type": "Array<WidgetCustomLink>",
-            "format": ""
-        },
-        {
-            "name": "group",
-            "baseName": "group",
-            "type": "Array<string>",
-            "format": ""
-        },
-        {
-            "name": "noGroupHosts",
-            "baseName": "no_group_hosts",
-            "type": "boolean",
-            "format": ""
-        },
-        {
-            "name": "noMetricHosts",
-            "baseName": "no_metric_hosts",
-            "type": "boolean",
-            "format": ""
-        },
-        {
-            "name": "nodeType",
-            "baseName": "node_type",
-            "type": "WidgetNodeType",
-            "format": ""
-        },
-        {
-            "name": "notes",
-            "baseName": "notes",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "requests",
-            "baseName": "requests",
-            "type": "HostMapWidgetDefinitionRequests",
-            "format": ""
-        },
-        {
-            "name": "scope",
-            "baseName": "scope",
-            "type": "Array<string>",
-            "format": ""
-        },
-        {
-            "name": "style",
-            "baseName": "style",
-            "type": "HostMapWidgetDefinitionStyle",
-            "format": ""
-        },
-        {
-            "name": "title",
-            "baseName": "title",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "titleAlign",
-            "baseName": "title_align",
-            "type": "WidgetTextAlign",
-            "format": ""
-        },
-        {
-            "name": "titleSize",
-            "baseName": "title_size",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "HostMapWidgetDefinitionType",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "customLinks",
+      baseName: "custom_links",
+      type: "Array<WidgetCustomLink>",
+      format: "",
+    },
+    {
+      name: "group",
+      baseName: "group",
+      type: "Array<string>",
+      format: "",
+    },
+    {
+      name: "noGroupHosts",
+      baseName: "no_group_hosts",
+      type: "boolean",
+      format: "",
+    },
+    {
+      name: "noMetricHosts",
+      baseName: "no_metric_hosts",
+      type: "boolean",
+      format: "",
+    },
+    {
+      name: "nodeType",
+      baseName: "node_type",
+      type: "WidgetNodeType",
+      format: "",
+    },
+    {
+      name: "notes",
+      baseName: "notes",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "requests",
+      baseName: "requests",
+      type: "HostMapWidgetDefinitionRequests",
+      format: "",
+    },
+    {
+      name: "scope",
+      baseName: "scope",
+      type: "Array<string>",
+      format: "",
+    },
+    {
+      name: "style",
+      baseName: "style",
+      type: "HostMapWidgetDefinitionStyle",
+      format: "",
+    },
+    {
+      name: "title",
+      baseName: "title",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "titleAlign",
+      baseName: "title_align",
+      type: "WidgetTextAlign",
+      format: "",
+    },
+    {
+      name: "titleSize",
+      baseName: "title_size",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "HostMapWidgetDefinitionType",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return HostMapWidgetDefinition.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return HostMapWidgetDefinition.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

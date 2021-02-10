@@ -10,54 +10,58 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsTriggerCITestsResponseLocations } from './SyntheticsTriggerCITestsResponseLocations';
-import { SyntheticsTriggerCITestsResponseResults } from './SyntheticsTriggerCITestsResponseResults';
-import { HttpFile } from '../http/http';
+import { SyntheticsTriggerCITestsResponseLocations } from "./SyntheticsTriggerCITestsResponseLocations";
+import { SyntheticsTriggerCITestsResponseResults } from "./SyntheticsTriggerCITestsResponseResults";
+import { HttpFile } from "../http/http";
 
 /**
-* Object containing information about the tests triggered.
-*/
+ * Object containing information about the tests triggered.
+ */
 export class SyntheticsTriggerCITestsResponse {
-    /**
-    * List of Synthetics locations.
-    */
-    'locations'?: Array<SyntheticsTriggerCITestsResponseLocations>;
-    /**
-    * Information about the tests runs.
-    */
-    'results'?: Array<SyntheticsTriggerCITestsResponseResults>;
-    /**
-    * The public IDs of the Synthetics test triggered.
-    */
-    'triggeredCheckIds'?: Array<string>;
+  /**
+   * List of Synthetics locations.
+   */
+  "locations"?: Array<SyntheticsTriggerCITestsResponseLocations>;
+  /**
+   * Information about the tests runs.
+   */
+  "results"?: Array<SyntheticsTriggerCITestsResponseResults>;
+  /**
+   * The public IDs of the Synthetics test triggered.
+   */
+  "triggeredCheckIds"?: Array<string>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "locations",
-            "baseName": "locations",
-            "type": "Array<SyntheticsTriggerCITestsResponseLocations>",
-            "format": ""
-        },
-        {
-            "name": "results",
-            "baseName": "results",
-            "type": "Array<SyntheticsTriggerCITestsResponseResults>",
-            "format": ""
-        },
-        {
-            "name": "triggeredCheckIds",
-            "baseName": "triggered_check_ids",
-            "type": "Array<string>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "locations",
+      baseName: "locations",
+      type: "Array<SyntheticsTriggerCITestsResponseLocations>",
+      format: "",
+    },
+    {
+      name: "results",
+      baseName: "results",
+      type: "Array<SyntheticsTriggerCITestsResponseResults>",
+      format: "",
+    },
+    {
+      name: "triggeredCheckIds",
+      baseName: "triggered_check_ids",
+      type: "Array<string>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SyntheticsTriggerCITestsResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SyntheticsTriggerCITestsResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

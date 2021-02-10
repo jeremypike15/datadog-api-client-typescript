@@ -10,42 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { IncidentFieldAttributesMultipleValue } from './IncidentFieldAttributesMultipleValue';
-import { IncidentFieldAttributesSingleValue } from './IncidentFieldAttributesSingleValue';
-import { IncidentFieldAttributesValueType } from './IncidentFieldAttributesValueType';
-import { HttpFile } from '../http/http';
+import { IncidentFieldAttributesMultipleValue } from "./IncidentFieldAttributesMultipleValue";
+import { IncidentFieldAttributesSingleValue } from "./IncidentFieldAttributesSingleValue";
+import { IncidentFieldAttributesValueType } from "./IncidentFieldAttributesValueType";
+import { HttpFile } from "../http/http";
 
 /**
-* Dynamic fields for which selections can be made, with field names as keys.
-*/
+ * Dynamic fields for which selections can be made, with field names as keys.
+ */
 export class IncidentFieldAttributes {
-    'type': IncidentFieldAttributesValueType;
-    /**
-    * The multiple values selected for this field.
-    */
-    'value'?: Array<string>;
+  "type": IncidentFieldAttributesValueType;
+  /**
+   * The multiple values selected for this field.
+   */
+  "value"?: Array<string>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "IncidentFieldAttributesValueType",
-            "format": ""
-        },
-        {
-            "name": "value",
-            "baseName": "value",
-            "type": "Array<string>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "type",
+      baseName: "type",
+      type: "IncidentFieldAttributesValueType",
+      format: "",
+    },
+    {
+      name: "value",
+      baseName: "value",
+      type: "Array<string>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IncidentFieldAttributes.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IncidentFieldAttributes.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

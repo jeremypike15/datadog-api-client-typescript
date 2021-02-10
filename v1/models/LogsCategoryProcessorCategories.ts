@@ -10,40 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { LogsFilter } from './LogsFilter';
-import { HttpFile } from '../http/http';
+import { LogsFilter } from "./LogsFilter";
+import { HttpFile } from "../http/http";
 
 /**
-* Object describing the logs filter.
-*/
+ * Object describing the logs filter.
+ */
 export class LogsCategoryProcessorCategories {
-    'filter'?: LogsFilter;
-    /**
-    * Value to assign to the target attribute.
-    */
-    'name'?: string;
+  "filter"?: LogsFilter;
+  /**
+   * Value to assign to the target attribute.
+   */
+  "name"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "filter",
-            "baseName": "filter",
-            "type": "LogsFilter",
-            "format": ""
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "filter",
+      baseName: "filter",
+      type: "LogsFilter",
+      format: "",
+    },
+    {
+      name: "name",
+      baseName: "name",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return LogsCategoryProcessorCategories.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return LogsCategoryProcessorCategories.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

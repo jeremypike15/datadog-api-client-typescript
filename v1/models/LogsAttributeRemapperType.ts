@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of logs attribute remapper.
-*/
-export type LogsAttributeRemapperType = "attribute-remapper" ;
+ * Type of logs attribute remapper.
+ */
+export type LogsAttributeRemapperType = "attribute-remapper";

@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The kind of grouping to use.
-*/
-export type WidgetGrouping = "check" | "cluster" ;
+ * The kind of grouping to use.
+ */
+export type WidgetGrouping = "check" | "cluster";

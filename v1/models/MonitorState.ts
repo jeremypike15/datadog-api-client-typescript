@@ -10,33 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { MonitorStateGroup } from './MonitorStateGroup';
-import { HttpFile } from '../http/http';
+import { MonitorStateGroup } from "./MonitorStateGroup";
+import { HttpFile } from "../http/http";
 
 /**
-* Wrapper object with the different monitor states.
-*/
+ * Wrapper object with the different monitor states.
+ */
 export class MonitorState {
-    /**
-    * Dictionary where the keys are groups (comma separated lists of tags) and the values are the list of groups your monitor is broken down on.
-    */
-    'groups'?: { [key: string]: MonitorStateGroup; };
+  /**
+   * Dictionary where the keys are groups (comma separated lists of tags) and the values are the list of groups your monitor is broken down on.
+   */
+  "groups"?: { [key: string]: MonitorStateGroup };
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "groups",
-            "baseName": "groups",
-            "type": "{ [key: string]: MonitorStateGroup; }",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "groups",
+      baseName: "groups",
+      type: "{ [key: string]: MonitorStateGroup; }",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return MonitorState.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return MonitorState.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

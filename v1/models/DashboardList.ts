@@ -10,100 +10,104 @@
  * Do not edit the class manually.
  */
 
-import { Creator } from './Creator';
-import { HttpFile } from '../http/http';
+import { Creator } from "./Creator";
+import { HttpFile } from "../http/http";
 
 /**
-* Your Datadog Dashboards.
-*/
+ * Your Datadog Dashboards.
+ */
 export class DashboardList {
-    'author'?: Creator;
-    /**
-    * Date of creation of the dashboard list.
-    */
-    'created'?: Date;
-    /**
-    * The number of dashboards in the list.
-    */
-    'dashboardCount'?: number;
-    /**
-    * The ID of the dashboard list.
-    */
-    'id'?: number;
-    /**
-    * Whether or not the list is in the favorites.
-    */
-    'isFavorite'?: boolean;
-    /**
-    * Date of last edition of the dashboard list.
-    */
-    'modified'?: Date;
-    /**
-    * The name of the dashboard list.
-    */
-    'name': string;
-    /**
-    * The type of dashboard list.
-    */
-    'type'?: string;
+  "author"?: Creator;
+  /**
+   * Date of creation of the dashboard list.
+   */
+  "created"?: Date;
+  /**
+   * The number of dashboards in the list.
+   */
+  "dashboardCount"?: number;
+  /**
+   * The ID of the dashboard list.
+   */
+  "id"?: number;
+  /**
+   * Whether or not the list is in the favorites.
+   */
+  "isFavorite"?: boolean;
+  /**
+   * Date of last edition of the dashboard list.
+   */
+  "modified"?: Date;
+  /**
+   * The name of the dashboard list.
+   */
+  "name": string;
+  /**
+   * The type of dashboard list.
+   */
+  "type"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "author",
-            "baseName": "author",
-            "type": "Creator",
-            "format": ""
-        },
-        {
-            "name": "created",
-            "baseName": "created",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "dashboardCount",
-            "baseName": "dashboard_count",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "isFavorite",
-            "baseName": "is_favorite",
-            "type": "boolean",
-            "format": ""
-        },
-        {
-            "name": "modified",
-            "baseName": "modified",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "author",
+      baseName: "author",
+      type: "Creator",
+      format: "",
+    },
+    {
+      name: "created",
+      baseName: "created",
+      type: "Date",
+      format: "date-time",
+    },
+    {
+      name: "dashboardCount",
+      baseName: "dashboard_count",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "id",
+      baseName: "id",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "isFavorite",
+      baseName: "is_favorite",
+      type: "boolean",
+      format: "",
+    },
+    {
+      name: "modified",
+      baseName: "modified",
+      type: "Date",
+      format: "date-time",
+    },
+    {
+      name: "name",
+      baseName: "name",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return DashboardList.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return DashboardList.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

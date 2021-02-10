@@ -10,23 +10,24 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The value to use for logs that don't have the facet used to group by
-*/
+ * The value to use for logs that don't have the facet used to group by
+ */
 export class LogsGroupByMissing {
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [];
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-    ];
+  static getAttributeTypeMap() {
+    return LogsGroupByMissing.attributeTypeMap;
+  }
 
-    static getAttributeTypeMap() {
-        return LogsGroupByMissing.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  public constructor() {}
 }
-

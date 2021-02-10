@@ -10,30 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { ApplicationKey } from './ApplicationKey';
-import { HttpFile } from '../http/http';
+import { ApplicationKey } from "./ApplicationKey";
+import { HttpFile } from "../http/http";
 
 /**
-* An application key response.
-*/
+ * An application key response.
+ */
 export class ApplicationKeyResponse {
-    'applicationKey'?: ApplicationKey;
+  "applicationKey"?: ApplicationKey;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "applicationKey",
-            "baseName": "application_key",
-            "type": "ApplicationKey",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "applicationKey",
+      baseName: "application_key",
+      type: "ApplicationKey",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return ApplicationKeyResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return ApplicationKeyResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of logs grok parser.
-*/
-export type LogsGrokParserType = "grok-parser" ;
+ * Type of logs grok parser.
+ */
+export type LogsGrokParserType = "grok-parser";

@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The type of filtering action.
-*/
-export type SecurityMonitoringFilterAction = "require" | "suppress" ;
+ * The type of filtering action.
+ */
+export type SecurityMonitoringFilterAction = "require" | "suppress";

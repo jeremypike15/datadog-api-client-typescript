@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of logs trace remapper.
-*/
-export type LogsTraceRemapperType = "trace-id-remapper" ;
+ * Type of logs trace remapper.
+ */
+export type LogsTraceRemapperType = "trace-id-remapper";

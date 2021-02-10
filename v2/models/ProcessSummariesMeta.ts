@@ -10,30 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { ProcessSummariesMetaPage } from './ProcessSummariesMetaPage';
-import { HttpFile } from '../http/http';
+import { ProcessSummariesMetaPage } from "./ProcessSummariesMetaPage";
+import { HttpFile } from "../http/http";
 
 /**
-* Response metadata object.
-*/
+ * Response metadata object.
+ */
 export class ProcessSummariesMeta {
-    'page'?: ProcessSummariesMetaPage;
+  "page"?: ProcessSummariesMetaPage;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "page",
-            "baseName": "page",
-            "type": "ProcessSummariesMetaPage",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "page",
+      baseName: "page",
+      type: "ProcessSummariesMetaPage",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return ProcessSummariesMeta.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return ProcessSummariesMeta.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

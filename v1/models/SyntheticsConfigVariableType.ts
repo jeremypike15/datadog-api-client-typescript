@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of the configuration variable.
-*/
-export type SyntheticsConfigVariableType = "text" ;
+ * Type of the configuration variable.
+ */
+export type SyntheticsConfigVariableType = "text";

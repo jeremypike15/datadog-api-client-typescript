@@ -10,33 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { UsageFargateHour } from './UsageFargateHour';
-import { HttpFile } from '../http/http';
+import { UsageFargateHour } from "./UsageFargateHour";
+import { HttpFile } from "../http/http";
 
 /**
-* Response containing the number of Fargate tasks run and hourly usage.
-*/
+ * Response containing the number of Fargate tasks run and hourly usage.
+ */
 export class UsageFargateResponse {
-    /**
-    * Array with the number of hourly Fargate tasks recorded for a given organization.
-    */
-    'usage'?: Array<UsageFargateHour>;
+  /**
+   * Array with the number of hourly Fargate tasks recorded for a given organization.
+   */
+  "usage"?: Array<UsageFargateHour>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "usage",
-            "baseName": "usage",
-            "type": "Array<UsageFargateHour>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "usage",
+      baseName: "usage",
+      type: "Array<UsageFargateHour>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UsageFargateResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UsageFargateResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

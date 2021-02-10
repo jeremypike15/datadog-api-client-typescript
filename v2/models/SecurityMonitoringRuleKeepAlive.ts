@@ -10,9 +10,19 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Once a signal is generated, the signal will remain “open” if a case is matched at least once within this keep alive window.
-*/
-export type SecurityMonitoringRuleKeepAlive = "0" | "60" | "300" | "600" | "900" | "1800" | "3600" | "7200" | "10800" | "21600" ;
+ * Once a signal is generated, the signal will remain “open” if a case is matched at least once within this keep alive window.
+ */
+export type SecurityMonitoringRuleKeepAlive =
+  | "0"
+  | "60"
+  | "300"
+  | "600"
+  | "900"
+  | "1800"
+  | "3600"
+  | "7200"
+  | "10800"
+  | "21600";

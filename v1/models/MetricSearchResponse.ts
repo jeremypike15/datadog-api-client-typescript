@@ -10,30 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { MetricSearchResponseResults } from './MetricSearchResponseResults';
-import { HttpFile } from '../http/http';
+import { MetricSearchResponseResults } from "./MetricSearchResponseResults";
+import { HttpFile } from "../http/http";
 
 /**
-* Object containing the list of metrics matching the search query.
-*/
+ * Object containing the list of metrics matching the search query.
+ */
 export class MetricSearchResponse {
-    'results'?: MetricSearchResponseResults;
+  "results"?: MetricSearchResponseResults;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "results",
-            "baseName": "results",
-            "type": "MetricSearchResponseResults",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "results",
+      baseName: "results",
+      type: "MetricSearchResponseResults",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return MetricSearchResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return MetricSearchResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

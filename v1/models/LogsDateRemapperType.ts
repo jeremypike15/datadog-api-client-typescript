@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of logs date remapper.
-*/
-export type LogsDateRemapperType = "date-remapper" ;
+ * Type of logs date remapper.
+ */
+export type LogsDateRemapperType = "date-remapper";

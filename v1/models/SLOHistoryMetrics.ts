@@ -10,97 +10,101 @@
  * Do not edit the class manually.
  */
 
-import { SLOHistoryMetricsSeries } from './SLOHistoryMetricsSeries';
-import { HttpFile } from '../http/http';
+import { SLOHistoryMetricsSeries } from "./SLOHistoryMetricsSeries";
+import { HttpFile } from "../http/http";
 
 /**
-* A `metric` based SLO history response.
-*/
+ * A `metric` based SLO history response.
+ */
 export class SLOHistoryMetrics {
-    'denominator': SLOHistoryMetricsSeries;
-    /**
-    * The aggregated query interval for the series data. It's implicit based on the query time window.
-    */
-    'interval': number;
-    /**
-    * Optional message if there are specific query issues/warnings.
-    */
-    'message'?: string;
-    'numerator': SLOHistoryMetricsSeries;
-    /**
-    * The combined numerator and denominator query CSV.
-    */
-    'query': string;
-    /**
-    * The series result type. This mimics `batch_query` response type.
-    */
-    'resType': string;
-    /**
-    * The series response version type. This mimics `batch_query` response type.
-    */
-    'respVersion': number;
-    /**
-    * An array of query timestamps in EPOCH milliseconds
-    */
-    'times': Array<number>;
+  "denominator": SLOHistoryMetricsSeries;
+  /**
+   * The aggregated query interval for the series data. It's implicit based on the query time window.
+   */
+  "interval": number;
+  /**
+   * Optional message if there are specific query issues/warnings.
+   */
+  "message"?: string;
+  "numerator": SLOHistoryMetricsSeries;
+  /**
+   * The combined numerator and denominator query CSV.
+   */
+  "query": string;
+  /**
+   * The series result type. This mimics `batch_query` response type.
+   */
+  "resType": string;
+  /**
+   * The series response version type. This mimics `batch_query` response type.
+   */
+  "respVersion": number;
+  /**
+   * An array of query timestamps in EPOCH milliseconds
+   */
+  "times": Array<number>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "denominator",
-            "baseName": "denominator",
-            "type": "SLOHistoryMetricsSeries",
-            "format": ""
-        },
-        {
-            "name": "interval",
-            "baseName": "interval",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "message",
-            "baseName": "message",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "numerator",
-            "baseName": "numerator",
-            "type": "SLOHistoryMetricsSeries",
-            "format": ""
-        },
-        {
-            "name": "query",
-            "baseName": "query",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "resType",
-            "baseName": "res_type",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "respVersion",
-            "baseName": "resp_version",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "times",
-            "baseName": "times",
-            "type": "Array<number>",
-            "format": "double"
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "denominator",
+      baseName: "denominator",
+      type: "SLOHistoryMetricsSeries",
+      format: "",
+    },
+    {
+      name: "interval",
+      baseName: "interval",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "message",
+      baseName: "message",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "numerator",
+      baseName: "numerator",
+      type: "SLOHistoryMetricsSeries",
+      format: "",
+    },
+    {
+      name: "query",
+      baseName: "query",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "resType",
+      baseName: "res_type",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "respVersion",
+      baseName: "resp_version",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "times",
+      baseName: "times",
+      type: "Array<number>",
+      format: "double",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SLOHistoryMetrics.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SLOHistoryMetrics.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

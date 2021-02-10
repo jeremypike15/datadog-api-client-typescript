@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of the Markdown timeline cell.
-*/
-export type IncidentTimelineCellMarkdownContentType = "markdown" ;
+ * Type of the Markdown timeline cell.
+ */
+export type IncidentTimelineCellMarkdownContentType = "markdown";

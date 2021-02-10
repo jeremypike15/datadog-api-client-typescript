@@ -11,8 +11,25 @@
   "license": "Unlicense",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
+  "lint-staged": {
+    "linters": {
+      "*.js": [
+        "eslint --fix",
+        "git add"
+      ],
+      "*.{json,md,html,yml,yaml,css}": [
+        "prettier --ignore-path .eslintignore --write",
+        "git add"
+      ]
+    },
+    "globOptions": {
+      "dot": true
+    }
+  },
   "scripts": {
     "build": "tsc",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "prepare": "npm run build",
     "test": "tsc && cucumber-js features/"
   },
@@ -39,9 +56,17 @@
     "@types/pollyjs__persister-fs": "^2.0.1",
     "@types/pollyjs__utils": "^2.6.1",
     "@types/url-parse": "^1.4.3",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/parser": "^4.15.0",
     "chai": "^4.2.0",
     "dd-trace": "git+https://github.com/DataDog/dd-trace-js.git",
-    "typescript": "^3.9.3"
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1",
+    "typescript": "^3.9.8"
   },
   "version": "1.0.0"
 }

@@ -10,46 +10,50 @@
  * Do not edit the class manually.
  */
 
-import { IncidentServiceCreateAttributes } from './IncidentServiceCreateAttributes';
-import { IncidentServiceRelationships } from './IncidentServiceRelationships';
-import { IncidentServiceType } from './IncidentServiceType';
-import { HttpFile } from '../http/http';
+import { IncidentServiceCreateAttributes } from "./IncidentServiceCreateAttributes";
+import { IncidentServiceRelationships } from "./IncidentServiceRelationships";
+import { IncidentServiceType } from "./IncidentServiceType";
+import { HttpFile } from "../http/http";
 
 /**
-* Incident Service payload for create requests.
-*/
+ * Incident Service payload for create requests.
+ */
 export class IncidentServiceCreateData {
-    'attributes'?: IncidentServiceCreateAttributes;
-    'relationships'?: IncidentServiceRelationships;
-    'type': IncidentServiceType;
+  "attributes"?: IncidentServiceCreateAttributes;
+  "relationships"?: IncidentServiceRelationships;
+  "type": IncidentServiceType;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "attributes",
-            "baseName": "attributes",
-            "type": "IncidentServiceCreateAttributes",
-            "format": ""
-        },
-        {
-            "name": "relationships",
-            "baseName": "relationships",
-            "type": "IncidentServiceRelationships",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "IncidentServiceType",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "attributes",
+      baseName: "attributes",
+      type: "IncidentServiceCreateAttributes",
+      format: "",
+    },
+    {
+      name: "relationships",
+      baseName: "relationships",
+      type: "IncidentServiceRelationships",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "IncidentServiceType",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IncidentServiceCreateData.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IncidentServiceCreateData.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

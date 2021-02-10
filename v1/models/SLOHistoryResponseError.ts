@@ -10,32 +10,36 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* A service level objective response containing the requested history.
-*/
+ * A service level objective response containing the requested history.
+ */
 export class SLOHistoryResponseError {
-    /**
-    * Human readable error.
-    */
-    'error'?: string;
+  /**
+   * Human readable error.
+   */
+  "error"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "error",
-            "baseName": "error",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "error",
+      baseName: "error",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SLOHistoryResponseError.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SLOHistoryResponseError.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

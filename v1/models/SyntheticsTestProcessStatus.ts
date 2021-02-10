@@ -10,9 +10,14 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Status of a Synthetic test.
-*/
-export type SyntheticsTestProcessStatus = "not_scheduled" | "scheduled" | "started" | "finished" | "finished_with_error" ;
+ * Status of a Synthetic test.
+ */
+export type SyntheticsTestProcessStatus =
+  | "not_scheduled"
+  | "scheduled"
+  | "started"
+  | "finished"
+  | "finished_with_error";

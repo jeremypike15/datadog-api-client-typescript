@@ -10,48 +10,52 @@
  * Do not edit the class manually.
  */
 
-import { LogsMetricCreateAttributes } from './LogsMetricCreateAttributes';
-import { LogsMetricType } from './LogsMetricType';
-import { HttpFile } from '../http/http';
+import { LogsMetricCreateAttributes } from "./LogsMetricCreateAttributes";
+import { LogsMetricType } from "./LogsMetricType";
+import { HttpFile } from "../http/http";
 
 /**
-* The new log-based metric properties.
-*/
+ * The new log-based metric properties.
+ */
 export class LogsMetricCreateData {
-    'attributes': LogsMetricCreateAttributes;
-    /**
-    * The name of the log-based metric.
-    */
-    'id': string;
-    'type': LogsMetricType;
+  "attributes": LogsMetricCreateAttributes;
+  /**
+   * The name of the log-based metric.
+   */
+  "id": string;
+  "type": LogsMetricType;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "attributes",
-            "baseName": "attributes",
-            "type": "LogsMetricCreateAttributes",
-            "format": ""
-        },
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "LogsMetricType",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "attributes",
+      baseName: "attributes",
+      type: "LogsMetricCreateAttributes",
+      format: "",
+    },
+    {
+      name: "id",
+      baseName: "id",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "LogsMetricType",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return LogsMetricCreateData.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return LogsMetricCreateData.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

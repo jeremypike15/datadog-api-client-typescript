@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* A numeric representation of the type of the service level objective (`0` for monitor, `1` for metric). Always included in service level objective responses. Ignored in create/update requests.
-*/
-export type SLOTypeNumeric = "0" | "1" ;
+ * A numeric representation of the type of the service level objective (`0` for monitor, `1` for metric). Always included in service level objective responses. Ignored in create/update requests.
+ */
+export type SLOTypeNumeric = "0" | "1";

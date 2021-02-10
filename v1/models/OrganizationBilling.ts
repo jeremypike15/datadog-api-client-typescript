@@ -10,32 +10,36 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* A JSON array of billing type.
-*/
+ * A JSON array of billing type.
+ */
 export class OrganizationBilling {
-    /**
-    * The type of billing. Only `parent_billing` is supported.
-    */
-    'type'?: string;
+  /**
+   * The type of billing. Only `parent_billing` is supported.
+   */
+  "type"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "type",
+      baseName: "type",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return OrganizationBilling.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return OrganizationBilling.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

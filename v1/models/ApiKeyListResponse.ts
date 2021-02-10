@@ -10,33 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { ApiKey } from './ApiKey';
-import { HttpFile } from '../http/http';
+import { ApiKey } from "./ApiKey";
+import { HttpFile } from "../http/http";
 
 /**
-* List of API and application keys available for a given organization.
-*/
+ * List of API and application keys available for a given organization.
+ */
 export class ApiKeyListResponse {
-    /**
-    * Array of API keys.
-    */
-    'apiKeys'?: Array<ApiKey>;
+  /**
+   * Array of API keys.
+   */
+  "apiKeys"?: Array<ApiKey>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "apiKeys",
-            "baseName": "api_keys",
-            "type": "Array<ApiKey>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "apiKeys",
+      baseName: "api_keys",
+      type: "Array<ApiKey>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return ApiKeyListResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return ApiKeyListResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

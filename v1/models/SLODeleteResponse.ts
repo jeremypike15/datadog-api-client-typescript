@@ -10,42 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* A response list of all service level objective deleted.
-*/
+ * A response list of all service level objective deleted.
+ */
 export class SLODeleteResponse {
-    /**
-    * An array containing the ID of the deleted service level objective object.
-    */
-    'data'?: Array<string>;
-    /**
-    * An dictionary containing the ID of the SLO as key and a deletion error as value.
-    */
-    'errors'?: { [key: string]: string; };
+  /**
+   * An array containing the ID of the deleted service level objective object.
+   */
+  "data"?: Array<string>;
+  /**
+   * An dictionary containing the ID of the SLO as key and a deletion error as value.
+   */
+  "errors"?: { [key: string]: string };
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "Array<string>",
-            "format": ""
-        },
-        {
-            "name": "errors",
-            "baseName": "errors",
-            "type": "{ [key: string]: string; }",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "data",
+      baseName: "data",
+      type: "Array<string>",
+      format: "",
+    },
+    {
+      name: "errors",
+      baseName: "errors",
+      type: "{ [key: string]: string; }",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SLODeleteResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SLODeleteResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

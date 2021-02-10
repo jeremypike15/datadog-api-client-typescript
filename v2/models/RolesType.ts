@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Roles type.
-*/
-export type RolesType = "roles" ;
+ * Roles type.
+ */
+export type RolesType = "roles";

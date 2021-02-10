@@ -10,30 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { IncidentServicesResponseMetaPagination } from './IncidentServicesResponseMetaPagination';
-import { HttpFile } from '../http/http';
+import { IncidentServicesResponseMetaPagination } from "./IncidentServicesResponseMetaPagination";
+import { HttpFile } from "../http/http";
 
 /**
-* The metadata object containing pagination metadata.
-*/
+ * The metadata object containing pagination metadata.
+ */
 export class IncidentServicesResponseMeta {
-    'pagination'?: IncidentServicesResponseMetaPagination;
+  "pagination"?: IncidentServicesResponseMetaPagination;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "pagination",
-            "baseName": "pagination",
-            "type": "IncidentServicesResponseMetaPagination",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "pagination",
+      baseName: "pagination",
+      type: "IncidentServicesResponseMetaPagination",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IncidentServicesResponseMeta.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IncidentServicesResponseMeta.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

@@ -10,59 +10,63 @@
  * Do not edit the class manually.
  */
 
-import { Organization } from './Organization';
-import { Permission } from './Permission';
-import { Role } from './Role';
-import { RoleAttributes } from './RoleAttributes';
-import { RoleResponseRelationships } from './RoleResponseRelationships';
-import { RolesType } from './RolesType';
-import { HttpFile } from '../http/http';
+import { Organization } from "./Organization";
+import { Permission } from "./Permission";
+import { Role } from "./Role";
+import { RoleAttributes } from "./RoleAttributes";
+import { RoleResponseRelationships } from "./RoleResponseRelationships";
+import { RolesType } from "./RolesType";
+import { HttpFile } from "../http/http";
 
 /**
-* An object related to a user.
-*/
+ * An object related to a user.
+ */
 export class UserResponseIncludedItem {
-    'attributes'?: RoleAttributes;
-    /**
-    * ID of the role.
-    */
-    'id'?: string;
-    'type': RolesType;
-    'relationships'?: RoleResponseRelationships;
+  "attributes"?: RoleAttributes;
+  /**
+   * ID of the role.
+   */
+  "id"?: string;
+  "type": RolesType;
+  "relationships"?: RoleResponseRelationships;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "attributes",
-            "baseName": "attributes",
-            "type": "RoleAttributes",
-            "format": ""
-        },
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "RolesType",
-            "format": ""
-        },
-        {
-            "name": "relationships",
-            "baseName": "relationships",
-            "type": "RoleResponseRelationships",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "attributes",
+      baseName: "attributes",
+      type: "RoleAttributes",
+      format: "",
+    },
+    {
+      name: "id",
+      baseName: "id",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "RolesType",
+      format: "",
+    },
+    {
+      name: "relationships",
+      baseName: "relationships",
+      type: "RoleResponseRelationships",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UserResponseIncludedItem.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UserResponseIncludedItem.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

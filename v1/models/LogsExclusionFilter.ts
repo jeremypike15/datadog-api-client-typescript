@@ -10,42 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Exclusion filter is defined by a query, a sampling rule, and a active/inactive toggle.
-*/
+ * Exclusion filter is defined by a query, a sampling rule, and a active/inactive toggle.
+ */
 export class LogsExclusionFilter {
-    /**
-    * Default query is `*`, meaning all logs flowing in the index would be excluded. Scope down exclusion filter to only a subset of logs with a log query.
-    */
-    'query'?: string;
-    /**
-    * Sample rate to apply to logs going through this exclusion filter, a value of 1 will exclude all logs matching the query.
-    */
-    'sampleRate': number;
+  /**
+   * Default query is `*`, meaning all logs flowing in the index would be excluded. Scope down exclusion filter to only a subset of logs with a log query.
+   */
+  "query"?: string;
+  /**
+   * Sample rate to apply to logs going through this exclusion filter, a value of 1 will exclude all logs matching the query.
+   */
+  "sampleRate": number;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "query",
-            "baseName": "query",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "sampleRate",
-            "baseName": "sample_rate",
-            "type": "number",
-            "format": "double"
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "query",
+      baseName: "query",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "sampleRate",
+      baseName: "sample_rate",
+      type: "number",
+      format: "double",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return LogsExclusionFilter.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return LogsExclusionFilter.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

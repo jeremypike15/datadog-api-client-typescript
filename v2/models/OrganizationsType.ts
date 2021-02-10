@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Organizations resource type.
-*/
-export type OrganizationsType = "orgs" ;
+ * Organizations resource type.
+ */
+export type OrganizationsType = "orgs";

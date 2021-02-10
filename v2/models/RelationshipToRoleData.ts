@@ -10,40 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { RolesType } from './RolesType';
-import { HttpFile } from '../http/http';
+import { RolesType } from "./RolesType";
+import { HttpFile } from "../http/http";
 
 /**
-* Relationship to role object.
-*/
+ * Relationship to role object.
+ */
 export class RelationshipToRoleData {
-    /**
-    * ID of the role.
-    */
-    'id'?: string;
-    'type'?: RolesType;
+  /**
+   * ID of the role.
+   */
+  "id"?: string;
+  "type"?: RolesType;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "RolesType",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "id",
+      baseName: "id",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "RolesType",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return RelationshipToRoleData.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return RelationshipToRoleData.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

@@ -10,9 +10,27 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The field to sort by.
-*/
-export type UsageAttributionSort = "api_percentage" | "snmp_usage" | "lambda_percentage" | "apm_host_usage" | "api_usage" | "container_usage" | "custom_timeseries_percentage" | "container_percentage" | "lambda_usage" | "apm_host_percentage" | "npm_host_percentage" | "browser_percentage" | "browser_usage" | "infra_host_percentage" | "snmp_percentage" | "npm_host_usage" | "infra_host_usage" | "custom_timeseries_usage" ;
+ * The field to sort by.
+ */
+export type UsageAttributionSort =
+  | "api_percentage"
+  | "snmp_usage"
+  | "lambda_percentage"
+  | "apm_host_usage"
+  | "api_usage"
+  | "container_usage"
+  | "custom_timeseries_percentage"
+  | "container_percentage"
+  | "lambda_usage"
+  | "apm_host_percentage"
+  | "npm_host_percentage"
+  | "browser_percentage"
+  | "browser_usage"
+  | "infra_host_percentage"
+  | "snmp_percentage"
+  | "npm_host_usage"
+  | "infra_host_usage"
+  | "custom_timeseries_usage";

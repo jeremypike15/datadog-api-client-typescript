@@ -10,40 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { IncidentPostmortemType } from './IncidentPostmortemType';
-import { HttpFile } from '../http/http';
+import { IncidentPostmortemType } from "./IncidentPostmortemType";
+import { HttpFile } from "../http/http";
 
 /**
-* The postmortem relationship data.
-*/
+ * The postmortem relationship data.
+ */
 export class RelationshipToIncidentPostmortemData {
-    /**
-    * A unique identifier that represents the postmortem.
-    */
-    'id': string;
-    'type': IncidentPostmortemType;
+  /**
+   * A unique identifier that represents the postmortem.
+   */
+  "id": string;
+  "type": IncidentPostmortemType;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "IncidentPostmortemType",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "id",
+      baseName: "id",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "IncidentPostmortemType",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return RelationshipToIncidentPostmortemData.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return RelationshipToIncidentPostmortemData.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

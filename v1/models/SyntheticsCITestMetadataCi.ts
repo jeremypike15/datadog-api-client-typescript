@@ -10,42 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Describe CI provider.
-*/
+ * Describe CI provider.
+ */
 export class SyntheticsCITestMetadataCi {
-    /**
-    * Name of the pipeline.
-    */
-    'pipeline'?: string;
-    /**
-    * Name of the CI provider.
-    */
-    'provider'?: string;
+  /**
+   * Name of the pipeline.
+   */
+  "pipeline"?: string;
+  /**
+   * Name of the CI provider.
+   */
+  "provider"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "pipeline",
-            "baseName": "pipeline",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "provider",
-            "baseName": "provider",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "pipeline",
+      baseName: "pipeline",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "provider",
+      baseName: "provider",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SyntheticsCITestMetadataCi.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SyntheticsCITestMetadataCi.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

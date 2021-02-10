@@ -10,23 +10,24 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* A resulting object to put the given computes in over all the matching records.
-*/
+ * A resulting object to put the given computes in over all the matching records.
+ */
 export class LogsGroupByTotal {
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [];
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-    ];
+  static getAttributeTypeMap() {
+    return LogsGroupByTotal.attributeTypeMap;
+  }
 
-    static getAttributeTypeMap() {
-        return LogsGroupByTotal.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  public constructor() {}
 }
-

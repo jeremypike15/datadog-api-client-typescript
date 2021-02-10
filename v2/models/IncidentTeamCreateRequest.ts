@@ -10,30 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { IncidentTeamCreateData } from './IncidentTeamCreateData';
-import { HttpFile } from '../http/http';
+import { IncidentTeamCreateData } from "./IncidentTeamCreateData";
+import { HttpFile } from "../http/http";
 
 /**
-* Create request with an incident team payload.
-*/
+ * Create request with an incident team payload.
+ */
 export class IncidentTeamCreateRequest {
-    'data': IncidentTeamCreateData;
+  "data": IncidentTeamCreateData;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "IncidentTeamCreateData",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "data",
+      baseName: "data",
+      type: "IncidentTeamCreateData",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IncidentTeamCreateRequest.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IncidentTeamCreateRequest.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

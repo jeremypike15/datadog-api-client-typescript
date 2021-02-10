@@ -10,30 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { ApplicationKeyCreateData } from './ApplicationKeyCreateData';
-import { HttpFile } from '../http/http';
+import { ApplicationKeyCreateData } from "./ApplicationKeyCreateData";
+import { HttpFile } from "../http/http";
 
 /**
-* Request used to create an application key.
-*/
+ * Request used to create an application key.
+ */
 export class ApplicationKeyCreateRequest {
-    'data': ApplicationKeyCreateData;
+  "data": ApplicationKeyCreateData;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "ApplicationKeyCreateData",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "data",
+      baseName: "data",
+      type: "ApplicationKeyCreateData",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return ApplicationKeyCreateRequest.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return ApplicationKeyCreateRequest.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

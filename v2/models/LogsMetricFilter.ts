@@ -10,32 +10,36 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The log-based metric filter. Logs matching this filter will be aggregated in this metric.
-*/
+ * The log-based metric filter. Logs matching this filter will be aggregated in this metric.
+ */
 export class LogsMetricFilter {
-    /**
-    * The search query - following the log search syntax.
-    */
-    'query'?: string;
+  /**
+   * The search query - following the log search syntax.
+   */
+  "query"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "query",
-            "baseName": "query",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "query",
+      baseName: "query",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return LogsMetricFilter.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return LogsMetricFilter.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

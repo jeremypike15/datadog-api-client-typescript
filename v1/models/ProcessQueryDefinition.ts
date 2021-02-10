@@ -10,62 +10,66 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The process query to use in the widget.
-*/
+ * The process query to use in the widget.
+ */
 export class ProcessQueryDefinition {
-    /**
-    * List of processes.
-    */
-    'filterBy'?: Array<string>;
-    /**
-    * Max number of items in the filter list.
-    */
-    'limit'?: number;
-    /**
-    * Your chosen metric.
-    */
-    'metric': string;
-    /**
-    * Your chosen search term.
-    */
-    'searchBy'?: string;
+  /**
+   * List of processes.
+   */
+  "filterBy"?: Array<string>;
+  /**
+   * Max number of items in the filter list.
+   */
+  "limit"?: number;
+  /**
+   * Your chosen metric.
+   */
+  "metric": string;
+  /**
+   * Your chosen search term.
+   */
+  "searchBy"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "filterBy",
-            "baseName": "filter_by",
-            "type": "Array<string>",
-            "format": ""
-        },
-        {
-            "name": "limit",
-            "baseName": "limit",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "metric",
-            "baseName": "metric",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "searchBy",
-            "baseName": "search_by",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "filterBy",
+      baseName: "filter_by",
+      type: "Array<string>",
+      format: "",
+    },
+    {
+      name: "limit",
+      baseName: "limit",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "metric",
+      baseName: "metric",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "searchBy",
+      baseName: "search_by",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return ProcessQueryDefinition.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return ProcessQueryDefinition.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

@@ -10,40 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { SecurityMonitoringFilterAction } from './SecurityMonitoringFilterAction';
-import { HttpFile } from '../http/http';
+import { SecurityMonitoringFilterAction } from "./SecurityMonitoringFilterAction";
+import { HttpFile } from "../http/http";
 
 /**
-* The rule's suppression filter.
-*/
+ * The rule's suppression filter.
+ */
 export class SecurityMonitoringFilter {
-    'action'?: SecurityMonitoringFilterAction;
-    /**
-    * Query for selecting logs to apply the filtering action.
-    */
-    'query'?: string;
+  "action"?: SecurityMonitoringFilterAction;
+  /**
+   * Query for selecting logs to apply the filtering action.
+   */
+  "query"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "action",
-            "baseName": "action",
-            "type": "SecurityMonitoringFilterAction",
-            "format": ""
-        },
-        {
-            "name": "query",
-            "baseName": "query",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "action",
+      baseName: "action",
+      type: "SecurityMonitoringFilterAction",
+      format: "",
+    },
+    {
+      name: "query",
+      baseName: "query",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SecurityMonitoringFilter.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SecurityMonitoringFilter.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

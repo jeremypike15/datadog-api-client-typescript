@@ -1,37 +1,37 @@
 import { setWorldConstructor, setDefaultTimeout } from "@cucumber/cucumber";
-import { messages } from '@cucumber/messages'
+import { messages } from "@cucumber/messages";
 import { Polly } from "@pollyjs/core";
 export class World {
-    public document?: messages.IGherkinDocument
-    public polly?: Polly
+  public document?: messages.IGherkinDocument;
+  public polly?: Polly;
 
-    public apiVersion: string = ''
-    public authMethods: any = {}
+  public apiVersion = "";
+  public authMethods: any = {};
 
-    public apiName?: string
-    public apiInstance?: any
-    public operationId: string = ''
-    public requestContext?: any
-    public method?: any
-    public response?: any
+  public apiName?: string;
+  public apiInstance?: any;
+  public operationId = "";
+  public requestContext?: any;
+  public method?: any;
+  public response?: any;
 
-    public undo: { (): void }[] = []
+  public undo: { (): void }[] = [];
 
-    public fixtures: { [key: string]: any } = {}
-    public opts: { [key: string]: any } = {}
+  public fixtures: { [key: string]: any } = {};
+  public opts: { [key: string]: any } = {};
 
-    cleanup() {
-        let undo = this.undo;
-        undo.reverse();
-        for (let clean of undo) {
-            try {
-                clean();
-            } catch (error) {
-                console.error(error);
-            }
-        }
-        this.undo = [];
+  cleanup() {
+    const undo = this.undo;
+    undo.reverse();
+    for (const clean of undo) {
+      try {
+        clean();
+      } catch (error) {
+        console.error(error);
+      }
     }
+    this.undo = [];
+  }
 }
 
 setWorldConstructor(World);

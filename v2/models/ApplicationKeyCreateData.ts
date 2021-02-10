@@ -10,38 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { ApplicationKeyCreateAttributes } from './ApplicationKeyCreateAttributes';
-import { ApplicationKeysType } from './ApplicationKeysType';
-import { HttpFile } from '../http/http';
+import { ApplicationKeyCreateAttributes } from "./ApplicationKeyCreateAttributes";
+import { ApplicationKeysType } from "./ApplicationKeysType";
+import { HttpFile } from "../http/http";
 
 /**
-* Object used to create an application key.
-*/
+ * Object used to create an application key.
+ */
 export class ApplicationKeyCreateData {
-    'attributes': ApplicationKeyCreateAttributes;
-    'type': ApplicationKeysType;
+  "attributes": ApplicationKeyCreateAttributes;
+  "type": ApplicationKeysType;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "attributes",
-            "baseName": "attributes",
-            "type": "ApplicationKeyCreateAttributes",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "ApplicationKeysType",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "attributes",
+      baseName: "attributes",
+      type: "ApplicationKeyCreateAttributes",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "ApplicationKeysType",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return ApplicationKeyCreateData.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return ApplicationKeyCreateData.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

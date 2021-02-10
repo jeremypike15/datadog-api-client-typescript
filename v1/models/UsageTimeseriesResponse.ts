@@ -10,33 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { UsageTimeseriesHour } from './UsageTimeseriesHour';
-import { HttpFile } from '../http/http';
+import { UsageTimeseriesHour } from "./UsageTimeseriesHour";
+import { HttpFile } from "../http/http";
 
 /**
-* Response containing hourly usage of timeseries.
-*/
+ * Response containing hourly usage of timeseries.
+ */
 export class UsageTimeseriesResponse {
-    /**
-    * An array of objects regarding hourly usage of timeseries.
-    */
-    'usage'?: Array<UsageTimeseriesHour>;
+  /**
+   * An array of objects regarding hourly usage of timeseries.
+   */
+  "usage"?: Array<UsageTimeseriesHour>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "usage",
-            "baseName": "usage",
-            "type": "Array<UsageTimeseriesHour>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "usage",
+      baseName: "usage",
+      type: "Array<UsageTimeseriesHour>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UsageTimeseriesResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UsageTimeseriesResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

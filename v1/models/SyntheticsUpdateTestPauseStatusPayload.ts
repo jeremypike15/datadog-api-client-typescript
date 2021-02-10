@@ -10,30 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsTestPauseStatus } from './SyntheticsTestPauseStatus';
-import { HttpFile } from '../http/http';
+import { SyntheticsTestPauseStatus } from "./SyntheticsTestPauseStatus";
+import { HttpFile } from "../http/http";
 
 /**
-* Object to start or pause an existing Synthetic test.
-*/
+ * Object to start or pause an existing Synthetic test.
+ */
 export class SyntheticsUpdateTestPauseStatusPayload {
-    'newStatus'?: SyntheticsTestPauseStatus;
+  "newStatus"?: SyntheticsTestPauseStatus;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "newStatus",
-            "baseName": "new_status",
-            "type": "SyntheticsTestPauseStatus",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "newStatus",
+      baseName: "new_status",
+      type: "SyntheticsTestPauseStatus",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SyntheticsUpdateTestPauseStatusPayload.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SyntheticsUpdateTestPauseStatusPayload.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

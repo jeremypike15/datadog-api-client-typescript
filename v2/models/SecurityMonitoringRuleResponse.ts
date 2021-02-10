@@ -10,163 +10,167 @@
  * Do not edit the class manually.
  */
 
-import { SecurityMonitoringFilter } from './SecurityMonitoringFilter';
-import { SecurityMonitoringRuleCase } from './SecurityMonitoringRuleCase';
-import { SecurityMonitoringRuleOptions } from './SecurityMonitoringRuleOptions';
-import { SecurityMonitoringRuleQuery } from './SecurityMonitoringRuleQuery';
-import { HttpFile } from '../http/http';
+import { SecurityMonitoringFilter } from "./SecurityMonitoringFilter";
+import { SecurityMonitoringRuleCase } from "./SecurityMonitoringRuleCase";
+import { SecurityMonitoringRuleOptions } from "./SecurityMonitoringRuleOptions";
+import { SecurityMonitoringRuleQuery } from "./SecurityMonitoringRuleQuery";
+import { HttpFile } from "../http/http";
 
 /**
-* Detection rule.
-*/
+ * Detection rule.
+ */
 export class SecurityMonitoringRuleResponse {
-    /**
-    * Cases for generating signals.
-    */
-    'cases'?: Array<SecurityMonitoringRuleCase>;
-    /**
-    * When the rule was created, timestamp in milliseconds.
-    */
-    'createdAt'?: number;
-    /**
-    * User ID of the user who created the rule.
-    */
-    'creationAuthorId'?: number;
-    /**
-    * Additional queries to filter matched events before they are processed.
-    */
-    'filters'?: Array<SecurityMonitoringFilter>;
-    /**
-    * The ID of the rule.
-    */
-    'id'?: string;
-    /**
-    * Whether the rule is included by default.
-    */
-    'isDefault'?: boolean;
-    /**
-    * Whether the rule has been deleted.
-    */
-    'isDeleted'?: boolean;
-    /**
-    * Whether the rule is enabled.
-    */
-    'isEnabled'?: boolean;
-    /**
-    * Message for generated signals.
-    */
-    'message'?: string;
-    /**
-    * The name of the rule.
-    */
-    'name'?: string;
-    'options'?: SecurityMonitoringRuleOptions;
-    /**
-    * Queries for selecting logs which are part of the rule.
-    */
-    'queries'?: Array<SecurityMonitoringRuleQuery>;
-    /**
-    * Tags for generated signals.
-    */
-    'tags'?: Array<string>;
-    /**
-    * The version of the rule.
-    */
-    'version'?: number;
+  /**
+   * Cases for generating signals.
+   */
+  "cases"?: Array<SecurityMonitoringRuleCase>;
+  /**
+   * When the rule was created, timestamp in milliseconds.
+   */
+  "createdAt"?: number;
+  /**
+   * User ID of the user who created the rule.
+   */
+  "creationAuthorId"?: number;
+  /**
+   * Additional queries to filter matched events before they are processed.
+   */
+  "filters"?: Array<SecurityMonitoringFilter>;
+  /**
+   * The ID of the rule.
+   */
+  "id"?: string;
+  /**
+   * Whether the rule is included by default.
+   */
+  "isDefault"?: boolean;
+  /**
+   * Whether the rule has been deleted.
+   */
+  "isDeleted"?: boolean;
+  /**
+   * Whether the rule is enabled.
+   */
+  "isEnabled"?: boolean;
+  /**
+   * Message for generated signals.
+   */
+  "message"?: string;
+  /**
+   * The name of the rule.
+   */
+  "name"?: string;
+  "options"?: SecurityMonitoringRuleOptions;
+  /**
+   * Queries for selecting logs which are part of the rule.
+   */
+  "queries"?: Array<SecurityMonitoringRuleQuery>;
+  /**
+   * Tags for generated signals.
+   */
+  "tags"?: Array<string>;
+  /**
+   * The version of the rule.
+   */
+  "version"?: number;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "cases",
-            "baseName": "cases",
-            "type": "Array<SecurityMonitoringRuleCase>",
-            "format": ""
-        },
-        {
-            "name": "createdAt",
-            "baseName": "createdAt",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "creationAuthorId",
-            "baseName": "creationAuthorId",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "filters",
-            "baseName": "filters",
-            "type": "Array<SecurityMonitoringFilter>",
-            "format": ""
-        },
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "isDefault",
-            "baseName": "isDefault",
-            "type": "boolean",
-            "format": ""
-        },
-        {
-            "name": "isDeleted",
-            "baseName": "isDeleted",
-            "type": "boolean",
-            "format": ""
-        },
-        {
-            "name": "isEnabled",
-            "baseName": "isEnabled",
-            "type": "boolean",
-            "format": ""
-        },
-        {
-            "name": "message",
-            "baseName": "message",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "options",
-            "baseName": "options",
-            "type": "SecurityMonitoringRuleOptions",
-            "format": ""
-        },
-        {
-            "name": "queries",
-            "baseName": "queries",
-            "type": "Array<SecurityMonitoringRuleQuery>",
-            "format": ""
-        },
-        {
-            "name": "tags",
-            "baseName": "tags",
-            "type": "Array<string>",
-            "format": ""
-        },
-        {
-            "name": "version",
-            "baseName": "version",
-            "type": "number",
-            "format": "int64"
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "cases",
+      baseName: "cases",
+      type: "Array<SecurityMonitoringRuleCase>",
+      format: "",
+    },
+    {
+      name: "createdAt",
+      baseName: "createdAt",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "creationAuthorId",
+      baseName: "creationAuthorId",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "filters",
+      baseName: "filters",
+      type: "Array<SecurityMonitoringFilter>",
+      format: "",
+    },
+    {
+      name: "id",
+      baseName: "id",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "isDefault",
+      baseName: "isDefault",
+      type: "boolean",
+      format: "",
+    },
+    {
+      name: "isDeleted",
+      baseName: "isDeleted",
+      type: "boolean",
+      format: "",
+    },
+    {
+      name: "isEnabled",
+      baseName: "isEnabled",
+      type: "boolean",
+      format: "",
+    },
+    {
+      name: "message",
+      baseName: "message",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "name",
+      baseName: "name",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "options",
+      baseName: "options",
+      type: "SecurityMonitoringRuleOptions",
+      format: "",
+    },
+    {
+      name: "queries",
+      baseName: "queries",
+      type: "Array<SecurityMonitoringRuleQuery>",
+      format: "",
+    },
+    {
+      name: "tags",
+      baseName: "tags",
+      type: "Array<string>",
+      format: "",
+    },
+    {
+      name: "version",
+      baseName: "version",
+      type: "number",
+      format: "int64",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SecurityMonitoringRuleResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SecurityMonitoringRuleResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

@@ -10,9 +10,18 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The frequency at which to run the Synthetic test (in seconds).
-*/
-export type SyntheticsTickInterval = "60" | "300" | "900" | "1800" | "3600" | "21600" | "43200" | "86400" | "604800" ;
+ * The frequency at which to run the Synthetic test (in seconds).
+ */
+export type SyntheticsTickInterval =
+  | "60"
+  | "300"
+  | "900"
+  | "1800"
+  | "3600"
+  | "21600"
+  | "43200"
+  | "86400"
+  | "604800";

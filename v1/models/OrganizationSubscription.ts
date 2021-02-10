@@ -10,32 +10,36 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Subscription definition.
-*/
+ * Subscription definition.
+ */
 export class OrganizationSubscription {
-    /**
-    * The subscription type. Types available are `trial`, `free`, and `pro`.
-    */
-    'type'?: string;
+  /**
+   * The subscription type. Types available are `trial`, `free`, and `pro`.
+   */
+  "type"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "type",
+      baseName: "type",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return OrganizationSubscription.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return OrganizationSubscription.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

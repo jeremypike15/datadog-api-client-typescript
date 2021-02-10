@@ -10,83 +10,87 @@
  * Do not edit the class manually.
  */
 
-import { LogQueryDefinition } from './LogQueryDefinition';
-import { ProcessQueryDefinition } from './ProcessQueryDefinition';
-import { HttpFile } from '../http/http';
+import { LogQueryDefinition } from "./LogQueryDefinition";
+import { ProcessQueryDefinition } from "./ProcessQueryDefinition";
+import { HttpFile } from "../http/http";
 
 /**
-* Updated host map.
-*/
+ * Updated host map.
+ */
 export class HostMapRequest {
-    'apmQuery'?: LogQueryDefinition;
-    'eventQuery'?: LogQueryDefinition;
-    'logQuery'?: LogQueryDefinition;
-    'networkQuery'?: LogQueryDefinition;
-    'processQuery'?: ProcessQueryDefinition;
-    /**
-    * Query definition.
-    */
-    'q'?: string;
-    'rumQuery'?: LogQueryDefinition;
-    'securityQuery'?: LogQueryDefinition;
+  "apmQuery"?: LogQueryDefinition;
+  "eventQuery"?: LogQueryDefinition;
+  "logQuery"?: LogQueryDefinition;
+  "networkQuery"?: LogQueryDefinition;
+  "processQuery"?: ProcessQueryDefinition;
+  /**
+   * Query definition.
+   */
+  "q"?: string;
+  "rumQuery"?: LogQueryDefinition;
+  "securityQuery"?: LogQueryDefinition;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "apmQuery",
-            "baseName": "apm_query",
-            "type": "LogQueryDefinition",
-            "format": ""
-        },
-        {
-            "name": "eventQuery",
-            "baseName": "event_query",
-            "type": "LogQueryDefinition",
-            "format": ""
-        },
-        {
-            "name": "logQuery",
-            "baseName": "log_query",
-            "type": "LogQueryDefinition",
-            "format": ""
-        },
-        {
-            "name": "networkQuery",
-            "baseName": "network_query",
-            "type": "LogQueryDefinition",
-            "format": ""
-        },
-        {
-            "name": "processQuery",
-            "baseName": "process_query",
-            "type": "ProcessQueryDefinition",
-            "format": ""
-        },
-        {
-            "name": "q",
-            "baseName": "q",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "rumQuery",
-            "baseName": "rum_query",
-            "type": "LogQueryDefinition",
-            "format": ""
-        },
-        {
-            "name": "securityQuery",
-            "baseName": "security_query",
-            "type": "LogQueryDefinition",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "apmQuery",
+      baseName: "apm_query",
+      type: "LogQueryDefinition",
+      format: "",
+    },
+    {
+      name: "eventQuery",
+      baseName: "event_query",
+      type: "LogQueryDefinition",
+      format: "",
+    },
+    {
+      name: "logQuery",
+      baseName: "log_query",
+      type: "LogQueryDefinition",
+      format: "",
+    },
+    {
+      name: "networkQuery",
+      baseName: "network_query",
+      type: "LogQueryDefinition",
+      format: "",
+    },
+    {
+      name: "processQuery",
+      baseName: "process_query",
+      type: "ProcessQueryDefinition",
+      format: "",
+    },
+    {
+      name: "q",
+      baseName: "q",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "rumQuery",
+      baseName: "rum_query",
+      type: "LogQueryDefinition",
+      format: "",
+    },
+    {
+      name: "securityQuery",
+      baseName: "security_query",
+      type: "LogQueryDefinition",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return HostMapRequest.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return HostMapRequest.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

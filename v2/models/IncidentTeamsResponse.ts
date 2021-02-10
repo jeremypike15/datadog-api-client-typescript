@@ -10,52 +10,56 @@
  * Do not edit the class manually.
  */
 
-import { IncidentServicesResponseMeta } from './IncidentServicesResponseMeta';
-import { IncidentTeamIncludedItems } from './IncidentTeamIncludedItems';
-import { IncidentTeamResponseData } from './IncidentTeamResponseData';
-import { HttpFile } from '../http/http';
+import { IncidentServicesResponseMeta } from "./IncidentServicesResponseMeta";
+import { IncidentTeamIncludedItems } from "./IncidentTeamIncludedItems";
+import { IncidentTeamResponseData } from "./IncidentTeamResponseData";
+import { HttpFile } from "../http/http";
 
 /**
-* Response with a list of incident team payloads.
-*/
+ * Response with a list of incident team payloads.
+ */
 export class IncidentTeamsResponse {
-    /**
-    * An array of incident teams.
-    */
-    'data': Array<IncidentTeamResponseData>;
-    /**
-    * Included related resources which the user requested.
-    */
-    'included'?: Array<IncidentTeamIncludedItems>;
-    'meta'?: IncidentServicesResponseMeta;
+  /**
+   * An array of incident teams.
+   */
+  "data": Array<IncidentTeamResponseData>;
+  /**
+   * Included related resources which the user requested.
+   */
+  "included"?: Array<IncidentTeamIncludedItems>;
+  "meta"?: IncidentServicesResponseMeta;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "Array<IncidentTeamResponseData>",
-            "format": ""
-        },
-        {
-            "name": "included",
-            "baseName": "included",
-            "type": "Array<IncidentTeamIncludedItems>",
-            "format": ""
-        },
-        {
-            "name": "meta",
-            "baseName": "meta",
-            "type": "IncidentServicesResponseMeta",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "data",
+      baseName: "data",
+      type: "Array<IncidentTeamResponseData>",
+      format: "",
+    },
+    {
+      name: "included",
+      baseName: "included",
+      type: "Array<IncidentTeamIncludedItems>",
+      format: "",
+    },
+    {
+      name: "meta",
+      baseName: "meta",
+      type: "IncidentServicesResponseMeta",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IncidentTeamsResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IncidentTeamsResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

@@ -10,49 +10,53 @@
  * Do not edit the class manually.
  */
 
-import { SecurityMonitoringSignal } from './SecurityMonitoringSignal';
-import { SecurityMonitoringSignalsListResponseLinks } from './SecurityMonitoringSignalsListResponseLinks';
-import { SecurityMonitoringSignalsListResponseMeta } from './SecurityMonitoringSignalsListResponseMeta';
-import { HttpFile } from '../http/http';
+import { SecurityMonitoringSignal } from "./SecurityMonitoringSignal";
+import { SecurityMonitoringSignalsListResponseLinks } from "./SecurityMonitoringSignalsListResponseLinks";
+import { SecurityMonitoringSignalsListResponseMeta } from "./SecurityMonitoringSignalsListResponseMeta";
+import { HttpFile } from "../http/http";
 
 /**
-* The response object with all security signals matching the request and pagination information.
-*/
+ * The response object with all security signals matching the request and pagination information.
+ */
 export class SecurityMonitoringSignalsListResponse {
-    /**
-    * An array of security signals matching the request.
-    */
-    'data'?: Array<SecurityMonitoringSignal>;
-    'links'?: SecurityMonitoringSignalsListResponseLinks;
-    'meta'?: SecurityMonitoringSignalsListResponseMeta;
+  /**
+   * An array of security signals matching the request.
+   */
+  "data"?: Array<SecurityMonitoringSignal>;
+  "links"?: SecurityMonitoringSignalsListResponseLinks;
+  "meta"?: SecurityMonitoringSignalsListResponseMeta;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "Array<SecurityMonitoringSignal>",
-            "format": ""
-        },
-        {
-            "name": "links",
-            "baseName": "links",
-            "type": "SecurityMonitoringSignalsListResponseLinks",
-            "format": ""
-        },
-        {
-            "name": "meta",
-            "baseName": "meta",
-            "type": "SecurityMonitoringSignalsListResponseMeta",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "data",
+      baseName: "data",
+      type: "Array<SecurityMonitoringSignal>",
+      format: "",
+    },
+    {
+      name: "links",
+      baseName: "links",
+      type: "SecurityMonitoringSignalsListResponseLinks",
+      format: "",
+    },
+    {
+      name: "meta",
+      baseName: "meta",
+      type: "SecurityMonitoringSignalsListResponseMeta",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SecurityMonitoringSignalsListResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SecurityMonitoringSignalsListResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

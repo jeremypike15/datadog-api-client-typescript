@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Size to use to display an event.
-*/
-export type WidgetEventSize = "s" | "l" ;
+ * Size to use to display an event.
+ */
+export type WidgetEventSize = "s" | "l";

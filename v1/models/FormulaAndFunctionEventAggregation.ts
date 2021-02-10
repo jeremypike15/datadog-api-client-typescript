@@ -10,9 +10,20 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Aggregation methods for event platform queries.
-*/
-export type FormulaAndFunctionEventAggregation = "count" | "cardinality" | "pc75" | "pc90" | "pc95" | "pc98" | "pc99" | "sum" | "min" | "max" | "avg" ;
+ * Aggregation methods for event platform queries.
+ */
+export type FormulaAndFunctionEventAggregation =
+  | "count"
+  | "cardinality"
+  | "pc75"
+  | "pc90"
+  | "pc95"
+  | "pc98"
+  | "pc99"
+  | "sum"
+  | "min"
+  | "max"
+  | "avg";

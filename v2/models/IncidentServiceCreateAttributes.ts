@@ -10,32 +10,36 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The incident service's attributes for a create request.
-*/
+ * The incident service's attributes for a create request.
+ */
 export class IncidentServiceCreateAttributes {
-    /**
-    * Name of the incident service.
-    */
-    'name': string;
+  /**
+   * Name of the incident service.
+   */
+  "name": string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "name",
+      baseName: "name",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IncidentServiceCreateAttributes.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IncidentServiceCreateAttributes.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

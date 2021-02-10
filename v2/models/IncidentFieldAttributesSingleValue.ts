@@ -10,40 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { IncidentFieldAttributesSingleValueType } from './IncidentFieldAttributesSingleValueType';
-import { HttpFile } from '../http/http';
+import { IncidentFieldAttributesSingleValueType } from "./IncidentFieldAttributesSingleValueType";
+import { HttpFile } from "../http/http";
 
 /**
-* A field with a single value selected.
-*/
+ * A field with a single value selected.
+ */
 export class IncidentFieldAttributesSingleValue {
-    'type'?: IncidentFieldAttributesSingleValueType;
-    /**
-    * The single value selected for this field.
-    */
-    'value'?: string;
+  "type"?: IncidentFieldAttributesSingleValueType;
+  /**
+   * The single value selected for this field.
+   */
+  "value"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "IncidentFieldAttributesSingleValueType",
-            "format": ""
-        },
-        {
-            "name": "value",
-            "baseName": "value",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "type",
+      baseName: "type",
+      type: "IncidentFieldAttributesSingleValueType",
+      format: "",
+    },
+    {
+      name: "value",
+      baseName: "value",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IncidentFieldAttributesSingleValue.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IncidentFieldAttributesSingleValue.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

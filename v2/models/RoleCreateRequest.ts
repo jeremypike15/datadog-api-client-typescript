@@ -10,30 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { RoleCreateData } from './RoleCreateData';
-import { HttpFile } from '../http/http';
+import { RoleCreateData } from "./RoleCreateData";
+import { HttpFile } from "../http/http";
 
 /**
-* Create a role.
-*/
+ * Create a role.
+ */
 export class RoleCreateRequest {
-    'data': RoleCreateData;
+  "data": RoleCreateData;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "RoleCreateData",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "data",
+      baseName: "data",
+      type: "RoleCreateData",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return RoleCreateRequest.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return RoleCreateRequest.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

@@ -10,62 +10,66 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Attributes of a user invitation.
-*/
+ * Attributes of a user invitation.
+ */
 export class UserInvitationDataAttributes {
-    /**
-    * Creation time of the user invitation.
-    */
-    'createdAt'?: Date;
-    /**
-    * Time of invitation expiration.
-    */
-    'expiresAt'?: Date;
-    /**
-    * Type of invitation.
-    */
-    'inviteType'?: string;
-    /**
-    * UUID of the user invitation.
-    */
-    'uuid'?: string;
+  /**
+   * Creation time of the user invitation.
+   */
+  "createdAt"?: Date;
+  /**
+   * Time of invitation expiration.
+   */
+  "expiresAt"?: Date;
+  /**
+   * Type of invitation.
+   */
+  "inviteType"?: string;
+  /**
+   * UUID of the user invitation.
+   */
+  "uuid"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "createdAt",
-            "baseName": "created_at",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "expiresAt",
-            "baseName": "expires_at",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "inviteType",
-            "baseName": "invite_type",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "uuid",
-            "baseName": "uuid",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "createdAt",
+      baseName: "created_at",
+      type: "Date",
+      format: "date-time",
+    },
+    {
+      name: "expiresAt",
+      baseName: "expires_at",
+      type: "Date",
+      format: "date-time",
+    },
+    {
+      name: "inviteType",
+      baseName: "invite_type",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "uuid",
+      baseName: "uuid",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UserInvitationDataAttributes.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UserInvitationDataAttributes.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

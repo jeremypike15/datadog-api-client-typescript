@@ -10,38 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { UserInvitationRelationships } from './UserInvitationRelationships';
-import { UserInvitationsType } from './UserInvitationsType';
-import { HttpFile } from '../http/http';
+import { UserInvitationRelationships } from "./UserInvitationRelationships";
+import { UserInvitationsType } from "./UserInvitationsType";
+import { HttpFile } from "../http/http";
 
 /**
-* Object to create a user invitation.
-*/
+ * Object to create a user invitation.
+ */
 export class UserInvitationData {
-    'relationships': UserInvitationRelationships;
-    'type': UserInvitationsType;
+  "relationships": UserInvitationRelationships;
+  "type": UserInvitationsType;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "relationships",
-            "baseName": "relationships",
-            "type": "UserInvitationRelationships",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "UserInvitationsType",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "relationships",
+      baseName: "relationships",
+      type: "UserInvitationRelationships",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "UserInvitationsType",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UserInvitationData.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UserInvitationData.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

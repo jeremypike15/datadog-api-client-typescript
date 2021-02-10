@@ -10,57 +10,61 @@
  * Do not edit the class manually.
  */
 
-import { User } from './User';
-import { UserAttributes } from './UserAttributes';
-import { UserResponseRelationships } from './UserResponseRelationships';
-import { UsersType } from './UsersType';
-import { HttpFile } from '../http/http';
+import { User } from "./User";
+import { UserAttributes } from "./UserAttributes";
+import { UserResponseRelationships } from "./UserResponseRelationships";
+import { UsersType } from "./UsersType";
+import { HttpFile } from "../http/http";
 
 /**
-* An object related to an API key.
-*/
+ * An object related to an API key.
+ */
 export class APIKeyResponseIncludedItem {
-    'attributes'?: UserAttributes;
-    /**
-    * ID of the user.
-    */
-    'id'?: string;
-    'relationships'?: UserResponseRelationships;
-    'type'?: UsersType;
+  "attributes"?: UserAttributes;
+  /**
+   * ID of the user.
+   */
+  "id"?: string;
+  "relationships"?: UserResponseRelationships;
+  "type"?: UsersType;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "attributes",
-            "baseName": "attributes",
-            "type": "UserAttributes",
-            "format": ""
-        },
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "relationships",
-            "baseName": "relationships",
-            "type": "UserResponseRelationships",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "UsersType",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "attributes",
+      baseName: "attributes",
+      type: "UserAttributes",
+      format: "",
+    },
+    {
+      name: "id",
+      baseName: "id",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "relationships",
+      baseName: "relationships",
+      type: "UserResponseRelationships",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "UsersType",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return APIKeyResponseIncludedItem.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return APIKeyResponseIncludedItem.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

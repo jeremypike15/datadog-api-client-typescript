@@ -10,41 +10,45 @@
  * Do not edit the class manually.
  */
 
-import { UsageAttributionAggregatesBody } from './UsageAttributionAggregatesBody';
-import { UsageAttributionPagination } from './UsageAttributionPagination';
-import { HttpFile } from '../http/http';
+import { UsageAttributionAggregatesBody } from "./UsageAttributionAggregatesBody";
+import { UsageAttributionPagination } from "./UsageAttributionPagination";
+import { HttpFile } from "../http/http";
 
 /**
-* The object containing document metadata.
-*/
+ * The object containing document metadata.
+ */
 export class UsageAttributionMetadata {
-    /**
-    * An array of available aggregates.
-    */
-    'aggregates'?: Array<UsageAttributionAggregatesBody>;
-    'pagination'?: UsageAttributionPagination;
+  /**
+   * An array of available aggregates.
+   */
+  "aggregates"?: Array<UsageAttributionAggregatesBody>;
+  "pagination"?: UsageAttributionPagination;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "aggregates",
-            "baseName": "aggregates",
-            "type": "Array<UsageAttributionAggregatesBody>",
-            "format": ""
-        },
-        {
-            "name": "pagination",
-            "baseName": "pagination",
-            "type": "UsageAttributionPagination",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "aggregates",
+      baseName: "aggregates",
+      type: "Array<UsageAttributionAggregatesBody>",
+      format: "",
+    },
+    {
+      name: "pagination",
+      baseName: "pagination",
+      type: "UsageAttributionPagination",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UsageAttributionMetadata.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UsageAttributionMetadata.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

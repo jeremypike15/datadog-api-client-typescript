@@ -10,9 +10,18 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* ID of the device the Synthetics monitor is running on. Same as `SyntheticsDeviceID`.
-*/
-export type MonitorDeviceID = "laptop_large" | "tablet" | "mobile_small" | "chrome.laptop_large" | "chrome.tablet" | "chrome.mobile_small" | "firefox.laptop_large" | "firefox.tablet" | "firefox.mobile_small" ;
+ * ID of the device the Synthetics monitor is running on. Same as `SyntheticsDeviceID`.
+ */
+export type MonitorDeviceID =
+  | "laptop_large"
+  | "tablet"
+  | "mobile_small"
+  | "chrome.laptop_large"
+  | "chrome.tablet"
+  | "chrome.mobile_small"
+  | "firefox.laptop_large"
+  | "firefox.tablet"
+  | "firefox.mobile_small";

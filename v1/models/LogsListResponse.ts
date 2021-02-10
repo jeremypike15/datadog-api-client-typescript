@@ -10,53 +10,57 @@
  * Do not edit the class manually.
  */
 
-import { Log } from './Log';
-import { HttpFile } from '../http/http';
+import { Log } from "./Log";
+import { HttpFile } from "../http/http";
 
 /**
-* Response object with all logs matching the request and pagination information.
-*/
+ * Response object with all logs matching the request and pagination information.
+ */
 export class LogsListResponse {
-    /**
-    * Array of logs matching the request and the `nextLogId` if sent.
-    */
-    'logs'?: Array<Log>;
-    /**
-    * Hash identifier of the next log to return in the list. This parameter is used for the pagination feature.
-    */
-    'nextLogId'?: string;
-    /**
-    * Status of the response.
-    */
-    'status'?: string;
+  /**
+   * Array of logs matching the request and the `nextLogId` if sent.
+   */
+  "logs"?: Array<Log>;
+  /**
+   * Hash identifier of the next log to return in the list. This parameter is used for the pagination feature.
+   */
+  "nextLogId"?: string;
+  /**
+   * Status of the response.
+   */
+  "status"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "logs",
-            "baseName": "logs",
-            "type": "Array<Log>",
-            "format": ""
-        },
-        {
-            "name": "nextLogId",
-            "baseName": "nextLogId",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "status",
-            "baseName": "status",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "logs",
+      baseName: "logs",
+      type: "Array<Log>",
+      format: "",
+    },
+    {
+      name: "nextLogId",
+      baseName: "nextLogId",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "status",
+      baseName: "status",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return LogsListResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return LogsListResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

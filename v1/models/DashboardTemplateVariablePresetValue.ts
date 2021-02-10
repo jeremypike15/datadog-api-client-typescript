@@ -10,42 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Template variables saved views.
-*/
+ * Template variables saved views.
+ */
 export class DashboardTemplateVariablePresetValue {
-    /**
-    * The name of the variable.
-    */
-    'name'?: string;
-    /**
-    * The value of the template variable within the saved view.
-    */
-    'value'?: string;
+  /**
+   * The name of the variable.
+   */
+  "name"?: string;
+  /**
+   * The value of the template variable within the saved view.
+   */
+  "value"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "value",
-            "baseName": "value",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "name",
+      baseName: "name",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "value",
+      baseName: "value",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return DashboardTemplateVariablePresetValue.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return DashboardTemplateVariablePresetValue.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

@@ -10,96 +10,100 @@
  * Do not edit the class manually.
  */
 
-import { NoteWidgetDefinitionType } from './NoteWidgetDefinitionType';
-import { WidgetTextAlign } from './WidgetTextAlign';
-import { WidgetTickEdge } from './WidgetTickEdge';
-import { HttpFile } from '../http/http';
+import { NoteWidgetDefinitionType } from "./NoteWidgetDefinitionType";
+import { WidgetTextAlign } from "./WidgetTextAlign";
+import { WidgetTickEdge } from "./WidgetTickEdge";
+import { HttpFile } from "../http/http";
 
 /**
-* The notes and links widget is similar to free text widget, but allows for more formatting options.
-*/
+ * The notes and links widget is similar to free text widget, but allows for more formatting options.
+ */
 export class NoteWidgetDefinition {
-    /**
-    * Background color of the note.
-    */
-    'backgroundColor'?: string;
-    /**
-    * Content of the note.
-    */
-    'content': string;
-    /**
-    * Size of the text.
-    */
-    'fontSize'?: string;
-    /**
-    * Whether to show a tick or not.
-    */
-    'showTick'?: boolean;
-    'textAlign'?: WidgetTextAlign;
-    'tickEdge'?: WidgetTickEdge;
-    /**
-    * Where to position the tick on an edge.
-    */
-    'tickPos'?: string;
-    'type': NoteWidgetDefinitionType;
+  /**
+   * Background color of the note.
+   */
+  "backgroundColor"?: string;
+  /**
+   * Content of the note.
+   */
+  "content": string;
+  /**
+   * Size of the text.
+   */
+  "fontSize"?: string;
+  /**
+   * Whether to show a tick or not.
+   */
+  "showTick"?: boolean;
+  "textAlign"?: WidgetTextAlign;
+  "tickEdge"?: WidgetTickEdge;
+  /**
+   * Where to position the tick on an edge.
+   */
+  "tickPos"?: string;
+  "type": NoteWidgetDefinitionType;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "backgroundColor",
-            "baseName": "background_color",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "content",
-            "baseName": "content",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "fontSize",
-            "baseName": "font_size",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "showTick",
-            "baseName": "show_tick",
-            "type": "boolean",
-            "format": ""
-        },
-        {
-            "name": "textAlign",
-            "baseName": "text_align",
-            "type": "WidgetTextAlign",
-            "format": ""
-        },
-        {
-            "name": "tickEdge",
-            "baseName": "tick_edge",
-            "type": "WidgetTickEdge",
-            "format": ""
-        },
-        {
-            "name": "tickPos",
-            "baseName": "tick_pos",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "NoteWidgetDefinitionType",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "backgroundColor",
+      baseName: "background_color",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "content",
+      baseName: "content",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "fontSize",
+      baseName: "font_size",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "showTick",
+      baseName: "show_tick",
+      type: "boolean",
+      format: "",
+    },
+    {
+      name: "textAlign",
+      baseName: "text_align",
+      type: "WidgetTextAlign",
+      format: "",
+    },
+    {
+      name: "tickEdge",
+      baseName: "tick_edge",
+      type: "WidgetTickEdge",
+      format: "",
+    },
+    {
+      name: "tickPos",
+      baseName: "tick_pos",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "NoteWidgetDefinitionType",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return NoteWidgetDefinition.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return NoteWidgetDefinition.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

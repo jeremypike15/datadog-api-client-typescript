@@ -10,42 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Description of errors.
-*/
+ * Description of errors.
+ */
 export class AWSLogsAsyncResponseErrors {
-    /**
-    * Code properties
-    */
-    'code'?: string;
-    /**
-    * Message content.
-    */
-    'message'?: string;
+  /**
+   * Code properties
+   */
+  "code"?: string;
+  /**
+   * Message content.
+   */
+  "message"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "code",
-            "baseName": "code",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "message",
-            "baseName": "message",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "code",
+      baseName: "code",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "message",
+      baseName: "message",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return AWSLogsAsyncResponseErrors.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return AWSLogsAsyncResponseErrors.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

@@ -10,48 +10,52 @@
  * Do not edit the class manually.
  */
 
-import { WidgetDefinition } from './WidgetDefinition';
-import { WidgetLayout } from './WidgetLayout';
-import { HttpFile } from '../http/http';
+import { WidgetDefinition } from "./WidgetDefinition";
+import { WidgetLayout } from "./WidgetLayout";
+import { HttpFile } from "../http/http";
 
 /**
-* Information about widget.  Note: The `layout` property is required for widgets in dashboards with `free` `layout_type` only.
-*/
+ * Information about widget.  Note: The `layout` property is required for widgets in dashboards with `free` `layout_type` only.
+ */
 export class Widget {
-    'definition': WidgetDefinition;
-    /**
-    * ID of the widget.
-    */
-    'id'?: number;
-    'layout'?: WidgetLayout;
+  "definition": WidgetDefinition;
+  /**
+   * ID of the widget.
+   */
+  "id"?: number;
+  "layout"?: WidgetLayout;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "definition",
-            "baseName": "definition",
-            "type": "WidgetDefinition",
-            "format": ""
-        },
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "layout",
-            "baseName": "layout",
-            "type": "WidgetLayout",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "definition",
+      baseName: "definition",
+      type: "WidgetDefinition",
+      format: "",
+    },
+    {
+      name: "id",
+      baseName: "id",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "layout",
+      baseName: "layout",
+      type: "WidgetLayout",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return Widget.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return Widget.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

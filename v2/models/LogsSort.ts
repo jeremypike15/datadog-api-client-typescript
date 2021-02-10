@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Sort parameters when querying logs.
-*/
-export type LogsSort = "timestamp" | "-timestamp" ;
+ * Sort parameters when querying logs.
+ */
+export type LogsSort = "timestamp" | "-timestamp";

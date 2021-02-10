@@ -10,33 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { UsageIncidentManagementHour } from './UsageIncidentManagementHour';
-import { HttpFile } from '../http/http';
+import { UsageIncidentManagementHour } from "./UsageIncidentManagementHour";
+import { HttpFile } from "../http/http";
 
 /**
-* Response containing the incident management usage for each hour for a given organization.
-*/
+ * Response containing the incident management usage for each hour for a given organization.
+ */
 export class UsageIncidentManagementResponse {
-    /**
-    * Get hourly usage for incident management.
-    */
-    'usage'?: Array<UsageIncidentManagementHour>;
+  /**
+   * Get hourly usage for incident management.
+   */
+  "usage"?: Array<UsageIncidentManagementHour>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "usage",
-            "baseName": "usage",
-            "type": "Array<UsageIncidentManagementHour>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "usage",
+      baseName: "usage",
+      type: "Array<UsageIncidentManagementHour>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UsageIncidentManagementResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UsageIncidentManagementResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

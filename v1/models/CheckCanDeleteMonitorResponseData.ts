@@ -10,32 +10,36 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Wrapper object with the list of monitor IDs.
-*/
+ * Wrapper object with the list of monitor IDs.
+ */
 export class CheckCanDeleteMonitorResponseData {
-    /**
-    * An array of of Monitor IDs that can be safely deleted.
-    */
-    'ok'?: Array<number>;
+  /**
+   * An array of of Monitor IDs that can be safely deleted.
+   */
+  "ok"?: Array<number>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "ok",
-            "baseName": "ok",
-            "type": "Array<number>",
-            "format": "int64"
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "ok",
+      baseName: "ok",
+      type: "Array<number>",
+      format: "int64",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return CheckCanDeleteMonitorResponseData.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return CheckCanDeleteMonitorResponseData.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

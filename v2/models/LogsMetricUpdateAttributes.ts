@@ -10,41 +10,45 @@
  * Do not edit the class manually.
  */
 
-import { LogsMetricFilter } from './LogsMetricFilter';
-import { LogsMetricGroupBy } from './LogsMetricGroupBy';
-import { HttpFile } from '../http/http';
+import { LogsMetricFilter } from "./LogsMetricFilter";
+import { LogsMetricGroupBy } from "./LogsMetricGroupBy";
+import { HttpFile } from "../http/http";
 
 /**
-* The log-based metric properties that will be updated.
-*/
+ * The log-based metric properties that will be updated.
+ */
 export class LogsMetricUpdateAttributes {
-    'filter'?: LogsMetricFilter;
-    /**
-    * The rules for the group by.
-    */
-    'groupBy'?: Array<LogsMetricGroupBy>;
+  "filter"?: LogsMetricFilter;
+  /**
+   * The rules for the group by.
+   */
+  "groupBy"?: Array<LogsMetricGroupBy>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "filter",
-            "baseName": "filter",
-            "type": "LogsMetricFilter",
-            "format": ""
-        },
-        {
-            "name": "groupBy",
-            "baseName": "group_by",
-            "type": "Array<LogsMetricGroupBy>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "filter",
+      baseName: "filter",
+      type: "LogsMetricFilter",
+      format: "",
+    },
+    {
+      name: "groupBy",
+      baseName: "group_by",
+      type: "Array<LogsMetricGroupBy>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return LogsMetricUpdateAttributes.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return LogsMetricUpdateAttributes.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

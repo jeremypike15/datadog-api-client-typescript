@@ -10,19 +10,16 @@
  * Do not edit the class manually.
  */
 
-import { LogsAggregateBucketValueTimeseriesPoint } from './LogsAggregateBucketValueTimeseriesPoint';
-import { HttpFile } from '../http/http';
+import { LogsAggregateBucketValueTimeseriesPoint } from "./LogsAggregateBucketValueTimeseriesPoint";
+import { HttpFile } from "../http/http";
 
 /**
-* A timeseries array
-*/
+ * A timeseries array
+ */
 export class LogsAggregateBucketValueTimeseries extends Array<LogsAggregateBucketValueTimeseriesPoint> {
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly discriminator: string | undefined = undefined;
-
-    
-    public constructor() {
-        super();
-    }
+  public constructor() {
+    super();
+  }
 }
-

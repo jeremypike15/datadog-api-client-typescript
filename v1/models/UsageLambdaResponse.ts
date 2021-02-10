@@ -10,33 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { UsageLambdaHour } from './UsageLambdaHour';
-import { HttpFile } from '../http/http';
+import { UsageLambdaHour } from "./UsageLambdaHour";
+import { HttpFile } from "../http/http";
 
 /**
-* Response containing the number of lambda functions and sum of the invocations of all lambda functions for each hour for a given organization.
-*/
+ * Response containing the number of lambda functions and sum of the invocations of all lambda functions for each hour for a given organization.
+ */
 export class UsageLambdaResponse {
-    /**
-    * Get hourly usage for Lambda.
-    */
-    'usage'?: Array<UsageLambdaHour>;
+  /**
+   * Get hourly usage for Lambda.
+   */
+  "usage"?: Array<UsageLambdaHour>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "usage",
-            "baseName": "usage",
-            "type": "Array<UsageLambdaHour>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "usage",
+      baseName: "usage",
+      type: "Array<UsageLambdaHour>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UsageLambdaResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UsageLambdaResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

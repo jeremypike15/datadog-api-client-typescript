@@ -10,49 +10,53 @@
  * Do not edit the class manually.
  */
 
-import { LogsMetricCompute } from './LogsMetricCompute';
-import { LogsMetricFilter } from './LogsMetricFilter';
-import { LogsMetricGroupBy } from './LogsMetricGroupBy';
-import { HttpFile } from '../http/http';
+import { LogsMetricCompute } from "./LogsMetricCompute";
+import { LogsMetricFilter } from "./LogsMetricFilter";
+import { LogsMetricGroupBy } from "./LogsMetricGroupBy";
+import { HttpFile } from "../http/http";
 
 /**
-* The object describing the Datadog log-based metric to create.
-*/
+ * The object describing the Datadog log-based metric to create.
+ */
 export class LogsMetricCreateAttributes {
-    'compute': LogsMetricCompute;
-    'filter'?: LogsMetricFilter;
-    /**
-    * The rules for the group by.
-    */
-    'groupBy'?: Array<LogsMetricGroupBy>;
+  "compute": LogsMetricCompute;
+  "filter"?: LogsMetricFilter;
+  /**
+   * The rules for the group by.
+   */
+  "groupBy"?: Array<LogsMetricGroupBy>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "compute",
-            "baseName": "compute",
-            "type": "LogsMetricCompute",
-            "format": ""
-        },
-        {
-            "name": "filter",
-            "baseName": "filter",
-            "type": "LogsMetricFilter",
-            "format": ""
-        },
-        {
-            "name": "groupBy",
-            "baseName": "group_by",
-            "type": "Array<LogsMetricGroupBy>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "compute",
+      baseName: "compute",
+      type: "LogsMetricCompute",
+      format: "",
+    },
+    {
+      name: "filter",
+      baseName: "filter",
+      type: "LogsMetricFilter",
+      format: "",
+    },
+    {
+      name: "groupBy",
+      baseName: "group_by",
+      type: "Array<LogsMetricGroupBy>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return LogsMetricCreateAttributes.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return LogsMetricCreateAttributes.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

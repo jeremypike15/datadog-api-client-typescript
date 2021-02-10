@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Method for sorting event platform results.
-*/
-export type FormulaAndFunctionEventsSortType = "alphabetical" | "measure" ;
+ * Method for sorting event platform results.
+ */
+export type FormulaAndFunctionEventsSortType = "alphabetical" | "measure";

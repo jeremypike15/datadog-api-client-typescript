@@ -10,33 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { UsageProfilingHour } from './UsageProfilingHour';
-import { HttpFile } from '../http/http';
+import { UsageProfilingHour } from "./UsageProfilingHour";
+import { HttpFile } from "../http/http";
 
 /**
-* Response containing the number of profiled hosts for each hour for a given organization.
-*/
+ * Response containing the number of profiled hosts for each hour for a given organization.
+ */
 export class UsageProfilingResponse {
-    /**
-    * Get hourly usage for profiled hosts.
-    */
-    'usage'?: Array<UsageProfilingHour>;
+  /**
+   * Get hourly usage for profiled hosts.
+   */
+  "usage"?: Array<UsageProfilingHour>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "usage",
-            "baseName": "usage",
-            "type": "Array<UsageProfilingHour>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "usage",
+      baseName: "usage",
+      type: "Array<UsageProfilingHour>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UsageProfilingResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UsageProfilingResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

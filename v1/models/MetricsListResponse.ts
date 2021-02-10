@@ -10,42 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Object listing all metric names stored by Datadog since a given time.
-*/
+ * Object listing all metric names stored by Datadog since a given time.
+ */
 export class MetricsListResponse {
-    /**
-    * Time when the metrics were active, seconds since the Unix epoch.
-    */
-    'from'?: string;
-    /**
-    * List of metric names.
-    */
-    'metrics'?: Array<string>;
+  /**
+   * Time when the metrics were active, seconds since the Unix epoch.
+   */
+  "from"?: string;
+  /**
+   * List of metric names.
+   */
+  "metrics"?: Array<string>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "from",
-            "baseName": "from",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "metrics",
-            "baseName": "metrics",
-            "type": "Array<string>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "from",
+      baseName: "from",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "metrics",
+      baseName: "metrics",
+      type: "Array<string>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return MetricsListResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return MetricsListResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

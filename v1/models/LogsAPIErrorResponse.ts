@@ -10,30 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { LogsAPIError } from './LogsAPIError';
-import { HttpFile } from '../http/http';
+import { LogsAPIError } from "./LogsAPIError";
+import { HttpFile } from "../http/http";
 
 /**
-* Response returned by the Logs API when errors occur.
-*/
+ * Response returned by the Logs API when errors occur.
+ */
 export class LogsAPIErrorResponse {
-    'error'?: LogsAPIError;
+  "error"?: LogsAPIError;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "error",
-            "baseName": "error",
-            "type": "LogsAPIError",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "error",
+      baseName: "error",
+      type: "LogsAPIError",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return LogsAPIErrorResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return LogsAPIErrorResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

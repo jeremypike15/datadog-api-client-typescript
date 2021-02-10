@@ -10,9 +10,14 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The type of the dashboard.
-*/
-export type DashboardType = "custom_timeboard" | "custom_screenboard" | "integration_screenboard" | "integration_timeboard" | "host_timeboard" ;
+ * The type of the dashboard.
+ */
+export type DashboardType =
+  | "custom_timeboard"
+  | "custom_screenboard"
+  | "integration_screenboard"
+  | "integration_timeboard"
+  | "host_timeboard";

@@ -10,9 +10,13 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The aggregation type.
-*/
-export type SecurityMonitoringRuleQueryAggregation = "count" | "cardinality" | "sum" | "max" ;
+ * The aggregation type.
+ */
+export type SecurityMonitoringRuleQueryAggregation =
+  | "count"
+  | "cardinality"
+  | "sum"
+  | "max";

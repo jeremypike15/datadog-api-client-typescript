@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Timeseries or Scalar response. This feature is currently in beta.
-*/
-export type FormulaAndFunctionResponseFormat = "timeseries" | "scalar" ;
+ * Timeseries or Scalar response. This feature is currently in beta.
+ */
+export type FormulaAndFunctionResponseFormat = "timeseries" | "scalar";

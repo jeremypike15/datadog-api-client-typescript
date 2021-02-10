@@ -10,42 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* A timeseries point
-*/
+ * A timeseries point
+ */
 export class LogsAggregateBucketValueTimeseriesPoint {
-    /**
-    * The time value for this point
-    */
-    'time'?: string;
-    /**
-    * The value for this point
-    */
-    'value'?: number;
+  /**
+   * The time value for this point
+   */
+  "time"?: string;
+  /**
+   * The value for this point
+   */
+  "value"?: number;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "time",
-            "baseName": "time",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "value",
-            "baseName": "value",
-            "type": "number",
-            "format": "double"
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "time",
+      baseName: "time",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "value",
+      baseName: "value",
+      type: "number",
+      format: "double",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return LogsAggregateBucketValueTimeseriesPoint.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return LogsAggregateBucketValueTimeseriesPoint.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

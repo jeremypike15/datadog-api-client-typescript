@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Incident resource type.
-*/
-export type IncidentType = "incidents" ;
+ * Incident resource type.
+ */
+export type IncidentType = "incidents";

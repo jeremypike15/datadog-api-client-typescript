@@ -10,9 +10,13 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Timeframe used for the change comparison.
-*/
-export type WidgetCompareTo = "hour_before" | "day_before" | "week_before" | "month_before" ;
+ * Timeframe used for the change comparison.
+ */
+export type WidgetCompareTo =
+  | "hour_before"
+  | "day_before"
+  | "week_before"
+  | "month_before";

@@ -10,40 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { AWSNamespace } from './AWSNamespace';
-import { HttpFile } from '../http/http';
+import { AWSNamespace } from "./AWSNamespace";
+import { HttpFile } from "../http/http";
 
 /**
-* The objects used to delete an AWS tag filter entry.
-*/
+ * The objects used to delete an AWS tag filter entry.
+ */
 export class AWSTagFilterDeleteRequest {
-    /**
-    * The unique identifier of your AWS account.
-    */
-    'awsAccountIdentifier'?: string;
-    'namespace'?: AWSNamespace;
+  /**
+   * The unique identifier of your AWS account.
+   */
+  "awsAccountIdentifier"?: string;
+  "namespace"?: AWSNamespace;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "awsAccountIdentifier",
-            "baseName": "aws_account_identifier",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "namespace",
-            "baseName": "namespace",
-            "type": "AWSNamespace",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "awsAccountIdentifier",
+      baseName: "aws_account_identifier",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "namespace",
+      baseName: "namespace",
+      type: "AWSNamespace",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return AWSTagFilterDeleteRequest.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return AWSTagFilterDeleteRequest.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

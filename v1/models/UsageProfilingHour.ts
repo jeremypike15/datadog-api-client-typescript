@@ -10,52 +10,56 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The number of profiled hosts for each hour for a given organization.
-*/
+ * The number of profiled hosts for each hour for a given organization.
+ */
 export class UsageProfilingHour {
-    /**
-    * Get average number of container agents for that hour.
-    */
-    'avgContainerAgentCount'?: number;
-    /**
-    * Contains the total number of profiled hosts reporting during a given hour.
-    */
-    'hostCount'?: number;
-    /**
-    * The hour for the usage.
-    */
-    'hour'?: Date;
+  /**
+   * Get average number of container agents for that hour.
+   */
+  "avgContainerAgentCount"?: number;
+  /**
+   * Contains the total number of profiled hosts reporting during a given hour.
+   */
+  "hostCount"?: number;
+  /**
+   * The hour for the usage.
+   */
+  "hour"?: Date;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "avgContainerAgentCount",
-            "baseName": "avg_container_agent_count",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "hostCount",
-            "baseName": "host_count",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "hour",
-            "baseName": "hour",
-            "type": "Date",
-            "format": "date-time"
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "avgContainerAgentCount",
+      baseName: "avg_container_agent_count",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "hostCount",
+      baseName: "host_count",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "hour",
+      baseName: "hour",
+      type: "Date",
+      format: "date-time",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UsageProfilingHour.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UsageProfilingHour.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

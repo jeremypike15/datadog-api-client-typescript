@@ -10,9 +10,11 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Property of the Synthetics Test Response to use for a Synthetics global variable.
-*/
-export type SyntheticsGlobalVariableParseTestOptionsType = "http_body" | "http_header" ;
+ * Property of the Synthetics Test Response to use for a Synthetics global variable.
+ */
+export type SyntheticsGlobalVariableParseTestOptionsType =
+  | "http_body"
+  | "http_header";

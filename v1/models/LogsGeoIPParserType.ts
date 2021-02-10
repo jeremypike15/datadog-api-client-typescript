@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of GeoIP parser.
-*/
-export type LogsGeoIPParserType = "geo-ip-parser" ;
+ * Type of GeoIP parser.
+ */
+export type LogsGeoIPParserType = "geo-ip-parser";

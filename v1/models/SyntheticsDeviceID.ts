@@ -10,9 +10,18 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The device ID.
-*/
-export type SyntheticsDeviceID = "laptop_large" | "tablet" | "mobile_small" | "chrome.laptop_large" | "chrome.tablet" | "chrome.mobile_small" | "firefox.laptop_large" | "firefox.tablet" | "firefox.mobile_small" ;
+ * The device ID.
+ */
+export type SyntheticsDeviceID =
+  | "laptop_large"
+  | "tablet"
+  | "mobile_small"
+  | "chrome.laptop_large"
+  | "chrome.tablet"
+  | "chrome.mobile_small"
+  | "firefox.laptop_large"
+  | "firefox.tablet"
+  | "firefox.mobile_small";

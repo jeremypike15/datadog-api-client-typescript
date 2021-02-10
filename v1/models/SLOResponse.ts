@@ -10,40 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { ServiceLevelObjective } from './ServiceLevelObjective';
-import { HttpFile } from '../http/http';
+import { ServiceLevelObjective } from "./ServiceLevelObjective";
+import { HttpFile } from "../http/http";
 
 /**
-* A service level objective response containing a single service level objective.
-*/
+ * A service level objective response containing a single service level objective.
+ */
 export class SLOResponse {
-    'data'?: ServiceLevelObjective;
-    /**
-    * An array of error messages. Each endpoint documents how/whether this field is used.
-    */
-    'errors'?: Array<string>;
+  "data"?: ServiceLevelObjective;
+  /**
+   * An array of error messages. Each endpoint documents how/whether this field is used.
+   */
+  "errors"?: Array<string>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "ServiceLevelObjective",
-            "format": ""
-        },
-        {
-            "name": "errors",
-            "baseName": "errors",
-            "type": "Array<string>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "data",
+      baseName: "data",
+      type: "ServiceLevelObjective",
+      format: "",
+    },
+    {
+      name: "errors",
+      baseName: "errors",
+      type: "Array<string>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SLOResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SLOResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

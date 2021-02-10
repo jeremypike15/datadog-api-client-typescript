@@ -10,40 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { LogContent } from './LogContent';
-import { HttpFile } from '../http/http';
+import { LogContent } from "./LogContent";
+import { HttpFile } from "../http/http";
 
 /**
-* Object describing a log after being processed and stored by Datadog.
-*/
+ * Object describing a log after being processed and stored by Datadog.
+ */
 export class Log {
-    'content'?: LogContent;
-    /**
-    * Unique ID of the Log.
-    */
-    'id'?: string;
+  "content"?: LogContent;
+  /**
+   * Unique ID of the Log.
+   */
+  "id"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "content",
-            "baseName": "content",
-            "type": "LogContent",
-            "format": ""
-        },
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "content",
+      baseName: "content",
+      type: "LogContent",
+      format: "",
+    },
+    {
+      name: "id",
+      baseName: "id",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return Log.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return Log.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

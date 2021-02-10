@@ -10,9 +10,16 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* If an alert event is enabled, set its type. For example, `error`, `warning`, `info`, `success`, `user_update`, `recommendation`, and `snapshot`.
-*/
-export type EventAlertType = "error" | "warning" | "info" | "success" | "user_update" | "recommendation" | "snapshot" ;
+ * If an alert event is enabled, set its type. For example, `error`, `warning`, `info`, `success`, `user_update`, `recommendation`, and `snapshot`.
+ */
+export type EventAlertType =
+  | "error"
+  | "warning"
+  | "info"
+  | "success"
+  | "user_update"
+  | "recommendation"
+  | "snapshot";

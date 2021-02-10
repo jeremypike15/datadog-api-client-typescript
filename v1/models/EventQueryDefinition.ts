@@ -10,42 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The event query.
-*/
+ * The event query.
+ */
 export class EventQueryDefinition {
-    /**
-    * The query being made on the event.
-    */
-    'search': string;
-    /**
-    * The execution method for multi-value filters. Can be either and or or.
-    */
-    'tagsExecution': string;
+  /**
+   * The query being made on the event.
+   */
+  "search": string;
+  /**
+   * The execution method for multi-value filters. Can be either and or or.
+   */
+  "tagsExecution": string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "search",
-            "baseName": "search",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "tagsExecution",
-            "baseName": "tags_execution",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "search",
+      baseName: "search",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "tagsExecution",
+      baseName: "tags_execution",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return EventQueryDefinition.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return EventQueryDefinition.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

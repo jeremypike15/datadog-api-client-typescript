@@ -10,9 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Step type used in your Synthetic test.
-*/
-export type SyntheticsStepType = "assertCurrentUrl" | "assertElementAttribute" | "assertElementContent" | "assertElementPresent" | "assertEmail" | "assertFileDownload" | "assertFromJavascript" | "assertPageContains" | "assertPageLacks" | "click" | "extractFromJavascript" | "extractVariable" | "goToEmailLink" | "goToUrl" | "goToUrlAndMeasureTti" | "hover" | "playSubTest" | "pressKey" | "refresh" | "runApiTest" | "scroll" | "selectOption" | "typeText" | "uploadFiles" | "wait" ;
+ * Step type used in your Synthetic test.
+ */
+export type SyntheticsStepType =
+  | "assertCurrentUrl"
+  | "assertElementAttribute"
+  | "assertElementContent"
+  | "assertElementPresent"
+  | "assertEmail"
+  | "assertFileDownload"
+  | "assertFromJavascript"
+  | "assertPageContains"
+  | "assertPageLacks"
+  | "click"
+  | "extractFromJavascript"
+  | "extractVariable"
+  | "goToEmailLink"
+  | "goToUrl"
+  | "goToUrlAndMeasureTti"
+  | "hover"
+  | "playSubTest"
+  | "pressKey"
+  | "refresh"
+  | "runApiTest"
+  | "scroll"
+  | "selectOption"
+  | "typeText"
+  | "uploadFiles"
+  | "wait";

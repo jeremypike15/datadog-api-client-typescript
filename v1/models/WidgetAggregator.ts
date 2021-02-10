@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Aggregator used for the request.
-*/
-export type WidgetAggregator = "avg" | "last" | "max" | "min" | "sum" ;
+ * Aggregator used for the request.
+ */
+export type WidgetAggregator = "avg" | "last" | "max" | "min" | "sum";

@@ -10,30 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsTestConfig } from './SyntheticsTestConfig';
-import { HttpFile } from '../http/http';
+import { SyntheticsTestConfig } from "./SyntheticsTestConfig";
+import { HttpFile } from "../http/http";
 
 /**
-* Object describing the API test configuration.
-*/
+ * Object describing the API test configuration.
+ */
 export class SyntheticsAPITestResultFullCheck {
-    'config': SyntheticsTestConfig;
+  "config": SyntheticsTestConfig;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "config",
-            "baseName": "config",
-            "type": "SyntheticsTestConfig",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "config",
+      baseName: "config",
+      type: "SyntheticsTestConfig",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SyntheticsAPITestResultFullCheck.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SyntheticsAPITestResultFullCheck.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

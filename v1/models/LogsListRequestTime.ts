@@ -10,52 +10,56 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Timeframe to retrieve the log from.
-*/
+ * Timeframe to retrieve the log from.
+ */
 export class LogsListRequestTime {
-    /**
-    * Minimum timestamp for requested logs.
-    */
-    'from': Date;
-    /**
-    * Timezone can be specified both as an offset (e.g. \"UTC+03:00\") or a regional zone (e.g. \"Europe/Paris\").
-    */
-    'timezone'?: string;
-    /**
-    * Maximum timestamp for requested logs.
-    */
-    'to': Date;
+  /**
+   * Minimum timestamp for requested logs.
+   */
+  "from": Date;
+  /**
+   * Timezone can be specified both as an offset (e.g. \"UTC+03:00\") or a regional zone (e.g. \"Europe/Paris\").
+   */
+  "timezone"?: string;
+  /**
+   * Maximum timestamp for requested logs.
+   */
+  "to": Date;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "from",
-            "baseName": "from",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "timezone",
-            "baseName": "timezone",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "to",
-            "baseName": "to",
-            "type": "Date",
-            "format": "date-time"
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "from",
+      baseName: "from",
+      type: "Date",
+      format: "date-time",
+    },
+    {
+      name: "timezone",
+      baseName: "timezone",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "to",
+      baseName: "to",
+      type: "Date",
+      format: "date-time",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return LogsListRequestTime.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return LogsListRequestTime.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

@@ -10,62 +10,66 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Number of RUM Sessions recorded for each hour for a given organization.
-*/
+ * Number of RUM Sessions recorded for each hour for a given organization.
+ */
 export class UsageRumSessionsHour {
-    /**
-    * The hour for the usage.
-    */
-    'hour'?: Date;
-    /**
-    * Contains the number of RUM Sessions.
-    */
-    'sessionCount'?: number;
-    /**
-    * Contains the number of mobile RUM Sessions on Android (data available beginning December 1, 2020).
-    */
-    'sessionCountAndroid'?: number;
-    /**
-    * Contains the number of mobile RUM Sessions on iOS (data available beginning December 1, 2020).
-    */
-    'sessionCountIos'?: number;
+  /**
+   * The hour for the usage.
+   */
+  "hour"?: Date;
+  /**
+   * Contains the number of RUM Sessions.
+   */
+  "sessionCount"?: number;
+  /**
+   * Contains the number of mobile RUM Sessions on Android (data available beginning December 1, 2020).
+   */
+  "sessionCountAndroid"?: number;
+  /**
+   * Contains the number of mobile RUM Sessions on iOS (data available beginning December 1, 2020).
+   */
+  "sessionCountIos"?: number;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "hour",
-            "baseName": "hour",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "sessionCount",
-            "baseName": "session_count",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "sessionCountAndroid",
-            "baseName": "session_count_android",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "sessionCountIos",
-            "baseName": "session_count_ios",
-            "type": "number",
-            "format": "int64"
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "hour",
+      baseName: "hour",
+      type: "Date",
+      format: "date-time",
+    },
+    {
+      name: "sessionCount",
+      baseName: "session_count",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "sessionCountAndroid",
+      baseName: "session_count_android",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "sessionCountIos",
+      baseName: "session_count_ios",
+      type: "number",
+      format: "int64",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UsageRumSessionsHour.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UsageRumSessionsHour.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

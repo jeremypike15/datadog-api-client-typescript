@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The type of sorting algorithm
-*/
-export type LogsAggregateSortType = "alphabetical" | "measure" ;
+ * The type of sorting algorithm
+ */
+export type LogsAggregateSortType = "alphabetical" | "measure";

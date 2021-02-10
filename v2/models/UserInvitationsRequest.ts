@@ -10,33 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { UserInvitationData } from './UserInvitationData';
-import { HttpFile } from '../http/http';
+import { UserInvitationData } from "./UserInvitationData";
+import { HttpFile } from "../http/http";
 
 /**
-* Object to invite users to join the organization.
-*/
+ * Object to invite users to join the organization.
+ */
 export class UserInvitationsRequest {
-    /**
-    * List of user invitations.
-    */
-    'data': Array<UserInvitationData>;
+  /**
+   * List of user invitations.
+   */
+  "data": Array<UserInvitationData>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "Array<UserInvitationData>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "data",
+      baseName: "data",
+      type: "Array<UserInvitationData>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UserInvitationsRequest.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UserInvitationsRequest.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

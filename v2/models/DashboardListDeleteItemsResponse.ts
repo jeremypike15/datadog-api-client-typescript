@@ -10,33 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { DashboardListItemResponse } from './DashboardListItemResponse';
-import { HttpFile } from '../http/http';
+import { DashboardListItemResponse } from "./DashboardListItemResponse";
+import { HttpFile } from "../http/http";
 
 /**
-* Response containing a list of deleted dashboards.
-*/
+ * Response containing a list of deleted dashboards.
+ */
 export class DashboardListDeleteItemsResponse {
-    /**
-    * List of dashboards deleted from the dashboard list.
-    */
-    'deletedDashboardsFromList'?: Array<DashboardListItemResponse>;
+  /**
+   * List of dashboards deleted from the dashboard list.
+   */
+  "deletedDashboardsFromList"?: Array<DashboardListItemResponse>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "deletedDashboardsFromList",
-            "baseName": "deleted_dashboards_from_list",
-            "type": "Array<DashboardListItemResponse>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "deletedDashboardsFromList",
+      baseName: "deleted_dashboards_from_list",
+      type: "Array<DashboardListItemResponse>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return DashboardListDeleteItemsResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return DashboardListDeleteItemsResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

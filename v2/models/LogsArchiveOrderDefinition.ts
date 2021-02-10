@@ -10,38 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { LogsArchiveOrderAttributes } from './LogsArchiveOrderAttributes';
-import { LogsArchiveOrderDefinitionType } from './LogsArchiveOrderDefinitionType';
-import { HttpFile } from '../http/http';
+import { LogsArchiveOrderAttributes } from "./LogsArchiveOrderAttributes";
+import { LogsArchiveOrderDefinitionType } from "./LogsArchiveOrderDefinitionType";
+import { HttpFile } from "../http/http";
 
 /**
-* The definition of an archive order.
-*/
+ * The definition of an archive order.
+ */
 export class LogsArchiveOrderDefinition {
-    'attributes': LogsArchiveOrderAttributes;
-    'type': LogsArchiveOrderDefinitionType;
+  "attributes": LogsArchiveOrderAttributes;
+  "type": LogsArchiveOrderDefinitionType;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "attributes",
-            "baseName": "attributes",
-            "type": "LogsArchiveOrderAttributes",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "LogsArchiveOrderDefinitionType",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "attributes",
+      baseName: "attributes",
+      type: "LogsArchiveOrderAttributes",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "LogsArchiveOrderDefinitionType",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return LogsArchiveOrderDefinition.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return LogsArchiveOrderDefinition.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

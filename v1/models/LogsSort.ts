@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Time-ascending `asc` or time-descending `desc`results.
-*/
-export type LogsSort = "asc" | "desc" ;
+ * Time-ascending `asc` or time-descending `desc`results.
+ */
+export type LogsSort = "asc" | "desc";

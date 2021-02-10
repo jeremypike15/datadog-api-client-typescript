@@ -10,33 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { AWSTagFilterListResponseFilters } from './AWSTagFilterListResponseFilters';
-import { HttpFile } from '../http/http';
+import { AWSTagFilterListResponseFilters } from "./AWSTagFilterListResponseFilters";
+import { HttpFile } from "../http/http";
 
 /**
-* An array of tag filter rules by `namespace` and tag filter string.
-*/
+ * An array of tag filter rules by `namespace` and tag filter string.
+ */
 export class AWSTagFilterListResponse {
-    /**
-    * An array of tag filters.
-    */
-    'filters'?: Array<AWSTagFilterListResponseFilters>;
+  /**
+   * An array of tag filters.
+   */
+  "filters"?: Array<AWSTagFilterListResponseFilters>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "filters",
-            "baseName": "filters",
-            "type": "Array<AWSTagFilterListResponseFilters>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "filters",
+      baseName: "filters",
+      type: "Array<AWSTagFilterListResponseFilters>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return AWSTagFilterListResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return AWSTagFilterListResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

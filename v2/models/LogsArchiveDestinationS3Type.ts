@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of the S3 archive destination.
-*/
-export type LogsArchiveDestinationS3Type = "s3" ;
+ * Type of the S3 archive destination.
+ */
+export type LogsArchiveDestinationS3Type = "s3";

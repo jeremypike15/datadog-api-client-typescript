@@ -10,43 +10,47 @@
  * Do not edit the class manually.
  */
 
-import { DashboardTemplateVariablePresetValue } from './DashboardTemplateVariablePresetValue';
-import { HttpFile } from '../http/http';
+import { DashboardTemplateVariablePresetValue } from "./DashboardTemplateVariablePresetValue";
+import { HttpFile } from "../http/http";
 
 /**
-* Template variables saved views.
-*/
+ * Template variables saved views.
+ */
 export class DashboardTemplateVariablePreset {
-    /**
-    * The name of the variable.
-    */
-    'name'?: string;
-    /**
-    * List of variables.
-    */
-    'templateVariables'?: Array<DashboardTemplateVariablePresetValue>;
+  /**
+   * The name of the variable.
+   */
+  "name"?: string;
+  /**
+   * List of variables.
+   */
+  "templateVariables"?: Array<DashboardTemplateVariablePresetValue>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "templateVariables",
-            "baseName": "template_variables",
-            "type": "Array<DashboardTemplateVariablePresetValue>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "name",
+      baseName: "name",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "templateVariables",
+      baseName: "template_variables",
+      type: "Array<DashboardTemplateVariablePresetValue>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return DashboardTemplateVariablePreset.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return DashboardTemplateVariablePreset.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

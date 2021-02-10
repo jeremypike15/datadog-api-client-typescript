@@ -10,60 +10,64 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsBrowserErrorType } from './SyntheticsBrowserErrorType';
-import { HttpFile } from '../http/http';
+import { SyntheticsBrowserErrorType } from "./SyntheticsBrowserErrorType";
+import { HttpFile } from "../http/http";
 
 /**
-* Error response object for a browser test.
-*/
+ * Error response object for a browser test.
+ */
 export class SyntheticsBrowserError {
-    /**
-    * Description of the error.
-    */
-    'description': string;
-    /**
-    * Name of the error.
-    */
-    'name': string;
-    /**
-    * Status Code of the error.
-    */
-    'statusCode'?: number;
-    'type': SyntheticsBrowserErrorType;
+  /**
+   * Description of the error.
+   */
+  "description": string;
+  /**
+   * Name of the error.
+   */
+  "name": string;
+  /**
+   * Status Code of the error.
+   */
+  "statusCode"?: number;
+  "type": SyntheticsBrowserErrorType;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "description",
-            "baseName": "description",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "statusCode",
-            "baseName": "statusCode",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "SyntheticsBrowserErrorType",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "description",
+      baseName: "description",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "name",
+      baseName: "name",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "statusCode",
+      baseName: "statusCode",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "SyntheticsBrowserErrorType",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SyntheticsBrowserError.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SyntheticsBrowserError.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

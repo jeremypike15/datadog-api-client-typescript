@@ -10,9 +10,17 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of the assertion.
-*/
-export type SyntheticsAssertionType = "body" | "header" | "statusCode" | "certificate" | "responseTime" | "property" | "recordEvery" | "recordSome" ;
+ * Type of the assertion.
+ */
+export type SyntheticsAssertionType =
+  | "body"
+  | "header"
+  | "statusCode"
+  | "certificate"
+  | "responseTime"
+  | "property"
+  | "recordEvery"
+  | "recordSome";

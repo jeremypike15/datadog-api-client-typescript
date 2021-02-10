@@ -10,43 +10,47 @@
  * Do not edit the class manually.
  */
 
-import { AWSLogsAsyncResponseErrors } from './AWSLogsAsyncResponseErrors';
-import { HttpFile } from '../http/http';
+import { AWSLogsAsyncResponseErrors } from "./AWSLogsAsyncResponseErrors";
+import { HttpFile } from "../http/http";
 
 /**
-* A list of all Datadog-AWS logs integrations available in your Datadog organization.
-*/
+ * A list of all Datadog-AWS logs integrations available in your Datadog organization.
+ */
 export class AWSLogsAsyncResponse {
-    /**
-    * List of errors.
-    */
-    'errors'?: Array<AWSLogsAsyncResponseErrors>;
-    /**
-    * Status of the properties.
-    */
-    'status'?: string;
+  /**
+   * List of errors.
+   */
+  "errors"?: Array<AWSLogsAsyncResponseErrors>;
+  /**
+   * Status of the properties.
+   */
+  "status"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "errors",
-            "baseName": "errors",
-            "type": "Array<AWSLogsAsyncResponseErrors>",
-            "format": ""
-        },
-        {
-            "name": "status",
-            "baseName": "status",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "errors",
+      baseName: "errors",
+      type: "Array<AWSLogsAsyncResponseErrors>",
+      format: "",
+    },
+    {
+      name: "status",
+      baseName: "status",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return AWSLogsAsyncResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return AWSLogsAsyncResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

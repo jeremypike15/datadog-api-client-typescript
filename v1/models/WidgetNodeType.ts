@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Which type of node to use in the map.
-*/
-export type WidgetNodeType = "host" | "container" ;
+ * Which type of node to use in the map.
+ */
+export type WidgetNodeType = "host" | "container";

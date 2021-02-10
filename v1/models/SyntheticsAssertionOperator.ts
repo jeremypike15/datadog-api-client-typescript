@@ -10,9 +10,22 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Assertion operator to apply.
-*/
-export type SyntheticsAssertionOperator = "contains" | "doesNotContain" | "is" | "isNot" | "lessThan" | "lessThanOrEqual" | "moreThan" | "moreThanOrEqual" | "matches" | "doesNotMatch" | "validates" | "isInMoreThan" | "isInLessThan" ;
+ * Assertion operator to apply.
+ */
+export type SyntheticsAssertionOperator =
+  | "contains"
+  | "doesNotContain"
+  | "is"
+  | "isNot"
+  | "lessThan"
+  | "lessThanOrEqual"
+  | "moreThan"
+  | "moreThanOrEqual"
+  | "matches"
+  | "doesNotMatch"
+  | "validates"
+  | "isInMoreThan"
+  | "isInLessThan";

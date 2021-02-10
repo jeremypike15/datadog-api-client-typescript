@@ -10,9 +10,13 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The state of the archive.
-*/
-export type LogsArchiveState = "UNKNOWN" | "WORKING" | "FAILING" | "WORKING_AUTH_LEGACY" ;
+ * The state of the archive.
+ */
+export type LogsArchiveState =
+  | "UNKNOWN"
+  | "WORKING"
+  | "FAILING"
+  | "WORKING_AUTH_LEGACY";

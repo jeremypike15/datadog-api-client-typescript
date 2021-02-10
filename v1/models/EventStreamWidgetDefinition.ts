@@ -10,94 +10,98 @@
  * Do not edit the class manually.
  */
 
-import { EventStreamWidgetDefinitionType } from './EventStreamWidgetDefinitionType';
-import { WidgetEventSize } from './WidgetEventSize';
-import { WidgetTextAlign } from './WidgetTextAlign';
-import { WidgetTime } from './WidgetTime';
-import { HttpFile } from '../http/http';
+import { EventStreamWidgetDefinitionType } from "./EventStreamWidgetDefinitionType";
+import { WidgetEventSize } from "./WidgetEventSize";
+import { WidgetTextAlign } from "./WidgetTextAlign";
+import { WidgetTime } from "./WidgetTime";
+import { HttpFile } from "../http/http";
 
 /**
-* The event stream is a widget version of the stream of events on the Event Stream view. Only available on FREE layout dashboards.
-*/
+ * The event stream is a widget version of the stream of events on the Event Stream view. Only available on FREE layout dashboards.
+ */
 export class EventStreamWidgetDefinition {
-    'eventSize'?: WidgetEventSize;
-    /**
-    * Query to filter the event stream with.
-    */
-    'query': string;
-    /**
-    * The execution method for multi-value filters. Can be either and or or.
-    */
-    'tagsExecution'?: string;
-    'time'?: WidgetTime;
-    /**
-    * Title of the widget.
-    */
-    'title'?: string;
-    'titleAlign'?: WidgetTextAlign;
-    /**
-    * Size of the title.
-    */
-    'titleSize'?: string;
-    'type': EventStreamWidgetDefinitionType;
+  "eventSize"?: WidgetEventSize;
+  /**
+   * Query to filter the event stream with.
+   */
+  "query": string;
+  /**
+   * The execution method for multi-value filters. Can be either and or or.
+   */
+  "tagsExecution"?: string;
+  "time"?: WidgetTime;
+  /**
+   * Title of the widget.
+   */
+  "title"?: string;
+  "titleAlign"?: WidgetTextAlign;
+  /**
+   * Size of the title.
+   */
+  "titleSize"?: string;
+  "type": EventStreamWidgetDefinitionType;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "eventSize",
-            "baseName": "event_size",
-            "type": "WidgetEventSize",
-            "format": ""
-        },
-        {
-            "name": "query",
-            "baseName": "query",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "tagsExecution",
-            "baseName": "tags_execution",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "time",
-            "baseName": "time",
-            "type": "WidgetTime",
-            "format": ""
-        },
-        {
-            "name": "title",
-            "baseName": "title",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "titleAlign",
-            "baseName": "title_align",
-            "type": "WidgetTextAlign",
-            "format": ""
-        },
-        {
-            "name": "titleSize",
-            "baseName": "title_size",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "EventStreamWidgetDefinitionType",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "eventSize",
+      baseName: "event_size",
+      type: "WidgetEventSize",
+      format: "",
+    },
+    {
+      name: "query",
+      baseName: "query",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "tagsExecution",
+      baseName: "tags_execution",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "time",
+      baseName: "time",
+      type: "WidgetTime",
+      format: "",
+    },
+    {
+      name: "title",
+      baseName: "title",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "titleAlign",
+      baseName: "title_align",
+      type: "WidgetTextAlign",
+      format: "",
+    },
+    {
+      name: "titleSize",
+      baseName: "title_size",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "EventStreamWidgetDefinitionType",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return EventStreamWidgetDefinition.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return EventStreamWidgetDefinition.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

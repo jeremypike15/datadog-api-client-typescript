@@ -10,46 +10,50 @@
  * Do not edit the class manually.
  */
 
-import { SecurityMonitoringSignalListRequestFilter } from './SecurityMonitoringSignalListRequestFilter';
-import { SecurityMonitoringSignalListRequestPage } from './SecurityMonitoringSignalListRequestPage';
-import { SecurityMonitoringSignalsSort } from './SecurityMonitoringSignalsSort';
-import { HttpFile } from '../http/http';
+import { SecurityMonitoringSignalListRequestFilter } from "./SecurityMonitoringSignalListRequestFilter";
+import { SecurityMonitoringSignalListRequestPage } from "./SecurityMonitoringSignalListRequestPage";
+import { SecurityMonitoringSignalsSort } from "./SecurityMonitoringSignalsSort";
+import { HttpFile } from "../http/http";
 
 /**
-* The request for a security signal list.
-*/
+ * The request for a security signal list.
+ */
 export class SecurityMonitoringSignalListRequest {
-    'filter'?: SecurityMonitoringSignalListRequestFilter;
-    'page'?: SecurityMonitoringSignalListRequestPage;
-    'sort'?: SecurityMonitoringSignalsSort;
+  "filter"?: SecurityMonitoringSignalListRequestFilter;
+  "page"?: SecurityMonitoringSignalListRequestPage;
+  "sort"?: SecurityMonitoringSignalsSort;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "filter",
-            "baseName": "filter",
-            "type": "SecurityMonitoringSignalListRequestFilter",
-            "format": ""
-        },
-        {
-            "name": "page",
-            "baseName": "page",
-            "type": "SecurityMonitoringSignalListRequestPage",
-            "format": ""
-        },
-        {
-            "name": "sort",
-            "baseName": "sort",
-            "type": "SecurityMonitoringSignalsSort",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "filter",
+      baseName: "filter",
+      type: "SecurityMonitoringSignalListRequestFilter",
+      format: "",
+    },
+    {
+      name: "page",
+      baseName: "page",
+      type: "SecurityMonitoringSignalListRequestPage",
+      format: "",
+    },
+    {
+      name: "sort",
+      baseName: "sort",
+      type: "SecurityMonitoringSignalsSort",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SecurityMonitoringSignalListRequest.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SecurityMonitoringSignalListRequest.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

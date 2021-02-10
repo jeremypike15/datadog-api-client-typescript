@@ -10,48 +10,52 @@
  * Do not edit the class manually.
  */
 
-import { APIKeyUpdateAttributes } from './APIKeyUpdateAttributes';
-import { APIKeysType } from './APIKeysType';
-import { HttpFile } from '../http/http';
+import { APIKeyUpdateAttributes } from "./APIKeyUpdateAttributes";
+import { APIKeysType } from "./APIKeysType";
+import { HttpFile } from "../http/http";
 
 /**
-* Object used to update an API key.
-*/
+ * Object used to update an API key.
+ */
 export class APIKeyUpdateData {
-    'attributes': APIKeyUpdateAttributes;
-    /**
-    * ID of the API key.
-    */
-    'id': string;
-    'type': APIKeysType;
+  "attributes": APIKeyUpdateAttributes;
+  /**
+   * ID of the API key.
+   */
+  "id": string;
+  "type": APIKeysType;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "attributes",
-            "baseName": "attributes",
-            "type": "APIKeyUpdateAttributes",
-            "format": ""
-        },
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "APIKeysType",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "attributes",
+      baseName: "attributes",
+      type: "APIKeyUpdateAttributes",
+      format: "",
+    },
+    {
+      name: "id",
+      baseName: "id",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "APIKeysType",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return APIKeyUpdateData.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return APIKeyUpdateData.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

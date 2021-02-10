@@ -10,33 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { UsageTraceHour } from './UsageTraceHour';
-import { HttpFile } from '../http/http';
+import { UsageTraceHour } from "./UsageTraceHour";
+import { HttpFile } from "../http/http";
 
 /**
-* A response containing trace usage.
-*/
+ * A response containing trace usage.
+ */
 export class UsageTraceResponse {
-    /**
-    * Array with the number of hourly traces indexed for a given organization.
-    */
-    'usage'?: Array<UsageTraceHour>;
+  /**
+   * Array with the number of hourly traces indexed for a given organization.
+   */
+  "usage"?: Array<UsageTraceHour>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "usage",
-            "baseName": "usage",
-            "type": "Array<UsageTraceHour>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "usage",
+      baseName: "usage",
+      type: "Array<UsageTraceHour>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UsageTraceResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UsageTraceResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

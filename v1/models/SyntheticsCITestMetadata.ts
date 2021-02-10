@@ -10,38 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsCITestMetadataCi } from './SyntheticsCITestMetadataCi';
-import { SyntheticsCITestMetadataGit } from './SyntheticsCITestMetadataGit';
-import { HttpFile } from '../http/http';
+import { SyntheticsCITestMetadataCi } from "./SyntheticsCITestMetadataCi";
+import { SyntheticsCITestMetadataGit } from "./SyntheticsCITestMetadataGit";
+import { HttpFile } from "../http/http";
 
 /**
-* Metadata for the Synthetics tests run
-*/
+ * Metadata for the Synthetics tests run
+ */
 export class SyntheticsCITestMetadata {
-    'ci'?: SyntheticsCITestMetadataCi;
-    'git'?: SyntheticsCITestMetadataGit;
+  "ci"?: SyntheticsCITestMetadataCi;
+  "git"?: SyntheticsCITestMetadataGit;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "ci",
-            "baseName": "ci",
-            "type": "SyntheticsCITestMetadataCi",
-            "format": ""
-        },
-        {
-            "name": "git",
-            "baseName": "git",
-            "type": "SyntheticsCITestMetadataGit",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "ci",
+      baseName: "ci",
+      type: "SyntheticsCITestMetadataCi",
+      format: "",
+    },
+    {
+      name: "git",
+      baseName: "git",
+      type: "SyntheticsCITestMetadataGit",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SyntheticsCITestMetadata.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SyntheticsCITestMetadata.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

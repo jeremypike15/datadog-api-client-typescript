@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of the iframe widget.
-*/
-export type IFrameWidgetDefinitionType = "iframe" ;
+ * Type of the iframe widget.
+ */
+export type IFrameWidgetDefinitionType = "iframe";

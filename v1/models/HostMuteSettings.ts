@@ -10,52 +10,56 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Combination of settings to mute a host.
-*/
+ * Combination of settings to mute a host.
+ */
 export class HostMuteSettings {
-    /**
-    * POSIX timestamp in seconds when the host is unmuted. If omitted, the host remains muted until explicitly unmuted.
-    */
-    'end'?: number;
-    /**
-    * Message to associate with the muting of this host.
-    */
-    'message'?: string;
-    /**
-    * If true and the host is already muted, replaces existing host mute settings.
-    */
-    'override'?: boolean;
+  /**
+   * POSIX timestamp in seconds when the host is unmuted. If omitted, the host remains muted until explicitly unmuted.
+   */
+  "end"?: number;
+  /**
+   * Message to associate with the muting of this host.
+   */
+  "message"?: string;
+  /**
+   * If true and the host is already muted, replaces existing host mute settings.
+   */
+  "override"?: boolean;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "end",
-            "baseName": "end",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "message",
-            "baseName": "message",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "override",
-            "baseName": "override",
-            "type": "boolean",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "end",
+      baseName: "end",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "message",
+      baseName: "message",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "override",
+      baseName: "override",
+      type: "boolean",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return HostMuteSettings.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return HostMuteSettings.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

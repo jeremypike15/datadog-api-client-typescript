@@ -10,32 +10,36 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Object containing array of IDs of canceled downtimes.
-*/
+ * Object containing array of IDs of canceled downtimes.
+ */
 export class CanceledDowntimesIds {
-    /**
-    * ID of downtimes that were canceled.
-    */
-    'cancelledIds'?: Array<number>;
+  /**
+   * ID of downtimes that were canceled.
+   */
+  "cancelledIds"?: Array<number>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "cancelledIds",
-            "baseName": "cancelled_ids",
-            "type": "Array<number>",
-            "format": "int64"
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "cancelledIds",
+      baseName: "cancelled_ids",
+      type: "Array<number>",
+      format: "int64",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return CanceledDowntimesIds.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return CanceledDowntimesIds.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

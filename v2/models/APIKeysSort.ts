@@ -10,9 +10,17 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Sorting options
-*/
-export type APIKeysSort = "created_at" | "-created_at" | "last4" | "-last4" | "modified_at" | "-modified_at" | "name" | "-name" ;
+ * Sorting options
+ */
+export type APIKeysSort =
+  | "created_at"
+  | "-created_at"
+  | "last4"
+  | "-last4"
+  | "modified_at"
+  | "-modified_at"
+  | "name"
+  | "-name";

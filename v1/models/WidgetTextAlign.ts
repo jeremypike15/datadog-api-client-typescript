@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* How to align the text on the widget.
-*/
-export type WidgetTextAlign = "center" | "left" | "right" ;
+ * How to align the text on the widget.
+ */
+export type WidgetTextAlign = "center" | "left" | "right";

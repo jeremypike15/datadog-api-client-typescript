@@ -10,42 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Set of rules for the grok parser.
-*/
+ * Set of rules for the grok parser.
+ */
 export class LogsGrokParserRules {
-    /**
-    * List of match rules for the grok parser, separated by a new line.
-    */
-    'matchRules': string;
-    /**
-    * List of support rules for the grok parser, separated by a new line.
-    */
-    'supportRules'?: string;
+  /**
+   * List of match rules for the grok parser, separated by a new line.
+   */
+  "matchRules": string;
+  /**
+   * List of support rules for the grok parser, separated by a new line.
+   */
+  "supportRules"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "matchRules",
-            "baseName": "match_rules",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "supportRules",
-            "baseName": "support_rules",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "matchRules",
+      baseName: "match_rules",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "supportRules",
+      baseName: "support_rules",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return LogsGrokParserRules.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return LogsGrokParserRules.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

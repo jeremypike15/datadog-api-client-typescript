@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of parser for a Synthetics global variable from a synthetics test.
-*/
-export type SyntheticsGlobalVariableParserType = "raw" | "json_path" | "regex" ;
+ * Type of parser for a Synthetics global variable from a synthetics test.
+ */
+export type SyntheticsGlobalVariableParserType = "raw" | "json_path" | "regex";

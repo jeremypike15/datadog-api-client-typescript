@@ -10,40 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { SLOCorrectionUpdateRequestAttributes } from './SLOCorrectionUpdateRequestAttributes';
-import { HttpFile } from '../http/http';
+import { SLOCorrectionUpdateRequestAttributes } from "./SLOCorrectionUpdateRequestAttributes";
+import { HttpFile } from "../http/http";
 
 /**
-* The data object associated with the SLO correction to be updated
-*/
+ * The data object associated with the SLO correction to be updated
+ */
 export class SLOCorrectionUpdateRequestData {
-    'attributes'?: SLOCorrectionUpdateRequestAttributes;
-    /**
-    * Should always be set to \"correction\"
-    */
-    'type'?: string;
+  "attributes"?: SLOCorrectionUpdateRequestAttributes;
+  /**
+   * Should always be set to \"correction\"
+   */
+  "type"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "attributes",
-            "baseName": "attributes",
-            "type": "SLOCorrectionUpdateRequestAttributes",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "attributes",
+      baseName: "attributes",
+      type: "SLOCorrectionUpdateRequestAttributes",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SLOCorrectionUpdateRequestData.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SLOCorrectionUpdateRequestData.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

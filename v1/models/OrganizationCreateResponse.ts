@@ -10,54 +10,58 @@
  * Do not edit the class manually.
  */
 
-import { ApiKey } from './ApiKey';
-import { ApplicationKey } from './ApplicationKey';
-import { Organization } from './Organization';
-import { User } from './User';
-import { HttpFile } from '../http/http';
+import { ApiKey } from "./ApiKey";
+import { ApplicationKey } from "./ApplicationKey";
+import { Organization } from "./Organization";
+import { User } from "./User";
+import { HttpFile } from "../http/http";
 
 /**
-* Response object for an organization creation.
-*/
+ * Response object for an organization creation.
+ */
 export class OrganizationCreateResponse {
-    'apiKey'?: ApiKey;
-    'applicationKey'?: ApplicationKey;
-    'org'?: Organization;
-    'user'?: User;
+  "apiKey"?: ApiKey;
+  "applicationKey"?: ApplicationKey;
+  "org"?: Organization;
+  "user"?: User;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "apiKey",
-            "baseName": "api_key",
-            "type": "ApiKey",
-            "format": ""
-        },
-        {
-            "name": "applicationKey",
-            "baseName": "application_key",
-            "type": "ApplicationKey",
-            "format": ""
-        },
-        {
-            "name": "org",
-            "baseName": "org",
-            "type": "Organization",
-            "format": ""
-        },
-        {
-            "name": "user",
-            "baseName": "user",
-            "type": "User",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "apiKey",
+      baseName: "api_key",
+      type: "ApiKey",
+      format: "",
+    },
+    {
+      name: "applicationKey",
+      baseName: "application_key",
+      type: "ApplicationKey",
+      format: "",
+    },
+    {
+      name: "org",
+      baseName: "org",
+      type: "Organization",
+      format: "",
+    },
+    {
+      name: "user",
+      baseName: "user",
+      type: "User",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return OrganizationCreateResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return OrganizationCreateResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

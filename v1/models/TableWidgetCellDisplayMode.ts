@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Define a display mode for the table cell.
-*/
-export type TableWidgetCellDisplayMode = "number" | "bar" ;
+ * Define a display mode for the table cell.
+ */
+export type TableWidgetCellDisplayMode = "number" | "bar";

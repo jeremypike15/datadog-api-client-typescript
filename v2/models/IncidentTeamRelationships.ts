@@ -10,37 +10,41 @@
  * Do not edit the class manually.
  */
 
-import { RelationshipToUser } from './RelationshipToUser';
-import { HttpFile } from '../http/http';
+import { RelationshipToUser } from "./RelationshipToUser";
+import { HttpFile } from "../http/http";
 
 /**
-* The incident team's relationships.
-*/
+ * The incident team's relationships.
+ */
 export class IncidentTeamRelationships {
-    'createdBy'?: RelationshipToUser;
-    'lastModifiedBy'?: RelationshipToUser;
+  "createdBy"?: RelationshipToUser;
+  "lastModifiedBy"?: RelationshipToUser;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "createdBy",
-            "baseName": "created_by",
-            "type": "RelationshipToUser",
-            "format": ""
-        },
-        {
-            "name": "lastModifiedBy",
-            "baseName": "last_modified_by",
-            "type": "RelationshipToUser",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "createdBy",
+      baseName: "created_by",
+      type: "RelationshipToUser",
+      format: "",
+    },
+    {
+      name: "lastModifiedBy",
+      baseName: "last_modified_by",
+      type: "RelationshipToUser",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IncidentTeamRelationships.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IncidentTeamRelationships.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

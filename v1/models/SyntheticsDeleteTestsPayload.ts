@@ -10,32 +10,36 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* A JSON list of the ID or IDs of the Synthetic tests that you want to delete.
-*/
+ * A JSON list of the ID or IDs of the Synthetic tests that you want to delete.
+ */
 export class SyntheticsDeleteTestsPayload {
-    /**
-    * An array of Synthetic test IDs you want to delete.
-    */
-    'publicIds'?: Array<string>;
+  /**
+   * An array of Synthetic test IDs you want to delete.
+   */
+  "publicIds"?: Array<string>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "publicIds",
-            "baseName": "public_ids",
-            "type": "Array<string>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "publicIds",
+      baseName: "public_ids",
+      type: "Array<string>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SyntheticsDeleteTestsPayload.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SyntheticsDeleteTestsPayload.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

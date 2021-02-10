@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The type of the service level objective.
-*/
-export type SLOType = "metric" | "monitor" ;
+ * The type of the service level objective.
+ */
+export type SLOType = "metric" | "monitor";

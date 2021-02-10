@@ -10,52 +10,56 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Object representing a graph snapshot.
-*/
+ * Object representing a graph snapshot.
+ */
 export class GraphSnapshot {
-    /**
-    * A JSON document defining the graph. `graph_def` can be used instead of `metric_query`. The JSON document uses the [grammar defined here](https://docs.datadoghq.com/graphing/graphing_json/#grammar) and should be formatted to a single line then URL encoded.
-    */
-    'graphDef'?: string;
-    /**
-    * The metric query. One of `metric_query` or `graph_def` is required.
-    */
-    'metricQuery'?: string;
-    /**
-    * URL of your [graph snapshot](https://docs.datadoghq.com/metrics/explorer/#snapshot).
-    */
-    'snapshotUrl'?: string;
+  /**
+   * A JSON document defining the graph. `graph_def` can be used instead of `metric_query`. The JSON document uses the [grammar defined here](https://docs.datadoghq.com/graphing/graphing_json/#grammar) and should be formatted to a single line then URL encoded.
+   */
+  "graphDef"?: string;
+  /**
+   * The metric query. One of `metric_query` or `graph_def` is required.
+   */
+  "metricQuery"?: string;
+  /**
+   * URL of your [graph snapshot](https://docs.datadoghq.com/metrics/explorer/#snapshot).
+   */
+  "snapshotUrl"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "graphDef",
-            "baseName": "graph_def",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "metricQuery",
-            "baseName": "metric_query",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "snapshotUrl",
-            "baseName": "snapshot_url",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "graphDef",
+      baseName: "graph_def",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "metricQuery",
+      baseName: "metric_query",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "snapshotUrl",
+      baseName: "snapshot_url",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return GraphSnapshot.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return GraphSnapshot.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

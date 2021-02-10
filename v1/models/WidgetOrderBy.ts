@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* What to order by.
-*/
-export type WidgetOrderBy = "change" | "name" | "present" | "past" ;
+ * What to order by.
+ */
+export type WidgetOrderBy = "change" | "name" | "present" | "past";

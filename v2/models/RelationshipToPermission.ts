@@ -10,30 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { RelationshipToPermissionData } from './RelationshipToPermissionData';
-import { HttpFile } from '../http/http';
+import { RelationshipToPermissionData } from "./RelationshipToPermissionData";
+import { HttpFile } from "../http/http";
 
 /**
-* Relationship to a permissions object.
-*/
+ * Relationship to a permissions object.
+ */
 export class RelationshipToPermission {
-    'data'?: RelationshipToPermissionData;
+  "data"?: RelationshipToPermissionData;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "RelationshipToPermissionData",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "data",
+      baseName: "data",
+      type: "RelationshipToPermissionData",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return RelationshipToPermission.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return RelationshipToPermission.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

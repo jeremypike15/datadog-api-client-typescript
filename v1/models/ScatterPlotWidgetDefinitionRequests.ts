@@ -10,37 +10,41 @@
  * Do not edit the class manually.
  */
 
-import { ScatterPlotRequest } from './ScatterPlotRequest';
-import { HttpFile } from '../http/http';
+import { ScatterPlotRequest } from "./ScatterPlotRequest";
+import { HttpFile } from "../http/http";
 
 /**
-* Widget definition.
-*/
+ * Widget definition.
+ */
 export class ScatterPlotWidgetDefinitionRequests {
-    'x': ScatterPlotRequest;
-    'y': ScatterPlotRequest;
+  "x": ScatterPlotRequest;
+  "y": ScatterPlotRequest;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "x",
-            "baseName": "x",
-            "type": "ScatterPlotRequest",
-            "format": ""
-        },
-        {
-            "name": "y",
-            "baseName": "y",
-            "type": "ScatterPlotRequest",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "x",
+      baseName: "x",
+      type: "ScatterPlotRequest",
+      format: "",
+    },
+    {
+      name: "y",
+      baseName: "y",
+      type: "ScatterPlotRequest",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return ScatterPlotWidgetDefinitionRequests.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return ScatterPlotWidgetDefinitionRequests.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

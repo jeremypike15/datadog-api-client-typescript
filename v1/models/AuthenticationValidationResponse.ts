@@ -10,32 +10,36 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Represent validation endpoint responses.
-*/
+ * Represent validation endpoint responses.
+ */
 export class AuthenticationValidationResponse {
-    /**
-    * Return `true` if the authentication response is valid.
-    */
-    'valid'?: boolean;
+  /**
+   * Return `true` if the authentication response is valid.
+   */
+  "valid"?: boolean;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "valid",
-            "baseName": "valid",
-            "type": "boolean",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "valid",
+      baseName: "valid",
+      type: "boolean",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return AuthenticationValidationResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return AuthenticationValidationResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

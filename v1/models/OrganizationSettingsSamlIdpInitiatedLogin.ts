@@ -10,32 +10,36 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Has one property enabled (boolean).
-*/
+ * Has one property enabled (boolean).
+ */
 export class OrganizationSettingsSamlIdpInitiatedLogin {
-    /**
-    * Whether SAML IdP initiated login is enabled, learn more in the [SAML documentation](https://docs.datadoghq.com/account_management/saml/#idp-initiated-login).
-    */
-    'enabled'?: boolean;
+  /**
+   * Whether SAML IdP initiated login is enabled, learn more in the [SAML documentation](https://docs.datadoghq.com/account_management/saml/#idp-initiated-login).
+   */
+  "enabled"?: boolean;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "enabled",
-            "baseName": "enabled",
-            "type": "boolean",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "enabled",
+      baseName: "enabled",
+      type: "boolean",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return OrganizationSettingsSamlIdpInitiatedLogin.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return OrganizationSettingsSamlIdpInitiatedLogin.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

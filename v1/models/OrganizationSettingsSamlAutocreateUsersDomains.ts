@@ -10,42 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Has two properties, `enabled` (boolean) and `domains`, which is a list of domains without the @ symbol.
-*/
+ * Has two properties, `enabled` (boolean) and `domains`, which is a list of domains without the @ symbol.
+ */
 export class OrganizationSettingsSamlAutocreateUsersDomains {
-    /**
-    * List of domains where the SAML automated user creation is enabled.
-    */
-    'domains'?: Array<string>;
-    /**
-    * Whether or not the automated user creation based on SAML domain is enabled.
-    */
-    'enabled'?: boolean;
+  /**
+   * List of domains where the SAML automated user creation is enabled.
+   */
+  "domains"?: Array<string>;
+  /**
+   * Whether or not the automated user creation based on SAML domain is enabled.
+   */
+  "enabled"?: boolean;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "domains",
-            "baseName": "domains",
-            "type": "Array<string>",
-            "format": ""
-        },
-        {
-            "name": "enabled",
-            "baseName": "enabled",
-            "type": "boolean",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "domains",
+      baseName: "domains",
+      type: "Array<string>",
+      format: "",
+    },
+    {
+      name: "enabled",
+      baseName: "enabled",
+      type: "boolean",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return OrganizationSettingsSamlAutocreateUsersDomains.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return OrganizationSettingsSamlAutocreateUsersDomains.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

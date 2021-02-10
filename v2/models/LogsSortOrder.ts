@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The order to use, ascending or descending
-*/
-export type LogsSortOrder = "asc" | "desc" ;
+ * The order to use, ascending or descending
+ */
+export type LogsSortOrder = "asc" | "desc";

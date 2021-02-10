@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The type of aggregation to use.
-*/
-export type LogsMetricResponseComputeAggregationType = "count" | "distribution" ;
+ * The type of aggregation to use.
+ */
+export type LogsMetricResponseComputeAggregationType = "count" | "distribution";

@@ -10,43 +10,47 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsBrowserTestResultShort } from './SyntheticsBrowserTestResultShort';
-import { HttpFile } from '../http/http';
+import { SyntheticsBrowserTestResultShort } from "./SyntheticsBrowserTestResultShort";
+import { HttpFile } from "../http/http";
 
 /**
-* Object with the latest Synthetic browser test run.
-*/
+ * Object with the latest Synthetic browser test run.
+ */
 export class SyntheticsGetBrowserTestLatestResultsResponse {
-    /**
-    * Timestamp of the latest browser test run.
-    */
-    'lastTimestampFetched'?: number;
-    /**
-    * Result of the latest browser test run.
-    */
-    'results'?: Array<SyntheticsBrowserTestResultShort>;
+  /**
+   * Timestamp of the latest browser test run.
+   */
+  "lastTimestampFetched"?: number;
+  /**
+   * Result of the latest browser test run.
+   */
+  "results"?: Array<SyntheticsBrowserTestResultShort>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "lastTimestampFetched",
-            "baseName": "last_timestamp_fetched",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "results",
-            "baseName": "results",
-            "type": "Array<SyntheticsBrowserTestResultShort>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "lastTimestampFetched",
+      baseName: "last_timestamp_fetched",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "results",
+      baseName: "results",
+      type: "Array<SyntheticsBrowserTestResultShort>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SyntheticsGetBrowserTestLatestResultsResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SyntheticsGetBrowserTestLatestResultsResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

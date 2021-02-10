@@ -10,30 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { UserInvitationResponseData } from './UserInvitationResponseData';
-import { HttpFile } from '../http/http';
+import { UserInvitationResponseData } from "./UserInvitationResponseData";
+import { HttpFile } from "../http/http";
 
 /**
-* User invitation as returned by the API.
-*/
+ * User invitation as returned by the API.
+ */
 export class UserInvitationResponse {
-    'data'?: UserInvitationResponseData;
+  "data"?: UserInvitationResponseData;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "UserInvitationResponseData",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "data",
+      baseName: "data",
+      type: "UserInvitationResponseData",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UserInvitationResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UserInvitationResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

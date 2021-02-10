@@ -10,102 +10,106 @@
  * Do not edit the class manually.
  */
 
-import { LogQueryDefinition } from './LogQueryDefinition';
-import { ProcessQueryDefinition } from './ProcessQueryDefinition';
-import { WidgetConditionalFormat } from './WidgetConditionalFormat';
-import { WidgetRequestStyle } from './WidgetRequestStyle';
-import { HttpFile } from '../http/http';
+import { LogQueryDefinition } from "./LogQueryDefinition";
+import { ProcessQueryDefinition } from "./ProcessQueryDefinition";
+import { WidgetConditionalFormat } from "./WidgetConditionalFormat";
+import { WidgetRequestStyle } from "./WidgetRequestStyle";
+import { HttpFile } from "../http/http";
 
 /**
-* Updated top list widget.
-*/
+ * Updated top list widget.
+ */
 export class ToplistWidgetRequest {
-    'apmQuery'?: LogQueryDefinition;
-    /**
-    * List of conditional formats.
-    */
-    'conditionalFormats'?: Array<WidgetConditionalFormat>;
-    'eventQuery'?: LogQueryDefinition;
-    'logQuery'?: LogQueryDefinition;
-    'networkQuery'?: LogQueryDefinition;
-    'processQuery'?: ProcessQueryDefinition;
-    /**
-    * Widget query.
-    */
-    'q'?: string;
-    'rumQuery'?: LogQueryDefinition;
-    'securityQuery'?: LogQueryDefinition;
-    'style'?: WidgetRequestStyle;
+  "apmQuery"?: LogQueryDefinition;
+  /**
+   * List of conditional formats.
+   */
+  "conditionalFormats"?: Array<WidgetConditionalFormat>;
+  "eventQuery"?: LogQueryDefinition;
+  "logQuery"?: LogQueryDefinition;
+  "networkQuery"?: LogQueryDefinition;
+  "processQuery"?: ProcessQueryDefinition;
+  /**
+   * Widget query.
+   */
+  "q"?: string;
+  "rumQuery"?: LogQueryDefinition;
+  "securityQuery"?: LogQueryDefinition;
+  "style"?: WidgetRequestStyle;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "apmQuery",
-            "baseName": "apm_query",
-            "type": "LogQueryDefinition",
-            "format": ""
-        },
-        {
-            "name": "conditionalFormats",
-            "baseName": "conditional_formats",
-            "type": "Array<WidgetConditionalFormat>",
-            "format": ""
-        },
-        {
-            "name": "eventQuery",
-            "baseName": "event_query",
-            "type": "LogQueryDefinition",
-            "format": ""
-        },
-        {
-            "name": "logQuery",
-            "baseName": "log_query",
-            "type": "LogQueryDefinition",
-            "format": ""
-        },
-        {
-            "name": "networkQuery",
-            "baseName": "network_query",
-            "type": "LogQueryDefinition",
-            "format": ""
-        },
-        {
-            "name": "processQuery",
-            "baseName": "process_query",
-            "type": "ProcessQueryDefinition",
-            "format": ""
-        },
-        {
-            "name": "q",
-            "baseName": "q",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "rumQuery",
-            "baseName": "rum_query",
-            "type": "LogQueryDefinition",
-            "format": ""
-        },
-        {
-            "name": "securityQuery",
-            "baseName": "security_query",
-            "type": "LogQueryDefinition",
-            "format": ""
-        },
-        {
-            "name": "style",
-            "baseName": "style",
-            "type": "WidgetRequestStyle",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "apmQuery",
+      baseName: "apm_query",
+      type: "LogQueryDefinition",
+      format: "",
+    },
+    {
+      name: "conditionalFormats",
+      baseName: "conditional_formats",
+      type: "Array<WidgetConditionalFormat>",
+      format: "",
+    },
+    {
+      name: "eventQuery",
+      baseName: "event_query",
+      type: "LogQueryDefinition",
+      format: "",
+    },
+    {
+      name: "logQuery",
+      baseName: "log_query",
+      type: "LogQueryDefinition",
+      format: "",
+    },
+    {
+      name: "networkQuery",
+      baseName: "network_query",
+      type: "LogQueryDefinition",
+      format: "",
+    },
+    {
+      name: "processQuery",
+      baseName: "process_query",
+      type: "ProcessQueryDefinition",
+      format: "",
+    },
+    {
+      name: "q",
+      baseName: "q",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "rumQuery",
+      baseName: "rum_query",
+      type: "LogQueryDefinition",
+      format: "",
+    },
+    {
+      name: "securityQuery",
+      baseName: "security_query",
+      type: "LogQueryDefinition",
+      format: "",
+    },
+    {
+      name: "style",
+      baseName: "style",
+      type: "WidgetRequestStyle",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return ToplistWidgetRequest.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return ToplistWidgetRequest.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

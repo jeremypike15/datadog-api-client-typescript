@@ -10,9 +10,13 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of the single value field definitions.
-*/
-export type IncidentFieldAttributesValueType = "multiselect" | "textarray" | "metrictag" | "autocomplete" ;
+ * Type of the single value field definitions.
+ */
+export type IncidentFieldAttributesValueType =
+  | "multiselect"
+  | "textarray"
+  | "metrictag"
+  | "autocomplete";

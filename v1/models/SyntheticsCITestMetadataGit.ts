@@ -10,42 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Git information.
-*/
+ * Git information.
+ */
 export class SyntheticsCITestMetadataGit {
-    /**
-    * Branch name.
-    */
-    'branch'?: string;
-    /**
-    * Commit SHA.
-    */
-    'commitSha'?: string;
+  /**
+   * Branch name.
+   */
+  "branch"?: string;
+  /**
+   * Commit SHA.
+   */
+  "commitSha"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "branch",
-            "baseName": "branch",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "commitSha",
-            "baseName": "commit_sha",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "branch",
+      baseName: "branch",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "commitSha",
+      baseName: "commit_sha",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SyntheticsCITestMetadataGit.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SyntheticsCITestMetadataGit.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

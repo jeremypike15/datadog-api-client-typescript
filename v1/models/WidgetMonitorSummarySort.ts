@@ -10,9 +10,24 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Widget sorting methods.
-*/
-export type WidgetMonitorSummarySort = "name" | "group" | "status" | "tags" | "triggered" | "group,asc" | "group,desc" | "name,asc" | "name,desc" | "status,asc" | "status,desc" | "tags,asc" | "tags,desc" | "triggered,asc" | "triggered,desc" ;
+ * Widget sorting methods.
+ */
+export type WidgetMonitorSummarySort =
+  | "name"
+  | "group"
+  | "status"
+  | "tags"
+  | "triggered"
+  | "group,asc"
+  | "group,desc"
+  | "name,asc"
+  | "name,desc"
+  | "status,asc"
+  | "status,desc"
+  | "tags,asc"
+  | "tags,desc"
+  | "triggered,asc"
+  | "triggered,desc";

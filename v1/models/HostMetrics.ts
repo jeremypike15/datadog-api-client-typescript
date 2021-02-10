@@ -10,52 +10,56 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Host Metrics collected.
-*/
+ * Host Metrics collected.
+ */
 export class HostMetrics {
-    /**
-    * The percent of CPU used (everything but idle).
-    */
-    'cpu'?: number;
-    /**
-    * The percent of CPU spent waiting on the IO (not reported for all platforms).
-    */
-    'iowait'?: number;
-    /**
-    * The system load over the last 15 minutes.
-    */
-    'load'?: number;
+  /**
+   * The percent of CPU used (everything but idle).
+   */
+  "cpu"?: number;
+  /**
+   * The percent of CPU spent waiting on the IO (not reported for all platforms).
+   */
+  "iowait"?: number;
+  /**
+   * The system load over the last 15 minutes.
+   */
+  "load"?: number;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "cpu",
-            "baseName": "cpu",
-            "type": "number",
-            "format": "double"
-        },
-        {
-            "name": "iowait",
-            "baseName": "iowait",
-            "type": "number",
-            "format": "double"
-        },
-        {
-            "name": "load",
-            "baseName": "load",
-            "type": "number",
-            "format": "double"
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "cpu",
+      baseName: "cpu",
+      type: "number",
+      format: "double",
+    },
+    {
+      name: "iowait",
+      baseName: "iowait",
+      type: "number",
+      format: "double",
+    },
+    {
+      name: "load",
+      baseName: "load",
+      type: "number",
+      format: "double",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return HostMetrics.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return HostMetrics.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

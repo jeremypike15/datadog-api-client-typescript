@@ -10,62 +10,66 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Response with the list of muted host for your organization.
-*/
+ * Response with the list of muted host for your organization.
+ */
 export class HostMuteResponse {
-    /**
-    * Action applied to the hosts.
-    */
-    'action'?: string;
-    /**
-    * POSIX timestamp in seconds when the host is unmuted.
-    */
-    'end'?: number;
-    /**
-    * The host name.
-    */
-    'hostname'?: string;
-    /**
-    * Message associated with the mute.
-    */
-    'message'?: string;
+  /**
+   * Action applied to the hosts.
+   */
+  "action"?: string;
+  /**
+   * POSIX timestamp in seconds when the host is unmuted.
+   */
+  "end"?: number;
+  /**
+   * The host name.
+   */
+  "hostname"?: string;
+  /**
+   * Message associated with the mute.
+   */
+  "message"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "action",
-            "baseName": "action",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "end",
-            "baseName": "end",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "hostname",
-            "baseName": "hostname",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "message",
-            "baseName": "message",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "action",
+      baseName: "action",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "end",
+      baseName: "end",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "hostname",
+      baseName: "hostname",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "message",
+      baseName: "message",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return HostMuteResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return HostMuteResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

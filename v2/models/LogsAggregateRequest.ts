@@ -10,68 +10,72 @@
  * Do not edit the class manually.
  */
 
-import { LogsAggregateRequestPage } from './LogsAggregateRequestPage';
-import { LogsCompute } from './LogsCompute';
-import { LogsGroupBy } from './LogsGroupBy';
-import { LogsQueryFilter } from './LogsQueryFilter';
-import { LogsQueryOptions } from './LogsQueryOptions';
-import { HttpFile } from '../http/http';
+import { LogsAggregateRequestPage } from "./LogsAggregateRequestPage";
+import { LogsCompute } from "./LogsCompute";
+import { LogsGroupBy } from "./LogsGroupBy";
+import { LogsQueryFilter } from "./LogsQueryFilter";
+import { LogsQueryOptions } from "./LogsQueryOptions";
+import { HttpFile } from "../http/http";
 
 /**
-* The object sent with the request to retrieve a list of logs from your organization.
-*/
+ * The object sent with the request to retrieve a list of logs from your organization.
+ */
 export class LogsAggregateRequest {
-    /**
-    * The list of metrics or timeseries to compute for the retrieved buckets.
-    */
-    'compute'?: Array<LogsCompute>;
-    'filter'?: LogsQueryFilter;
-    /**
-    * The rules for the group by
-    */
-    'groupBy'?: Array<LogsGroupBy>;
-    'options'?: LogsQueryOptions;
-    'page'?: LogsAggregateRequestPage;
+  /**
+   * The list of metrics or timeseries to compute for the retrieved buckets.
+   */
+  "compute"?: Array<LogsCompute>;
+  "filter"?: LogsQueryFilter;
+  /**
+   * The rules for the group by
+   */
+  "groupBy"?: Array<LogsGroupBy>;
+  "options"?: LogsQueryOptions;
+  "page"?: LogsAggregateRequestPage;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "compute",
-            "baseName": "compute",
-            "type": "Array<LogsCompute>",
-            "format": ""
-        },
-        {
-            "name": "filter",
-            "baseName": "filter",
-            "type": "LogsQueryFilter",
-            "format": ""
-        },
-        {
-            "name": "groupBy",
-            "baseName": "group_by",
-            "type": "Array<LogsGroupBy>",
-            "format": ""
-        },
-        {
-            "name": "options",
-            "baseName": "options",
-            "type": "LogsQueryOptions",
-            "format": ""
-        },
-        {
-            "name": "page",
-            "baseName": "page",
-            "type": "LogsAggregateRequestPage",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "compute",
+      baseName: "compute",
+      type: "Array<LogsCompute>",
+      format: "",
+    },
+    {
+      name: "filter",
+      baseName: "filter",
+      type: "LogsQueryFilter",
+      format: "",
+    },
+    {
+      name: "groupBy",
+      baseName: "group_by",
+      type: "Array<LogsGroupBy>",
+      format: "",
+    },
+    {
+      name: "options",
+      baseName: "options",
+      type: "LogsQueryOptions",
+      format: "",
+    },
+    {
+      name: "page",
+      baseName: "page",
+      type: "LogsAggregateRequestPage",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return LogsAggregateRequest.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return LogsAggregateRequest.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

@@ -10,9 +10,15 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Sorting options for roles.
-*/
-export type RolesSort = "name" | "-name" | "modified_at" | "-modified_at" | "user_count" | "-user_count" ;
+ * Sorting options for roles.
+ */
+export type RolesSort =
+  | "name"
+  | "-name"
+  | "modified_at"
+  | "-modified_at"
+  | "user_count"
+  | "-user_count";

@@ -10,112 +10,116 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Attributes of user object returned by the API.
-*/
+ * Attributes of user object returned by the API.
+ */
 export class UserAttributes {
-    /**
-    * Creation time of the user.
-    */
-    'createdAt'?: Date;
-    /**
-    * Whether the user is disabled.
-    */
-    'disabled'?: boolean;
-    /**
-    * Email of the user.
-    */
-    'email'?: string;
-    /**
-    * Handle of the user.
-    */
-    'handle'?: string;
-    /**
-    * URL of the user's icon.
-    */
-    'icon'?: string;
-    /**
-    * Name of the user.
-    */
-    'name'?: string;
-    /**
-    * Status of the user.
-    */
-    'status'?: string;
-    /**
-    * Title of the user.
-    */
-    'title'?: string;
-    /**
-    * Whether the user is verified.
-    */
-    'verified'?: boolean;
+  /**
+   * Creation time of the user.
+   */
+  "createdAt"?: Date;
+  /**
+   * Whether the user is disabled.
+   */
+  "disabled"?: boolean;
+  /**
+   * Email of the user.
+   */
+  "email"?: string;
+  /**
+   * Handle of the user.
+   */
+  "handle"?: string;
+  /**
+   * URL of the user's icon.
+   */
+  "icon"?: string;
+  /**
+   * Name of the user.
+   */
+  "name"?: string;
+  /**
+   * Status of the user.
+   */
+  "status"?: string;
+  /**
+   * Title of the user.
+   */
+  "title"?: string;
+  /**
+   * Whether the user is verified.
+   */
+  "verified"?: boolean;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "createdAt",
-            "baseName": "created_at",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "disabled",
-            "baseName": "disabled",
-            "type": "boolean",
-            "format": ""
-        },
-        {
-            "name": "email",
-            "baseName": "email",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "handle",
-            "baseName": "handle",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "icon",
-            "baseName": "icon",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "status",
-            "baseName": "status",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "title",
-            "baseName": "title",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "verified",
-            "baseName": "verified",
-            "type": "boolean",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "createdAt",
+      baseName: "created_at",
+      type: "Date",
+      format: "date-time",
+    },
+    {
+      name: "disabled",
+      baseName: "disabled",
+      type: "boolean",
+      format: "",
+    },
+    {
+      name: "email",
+      baseName: "email",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "handle",
+      baseName: "handle",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "icon",
+      baseName: "icon",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "name",
+      baseName: "name",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "status",
+      baseName: "status",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "title",
+      baseName: "title",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "verified",
+      baseName: "verified",
+      type: "boolean",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UserAttributes.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UserAttributes.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

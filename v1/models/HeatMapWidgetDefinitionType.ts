@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of the heat map widget.
-*/
-export type HeatMapWidgetDefinitionType = "heatmap" ;
+ * Type of the heat map widget.
+ */
+export type HeatMapWidgetDefinitionType = "heatmap";

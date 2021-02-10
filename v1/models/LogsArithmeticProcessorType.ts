@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of logs arithmetic processor.
-*/
-export type LogsArithmeticProcessorType = "arithmetic-processor" ;
+ * Type of logs arithmetic processor.
+ */
+export type LogsArithmeticProcessorType = "arithmetic-processor";

@@ -10,62 +10,66 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Datadog API key.
-*/
+ * Datadog API key.
+ */
 export class ApiKey {
-    /**
-    * Date of creation of the API key.
-    */
-    'created'?: string;
-    /**
-    * Datadog user handle that created the API key.
-    */
-    'createdBy'?: string;
-    /**
-    * API key.
-    */
-    'key'?: string;
-    /**
-    * Name of your API key.
-    */
-    'name'?: string;
+  /**
+   * Date of creation of the API key.
+   */
+  "created"?: string;
+  /**
+   * Datadog user handle that created the API key.
+   */
+  "createdBy"?: string;
+  /**
+   * API key.
+   */
+  "key"?: string;
+  /**
+   * Name of your API key.
+   */
+  "name"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "created",
-            "baseName": "created",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "createdBy",
-            "baseName": "created_by",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "key",
-            "baseName": "key",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "created",
+      baseName: "created",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "createdBy",
+      baseName: "created_by",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "key",
+      baseName: "key",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "name",
+      baseName: "name",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return ApiKey.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return ApiKey.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

@@ -10,42 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Number of Synthetics API tests run for each hour for a given organization.
-*/
+ * Number of Synthetics API tests run for each hour for a given organization.
+ */
 export class UsageSyntheticsAPIHour {
-    /**
-    * Contains the number of Synthetics API tests run.
-    */
-    'checkCallsCount'?: number;
-    /**
-    * The hour for the usage.
-    */
-    'hour'?: Date;
+  /**
+   * Contains the number of Synthetics API tests run.
+   */
+  "checkCallsCount"?: number;
+  /**
+   * The hour for the usage.
+   */
+  "hour"?: Date;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "checkCallsCount",
-            "baseName": "check_calls_count",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "hour",
-            "baseName": "hour",
-            "type": "Date",
-            "format": "date-time"
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "checkCallsCount",
+      baseName: "check_calls_count",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "hour",
+      baseName: "hour",
+      type: "Date",
+      format: "date-time",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UsageSyntheticsAPIHour.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UsageSyntheticsAPIHour.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

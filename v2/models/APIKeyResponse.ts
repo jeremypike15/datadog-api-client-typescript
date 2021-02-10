@@ -10,41 +10,45 @@
  * Do not edit the class manually.
  */
 
-import { APIKeyResponseIncludedItem } from './APIKeyResponseIncludedItem';
-import { FullAPIKey } from './FullAPIKey';
-import { HttpFile } from '../http/http';
+import { APIKeyResponseIncludedItem } from "./APIKeyResponseIncludedItem";
+import { FullAPIKey } from "./FullAPIKey";
+import { HttpFile } from "../http/http";
 
 /**
-* Response for retrieving an API key.
-*/
+ * Response for retrieving an API key.
+ */
 export class APIKeyResponse {
-    'data'?: FullAPIKey;
-    /**
-    * Array of objects related to the API key.
-    */
-    'included'?: Array<APIKeyResponseIncludedItem>;
+  "data"?: FullAPIKey;
+  /**
+   * Array of objects related to the API key.
+   */
+  "included"?: Array<APIKeyResponseIncludedItem>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "FullAPIKey",
-            "format": ""
-        },
-        {
-            "name": "included",
-            "baseName": "included",
-            "type": "Array<APIKeyResponseIncludedItem>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "data",
+      baseName: "data",
+      type: "FullAPIKey",
+      format: "",
+    },
+    {
+      name: "included",
+      baseName: "included",
+      type: "Array<APIKeyResponseIncludedItem>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return APIKeyResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return APIKeyResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

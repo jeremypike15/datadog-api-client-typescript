@@ -10,38 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { UsageSpecifiedCustomReportsData } from './UsageSpecifiedCustomReportsData';
-import { UsageSpecifiedCustomReportsMeta } from './UsageSpecifiedCustomReportsMeta';
-import { HttpFile } from '../http/http';
+import { UsageSpecifiedCustomReportsData } from "./UsageSpecifiedCustomReportsData";
+import { UsageSpecifiedCustomReportsMeta } from "./UsageSpecifiedCustomReportsMeta";
+import { HttpFile } from "../http/http";
 
 /**
-* Returns available specified custom reports.
-*/
+ * Returns available specified custom reports.
+ */
 export class UsageSpecifiedCustomReportsResponse {
-    'data'?: UsageSpecifiedCustomReportsData;
-    'meta'?: UsageSpecifiedCustomReportsMeta;
+  "data"?: UsageSpecifiedCustomReportsData;
+  "meta"?: UsageSpecifiedCustomReportsMeta;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "UsageSpecifiedCustomReportsData",
-            "format": ""
-        },
-        {
-            "name": "meta",
-            "baseName": "meta",
-            "type": "UsageSpecifiedCustomReportsMeta",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "data",
+      baseName: "data",
+      type: "UsageSpecifiedCustomReportsData",
+      format: "",
+    },
+    {
+      name: "meta",
+      baseName: "meta",
+      type: "UsageSpecifiedCustomReportsMeta",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UsageSpecifiedCustomReportsResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UsageSpecifiedCustomReportsResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

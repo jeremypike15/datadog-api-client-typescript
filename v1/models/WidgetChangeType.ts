@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Show the absolute or the relative change.
-*/
-export type WidgetChangeType = "absolute" | "relative" ;
+ * Show the absolute or the relative change.
+ */
+export type WidgetChangeType = "absolute" | "relative";

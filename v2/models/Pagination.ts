@@ -10,42 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Pagination object.
-*/
+ * Pagination object.
+ */
 export class Pagination {
-    /**
-    * Total count.
-    */
-    'totalCount'?: number;
-    /**
-    * Total count of elements matched by the filter.
-    */
-    'totalFilteredCount'?: number;
+  /**
+   * Total count.
+   */
+  "totalCount"?: number;
+  /**
+   * Total count of elements matched by the filter.
+   */
+  "totalFilteredCount"?: number;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "totalCount",
-            "baseName": "total_count",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "totalFilteredCount",
-            "baseName": "total_filtered_count",
-            "type": "number",
-            "format": "int64"
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "totalCount",
+      baseName: "total_count",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "totalFilteredCount",
+      baseName: "total_filtered_count",
+      type: "number",
+      format: "int64",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return Pagination.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return Pagination.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

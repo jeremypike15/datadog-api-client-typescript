@@ -10,9 +10,15 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Data source for event platform-based queries.
-*/
-export type FormulaAndFunctionEventsDataSource = "logs" | "analyzed_spans" | "network" | "rum" | "security_signals" | "profiles" ;
+ * Data source for event platform-based queries.
+ */
+export type FormulaAndFunctionEventsDataSource =
+  | "logs"
+  | "analyzed_spans"
+  | "network"
+  | "rum"
+  | "security_signals"
+  | "profiles";

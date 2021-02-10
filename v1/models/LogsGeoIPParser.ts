@@ -10,70 +10,74 @@
  * Do not edit the class manually.
  */
 
-import { LogsGeoIPParserType } from './LogsGeoIPParserType';
-import { HttpFile } from '../http/http';
+import { LogsGeoIPParserType } from "./LogsGeoIPParserType";
+import { HttpFile } from "../http/http";
 
 /**
-* The GeoIP parser takes an IP address attribute and extracts if available the Continent, Country, Subdivision, and City information in the target attribute path.
-*/
+ * The GeoIP parser takes an IP address attribute and extracts if available the Continent, Country, Subdivision, and City information in the target attribute path.
+ */
 export class LogsGeoIPParser {
-    /**
-    * Whether or not the processor is enabled.
-    */
-    'isEnabled'?: boolean;
-    /**
-    * Name of the processor.
-    */
-    'name'?: string;
-    /**
-    * Array of source attributes.
-    */
-    'sources': Array<string>;
-    /**
-    * Name of the parent attribute that contains all the extracted details from the `sources`.
-    */
-    'target': string;
-    'type': LogsGeoIPParserType;
+  /**
+   * Whether or not the processor is enabled.
+   */
+  "isEnabled"?: boolean;
+  /**
+   * Name of the processor.
+   */
+  "name"?: string;
+  /**
+   * Array of source attributes.
+   */
+  "sources": Array<string>;
+  /**
+   * Name of the parent attribute that contains all the extracted details from the `sources`.
+   */
+  "target": string;
+  "type": LogsGeoIPParserType;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "isEnabled",
-            "baseName": "is_enabled",
-            "type": "boolean",
-            "format": ""
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "sources",
-            "baseName": "sources",
-            "type": "Array<string>",
-            "format": ""
-        },
-        {
-            "name": "target",
-            "baseName": "target",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "LogsGeoIPParserType",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "isEnabled",
+      baseName: "is_enabled",
+      type: "boolean",
+      format: "",
+    },
+    {
+      name: "name",
+      baseName: "name",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "sources",
+      baseName: "sources",
+      type: "Array<string>",
+      format: "",
+    },
+    {
+      name: "target",
+      baseName: "target",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "LogsGeoIPParserType",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return LogsGeoIPParser.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return LogsGeoIPParser.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

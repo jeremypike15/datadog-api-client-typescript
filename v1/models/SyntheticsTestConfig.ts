@@ -10,63 +10,67 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsAssertion } from './SyntheticsAssertion';
-import { SyntheticsBrowserVariable } from './SyntheticsBrowserVariable';
-import { SyntheticsConfigVariable } from './SyntheticsConfigVariable';
-import { SyntheticsTestRequest } from './SyntheticsTestRequest';
-import { HttpFile } from '../http/http';
+import { SyntheticsAssertion } from "./SyntheticsAssertion";
+import { SyntheticsBrowserVariable } from "./SyntheticsBrowserVariable";
+import { SyntheticsConfigVariable } from "./SyntheticsConfigVariable";
+import { SyntheticsTestRequest } from "./SyntheticsTestRequest";
+import { HttpFile } from "../http/http";
 
 /**
-* Configuration object for a Synthetic test.
-*/
+ * Configuration object for a Synthetic test.
+ */
 export class SyntheticsTestConfig {
-    /**
-    * Array of assertions used for the test.
-    */
-    'assertions': Array<SyntheticsAssertion>;
-    /**
-    * API tests only - array of variables used for the test.
-    */
-    'configVariables'?: Array<SyntheticsConfigVariable>;
-    'request': SyntheticsTestRequest;
-    /**
-    * Browser tests only - array of variables used for the test steps.
-    */
-    'variables'?: Array<SyntheticsBrowserVariable>;
+  /**
+   * Array of assertions used for the test.
+   */
+  "assertions": Array<SyntheticsAssertion>;
+  /**
+   * API tests only - array of variables used for the test.
+   */
+  "configVariables"?: Array<SyntheticsConfigVariable>;
+  "request": SyntheticsTestRequest;
+  /**
+   * Browser tests only - array of variables used for the test steps.
+   */
+  "variables"?: Array<SyntheticsBrowserVariable>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "assertions",
-            "baseName": "assertions",
-            "type": "Array<SyntheticsAssertion>",
-            "format": ""
-        },
-        {
-            "name": "configVariables",
-            "baseName": "configVariables",
-            "type": "Array<SyntheticsConfigVariable>",
-            "format": ""
-        },
-        {
-            "name": "request",
-            "baseName": "request",
-            "type": "SyntheticsTestRequest",
-            "format": ""
-        },
-        {
-            "name": "variables",
-            "baseName": "variables",
-            "type": "Array<SyntheticsBrowserVariable>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "assertions",
+      baseName: "assertions",
+      type: "Array<SyntheticsAssertion>",
+      format: "",
+    },
+    {
+      name: "configVariables",
+      baseName: "configVariables",
+      type: "Array<SyntheticsConfigVariable>",
+      format: "",
+    },
+    {
+      name: "request",
+      baseName: "request",
+      type: "SyntheticsTestRequest",
+      format: "",
+    },
+    {
+      name: "variables",
+      baseName: "variables",
+      type: "Array<SyntheticsBrowserVariable>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SyntheticsTestConfig.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SyntheticsTestConfig.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

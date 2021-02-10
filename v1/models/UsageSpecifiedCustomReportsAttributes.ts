@@ -10,82 +10,86 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The response containing attributes for specified custom reports.
-*/
+ * The response containing attributes for specified custom reports.
+ */
 export class UsageSpecifiedCustomReportsAttributes {
-    /**
-    * The date the specified custom report was computed.
-    */
-    'computedOn'?: string;
-    /**
-    * The ending date of specified custom report.
-    */
-    'endDate'?: string;
-    /**
-    * A downloadable file for the specified custom reporting file.
-    */
-    'location'?: string;
-    /**
-    * size
-    */
-    'size'?: number;
-    /**
-    * The starting date of specified custom report.
-    */
-    'startDate'?: string;
-    /**
-    * A list of tags to apply to specified custom reports.
-    */
-    'tags'?: Array<string>;
+  /**
+   * The date the specified custom report was computed.
+   */
+  "computedOn"?: string;
+  /**
+   * The ending date of specified custom report.
+   */
+  "endDate"?: string;
+  /**
+   * A downloadable file for the specified custom reporting file.
+   */
+  "location"?: string;
+  /**
+   * size
+   */
+  "size"?: number;
+  /**
+   * The starting date of specified custom report.
+   */
+  "startDate"?: string;
+  /**
+   * A list of tags to apply to specified custom reports.
+   */
+  "tags"?: Array<string>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "computedOn",
-            "baseName": "computed_on",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "endDate",
-            "baseName": "end_date",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "location",
-            "baseName": "location",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "size",
-            "baseName": "size",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "startDate",
-            "baseName": "start_date",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "tags",
-            "baseName": "tags",
-            "type": "Array<string>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "computedOn",
+      baseName: "computed_on",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "endDate",
+      baseName: "end_date",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "location",
+      baseName: "location",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "size",
+      baseName: "size",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "startDate",
+      baseName: "start_date",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "tags",
+      baseName: "tags",
+      type: "Array<string>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UsageSpecifiedCustomReportsAttributes.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UsageSpecifiedCustomReportsAttributes.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

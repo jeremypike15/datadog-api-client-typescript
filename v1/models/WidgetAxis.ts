@@ -10,72 +10,76 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Axis controls for the widget.
-*/
+ * Axis controls for the widget.
+ */
 export class WidgetAxis {
-    /**
-    * True includes zero.
-    */
-    'includeZero'?: boolean;
-    /**
-    * The label of the axis to display on the graph.
-    */
-    'label'?: string;
-    /**
-    * Specifies the maximum value to show on the y-axis. It takes a number, or auto for default behavior.
-    */
-    'max'?: string;
-    /**
-    * Specifies minimum value to show on the y-axis. It takes a number, or auto for default behavior.
-    */
-    'min'?: string;
-    /**
-    * Specifies the scale type. Possible values are `linear`, `log`, `sqrt`, `pow##` (e.g. `pow2`, `pow0.5` etc.).
-    */
-    'scale'?: string;
+  /**
+   * True includes zero.
+   */
+  "includeZero"?: boolean;
+  /**
+   * The label of the axis to display on the graph.
+   */
+  "label"?: string;
+  /**
+   * Specifies the maximum value to show on the y-axis. It takes a number, or auto for default behavior.
+   */
+  "max"?: string;
+  /**
+   * Specifies minimum value to show on the y-axis. It takes a number, or auto for default behavior.
+   */
+  "min"?: string;
+  /**
+   * Specifies the scale type. Possible values are `linear`, `log`, `sqrt`, `pow##` (e.g. `pow2`, `pow0.5` etc.).
+   */
+  "scale"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "includeZero",
-            "baseName": "include_zero",
-            "type": "boolean",
-            "format": ""
-        },
-        {
-            "name": "label",
-            "baseName": "label",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "max",
-            "baseName": "max",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "min",
-            "baseName": "min",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "scale",
-            "baseName": "scale",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "includeZero",
+      baseName: "include_zero",
+      type: "boolean",
+      format: "",
+    },
+    {
+      name: "label",
+      baseName: "label",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "max",
+      baseName: "max",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "min",
+      baseName: "min",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "scale",
+      baseName: "scale",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return WidgetAxis.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return WidgetAxis.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

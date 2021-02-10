@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of lines displayed.
-*/
-export type WidgetLineType = "dashed" | "dotted" | "solid" ;
+ * Type of lines displayed.
+ */
+export type WidgetLineType = "dashed" | "dotted" | "solid";

@@ -10,33 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { UsageRumSessionsHour } from './UsageRumSessionsHour';
-import { HttpFile } from '../http/http';
+import { UsageRumSessionsHour } from "./UsageRumSessionsHour";
+import { HttpFile } from "../http/http";
 
 /**
-* Response containing the number of RUM Sessions for each hour for a given organization.
-*/
+ * Response containing the number of RUM Sessions for each hour for a given organization.
+ */
 export class UsageRumSessionsResponse {
-    /**
-    * Get hourly usage for RUM Sessions.
-    */
-    'usage'?: Array<UsageRumSessionsHour>;
+  /**
+   * Get hourly usage for RUM Sessions.
+   */
+  "usage"?: Array<UsageRumSessionsHour>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "usage",
-            "baseName": "usage",
-            "type": "Array<UsageRumSessionsHour>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "usage",
+      baseName: "usage",
+      type: "Array<UsageRumSessionsHour>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UsageRumSessionsResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UsageRumSessionsResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

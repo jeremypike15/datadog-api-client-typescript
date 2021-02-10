@@ -10,33 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { SLOCorrectionListResponseData } from './SLOCorrectionListResponseData';
-import { HttpFile } from '../http/http';
+import { SLOCorrectionListResponseData } from "./SLOCorrectionListResponseData";
+import { HttpFile } from "../http/http";
 
 /**
-* A list of  SLO correction objects
-*/
+ * A list of  SLO correction objects
+ */
 export class SLOCorrectionListResponse {
-    /**
-    * The list of of SLO corrections objects
-    */
-    'data'?: Array<SLOCorrectionListResponseData>;
+  /**
+   * The list of of SLO corrections objects
+   */
+  "data"?: Array<SLOCorrectionListResponseData>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "Array<SLOCorrectionListResponseData>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "data",
+      baseName: "data",
+      type: "Array<SLOCorrectionListResponseData>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SLOCorrectionListResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SLOCorrectionListResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

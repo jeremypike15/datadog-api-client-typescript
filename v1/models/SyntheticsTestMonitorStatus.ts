@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The status of your Synthetic monitor. * `O` for not triggered * `1` for triggered * `2` for no data
-*/
-export type SyntheticsTestMonitorStatus = "0" | "1" | "2" ;
+ * The status of your Synthetic monitor. * `O` for not triggered * `1` for triggered * `2` for no data
+ */
+export type SyntheticsTestMonitorStatus = "0" | "1" | "2";

@@ -10,30 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { IncidentServiceCreateData } from './IncidentServiceCreateData';
-import { HttpFile } from '../http/http';
+import { IncidentServiceCreateData } from "./IncidentServiceCreateData";
+import { HttpFile } from "../http/http";
 
 /**
-* Create request with an incident service payload.
-*/
+ * Create request with an incident service payload.
+ */
 export class IncidentServiceCreateRequest {
-    'data': IncidentServiceCreateData;
+  "data": IncidentServiceCreateData;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "IncidentServiceCreateData",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "data",
+      baseName: "data",
+      type: "IncidentServiceCreateData",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IncidentServiceCreateRequest.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IncidentServiceCreateRequest.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

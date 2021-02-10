@@ -10,56 +10,60 @@
  * Do not edit the class manually.
  */
 
-import { FormulaAndFunctionEventAggregation } from './FormulaAndFunctionEventAggregation';
-import { FormulaAndFunctionEventsSortType } from './FormulaAndFunctionEventsSortType';
-import { QuerySortOrder } from './QuerySortOrder';
-import { HttpFile } from '../http/http';
+import { FormulaAndFunctionEventAggregation } from "./FormulaAndFunctionEventAggregation";
+import { FormulaAndFunctionEventsSortType } from "./FormulaAndFunctionEventsSortType";
+import { QuerySortOrder } from "./QuerySortOrder";
+import { HttpFile } from "../http/http";
 
 /**
-* Options for sorting group by results.
-*/
+ * Options for sorting group by results.
+ */
 export class TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort {
-    'aggregation': FormulaAndFunctionEventAggregation;
-    /**
-    * Metric used for sorting group by results.
-    */
-    'metric'?: string;
-    'order'?: QuerySortOrder;
-    'type'?: FormulaAndFunctionEventsSortType;
+  "aggregation": FormulaAndFunctionEventAggregation;
+  /**
+   * Metric used for sorting group by results.
+   */
+  "metric"?: string;
+  "order"?: QuerySortOrder;
+  "type"?: FormulaAndFunctionEventsSortType;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "aggregation",
-            "baseName": "aggregation",
-            "type": "FormulaAndFunctionEventAggregation",
-            "format": ""
-        },
-        {
-            "name": "metric",
-            "baseName": "metric",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "order",
-            "baseName": "order",
-            "type": "QuerySortOrder",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "FormulaAndFunctionEventsSortType",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "aggregation",
+      baseName: "aggregation",
+      type: "FormulaAndFunctionEventAggregation",
+      format: "",
+    },
+    {
+      name: "metric",
+      baseName: "metric",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "order",
+      baseName: "order",
+      type: "QuerySortOrder",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "FormulaAndFunctionEventsSortType",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

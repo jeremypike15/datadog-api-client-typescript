@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of the table widget.
-*/
-export type TableWidgetDefinitionType = "query_table" ;
+ * Type of the table widget.
+ */
+export type TableWidgetDefinitionType = "query_table";

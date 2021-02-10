@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of display to use for the request.
-*/
-export type WidgetDisplayType = "area" | "bars" | "line" ;
+ * Type of display to use for the request.
+ */
+export type WidgetDisplayType = "area" | "bars" | "line";

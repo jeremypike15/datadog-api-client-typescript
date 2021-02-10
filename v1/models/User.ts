@@ -10,90 +10,94 @@
  * Do not edit the class manually.
  */
 
-import { AccessRole } from './AccessRole';
-import { HttpFile } from '../http/http';
+import { AccessRole } from "./AccessRole";
+import { HttpFile } from "../http/http";
 
 /**
-* Create, edit, and disable users.
-*/
+ * Create, edit, and disable users.
+ */
 export class User {
-    'accessRole'?: AccessRole;
-    /**
-    * The new disabled status of the user.
-    */
-    'disabled'?: boolean;
-    /**
-    * The new email of the user.
-    */
-    'email'?: string;
-    /**
-    * The user handle, must be a valid email.
-    */
-    'handle'?: string;
-    /**
-    * Gravatar icon associated to the user.
-    */
-    'icon'?: string;
-    /**
-    * The name of the user.
-    */
-    'name'?: string;
-    /**
-    * Whether or not the user logged in Datadog at least once.
-    */
-    'verified'?: boolean;
+  "accessRole"?: AccessRole;
+  /**
+   * The new disabled status of the user.
+   */
+  "disabled"?: boolean;
+  /**
+   * The new email of the user.
+   */
+  "email"?: string;
+  /**
+   * The user handle, must be a valid email.
+   */
+  "handle"?: string;
+  /**
+   * Gravatar icon associated to the user.
+   */
+  "icon"?: string;
+  /**
+   * The name of the user.
+   */
+  "name"?: string;
+  /**
+   * Whether or not the user logged in Datadog at least once.
+   */
+  "verified"?: boolean;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "accessRole",
-            "baseName": "access_role",
-            "type": "AccessRole",
-            "format": ""
-        },
-        {
-            "name": "disabled",
-            "baseName": "disabled",
-            "type": "boolean",
-            "format": ""
-        },
-        {
-            "name": "email",
-            "baseName": "email",
-            "type": "string",
-            "format": "email"
-        },
-        {
-            "name": "handle",
-            "baseName": "handle",
-            "type": "string",
-            "format": "email"
-        },
-        {
-            "name": "icon",
-            "baseName": "icon",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "verified",
-            "baseName": "verified",
-            "type": "boolean",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "accessRole",
+      baseName: "access_role",
+      type: "AccessRole",
+      format: "",
+    },
+    {
+      name: "disabled",
+      baseName: "disabled",
+      type: "boolean",
+      format: "",
+    },
+    {
+      name: "email",
+      baseName: "email",
+      type: "string",
+      format: "email",
+    },
+    {
+      name: "handle",
+      baseName: "handle",
+      type: "string",
+      format: "email",
+    },
+    {
+      name: "icon",
+      baseName: "icon",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "name",
+      baseName: "name",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "verified",
+      baseName: "verified",
+      type: "boolean",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return User.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return User.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

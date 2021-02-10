@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Comparator to apply.
-*/
-export type WidgetComparator = "&gt;" | "&gt;&#x3D;" | "&lt;" | "&lt;&#x3D;" ;
+ * Comparator to apply.
+ */
+export type WidgetComparator = "&gt;" | "&gt;&#x3D;" | "&lt;" | "&lt;&#x3D;";

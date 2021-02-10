@@ -10,52 +10,56 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Attributes of a partial application key.
-*/
+ * Attributes of a partial application key.
+ */
 export class PartialApplicationKeyAttributes {
-    /**
-    * Creation date of the application key.
-    */
-    'createdAt'?: string;
-    /**
-    * The last four characters of the application key.
-    */
-    'last4'?: string;
-    /**
-    * Name of the application key.
-    */
-    'name'?: string;
+  /**
+   * Creation date of the application key.
+   */
+  "createdAt"?: string;
+  /**
+   * The last four characters of the application key.
+   */
+  "last4"?: string;
+  /**
+   * Name of the application key.
+   */
+  "name"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "createdAt",
-            "baseName": "created_at",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "last4",
-            "baseName": "last4",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "createdAt",
+      baseName: "created_at",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "last4",
+      baseName: "last4",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "name",
+      baseName: "name",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return PartialApplicationKeyAttributes.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return PartialApplicationKeyAttributes.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

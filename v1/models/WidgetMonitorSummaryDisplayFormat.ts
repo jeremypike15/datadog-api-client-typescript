@@ -10,9 +10,12 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* What to display on the widget.
-*/
-export type WidgetMonitorSummaryDisplayFormat = "counts" | "countsAndList" | "list" ;
+ * What to display on the widget.
+ */
+export type WidgetMonitorSummaryDisplayFormat =
+  | "counts"
+  | "countsAndList"
+  | "list";

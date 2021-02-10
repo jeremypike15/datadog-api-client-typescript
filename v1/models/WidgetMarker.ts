@@ -10,62 +10,66 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Markers allow you to add visual conditional formatting for your graphs.
-*/
+ * Markers allow you to add visual conditional formatting for your graphs.
+ */
 export class WidgetMarker {
-    /**
-    * Combination of:   - A severity error, warning, ok, or info   - A line type: dashed, solid, or bold 
-    */
-    'displayType'?: string;
-    /**
-    * Label to display over the marker.
-    */
-    'label'?: string;
-    /**
-    * Timestamp for the widget.
-    */
-    'time'?: string;
-    /**
-    * Value to apply. Can be a single value y = 15 or a range of values 0 < y < 10.
-    */
-    'value': string;
+  /**
+   * Combination of:   - A severity error, warning, ok, or info   - A line type: dashed, solid, or bold
+   */
+  "displayType"?: string;
+  /**
+   * Label to display over the marker.
+   */
+  "label"?: string;
+  /**
+   * Timestamp for the widget.
+   */
+  "time"?: string;
+  /**
+   * Value to apply. Can be a single value y = 15 or a range of values 0 < y < 10.
+   */
+  "value": string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "displayType",
-            "baseName": "display_type",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "label",
-            "baseName": "label",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "time",
-            "baseName": "time",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "value",
-            "baseName": "value",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "displayType",
+      baseName: "display_type",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "label",
+      baseName: "label",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "time",
+      baseName: "time",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "value",
+      baseName: "value",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return WidgetMarker.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return WidgetMarker.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

@@ -10,30 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { RoleUpdateData } from './RoleUpdateData';
-import { HttpFile } from '../http/http';
+import { RoleUpdateData } from "./RoleUpdateData";
+import { HttpFile } from "../http/http";
 
 /**
-* Update a role.
-*/
+ * Update a role.
+ */
 export class RoleUpdateRequest {
-    'data': RoleUpdateData;
+  "data": RoleUpdateData;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "RoleUpdateData",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "data",
+      baseName: "data",
+      type: "RoleUpdateData",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return RoleUpdateRequest.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return RoleUpdateRequest.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

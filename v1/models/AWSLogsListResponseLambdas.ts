@@ -10,32 +10,36 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Description of the Lambdas.
-*/
+ * Description of the Lambdas.
+ */
 export class AWSLogsListResponseLambdas {
-    /**
-    * Available ARN IDs.
-    */
-    'arn'?: string;
+  /**
+   * Available ARN IDs.
+   */
+  "arn"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "arn",
-            "baseName": "arn",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "arn",
+      baseName: "arn",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return AWSLogsListResponseLambdas.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return AWSLogsListResponseLambdas.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

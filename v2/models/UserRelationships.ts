@@ -10,30 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { RelationshipToRoles } from './RelationshipToRoles';
-import { HttpFile } from '../http/http';
+import { RelationshipToRoles } from "./RelationshipToRoles";
+import { HttpFile } from "../http/http";
 
 /**
-* Relationships of the user object.
-*/
+ * Relationships of the user object.
+ */
 export class UserRelationships {
-    'roles'?: RelationshipToRoles;
+  "roles"?: RelationshipToRoles;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "roles",
-            "baseName": "roles",
-            "type": "RelationshipToRoles",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "roles",
+      baseName: "roles",
+      type: "RelationshipToRoles",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UserRelationships.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UserRelationships.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

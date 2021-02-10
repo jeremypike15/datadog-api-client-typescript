@@ -10,42 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Object containing a deleted Synthetic test ID with the associated deletion timestamp.
-*/
+ * Object containing a deleted Synthetic test ID with the associated deletion timestamp.
+ */
 export class SyntheticsDeleteTestsResponseDeletedTests {
-    /**
-    * Deletion timestamp of the Synthetic test ID.
-    */
-    'deletedAt'?: Date;
-    /**
-    * The Synthetic test ID deleted.
-    */
-    'publicId'?: string;
+  /**
+   * Deletion timestamp of the Synthetic test ID.
+   */
+  "deletedAt"?: Date;
+  /**
+   * The Synthetic test ID deleted.
+   */
+  "publicId"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "deletedAt",
-            "baseName": "deleted_at",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "publicId",
-            "baseName": "public_id",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "deletedAt",
+      baseName: "deleted_at",
+      type: "Date",
+      format: "date-time",
+    },
+    {
+      name: "publicId",
+      baseName: "public_id",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SyntheticsDeleteTestsResponseDeletedTests.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SyntheticsDeleteTestsResponseDeletedTests.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

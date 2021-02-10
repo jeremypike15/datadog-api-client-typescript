@@ -10,52 +10,56 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The incident service's attributes from a response.
-*/
+ * The incident service's attributes from a response.
+ */
 export class IncidentServiceResponseAttributes {
-    /**
-    * Timestamp of when the incident service was created.
-    */
-    'created'?: Date;
-    /**
-    * Timestamp of when the incident service was modified.
-    */
-    'modified'?: Date;
-    /**
-    * Name of the incident service.
-    */
-    'name'?: string;
+  /**
+   * Timestamp of when the incident service was created.
+   */
+  "created"?: Date;
+  /**
+   * Timestamp of when the incident service was modified.
+   */
+  "modified"?: Date;
+  /**
+   * Name of the incident service.
+   */
+  "name"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "created",
-            "baseName": "created",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "modified",
-            "baseName": "modified",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "created",
+      baseName: "created",
+      type: "Date",
+      format: "date-time",
+    },
+    {
+      name: "modified",
+      baseName: "modified",
+      type: "Date",
+      format: "date-time",
+    },
+    {
+      name: "name",
+      baseName: "name",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IncidentServiceResponseAttributes.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IncidentServiceResponseAttributes.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

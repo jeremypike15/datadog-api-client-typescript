@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Size of the widget.
-*/
-export type WidgetSizeFormat = "small" | "medium" | "large" ;
+ * Size of the widget.
+ */
+export type WidgetSizeFormat = "small" | "medium" | "large";

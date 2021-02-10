@@ -10,9 +10,12 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Number of columns to display.
-*/
-export type WidgetServiceSummaryDisplayFormat = "one_column" | "two_column" | "three_column" ;
+ * Number of columns to display.
+ */
+export type WidgetServiceSummaryDisplayFormat =
+  | "one_column"
+  | "two_column"
+  | "three_column";

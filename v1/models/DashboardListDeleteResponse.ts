@@ -10,32 +10,36 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Deleted dashboard details.
-*/
+ * Deleted dashboard details.
+ */
 export class DashboardListDeleteResponse {
-    /**
-    * ID of the deleted dashboard list.
-    */
-    'deletedDashboardListId'?: number;
+  /**
+   * ID of the deleted dashboard list.
+   */
+  "deletedDashboardListId"?: number;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "deletedDashboardListId",
-            "baseName": "deleted_dashboard_list_id",
-            "type": "number",
-            "format": "int64"
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "deletedDashboardListId",
+      baseName: "deleted_dashboard_list_id",
+      type: "number",
+      format: "int64",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return DashboardListDeleteResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return DashboardListDeleteResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

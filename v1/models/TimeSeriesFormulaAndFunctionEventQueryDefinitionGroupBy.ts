@@ -10,50 +10,54 @@
  * Do not edit the class manually.
  */
 
-import { TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort } from './TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort';
-import { HttpFile } from '../http/http';
+import { TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort } from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort";
+import { HttpFile } from "../http/http";
 
 /**
-* Group by options.
-*/
+ * Group by options.
+ */
 export class TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy {
-    /**
-    * Event facet.
-    */
-    'facet': string;
-    /**
-    * Number of groups to return.
-    */
-    'limit'?: number;
-    'sort'?: TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort;
+  /**
+   * Event facet.
+   */
+  "facet": string;
+  /**
+   * Number of groups to return.
+   */
+  "limit"?: number;
+  "sort"?: TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "facet",
-            "baseName": "facet",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "limit",
-            "baseName": "limit",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "sort",
-            "baseName": "sort",
-            "type": "TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "facet",
+      baseName: "facet",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "limit",
+      baseName: "limit",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "sort",
+      baseName: "sort",
+      type: "TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

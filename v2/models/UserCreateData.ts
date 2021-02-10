@@ -10,46 +10,50 @@
  * Do not edit the class manually.
  */
 
-import { UserCreateAttributes } from './UserCreateAttributes';
-import { UserRelationships } from './UserRelationships';
-import { UsersType } from './UsersType';
-import { HttpFile } from '../http/http';
+import { UserCreateAttributes } from "./UserCreateAttributes";
+import { UserRelationships } from "./UserRelationships";
+import { UsersType } from "./UsersType";
+import { HttpFile } from "../http/http";
 
 /**
-* Object to create a user.
-*/
+ * Object to create a user.
+ */
 export class UserCreateData {
-    'attributes': UserCreateAttributes;
-    'relationships'?: UserRelationships;
-    'type': UsersType;
+  "attributes": UserCreateAttributes;
+  "relationships"?: UserRelationships;
+  "type": UsersType;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "attributes",
-            "baseName": "attributes",
-            "type": "UserCreateAttributes",
-            "format": ""
-        },
-        {
-            "name": "relationships",
-            "baseName": "relationships",
-            "type": "UserRelationships",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "UsersType",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "attributes",
+      baseName: "attributes",
+      type: "UserCreateAttributes",
+      format: "",
+    },
+    {
+      name: "relationships",
+      baseName: "relationships",
+      type: "UserRelationships",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "UsersType",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UserCreateData.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UserCreateData.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

@@ -10,56 +10,60 @@
  * Do not edit the class manually.
  */
 
-import { IncidentServiceRelationships } from './IncidentServiceRelationships';
-import { IncidentServiceType } from './IncidentServiceType';
-import { IncidentServiceUpdateAttributes } from './IncidentServiceUpdateAttributes';
-import { HttpFile } from '../http/http';
+import { IncidentServiceRelationships } from "./IncidentServiceRelationships";
+import { IncidentServiceType } from "./IncidentServiceType";
+import { IncidentServiceUpdateAttributes } from "./IncidentServiceUpdateAttributes";
+import { HttpFile } from "../http/http";
 
 /**
-* Incident Service payload for update requests.
-*/
+ * Incident Service payload for update requests.
+ */
 export class IncidentServiceUpdateData {
-    'attributes'?: IncidentServiceUpdateAttributes;
-    /**
-    * The incident service's ID.
-    */
-    'id': string;
-    'relationships'?: IncidentServiceRelationships;
-    'type': IncidentServiceType;
+  "attributes"?: IncidentServiceUpdateAttributes;
+  /**
+   * The incident service's ID.
+   */
+  "id": string;
+  "relationships"?: IncidentServiceRelationships;
+  "type": IncidentServiceType;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "attributes",
-            "baseName": "attributes",
-            "type": "IncidentServiceUpdateAttributes",
-            "format": ""
-        },
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "relationships",
-            "baseName": "relationships",
-            "type": "IncidentServiceRelationships",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "IncidentServiceType",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "attributes",
+      baseName: "attributes",
+      type: "IncidentServiceUpdateAttributes",
+      format: "",
+    },
+    {
+      name: "id",
+      baseName: "id",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "relationships",
+      baseName: "relationships",
+      type: "IncidentServiceRelationships",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "IncidentServiceType",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IncidentServiceUpdateData.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IncidentServiceUpdateData.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

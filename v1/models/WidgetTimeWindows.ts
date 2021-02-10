@@ -10,9 +10,17 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Define a time window.
-*/
-export type WidgetTimeWindows = "7d" | "30d" | "90d" | "week_to_date" | "previous_week" | "month_to_date" | "previous_month" | "global_time" ;
+ * Define a time window.
+ */
+export type WidgetTimeWindows =
+  | "7d"
+  | "30d"
+  | "90d"
+  | "week_to_date"
+  | "previous_week"
+  | "month_to_date"
+  | "previous_month"
+  | "global_time";

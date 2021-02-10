@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Layout type of the dashboard.
-*/
-export type DashboardLayoutType = "ordered" | "free" ;
+ * Layout type of the dashboard.
+ */
+export type DashboardLayoutType = "ordered" | "free";

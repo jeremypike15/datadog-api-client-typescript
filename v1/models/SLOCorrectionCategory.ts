@@ -10,9 +10,13 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Category the SLO correction belongs to
-*/
-export type SLOCorrectionCategory = "Scheduled Maintenance" | "Outside Business Hours" | "Deployment" | "Other" ;
+ * Category the SLO correction belongs to
+ */
+export type SLOCorrectionCategory =
+  | "Scheduled Maintenance"
+  | "Outside Business Hours"
+  | "Deployment"
+  | "Other";

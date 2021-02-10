@@ -10,52 +10,56 @@
  * Do not edit the class manually.
  */
 
-import { IncidentResponseData } from './IncidentResponseData';
-import { IncidentResponseIncludedItem } from './IncidentResponseIncludedItem';
-import { IncidentServicesResponseMeta } from './IncidentServicesResponseMeta';
-import { HttpFile } from '../http/http';
+import { IncidentResponseData } from "./IncidentResponseData";
+import { IncidentResponseIncludedItem } from "./IncidentResponseIncludedItem";
+import { IncidentServicesResponseMeta } from "./IncidentServicesResponseMeta";
+import { HttpFile } from "../http/http";
 
 /**
-* Response with a list of incidents.
-*/
+ * Response with a list of incidents.
+ */
 export class IncidentsResponse {
-    /**
-    * An array of incidents.
-    */
-    'data': Array<IncidentResponseData>;
-    /**
-    * Included related resources that the user requested.
-    */
-    'included'?: Array<IncidentResponseIncludedItem>;
-    'meta'?: IncidentServicesResponseMeta;
+  /**
+   * An array of incidents.
+   */
+  "data": Array<IncidentResponseData>;
+  /**
+   * Included related resources that the user requested.
+   */
+  "included"?: Array<IncidentResponseIncludedItem>;
+  "meta"?: IncidentServicesResponseMeta;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "Array<IncidentResponseData>",
-            "format": ""
-        },
-        {
-            "name": "included",
-            "baseName": "included",
-            "type": "Array<IncidentResponseIncludedItem>",
-            "format": ""
-        },
-        {
-            "name": "meta",
-            "baseName": "meta",
-            "type": "IncidentServicesResponseMeta",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "data",
+      baseName: "data",
+      type: "Array<IncidentResponseData>",
+      format: "",
+    },
+    {
+      name: "included",
+      baseName: "included",
+      type: "Array<IncidentResponseIncludedItem>",
+      format: "",
+    },
+    {
+      name: "meta",
+      baseName: "meta",
+      type: "IncidentServicesResponseMeta",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IncidentsResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IncidentsResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

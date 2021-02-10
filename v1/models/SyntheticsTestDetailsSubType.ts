@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The sub-type of the Synthetic API test, `http`, `ssl`, `tcp` or `dns`.
-*/
-export type SyntheticsTestDetailsSubType = "http" | "ssl" | "tcp" | "dns" ;
+ * The sub-type of the Synthetic API test, `http`, `ssl`, `tcp` or `dns`.
+ */
+export type SyntheticsTestDetailsSubType = "http" | "ssl" | "tcp" | "dns";

@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Define how you want to align the text on the widget.
-*/
-export type WidgetTickEdge = "bottom" | "left" | "right" | "top" ;
+ * Define how you want to align the text on the widget.
+ */
+export type WidgetTickEdge = "bottom" | "left" | "right" | "top";

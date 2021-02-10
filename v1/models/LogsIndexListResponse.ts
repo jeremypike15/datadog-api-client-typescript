@@ -10,33 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { LogsIndex } from './LogsIndex';
-import { HttpFile } from '../http/http';
+import { LogsIndex } from "./LogsIndex";
+import { HttpFile } from "../http/http";
 
 /**
-* Object with all Index configurations for a given organization.
-*/
+ * Object with all Index configurations for a given organization.
+ */
 export class LogsIndexListResponse {
-    /**
-    * Array of Log index configurations.
-    */
-    'indexes'?: Array<LogsIndex>;
+  /**
+   * Array of Log index configurations.
+   */
+  "indexes"?: Array<LogsIndex>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "indexes",
-            "baseName": "indexes",
-            "type": "Array<LogsIndex>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "indexes",
+      baseName: "indexes",
+      type: "Array<LogsIndex>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return LogsIndexListResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return LogsIndexListResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

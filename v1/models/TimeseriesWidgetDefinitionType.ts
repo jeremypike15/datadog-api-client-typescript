@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of the timeseries widget.
-*/
-export type TimeseriesWidgetDefinitionType = "timeseries" ;
+ * Type of the timeseries widget.
+ */
+export type TimeseriesWidgetDefinitionType = "timeseries";

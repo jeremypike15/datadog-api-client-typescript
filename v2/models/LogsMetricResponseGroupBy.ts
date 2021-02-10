@@ -10,42 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* A group by rule.
-*/
+ * A group by rule.
+ */
 export class LogsMetricResponseGroupBy {
-    /**
-    * The path to the value the log-based metric will be aggregated over.
-    */
-    'path'?: string;
-    /**
-    * Eventual name of the tag that gets created. By default, the path attribute is used as the tag name.
-    */
-    'tagName'?: string;
+  /**
+   * The path to the value the log-based metric will be aggregated over.
+   */
+  "path"?: string;
+  /**
+   * Eventual name of the tag that gets created. By default, the path attribute is used as the tag name.
+   */
+  "tagName"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "path",
-            "baseName": "path",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "tagName",
-            "baseName": "tag_name",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "path",
+      baseName: "path",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "tagName",
+      baseName: "tag_name",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return LogsMetricResponseGroupBy.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return LogsMetricResponseGroupBy.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

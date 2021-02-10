@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Amount of log lines to display
-*/
-export type WidgetMessageDisplay = "inline" | "expanded-md" | "expanded-lg" ;
+ * Amount of log lines to display
+ */
+export type WidgetMessageDisplay = "inline" | "expanded-md" | "expanded-lg";

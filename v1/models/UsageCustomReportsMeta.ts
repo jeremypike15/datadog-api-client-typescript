@@ -10,30 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { UsageCustomReportsPage } from './UsageCustomReportsPage';
-import { HttpFile } from '../http/http';
+import { UsageCustomReportsPage } from "./UsageCustomReportsPage";
+import { HttpFile } from "../http/http";
 
 /**
-* The object containing document metadata.
-*/
+ * The object containing document metadata.
+ */
 export class UsageCustomReportsMeta {
-    'page'?: UsageCustomReportsPage;
+  "page"?: UsageCustomReportsPage;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "page",
-            "baseName": "page",
-            "type": "UsageCustomReportsPage",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "page",
+      baseName: "page",
+      type: "UsageCustomReportsPage",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UsageCustomReportsMeta.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UsageCustomReportsMeta.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

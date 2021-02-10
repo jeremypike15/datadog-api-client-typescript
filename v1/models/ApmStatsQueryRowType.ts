@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The level of detail for the request.
-*/
-export type ApmStatsQueryRowType = "service" | "resource" | "span" ;
+ * The level of detail for the request.
+ */
+export type ApmStatsQueryRowType = "service" | "resource" | "span";

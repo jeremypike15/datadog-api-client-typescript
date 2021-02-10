@@ -10,92 +10,96 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Response with properties for each aggregated usage type.
-*/
+ * Response with properties for each aggregated usage type.
+ */
 export class UsageBillableSummaryBody {
-    /**
-    * The total account usage.
-    */
-    'accountBillableUsage'?: number;
-    /**
-    * Elapsed usage hours for some billable product.
-    */
-    'elapsedUsageHours'?: number;
-    /**
-    * The first billable hour for the org.
-    */
-    'firstBillableUsageHour'?: Date;
-    /**
-    * The last billable hour for the org.
-    */
-    'lastBillableUsageHour'?: Date;
-    /**
-    * The number of units used within the billable timeframe.
-    */
-    'orgBillableUsage'?: number;
-    /**
-    * The percentage of account usage the org represents.
-    */
-    'percentageInAccount'?: number;
-    /**
-    * Units pertaining to the usage.
-    */
-    'usageUnit'?: string;
+  /**
+   * The total account usage.
+   */
+  "accountBillableUsage"?: number;
+  /**
+   * Elapsed usage hours for some billable product.
+   */
+  "elapsedUsageHours"?: number;
+  /**
+   * The first billable hour for the org.
+   */
+  "firstBillableUsageHour"?: Date;
+  /**
+   * The last billable hour for the org.
+   */
+  "lastBillableUsageHour"?: Date;
+  /**
+   * The number of units used within the billable timeframe.
+   */
+  "orgBillableUsage"?: number;
+  /**
+   * The percentage of account usage the org represents.
+   */
+  "percentageInAccount"?: number;
+  /**
+   * Units pertaining to the usage.
+   */
+  "usageUnit"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "accountBillableUsage",
-            "baseName": "account_billable_usage",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "elapsedUsageHours",
-            "baseName": "elapsed_usage_hours",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "firstBillableUsageHour",
-            "baseName": "first_billable_usage_hour",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "lastBillableUsageHour",
-            "baseName": "last_billable_usage_hour",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "orgBillableUsage",
-            "baseName": "org_billable_usage",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "percentageInAccount",
-            "baseName": "percentage_in_account",
-            "type": "number",
-            "format": "double"
-        },
-        {
-            "name": "usageUnit",
-            "baseName": "usage_unit",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "accountBillableUsage",
+      baseName: "account_billable_usage",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "elapsedUsageHours",
+      baseName: "elapsed_usage_hours",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "firstBillableUsageHour",
+      baseName: "first_billable_usage_hour",
+      type: "Date",
+      format: "date-time",
+    },
+    {
+      name: "lastBillableUsageHour",
+      baseName: "last_billable_usage_hour",
+      type: "Date",
+      format: "date-time",
+    },
+    {
+      name: "orgBillableUsage",
+      baseName: "org_billable_usage",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "percentageInAccount",
+      baseName: "percentage_in_account",
+      type: "number",
+      format: "double",
+    },
+    {
+      name: "usageUnit",
+      baseName: "usage_unit",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UsageBillableSummaryBody.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UsageBillableSummaryBody.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

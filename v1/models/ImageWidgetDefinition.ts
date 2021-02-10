@@ -10,56 +10,60 @@
  * Do not edit the class manually.
  */
 
-import { ImageWidgetDefinitionType } from './ImageWidgetDefinitionType';
-import { WidgetImageSizing } from './WidgetImageSizing';
-import { WidgetMargin } from './WidgetMargin';
-import { HttpFile } from '../http/http';
+import { ImageWidgetDefinitionType } from "./ImageWidgetDefinitionType";
+import { WidgetImageSizing } from "./WidgetImageSizing";
+import { WidgetMargin } from "./WidgetMargin";
+import { HttpFile } from "../http/http";
 
 /**
-* The image widget allows you to embed an image on your dashboard. An image can be a PNG, JPG, or animated GIF. Only available on FREE layout dashboards.
-*/
+ * The image widget allows you to embed an image on your dashboard. An image can be a PNG, JPG, or animated GIF. Only available on FREE layout dashboards.
+ */
 export class ImageWidgetDefinition {
-    'margin'?: WidgetMargin;
-    'sizing'?: WidgetImageSizing;
-    'type': ImageWidgetDefinitionType;
-    /**
-    * URL of the image.
-    */
-    'url': string;
+  "margin"?: WidgetMargin;
+  "sizing"?: WidgetImageSizing;
+  "type": ImageWidgetDefinitionType;
+  /**
+   * URL of the image.
+   */
+  "url": string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "margin",
-            "baseName": "margin",
-            "type": "WidgetMargin",
-            "format": ""
-        },
-        {
-            "name": "sizing",
-            "baseName": "sizing",
-            "type": "WidgetImageSizing",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "ImageWidgetDefinitionType",
-            "format": ""
-        },
-        {
-            "name": "url",
-            "baseName": "url",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "margin",
+      baseName: "margin",
+      type: "WidgetMargin",
+      format: "",
+    },
+    {
+      name: "sizing",
+      baseName: "sizing",
+      type: "WidgetImageSizing",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "ImageWidgetDefinitionType",
+      format: "",
+    },
+    {
+      name: "url",
+      baseName: "url",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return ImageWidgetDefinition.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return ImageWidgetDefinition.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

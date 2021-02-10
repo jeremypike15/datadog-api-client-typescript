@@ -10,9 +10,16 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The different states your monitor can be in.
-*/
-export type MonitorOverallStates = "Alert" | "Ignored" | "No Data" | "OK" | "Skipped" | "Unknown" | "Warn" ;
+ * The different states your monitor can be in.
+ */
+export type MonitorOverallStates =
+  | "Alert"
+  | "Ignored"
+  | "No Data"
+  | "OK"
+  | "Skipped"
+  | "Unknown"
+  | "Warn";

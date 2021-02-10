@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Type of the single value field definitions.
-*/
-export type IncidentFieldAttributesSingleValueType = "dropdown" | "textbox" ;
+ * Type of the single value field definitions.
+ */
+export type IncidentFieldAttributesSingleValueType = "dropdown" | "textbox";

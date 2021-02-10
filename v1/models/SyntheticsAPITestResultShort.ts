@@ -10,68 +10,72 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsAPITestResultShortResult } from './SyntheticsAPITestResultShortResult';
-import { SyntheticsTestMonitorStatus } from './SyntheticsTestMonitorStatus';
-import { HttpFile } from '../http/http';
+import { SyntheticsAPITestResultShortResult } from "./SyntheticsAPITestResultShortResult";
+import { SyntheticsTestMonitorStatus } from "./SyntheticsTestMonitorStatus";
+import { HttpFile } from "../http/http";
 
 /**
-* Object with the results of a single Synthetic API test.
-*/
+ * Object with the results of a single Synthetic API test.
+ */
 export class SyntheticsAPITestResultShort {
-    /**
-    * Last time the API test was performed.
-    */
-    'checkTime'?: number;
-    /**
-    * Location from which the API test was performed.
-    */
-    'probeDc'?: string;
-    'result'?: SyntheticsAPITestResultShortResult;
-    /**
-    * ID of the API test result.
-    */
-    'resultId'?: string;
-    'status'?: SyntheticsTestMonitorStatus;
+  /**
+   * Last time the API test was performed.
+   */
+  "checkTime"?: number;
+  /**
+   * Location from which the API test was performed.
+   */
+  "probeDc"?: string;
+  "result"?: SyntheticsAPITestResultShortResult;
+  /**
+   * ID of the API test result.
+   */
+  "resultId"?: string;
+  "status"?: SyntheticsTestMonitorStatus;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "checkTime",
-            "baseName": "check_time",
-            "type": "number",
-            "format": "double"
-        },
-        {
-            "name": "probeDc",
-            "baseName": "probe_dc",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "result",
-            "baseName": "result",
-            "type": "SyntheticsAPITestResultShortResult",
-            "format": ""
-        },
-        {
-            "name": "resultId",
-            "baseName": "result_id",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "status",
-            "baseName": "status",
-            "type": "SyntheticsTestMonitorStatus",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "checkTime",
+      baseName: "check_time",
+      type: "number",
+      format: "double",
+    },
+    {
+      name: "probeDc",
+      baseName: "probe_dc",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "result",
+      baseName: "result",
+      type: "SyntheticsAPITestResultShortResult",
+      format: "",
+    },
+    {
+      name: "resultId",
+      baseName: "result_id",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "status",
+      baseName: "status",
+      type: "SyntheticsTestMonitorStatus",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SyntheticsAPITestResultShort.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SyntheticsAPITestResultShort.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

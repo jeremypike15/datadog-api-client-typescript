@@ -10,50 +10,54 @@
  * Do not edit the class manually.
  */
 
-import { SLOErrorTimeframe } from './SLOErrorTimeframe';
-import { HttpFile } from '../http/http';
+import { SLOErrorTimeframe } from "./SLOErrorTimeframe";
+import { HttpFile } from "../http/http";
 
 /**
-* Object describing the error.
-*/
+ * Object describing the error.
+ */
 export class SLOBulkDeleteResponseErrors {
-    /**
-    * The ID of the service level objective object associated with this error.
-    */
-    'id': string;
-    /**
-    * The error message.
-    */
-    'message': string;
-    'timeframe': SLOErrorTimeframe;
+  /**
+   * The ID of the service level objective object associated with this error.
+   */
+  "id": string;
+  /**
+   * The error message.
+   */
+  "message": string;
+  "timeframe": SLOErrorTimeframe;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "message",
-            "baseName": "message",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "timeframe",
-            "baseName": "timeframe",
-            "type": "SLOErrorTimeframe",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "id",
+      baseName: "id",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "message",
+      baseName: "message",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "timeframe",
+      baseName: "timeframe",
+      type: "SLOErrorTimeframe",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SLOBulkDeleteResponseErrors.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SLOBulkDeleteResponseErrors.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

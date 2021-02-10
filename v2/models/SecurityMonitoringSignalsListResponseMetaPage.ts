@@ -10,32 +10,36 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Paging attributes.
-*/
+ * Paging attributes.
+ */
 export class SecurityMonitoringSignalsListResponseMetaPage {
-    /**
-    * The cursor used to get the next results, if any. To make the next request, use the same parameters with the addition of the `page[cursor]`.
-    */
-    'after'?: string;
+  /**
+   * The cursor used to get the next results, if any. To make the next request, use the same parameters with the addition of the `page[cursor]`.
+   */
+  "after"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "after",
-            "baseName": "after",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "after",
+      baseName: "after",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SecurityMonitoringSignalsListResponseMetaPage.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SecurityMonitoringSignalsListResponseMetaPage.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

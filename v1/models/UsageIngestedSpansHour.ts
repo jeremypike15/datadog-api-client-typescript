@@ -10,42 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Ingested spans usage for a given organization for a given hour.
-*/
+ * Ingested spans usage for a given organization for a given hour.
+ */
 export class UsageIngestedSpansHour {
-    /**
-    * The hour for the usage.
-    */
-    'hour'?: Date;
-    /**
-    * Contains the total number of bytes ingested during a given hour.
-    */
-    'ingestedEventsBytes'?: number;
+  /**
+   * The hour for the usage.
+   */
+  "hour"?: Date;
+  /**
+   * Contains the total number of bytes ingested during a given hour.
+   */
+  "ingestedEventsBytes"?: number;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "hour",
-            "baseName": "hour",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "ingestedEventsBytes",
-            "baseName": "ingested_events_bytes",
-            "type": "number",
-            "format": "int64"
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "hour",
+      baseName: "hour",
+      type: "Date",
+      format: "date-time",
+    },
+    {
+      name: "ingestedEventsBytes",
+      baseName: "ingested_events_bytes",
+      type: "number",
+      format: "int64",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return UsageIngestedSpansHour.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return UsageIngestedSpansHour.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

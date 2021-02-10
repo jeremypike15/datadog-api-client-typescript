@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Error type returned by a browser test.
-*/
-export type SyntheticsBrowserErrorType = "network" | "js" ;
+ * Error type returned by a browser test.
+ */
+export type SyntheticsBrowserErrorType = "network" | "js";

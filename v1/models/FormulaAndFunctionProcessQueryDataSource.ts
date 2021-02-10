@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Data sources that rely on the process backend.
-*/
-export type FormulaAndFunctionProcessQueryDataSource = "process" | "container" ;
+ * Data sources that rely on the process backend.
+ */
+export type FormulaAndFunctionProcessQueryDataSource = "process" | "container";

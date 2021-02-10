@@ -10,41 +10,45 @@
  * Do not edit the class manually.
  */
 
-import { IncidentTeamIncludedItems } from './IncidentTeamIncludedItems';
-import { IncidentTeamResponseData } from './IncidentTeamResponseData';
-import { HttpFile } from '../http/http';
+import { IncidentTeamIncludedItems } from "./IncidentTeamIncludedItems";
+import { IncidentTeamResponseData } from "./IncidentTeamResponseData";
+import { HttpFile } from "../http/http";
 
 /**
-* Response with an incident team payload.
-*/
+ * Response with an incident team payload.
+ */
 export class IncidentTeamResponse {
-    'data': IncidentTeamResponseData;
-    /**
-    * Included objects from relationships.
-    */
-    'included'?: Array<IncidentTeamIncludedItems>;
+  "data": IncidentTeamResponseData;
+  /**
+   * Included objects from relationships.
+   */
+  "included"?: Array<IncidentTeamIncludedItems>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "IncidentTeamResponseData",
-            "format": ""
-        },
-        {
-            "name": "included",
-            "baseName": "included",
-            "type": "Array<IncidentTeamIncludedItems>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "data",
+      baseName: "data",
+      type: "IncidentTeamResponseData",
+      format: "",
+    },
+    {
+      name: "included",
+      baseName: "included",
+      type: "Array<IncidentTeamIncludedItems>",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IncidentTeamResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IncidentTeamResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

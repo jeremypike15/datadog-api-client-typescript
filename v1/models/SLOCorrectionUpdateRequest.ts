@@ -10,30 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { SLOCorrectionUpdateRequestData } from './SLOCorrectionUpdateRequestData';
-import { HttpFile } from '../http/http';
+import { SLOCorrectionUpdateRequestData } from "./SLOCorrectionUpdateRequestData";
+import { HttpFile } from "../http/http";
 
 /**
-* An object that defines a correction to be applied to an SLO
-*/
+ * An object that defines a correction to be applied to an SLO
+ */
 export class SLOCorrectionUpdateRequest {
-    'data'?: SLOCorrectionUpdateRequestData;
+  "data"?: SLOCorrectionUpdateRequestData;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "SLOCorrectionUpdateRequestData",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "data",
+      baseName: "data",
+      type: "SLOCorrectionUpdateRequestData",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SLOCorrectionUpdateRequest.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SLOCorrectionUpdateRequest.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

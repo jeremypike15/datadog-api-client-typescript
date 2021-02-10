@@ -10,30 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { Pagination } from './Pagination';
-import { HttpFile } from '../http/http';
+import { Pagination } from "./Pagination";
+import { HttpFile } from "../http/http";
 
 /**
-* Object describing meta attributes of response.
-*/
+ * Object describing meta attributes of response.
+ */
 export class ResponseMetaAttributes {
-    'page'?: Pagination;
+  "page"?: Pagination;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "page",
-            "baseName": "page",
-            "type": "Pagination",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "page",
+      baseName: "page",
+      type: "Pagination",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return ResponseMetaAttributes.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return ResponseMetaAttributes.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

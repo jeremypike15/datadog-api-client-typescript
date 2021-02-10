@@ -10,40 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { CheckCanDeleteSLOResponseData } from './CheckCanDeleteSLOResponseData';
-import { HttpFile } from '../http/http';
+import { CheckCanDeleteSLOResponseData } from "./CheckCanDeleteSLOResponseData";
+import { HttpFile } from "../http/http";
 
 /**
-* A service level objective response containing the requested object.
-*/
+ * A service level objective response containing the requested object.
+ */
 export class CheckCanDeleteSLOResponse {
-    'data'?: CheckCanDeleteSLOResponseData;
-    /**
-    * A mapping of SLO id to it's current usages.
-    */
-    'errors'?: { [key: string]: string; };
+  "data"?: CheckCanDeleteSLOResponseData;
+  /**
+   * A mapping of SLO id to it's current usages.
+   */
+  "errors"?: { [key: string]: string };
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "CheckCanDeleteSLOResponseData",
-            "format": ""
-        },
-        {
-            "name": "errors",
-            "baseName": "errors",
-            "type": "{ [key: string]: string; }",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "data",
+      baseName: "data",
+      type: "CheckCanDeleteSLOResponseData",
+      format: "",
+    },
+    {
+      name: "errors",
+      baseName: "errors",
+      type: "{ [key: string]: string; }",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return CheckCanDeleteSLOResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return CheckCanDeleteSLOResponse.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

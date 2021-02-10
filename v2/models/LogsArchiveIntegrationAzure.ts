@@ -10,42 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The Azure archive's integration destination.
-*/
+ * The Azure archive's integration destination.
+ */
 export class LogsArchiveIntegrationAzure {
-    /**
-    * A client ID.
-    */
-    'clientId': string;
-    /**
-    * A tenant ID.
-    */
-    'tenantId': string;
+  /**
+   * A client ID.
+   */
+  "clientId": string;
+  /**
+   * A tenant ID.
+   */
+  "tenantId": string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "clientId",
-            "baseName": "client_id",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "tenantId",
-            "baseName": "tenant_id",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "clientId",
+      baseName: "client_id",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "tenantId",
+      baseName: "tenant_id",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return LogsArchiveIntegrationAzure.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return LogsArchiveIntegrationAzure.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

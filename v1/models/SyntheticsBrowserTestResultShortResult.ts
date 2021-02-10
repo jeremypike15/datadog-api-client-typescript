@@ -10,70 +10,74 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsDevice } from './SyntheticsDevice';
-import { HttpFile } from '../http/http';
+import { SyntheticsDevice } from "./SyntheticsDevice";
+import { HttpFile } from "../http/http";
 
 /**
-* Object with the result of the last browser test run.
-*/
+ * Object with the result of the last browser test run.
+ */
 export class SyntheticsBrowserTestResultShortResult {
-    'device'?: SyntheticsDevice;
-    /**
-    * Length in second of the browser test run.
-    */
-    'duration'?: number;
-    /**
-    * Amount of errors collected for a single browser test run.
-    */
-    'errorCount'?: number;
-    /**
-    * Amount of browser test steps completed before failing.
-    */
-    'stepCountCompleted'?: number;
-    /**
-    * Total amount of browser test steps.
-    */
-    'stepCountTotal'?: number;
+  "device"?: SyntheticsDevice;
+  /**
+   * Length in second of the browser test run.
+   */
+  "duration"?: number;
+  /**
+   * Amount of errors collected for a single browser test run.
+   */
+  "errorCount"?: number;
+  /**
+   * Amount of browser test steps completed before failing.
+   */
+  "stepCountCompleted"?: number;
+  /**
+   * Total amount of browser test steps.
+   */
+  "stepCountTotal"?: number;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "device",
-            "baseName": "device",
-            "type": "SyntheticsDevice",
-            "format": ""
-        },
-        {
-            "name": "duration",
-            "baseName": "duration",
-            "type": "number",
-            "format": "double"
-        },
-        {
-            "name": "errorCount",
-            "baseName": "errorCount",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "stepCountCompleted",
-            "baseName": "stepCountCompleted",
-            "type": "number",
-            "format": "int64"
-        },
-        {
-            "name": "stepCountTotal",
-            "baseName": "stepCountTotal",
-            "type": "number",
-            "format": "int64"
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "device",
+      baseName: "device",
+      type: "SyntheticsDevice",
+      format: "",
+    },
+    {
+      name: "duration",
+      baseName: "duration",
+      type: "number",
+      format: "double",
+    },
+    {
+      name: "errorCount",
+      baseName: "errorCount",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "stepCountCompleted",
+      baseName: "stepCountCompleted",
+      type: "number",
+      format: "int64",
+    },
+    {
+      name: "stepCountTotal",
+      baseName: "stepCountTotal",
+      type: "number",
+      format: "int64",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return SyntheticsBrowserTestResultShortResult.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return SyntheticsBrowserTestResultShortResult.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

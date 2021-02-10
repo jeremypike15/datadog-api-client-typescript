@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Integration metadata resource type.
-*/
-export type IncidentIntegrationMetadataType = "incident_integration_metadata" ;
+ * Integration metadata resource type.
+ */
+export type IncidentIntegrationMetadataType = "incident_integration_metadata";

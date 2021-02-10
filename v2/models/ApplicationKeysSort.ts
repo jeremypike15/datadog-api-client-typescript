@@ -10,9 +10,15 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* Sorting options
-*/
-export type ApplicationKeysSort = "created_at" | "-created_at" | "last4" | "-last4" | "name" | "-name" ;
+ * Sorting options
+ */
+export type ApplicationKeysSort =
+  | "created_at"
+  | "-created_at"
+  | "last4"
+  | "-last4"
+  | "name"
+  | "-name";

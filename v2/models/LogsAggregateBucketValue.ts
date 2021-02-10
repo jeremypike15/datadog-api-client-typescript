@@ -10,24 +10,25 @@
  * Do not edit the class manually.
  */
 
-import { LogsAggregateBucketValueTimeseries } from './LogsAggregateBucketValueTimeseries';
-import { HttpFile } from '../http/http';
+import { LogsAggregateBucketValueTimeseries } from "./LogsAggregateBucketValueTimeseries";
+import { HttpFile } from "../http/http";
 
 /**
-* A bucket value, can be either a timeseries or a single value
-*/
+ * A bucket value, can be either a timeseries or a single value
+ */
 export class LogsAggregateBucketValue {
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [];
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-    ];
+  static getAttributeTypeMap() {
+    return LogsAggregateBucketValue.attributeTypeMap;
+  }
 
-    static getAttributeTypeMap() {
-        return LogsAggregateBucketValue.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  public constructor() {}
 }
-

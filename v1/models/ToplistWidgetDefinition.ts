@@ -10,88 +10,92 @@
  * Do not edit the class manually.
  */
 
-import { ToplistWidgetDefinitionType } from './ToplistWidgetDefinitionType';
-import { ToplistWidgetRequest } from './ToplistWidgetRequest';
-import { WidgetCustomLink } from './WidgetCustomLink';
-import { WidgetTextAlign } from './WidgetTextAlign';
-import { WidgetTime } from './WidgetTime';
-import { HttpFile } from '../http/http';
+import { ToplistWidgetDefinitionType } from "./ToplistWidgetDefinitionType";
+import { ToplistWidgetRequest } from "./ToplistWidgetRequest";
+import { WidgetCustomLink } from "./WidgetCustomLink";
+import { WidgetTextAlign } from "./WidgetTextAlign";
+import { WidgetTime } from "./WidgetTime";
+import { HttpFile } from "../http/http";
 
 /**
-* The top list visualization enables you to display a list of Tag value like hostname or service with the most or least of any metric value, such as highest consumers of CPU, hosts with the least disk space, etc.
-*/
+ * The top list visualization enables you to display a list of Tag value like hostname or service with the most or least of any metric value, such as highest consumers of CPU, hosts with the least disk space, etc.
+ */
 export class ToplistWidgetDefinition {
-    /**
-    * List of custom links.
-    */
-    'customLinks'?: Array<WidgetCustomLink>;
-    /**
-    * List of top list widget requests.
-    */
-    'requests': Array<ToplistWidgetRequest>;
-    'time'?: WidgetTime;
-    /**
-    * Title of your widget.
-    */
-    'title'?: string;
-    'titleAlign'?: WidgetTextAlign;
-    /**
-    * Size of the title.
-    */
-    'titleSize'?: string;
-    'type': ToplistWidgetDefinitionType;
+  /**
+   * List of custom links.
+   */
+  "customLinks"?: Array<WidgetCustomLink>;
+  /**
+   * List of top list widget requests.
+   */
+  "requests": Array<ToplistWidgetRequest>;
+  "time"?: WidgetTime;
+  /**
+   * Title of your widget.
+   */
+  "title"?: string;
+  "titleAlign"?: WidgetTextAlign;
+  /**
+   * Size of the title.
+   */
+  "titleSize"?: string;
+  "type": ToplistWidgetDefinitionType;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "customLinks",
-            "baseName": "custom_links",
-            "type": "Array<WidgetCustomLink>",
-            "format": ""
-        },
-        {
-            "name": "requests",
-            "baseName": "requests",
-            "type": "Array<ToplistWidgetRequest>",
-            "format": ""
-        },
-        {
-            "name": "time",
-            "baseName": "time",
-            "type": "WidgetTime",
-            "format": ""
-        },
-        {
-            "name": "title",
-            "baseName": "title",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "titleAlign",
-            "baseName": "title_align",
-            "type": "WidgetTextAlign",
-            "format": ""
-        },
-        {
-            "name": "titleSize",
-            "baseName": "title_size",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "ToplistWidgetDefinitionType",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "customLinks",
+      baseName: "custom_links",
+      type: "Array<WidgetCustomLink>",
+      format: "",
+    },
+    {
+      name: "requests",
+      baseName: "requests",
+      type: "Array<ToplistWidgetRequest>",
+      format: "",
+    },
+    {
+      name: "time",
+      baseName: "time",
+      type: "WidgetTime",
+      format: "",
+    },
+    {
+      name: "title",
+      baseName: "title",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "titleAlign",
+      baseName: "title_align",
+      type: "WidgetTextAlign",
+      format: "",
+    },
+    {
+      name: "titleSize",
+      baseName: "title_size",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "type",
+      baseName: "type",
+      type: "ToplistWidgetDefinitionType",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return ToplistWidgetDefinition.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return ToplistWidgetDefinition.attributeTypeMap;
+  }
+
+  public constructor() {}
 }
-

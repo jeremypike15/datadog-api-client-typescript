@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 /**
-* The sort parameters used for querying security signals.
-*/
-export type SecurityMonitoringSignalsSort = "timestamp" | "-timestamp" ;
+ * The sort parameters used for querying security signals.
+ */
+export type SecurityMonitoringSignalsSort = "timestamp" | "-timestamp";
