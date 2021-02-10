@@ -7,13 +7,12 @@ import {
   ResponseContext,
   HttpFile,
 } from "../http/http";
-import * as FormData from "form-data";
+import FormData from "form-data";
 import { ObjectSerializer } from "../models/ObjectSerializer";
 import { ApiException } from "./exception";
 import { isCodeInRange } from "../util";
 
 import { IPRanges } from "../models/IPRanges";
-import { ServerConfiguration } from "../servers";
 
 /**
  * no description
@@ -26,19 +25,11 @@ export class IPRangesApiRequestFactory extends BaseAPIRequestFactory {
   public async getIPRanges(options?: Configuration): Promise<RequestContext> {
     const config = options || this.configuration;
 
-    const server1 = new ServerConfiguration<{
-      site: "datadoghq.com" | "datadoghq.eu" | "ddog-gov.com";
-      subdomain: string;
-    }>("https://{subdomain}.{site}", {
-      site: "datadoghq.com",
-      subdomain: "ip-ranges",
-    });
-
     // Path Params
     const localVarPath = "/";
 
     // Make Request Context
-    const requestContext = server1.makeRequestContext(
+    const requestContext = config.baseServer.makeRequestContext(
       localVarPath,
       HttpMethod.GET
     );
