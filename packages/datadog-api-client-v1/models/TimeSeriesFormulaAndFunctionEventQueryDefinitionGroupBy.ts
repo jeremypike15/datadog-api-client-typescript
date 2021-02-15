@@ -10,11 +10,11 @@
  * Do not edit the class manually.
  */
 
-import { TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort } from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort";
+import { TimeSeriesFormulaAndFunctionEventQueryDefinitionSort } from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionSort";
 import { HttpFile } from "../http/http";
 
 /**
- * Group by options.
+ * List of objects used to group by.
  */
 export class TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy {
   /**
@@ -25,7 +25,7 @@ export class TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy {
    * Number of groups to return.
    */
   "limit"?: number;
-  "sort"?: TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort;
+  "sort"?: TimeSeriesFormulaAndFunctionEventQueryDefinitionSort;
 
   static readonly discriminator: string | undefined = undefined;
 
@@ -50,7 +50,7 @@ export class TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy {
     {
       name: "sort",
       baseName: "sort",
-      type: "TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort",
+      type: "TimeSeriesFormulaAndFunctionEventQueryDefinitionSort",
       format: "",
     },
   ];

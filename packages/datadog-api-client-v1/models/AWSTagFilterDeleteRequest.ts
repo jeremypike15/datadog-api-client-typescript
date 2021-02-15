@@ -20,7 +20,7 @@ export class AWSTagFilterDeleteRequest {
   /**
    * The unique identifier of your AWS account.
    */
-  "awsAccountIdentifier"?: string;
+  "accountId"?: string;
   "namespace"?: AWSNamespace;
 
   static readonly discriminator: string | undefined = undefined;
@@ -32,8 +32,8 @@ export class AWSTagFilterDeleteRequest {
     format: string;
   }> = [
     {
-      name: "awsAccountIdentifier",
-      baseName: "aws_account_identifier",
+      name: "accountId",
+      baseName: "account_id",
       type: "string",
       format: "",
     },

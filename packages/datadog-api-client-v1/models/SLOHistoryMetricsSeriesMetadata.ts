@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { SLOHistoryMetricsSeriesMetadataUnit } from "./SLOHistoryMetricsSeriesMetadataUnit";
 import { HttpFile } from "../http/http";
 
 /**
@@ -37,9 +38,9 @@ export class SLOHistoryMetricsSeriesMetadata {
    */
   "scope"?: string;
   /**
-   * Query units (if available).
+   * An array of metric units that contains up to two unit objects. For example, bytes represents one unit object and bytes per second represents two unit objects. If a metric query only has one unit object, the second array element is null.
    */
-  "unit"?: string;
+  "unit"?: Array<SLOHistoryMetricsSeriesMetadataUnit>;
 
   static readonly discriminator: string | undefined = undefined;
 
@@ -82,7 +83,7 @@ export class SLOHistoryMetricsSeriesMetadata {
     {
       name: "unit",
       baseName: "unit",
-      type: "string",
+      type: "Array<SLOHistoryMetricsSeriesMetadataUnit>",
       format: "",
     },
   ];

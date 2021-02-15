@@ -6,7 +6,7 @@ import path from "path";
 import { World } from "../support/world";
 import { pathLookup } from "./templating";
 import { UndoActions, buildUndoFor } from "./undo";
-import * as datadogApiClient from '../../index'
+import * as datadogApiClient from "../../index";
 
 interface IOperationParameter {
   name: string;

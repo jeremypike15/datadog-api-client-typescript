@@ -71,7 +71,6 @@ export * from "./EventTimelineWidgetDefinition";
 export * from "./EventTimelineWidgetDefinitionType";
 export * from "./FormulaAndFunctionEventAggregation";
 export * from "./FormulaAndFunctionEventsDataSource";
-export * from "./FormulaAndFunctionEventsSortType";
 export * from "./FormulaAndFunctionMetricAggregation";
 export * from "./FormulaAndFunctionMetricDataSource";
 export * from "./FormulaAndFunctionProcessQueryDataSource";
@@ -233,6 +232,7 @@ export * from "./SLOErrorTimeframe";
 export * from "./SLOHistoryMetrics";
 export * from "./SLOHistoryMetricsSeries";
 export * from "./SLOHistoryMetricsSeriesMetadata";
+export * from "./SLOHistoryMetricsSeriesMetadataUnit";
 export * from "./SLOHistoryResponse";
 export * from "./SLOHistoryResponseData";
 export * from "./SLOHistoryResponseError";
@@ -347,8 +347,8 @@ export * from "./TargetFormatType";
 export * from "./TimeSeriesFormulaAndFunctionEventQueryDefinition";
 export * from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionCompute";
 export * from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy";
-export * from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort";
 export * from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionSearch";
+export * from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionSort";
 export * from "./TimeSeriesFormulaAndFunctionMetricQueryDefinition";
 export * from "./TimeSeriesFormulaAndFunctionProcessQueryDefinition";
 export * from "./TimeseriesWidgetDefinition";
@@ -551,7 +551,6 @@ import { EventTimelineWidgetDefinition } from "./EventTimelineWidgetDefinition";
 import { EventTimelineWidgetDefinitionType } from "./EventTimelineWidgetDefinitionType";
 import { FormulaAndFunctionEventAggregation } from "./FormulaAndFunctionEventAggregation";
 import { FormulaAndFunctionEventsDataSource } from "./FormulaAndFunctionEventsDataSource";
-import { FormulaAndFunctionEventsSortType } from "./FormulaAndFunctionEventsSortType";
 import { FormulaAndFunctionMetricAggregation } from "./FormulaAndFunctionMetricAggregation";
 import { FormulaAndFunctionMetricDataSource } from "./FormulaAndFunctionMetricDataSource";
 import { FormulaAndFunctionProcessQueryDataSource } from "./FormulaAndFunctionProcessQueryDataSource";
@@ -713,6 +712,7 @@ import { SLOErrorTimeframe } from "./SLOErrorTimeframe";
 import { SLOHistoryMetrics } from "./SLOHistoryMetrics";
 import { SLOHistoryMetricsSeries } from "./SLOHistoryMetricsSeries";
 import { SLOHistoryMetricsSeriesMetadata } from "./SLOHistoryMetricsSeriesMetadata";
+import { SLOHistoryMetricsSeriesMetadataUnit } from "./SLOHistoryMetricsSeriesMetadataUnit";
 import { SLOHistoryResponse } from "./SLOHistoryResponse";
 import { SLOHistoryResponseData } from "./SLOHistoryResponseData";
 import { SLOHistoryResponseError } from "./SLOHistoryResponseError";
@@ -827,8 +827,8 @@ import { TargetFormatType } from "./TargetFormatType";
 import { TimeSeriesFormulaAndFunctionEventQueryDefinition } from "./TimeSeriesFormulaAndFunctionEventQueryDefinition";
 import { TimeSeriesFormulaAndFunctionEventQueryDefinitionCompute } from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionCompute";
 import { TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy } from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy";
-import { TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort } from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort";
 import { TimeSeriesFormulaAndFunctionEventQueryDefinitionSearch } from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionSearch";
+import { TimeSeriesFormulaAndFunctionEventQueryDefinitionSort } from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionSort";
 import { TimeSeriesFormulaAndFunctionMetricQueryDefinition } from "./TimeSeriesFormulaAndFunctionMetricQueryDefinition";
 import { TimeSeriesFormulaAndFunctionProcessQueryDefinition } from "./TimeSeriesFormulaAndFunctionProcessQueryDefinition";
 import { TimeseriesWidgetDefinition } from "./TimeseriesWidgetDefinition";
@@ -991,7 +991,6 @@ const enumsMap: Set<string> = new Set<string>([
   "EventTimelineWidgetDefinitionType",
   "FormulaAndFunctionEventAggregation",
   "FormulaAndFunctionEventsDataSource",
-  "FormulaAndFunctionEventsSortType",
   "FormulaAndFunctionMetricAggregation",
   "FormulaAndFunctionMetricDataSource",
   "FormulaAndFunctionProcessQueryDataSource",
@@ -1281,6 +1280,7 @@ const typeMap: { [index: string]: any } = {
   SLOHistoryMetrics: SLOHistoryMetrics,
   SLOHistoryMetricsSeries: SLOHistoryMetricsSeries,
   SLOHistoryMetricsSeriesMetadata: SLOHistoryMetricsSeriesMetadata,
+  SLOHistoryMetricsSeriesMetadataUnit: SLOHistoryMetricsSeriesMetadataUnit,
   SLOHistoryResponse: SLOHistoryResponse,
   SLOHistoryResponseData: SLOHistoryResponseData,
   SLOHistoryResponseError: SLOHistoryResponseError,
@@ -1364,8 +1364,8 @@ const typeMap: { [index: string]: any } = {
   TimeSeriesFormulaAndFunctionEventQueryDefinition: TimeSeriesFormulaAndFunctionEventQueryDefinition,
   TimeSeriesFormulaAndFunctionEventQueryDefinitionCompute: TimeSeriesFormulaAndFunctionEventQueryDefinitionCompute,
   TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy: TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy,
-  TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort: TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort,
   TimeSeriesFormulaAndFunctionEventQueryDefinitionSearch: TimeSeriesFormulaAndFunctionEventQueryDefinitionSearch,
+  TimeSeriesFormulaAndFunctionEventQueryDefinitionSort: TimeSeriesFormulaAndFunctionEventQueryDefinitionSort,
   TimeSeriesFormulaAndFunctionMetricQueryDefinition: TimeSeriesFormulaAndFunctionMetricQueryDefinition,
   TimeSeriesFormulaAndFunctionProcessQueryDefinition: TimeSeriesFormulaAndFunctionProcessQueryDefinition,
   TimeseriesWidgetDefinition: TimeseriesWidgetDefinition,

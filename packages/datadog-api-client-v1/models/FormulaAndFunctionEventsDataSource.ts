@@ -17,7 +17,7 @@ import { HttpFile } from "../http/http";
  */
 export type FormulaAndFunctionEventsDataSource =
   | "logs"
-  | "analyzed_spans"
+  | "spans"
   | "network"
   | "rum"
   | "security_signals"

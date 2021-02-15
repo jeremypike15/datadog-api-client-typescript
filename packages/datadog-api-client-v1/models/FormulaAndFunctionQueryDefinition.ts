@@ -36,7 +36,10 @@ export class FormulaAndFunctionQueryDefinition {
    */
   "query": string;
   "compute": TimeSeriesFormulaAndFunctionEventQueryDefinitionCompute;
-  "groupBy"?: TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy;
+  /**
+   * Group by options.
+   */
+  "groupBy"?: Array<TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy>;
   /**
    * An array of index names to query in the stream. Omit or use `[]` to query all indexes at once.
    */
@@ -105,7 +108,7 @@ export class FormulaAndFunctionQueryDefinition {
     {
       name: "groupBy",
       baseName: "group_by",
-      type: "TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy",
+      type: "Array<TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy>",
       format: "",
     },
     {

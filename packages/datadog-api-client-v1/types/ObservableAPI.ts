@@ -77,7 +77,6 @@ import { EventTimelineWidgetDefinition } from "../models/EventTimelineWidgetDefi
 import { EventTimelineWidgetDefinitionType } from "../models/EventTimelineWidgetDefinitionType";
 import { FormulaAndFunctionEventAggregation } from "../models/FormulaAndFunctionEventAggregation";
 import { FormulaAndFunctionEventsDataSource } from "../models/FormulaAndFunctionEventsDataSource";
-import { FormulaAndFunctionEventsSortType } from "../models/FormulaAndFunctionEventsSortType";
 import { FormulaAndFunctionMetricAggregation } from "../models/FormulaAndFunctionMetricAggregation";
 import { FormulaAndFunctionMetricDataSource } from "../models/FormulaAndFunctionMetricDataSource";
 import { FormulaAndFunctionProcessQueryDataSource } from "../models/FormulaAndFunctionProcessQueryDataSource";
@@ -239,6 +238,7 @@ import { SLOErrorTimeframe } from "../models/SLOErrorTimeframe";
 import { SLOHistoryMetrics } from "../models/SLOHistoryMetrics";
 import { SLOHistoryMetricsSeries } from "../models/SLOHistoryMetricsSeries";
 import { SLOHistoryMetricsSeriesMetadata } from "../models/SLOHistoryMetricsSeriesMetadata";
+import { SLOHistoryMetricsSeriesMetadataUnit } from "../models/SLOHistoryMetricsSeriesMetadataUnit";
 import { SLOHistoryResponse } from "../models/SLOHistoryResponse";
 import { SLOHistoryResponseData } from "../models/SLOHistoryResponseData";
 import { SLOHistoryResponseError } from "../models/SLOHistoryResponseError";
@@ -353,8 +353,8 @@ import { TargetFormatType } from "../models/TargetFormatType";
 import { TimeSeriesFormulaAndFunctionEventQueryDefinition } from "../models/TimeSeriesFormulaAndFunctionEventQueryDefinition";
 import { TimeSeriesFormulaAndFunctionEventQueryDefinitionCompute } from "../models/TimeSeriesFormulaAndFunctionEventQueryDefinitionCompute";
 import { TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy } from "../models/TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy";
-import { TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort } from "../models/TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort";
 import { TimeSeriesFormulaAndFunctionEventQueryDefinitionSearch } from "../models/TimeSeriesFormulaAndFunctionEventQueryDefinitionSearch";
+import { TimeSeriesFormulaAndFunctionEventQueryDefinitionSort } from "../models/TimeSeriesFormulaAndFunctionEventQueryDefinitionSort";
 import { TimeSeriesFormulaAndFunctionMetricQueryDefinition } from "../models/TimeSeriesFormulaAndFunctionMetricQueryDefinition";
 import { TimeSeriesFormulaAndFunctionProcessQueryDefinition } from "../models/TimeSeriesFormulaAndFunctionProcessQueryDefinition";
 import { TimeseriesWidgetDefinition } from "../models/TimeseriesWidgetDefinition";
@@ -5496,7 +5496,7 @@ export class ObservableServiceLevelObjectivesApi {
    * Get all SLOs
    * @param ids A comma separated list of the IDs of the service level objectives objects.
    * @param query The query string to filter results based on SLO names.
-   * @param tagsQuery The query string to filter results based on SLO tags.
+   * @param tagsQuery The query string to filter results based on a single SLO tag.
    * @param metricsQuery The query string to filter results based on SLO numerator and denominator.
    */
   public listSLOs(

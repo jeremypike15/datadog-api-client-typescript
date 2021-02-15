@@ -22,7 +22,10 @@ import { HttpFile } from "../http/http";
 export class TimeSeriesFormulaAndFunctionEventQueryDefinition {
   "compute": TimeSeriesFormulaAndFunctionEventQueryDefinitionCompute;
   "dataSource": FormulaAndFunctionEventsDataSource;
-  "groupBy"?: TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy;
+  /**
+   * Group by options.
+   */
+  "groupBy"?: Array<TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy>;
   /**
    * An array of index names to query in the stream. Omit or use `[]` to query all indexes at once.
    */
@@ -56,7 +59,7 @@ export class TimeSeriesFormulaAndFunctionEventQueryDefinition {
     {
       name: "groupBy",
       baseName: "group_by",
-      type: "TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy",
+      type: "Array<TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy>",
       format: "",
     },
     {

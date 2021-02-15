@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { pathLookup } from "./templating";
-import * as datadogApiClient from '../../index'
+import * as datadogApiClient from "../../index";
 
 interface iOperationParameter {
   name: string;

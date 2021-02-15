@@ -108,7 +108,6 @@ models/EventTimelineWidgetDefinition.ts
 models/EventTimelineWidgetDefinitionType.ts
 models/FormulaAndFunctionEventAggregation.ts
 models/FormulaAndFunctionEventsDataSource.ts
-models/FormulaAndFunctionEventsSortType.ts
 models/FormulaAndFunctionMetricAggregation.ts
 models/FormulaAndFunctionMetricDataSource.ts
 models/FormulaAndFunctionProcessQueryDataSource.ts
@@ -271,6 +270,7 @@ models/SLOErrorTimeframe.ts
 models/SLOHistoryMetrics.ts
 models/SLOHistoryMetricsSeries.ts
 models/SLOHistoryMetricsSeriesMetadata.ts
+models/SLOHistoryMetricsSeriesMetadataUnit.ts
 models/SLOHistoryResponse.ts
 models/SLOHistoryResponseData.ts
 models/SLOHistoryResponseError.ts
@@ -385,8 +385,8 @@ models/TargetFormatType.ts
 models/TimeSeriesFormulaAndFunctionEventQueryDefinition.ts
 models/TimeSeriesFormulaAndFunctionEventQueryDefinitionCompute.ts
 models/TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy.ts
-models/TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBySort.ts
 models/TimeSeriesFormulaAndFunctionEventQueryDefinitionSearch.ts
+models/TimeSeriesFormulaAndFunctionEventQueryDefinitionSort.ts
 models/TimeSeriesFormulaAndFunctionMetricQueryDefinition.ts
 models/TimeSeriesFormulaAndFunctionProcessQueryDefinition.ts
 models/TimeseriesWidgetDefinition.ts

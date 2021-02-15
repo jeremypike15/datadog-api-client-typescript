@@ -407,7 +407,7 @@ export class ServiceLevelObjectivesApiRequestFactory extends BaseAPIRequestFacto
    * Get all SLOs
    * @param ids A comma separated list of the IDs of the service level objectives objects.
    * @param query The query string to filter results based on SLO names.
-   * @param tagsQuery The query string to filter results based on SLO tags.
+   * @param tagsQuery The query string to filter results based on a single SLO tag.
    * @param metricsQuery The query string to filter results based on SLO numerator and denominator.
    */
   public async listSLOs(
