@@ -172,6 +172,21 @@ import { LogsResponseMetadataPage } from "../models/LogsResponseMetadataPage";
 import { LogsSort } from "../models/LogsSort";
 import { LogsSortOrder } from "../models/LogsSortOrder";
 import { LogsWarning } from "../models/LogsWarning";
+import { Metric } from "../models/Metric";
+import { MetricTagConfiguration } from "../models/MetricTagConfiguration";
+import { MetricTagConfigurationAttributes } from "../models/MetricTagConfigurationAttributes";
+import { MetricTagConfigurationCreateAttributes } from "../models/MetricTagConfigurationCreateAttributes";
+import { MetricTagConfigurationCreateData } from "../models/MetricTagConfigurationCreateData";
+import { MetricTagConfigurationCreateRequest } from "../models/MetricTagConfigurationCreateRequest";
+import { MetricTagConfigurationMetricTypes } from "../models/MetricTagConfigurationMetricTypes";
+import { MetricTagConfigurationResponse } from "../models/MetricTagConfigurationResponse";
+import { MetricTagConfigurationType } from "../models/MetricTagConfigurationType";
+import { MetricTagConfigurationUpdateAttributes } from "../models/MetricTagConfigurationUpdateAttributes";
+import { MetricTagConfigurationUpdateData } from "../models/MetricTagConfigurationUpdateData";
+import { MetricTagConfigurationUpdateRequest } from "../models/MetricTagConfigurationUpdateRequest";
+import { MetricType } from "../models/MetricType";
+import { MetricsAndMetricTagConfigurations } from "../models/MetricsAndMetricTagConfigurations";
+import { MetricsAndMetricTagConfigurationsResponse } from "../models/MetricsAndMetricTagConfigurationsResponse";
 import { Organization } from "../models/Organization";
 import { OrganizationAttributes } from "../models/OrganizationAttributes";
 import { OrganizationsType } from "../models/OrganizationsType";
@@ -336,7 +351,7 @@ export class PromiseDashboardListsApi {
 
   /**
    * Fetch the dashboard list’s dashboard definitions.
-   * Get a Dashboard List
+   * Get items of a Dashboard List
    * @param dashboardListId ID of the dashboard list to get items from.
    */
   public getDashboardListItems(
@@ -1256,6 +1271,109 @@ export class PromiseLogsMetricsApi {
     options?: Configuration
   ): Promise<LogsMetricResponse> {
     const result = this.api.updateLogsMetric(metricId, body, options);
+    return result.toPromise();
+  }
+}
+
+import { ObservableMetricsApi } from "./ObservableAPI";
+
+import {
+  MetricsApiRequestFactory,
+  MetricsApiResponseProcessor,
+} from "../apis/MetricsApi";
+export class PromiseMetricsApi {
+  private api: ObservableMetricsApi;
+
+  public constructor(
+    configuration: Configuration,
+    requestFactory?: MetricsApiRequestFactory,
+    responseProcessor?: MetricsApiResponseProcessor
+  ) {
+    this.api = new ObservableMetricsApi(
+      configuration,
+      requestFactory,
+      responseProcessor
+    );
+  }
+
+  /**
+   * Create and define a list of queryable tag keys for a count/gauge/rate/distribution metric. Optionally, include percentile aggregations on any distribution metric. Can only be used with application keys of users with the `Manage Tags for Metrics` permission.
+   * Create a Tag Configuration
+   * @param metricName The name of the metric.
+   * @param body
+   */
+  public createTagConfiguration(
+    metricName: string,
+    body: MetricTagConfigurationCreateRequest,
+    options?: Configuration
+  ): Promise<MetricTagConfigurationResponse> {
+    const result = this.api.createTagConfiguration(metricName, body, options);
+    return result.toPromise();
+  }
+
+  /**
+   * Deletes a metric's tag configuration. Can only be used with application keys from users with the `Manage Tags for Metrics` permission.
+   * Delete a Tag Configuration
+   * @param metricName The name of the metric.
+   */
+  public deleteTagConfiguration(
+    metricName: string,
+    options?: Configuration
+  ): Promise<void> {
+    const result = this.api.deleteTagConfiguration(metricName, options);
+    return result.toPromise();
+  }
+
+  /**
+   * Returns the tag configuration for the given metric name.
+   * List Tag Configuration by Name
+   * @param metricName The name of the metric.
+   */
+  public listTagConfigurationByName(
+    metricName: string,
+    options?: Configuration
+  ): Promise<MetricTagConfigurationResponse> {
+    const result = this.api.listTagConfigurationByName(metricName, options);
+    return result.toPromise();
+  }
+
+  /**
+   * Returns all configured count/gauge/rate/distribution metric names (with additional filters if specified).
+   * List Tag Configurations
+   * @param filterConfigured Filter metrics that have configured tags.
+   * @param filterTagsConfigured Filter tag configurations by configured tags.
+   * @param filterMetricType Filter tag configurations by metric type.
+   * @param filterIncludePercentiles Filter distributions with additional percentile aggregations enabled or disabled.
+   */
+  public listTagConfigurations(
+    filterConfigured?: boolean,
+    filterTagsConfigured?: string,
+    filterMetricType?: MetricTagConfigurationMetricTypes,
+    filterIncludePercentiles?: boolean,
+    options?: Configuration
+  ): Promise<MetricsAndMetricTagConfigurationsResponse> {
+    const result = this.api.listTagConfigurations(
+      filterConfigured,
+      filterTagsConfigured,
+      filterMetricType,
+      filterIncludePercentiles,
+      options
+    );
+    return result.toPromise();
+  }
+
+  /**
+   * Update the tag configuration of a metric or percentile aggregations of a distribution metric. Can only be used with application keys from users with the `Manage Tags for Metrics` permission.
+   * Update a Tag Configuration
+   * @param metricName The name of the metric.
+   * @param body
+   */
+  public updateTagConfiguration(
+    metricName: string,
+    body: MetricTagConfigurationUpdateRequest,
+    options?: Configuration
+  ): Promise<MetricTagConfigurationResponse> {
+    const result = this.api.updateTagConfiguration(metricName, body, options);
     return result.toPromise();
   }
 }

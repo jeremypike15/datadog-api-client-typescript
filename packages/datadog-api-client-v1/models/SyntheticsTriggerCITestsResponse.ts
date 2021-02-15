@@ -10,8 +10,8 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsTriggerCITestsResponseLocations } from "./SyntheticsTriggerCITestsResponseLocations";
-import { SyntheticsTriggerCITestsResponseResults } from "./SyntheticsTriggerCITestsResponseResults";
+import { SyntheticsTriggerCITestLocation } from "./SyntheticsTriggerCITestLocation";
+import { SyntheticsTriggerCITestRunResult } from "./SyntheticsTriggerCITestRunResult";
 import { HttpFile } from "../http/http";
 
 /**
@@ -21,11 +21,11 @@ export class SyntheticsTriggerCITestsResponse {
   /**
    * List of Synthetics locations.
    */
-  "locations"?: Array<SyntheticsTriggerCITestsResponseLocations>;
+  "locations"?: Array<SyntheticsTriggerCITestLocation>;
   /**
    * Information about the tests runs.
    */
-  "results"?: Array<SyntheticsTriggerCITestsResponseResults>;
+  "results"?: Array<SyntheticsTriggerCITestRunResult>;
   /**
    * The public IDs of the Synthetics test triggered.
    */
@@ -42,13 +42,13 @@ export class SyntheticsTriggerCITestsResponse {
     {
       name: "locations",
       baseName: "locations",
-      type: "Array<SyntheticsTriggerCITestsResponseLocations>",
+      type: "Array<SyntheticsTriggerCITestLocation>",
       format: "",
     },
     {
       name: "results",
       baseName: "results",
-      type: "Array<SyntheticsTriggerCITestsResponseResults>",
+      type: "Array<SyntheticsTriggerCITestRunResult>",
       format: "",
     },
     {

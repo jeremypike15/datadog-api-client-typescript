@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 
-import { AWSLogsAsyncResponseErrors } from "./AWSLogsAsyncResponseErrors";
+import { AWSLogsAsyncError } from "./AWSLogsAsyncError";
 import { HttpFile } from "../http/http";
 
 /**
@@ -20,7 +20,7 @@ export class AWSLogsAsyncResponse {
   /**
    * List of errors.
    */
-  "errors"?: Array<AWSLogsAsyncResponseErrors>;
+  "errors"?: Array<AWSLogsAsyncError>;
   /**
    * Status of the properties.
    */
@@ -37,7 +37,7 @@ export class AWSLogsAsyncResponse {
     {
       name: "errors",
       baseName: "errors",
-      type: "Array<AWSLogsAsyncResponseErrors>",
+      type: "Array<AWSLogsAsyncError>",
       format: "",
     },
     {

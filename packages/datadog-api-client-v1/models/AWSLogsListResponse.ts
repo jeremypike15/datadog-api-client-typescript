@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 
-import { AWSLogsListResponseLambdas } from "./AWSLogsListResponseLambdas";
+import { AWSLogsLambda } from "./AWSLogsLambda";
 import { HttpFile } from "../http/http";
 
 /**
@@ -24,7 +24,7 @@ export class AWSLogsListResponse {
   /**
    * List of ARNs configured in your Datadog account.
    */
-  "lambdas"?: Array<AWSLogsListResponseLambdas>;
+  "lambdas"?: Array<AWSLogsLambda>;
   /**
    * Array of services IDs.
    */
@@ -47,7 +47,7 @@ export class AWSLogsListResponse {
     {
       name: "lambdas",
       baseName: "lambdas",
-      type: "Array<AWSLogsListResponseLambdas>",
+      type: "Array<AWSLogsLambda>",
       format: "",
     },
     {

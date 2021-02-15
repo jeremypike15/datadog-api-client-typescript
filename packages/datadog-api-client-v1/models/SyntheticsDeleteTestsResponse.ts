@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsDeleteTestsResponseDeletedTests } from "./SyntheticsDeleteTestsResponseDeletedTests";
+import { SyntheticsDeletedTest } from "./SyntheticsDeletedTest";
 import { HttpFile } from "../http/http";
 
 /**
@@ -20,7 +20,7 @@ export class SyntheticsDeleteTestsResponse {
   /**
    * Array of objects containing a deleted Synthetic test ID with the associated deletion timestamp.
    */
-  "deletedTests"?: Array<SyntheticsDeleteTestsResponseDeletedTests>;
+  "deletedTests"?: Array<SyntheticsDeletedTest>;
 
   static readonly discriminator: string | undefined = undefined;
 
@@ -33,7 +33,7 @@ export class SyntheticsDeleteTestsResponse {
     {
       name: "deletedTests",
       baseName: "deleted_tests",
-      type: "Array<SyntheticsDeleteTestsResponseDeletedTests>",
+      type: "Array<SyntheticsDeletedTest>",
       format: "",
     },
   ];

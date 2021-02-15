@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 
-import { DashboardSummaryDashboards } from "./DashboardSummaryDashboards";
+import { DashboardSummaryDefinition } from "./DashboardSummaryDefinition";
 import { HttpFile } from "../http/http";
 
 /**
@@ -20,7 +20,7 @@ export class DashboardSummary {
   /**
    * List of dashboard definitions.
    */
-  "dashboards"?: Array<DashboardSummaryDashboards>;
+  "dashboards"?: Array<DashboardSummaryDefinition>;
 
   static readonly discriminator: string | undefined = undefined;
 
@@ -33,7 +33,7 @@ export class DashboardSummary {
     {
       name: "dashboards",
       baseName: "dashboards",
-      type: "Array<DashboardSummaryDashboards>",
+      type: "Array<DashboardSummaryDefinition>",
       format: "",
     },
   ];

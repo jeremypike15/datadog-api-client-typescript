@@ -18,6 +18,8 @@ import { DistributionWidgetDefinition } from "./DistributionWidgetDefinition";
 import { EventStreamWidgetDefinition } from "./EventStreamWidgetDefinition";
 import { EventTimelineWidgetDefinition } from "./EventTimelineWidgetDefinition";
 import { FreeTextWidgetDefinition } from "./FreeTextWidgetDefinition";
+import { GeomapWidgetDefinition } from "./GeomapWidgetDefinition";
+import { GeomapWidgetDefinitionView } from "./GeomapWidgetDefinitionView";
 import { GroupWidgetDefinition } from "./GroupWidgetDefinition";
 import { HeatMapWidgetDefinition } from "./HeatMapWidgetDefinition";
 import { HostMapWidgetDefinition } from "./HostMapWidgetDefinition";
@@ -146,6 +148,8 @@ export class WidgetDefinition {
    * Text to display.
    */
   "text": string;
+  "style": HostMapWidgetDefinitionStyle;
+  "view": GeomapWidgetDefinitionView;
   "layoutType": WidgetLayoutType;
   /**
    * List of widget groups.
@@ -173,7 +177,6 @@ export class WidgetDefinition {
    * List of tags used to filter the map.
    */
   "scope"?: Array<string>;
-  "style"?: HostMapWidgetDefinitionStyle;
   /**
    * URL of the image.
    */
@@ -475,6 +478,18 @@ export class WidgetDefinition {
       format: "",
     },
     {
+      name: "style",
+      baseName: "style",
+      type: "HostMapWidgetDefinitionStyle",
+      format: "",
+    },
+    {
+      name: "view",
+      baseName: "view",
+      type: "GeomapWidgetDefinitionView",
+      format: "",
+    },
+    {
       name: "layoutType",
       baseName: "layout_type",
       type: "WidgetLayoutType",
@@ -526,12 +541,6 @@ export class WidgetDefinition {
       name: "scope",
       baseName: "scope",
       type: "Array<string>",
-      format: "",
-    },
-    {
-      name: "style",
-      baseName: "style",
-      type: "HostMapWidgetDefinitionStyle",
       format: "",
     },
     {

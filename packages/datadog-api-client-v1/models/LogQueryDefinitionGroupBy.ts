@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 
-import { LogQueryDefinitionSort } from "./LogQueryDefinitionSort";
+import { LogQueryDefinitionGroupBySort } from "./LogQueryDefinitionGroupBySort";
 import { HttpFile } from "../http/http";
 
 /**
@@ -25,7 +25,7 @@ export class LogQueryDefinitionGroupBy {
    * Maximum number of items in the group.
    */
   "limit"?: number;
-  "sort"?: LogQueryDefinitionSort;
+  "sort"?: LogQueryDefinitionGroupBySort;
 
   static readonly discriminator: string | undefined = undefined;
 
@@ -50,7 +50,7 @@ export class LogQueryDefinitionGroupBy {
     {
       name: "sort",
       baseName: "sort",
-      type: "LogQueryDefinitionSort",
+      type: "LogQueryDefinitionGroupBySort",
       format: "",
     },
   ];

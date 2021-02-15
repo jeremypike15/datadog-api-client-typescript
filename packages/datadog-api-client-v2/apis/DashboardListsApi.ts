@@ -169,7 +169,7 @@ export class DashboardListsApiRequestFactory extends BaseAPIRequestFactory {
 
   /**
    * Fetch the dashboard list’s dashboard definitions.
-   * Get a Dashboard List
+   * Get items of a Dashboard List
    * @param dashboardListId ID of the dashboard list to get items from.
    */
   public async getDashboardListItems(

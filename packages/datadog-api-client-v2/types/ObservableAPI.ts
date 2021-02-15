@@ -174,6 +174,21 @@ import { LogsResponseMetadataPage } from "../models/LogsResponseMetadataPage";
 import { LogsSort } from "../models/LogsSort";
 import { LogsSortOrder } from "../models/LogsSortOrder";
 import { LogsWarning } from "../models/LogsWarning";
+import { Metric } from "../models/Metric";
+import { MetricTagConfiguration } from "../models/MetricTagConfiguration";
+import { MetricTagConfigurationAttributes } from "../models/MetricTagConfigurationAttributes";
+import { MetricTagConfigurationCreateAttributes } from "../models/MetricTagConfigurationCreateAttributes";
+import { MetricTagConfigurationCreateData } from "../models/MetricTagConfigurationCreateData";
+import { MetricTagConfigurationCreateRequest } from "../models/MetricTagConfigurationCreateRequest";
+import { MetricTagConfigurationMetricTypes } from "../models/MetricTagConfigurationMetricTypes";
+import { MetricTagConfigurationResponse } from "../models/MetricTagConfigurationResponse";
+import { MetricTagConfigurationType } from "../models/MetricTagConfigurationType";
+import { MetricTagConfigurationUpdateAttributes } from "../models/MetricTagConfigurationUpdateAttributes";
+import { MetricTagConfigurationUpdateData } from "../models/MetricTagConfigurationUpdateData";
+import { MetricTagConfigurationUpdateRequest } from "../models/MetricTagConfigurationUpdateRequest";
+import { MetricType } from "../models/MetricType";
+import { MetricsAndMetricTagConfigurations } from "../models/MetricsAndMetricTagConfigurations";
+import { MetricsAndMetricTagConfigurationsResponse } from "../models/MetricsAndMetricTagConfigurationsResponse";
 import { Organization } from "../models/Organization";
 import { OrganizationAttributes } from "../models/OrganizationAttributes";
 import { OrganizationsType } from "../models/OrganizationsType";
@@ -393,7 +408,7 @@ export class ObservableDashboardListsApi {
 
   /**
    * Fetch the dashboard list’s dashboard definitions.
-   * Get a Dashboard List
+   * Get items of a Dashboard List
    * @param dashboardListId ID of the dashboard list to get items from.
    */
   public getDashboardListItems(
@@ -2722,6 +2737,258 @@ export class ObservableLogsMetricsApi {
           return middlewarePostObservable.pipe(
             map((rsp: ResponseContext) =>
               this.responseProcessor.updateLogsMetric(rsp)
+            )
+          );
+        })
+      );
+  }
+}
+
+import {
+  MetricsApiRequestFactory,
+  MetricsApiResponseProcessor,
+} from "../apis/MetricsApi";
+export class ObservableMetricsApi {
+  private requestFactory: MetricsApiRequestFactory;
+  private responseProcessor: MetricsApiResponseProcessor;
+  private configuration: Configuration;
+
+  public constructor(
+    configuration: Configuration,
+    requestFactory?: MetricsApiRequestFactory,
+    responseProcessor?: MetricsApiResponseProcessor
+  ) {
+    this.configuration = configuration;
+    this.requestFactory =
+      requestFactory || new MetricsApiRequestFactory(configuration);
+    this.responseProcessor =
+      responseProcessor || new MetricsApiResponseProcessor();
+  }
+
+  /**
+   * Create and define a list of queryable tag keys for a count/gauge/rate/distribution metric. Optionally, include percentile aggregations on any distribution metric. Can only be used with application keys of users with the `Manage Tags for Metrics` permission.
+   * Create a Tag Configuration
+   * @param metricName The name of the metric.
+   * @param body
+   */
+  public createTagConfiguration(
+    metricName: string,
+    body: MetricTagConfigurationCreateRequest,
+    options?: Configuration
+  ): Observable<MetricTagConfigurationResponse> {
+    const requestContextPromise = this.requestFactory.createTagConfiguration(
+      metricName,
+      body,
+      options
+    );
+
+    // build promise chain
+    let middlewarePreObservable = from_<RequestContext>(requestContextPromise);
+    for (const middleware of this.configuration.middleware) {
+      middlewarePreObservable = middlewarePreObservable.pipe(
+        mergeMap((ctx: RequestContext) => middleware.pre(ctx))
+      );
+    }
+
+    return middlewarePreObservable
+      .pipe(
+        mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))
+      )
+      .pipe(
+        mergeMap((response: ResponseContext) => {
+          let middlewarePostObservable = of(response);
+          for (const middleware of this.configuration.middleware) {
+            middlewarePostObservable = middlewarePostObservable.pipe(
+              mergeMap((rsp: ResponseContext) => middleware.post(rsp))
+            );
+          }
+          return middlewarePostObservable.pipe(
+            map((rsp: ResponseContext) =>
+              this.responseProcessor.createTagConfiguration(rsp)
+            )
+          );
+        })
+      );
+  }
+
+  /**
+   * Deletes a metric's tag configuration. Can only be used with application keys from users with the `Manage Tags for Metrics` permission.
+   * Delete a Tag Configuration
+   * @param metricName The name of the metric.
+   */
+  public deleteTagConfiguration(
+    metricName: string,
+    options?: Configuration
+  ): Observable<void> {
+    const requestContextPromise = this.requestFactory.deleteTagConfiguration(
+      metricName,
+      options
+    );
+
+    // build promise chain
+    let middlewarePreObservable = from_<RequestContext>(requestContextPromise);
+    for (const middleware of this.configuration.middleware) {
+      middlewarePreObservable = middlewarePreObservable.pipe(
+        mergeMap((ctx: RequestContext) => middleware.pre(ctx))
+      );
+    }
+
+    return middlewarePreObservable
+      .pipe(
+        mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))
+      )
+      .pipe(
+        mergeMap((response: ResponseContext) => {
+          let middlewarePostObservable = of(response);
+          for (const middleware of this.configuration.middleware) {
+            middlewarePostObservable = middlewarePostObservable.pipe(
+              mergeMap((rsp: ResponseContext) => middleware.post(rsp))
+            );
+          }
+          return middlewarePostObservable.pipe(
+            map((rsp: ResponseContext) =>
+              this.responseProcessor.deleteTagConfiguration(rsp)
+            )
+          );
+        })
+      );
+  }
+
+  /**
+   * Returns the tag configuration for the given metric name.
+   * List Tag Configuration by Name
+   * @param metricName The name of the metric.
+   */
+  public listTagConfigurationByName(
+    metricName: string,
+    options?: Configuration
+  ): Observable<MetricTagConfigurationResponse> {
+    const requestContextPromise = this.requestFactory.listTagConfigurationByName(
+      metricName,
+      options
+    );
+
+    // build promise chain
+    let middlewarePreObservable = from_<RequestContext>(requestContextPromise);
+    for (const middleware of this.configuration.middleware) {
+      middlewarePreObservable = middlewarePreObservable.pipe(
+        mergeMap((ctx: RequestContext) => middleware.pre(ctx))
+      );
+    }
+
+    return middlewarePreObservable
+      .pipe(
+        mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))
+      )
+      .pipe(
+        mergeMap((response: ResponseContext) => {
+          let middlewarePostObservable = of(response);
+          for (const middleware of this.configuration.middleware) {
+            middlewarePostObservable = middlewarePostObservable.pipe(
+              mergeMap((rsp: ResponseContext) => middleware.post(rsp))
+            );
+          }
+          return middlewarePostObservable.pipe(
+            map((rsp: ResponseContext) =>
+              this.responseProcessor.listTagConfigurationByName(rsp)
+            )
+          );
+        })
+      );
+  }
+
+  /**
+   * Returns all configured count/gauge/rate/distribution metric names (with additional filters if specified).
+   * List Tag Configurations
+   * @param filterConfigured Filter metrics that have configured tags.
+   * @param filterTagsConfigured Filter tag configurations by configured tags.
+   * @param filterMetricType Filter tag configurations by metric type.
+   * @param filterIncludePercentiles Filter distributions with additional percentile aggregations enabled or disabled.
+   */
+  public listTagConfigurations(
+    filterConfigured?: boolean,
+    filterTagsConfigured?: string,
+    filterMetricType?: MetricTagConfigurationMetricTypes,
+    filterIncludePercentiles?: boolean,
+    options?: Configuration
+  ): Observable<MetricsAndMetricTagConfigurationsResponse> {
+    const requestContextPromise = this.requestFactory.listTagConfigurations(
+      filterConfigured,
+      filterTagsConfigured,
+      filterMetricType,
+      filterIncludePercentiles,
+      options
+    );
+
+    // build promise chain
+    let middlewarePreObservable = from_<RequestContext>(requestContextPromise);
+    for (const middleware of this.configuration.middleware) {
+      middlewarePreObservable = middlewarePreObservable.pipe(
+        mergeMap((ctx: RequestContext) => middleware.pre(ctx))
+      );
+    }
+
+    return middlewarePreObservable
+      .pipe(
+        mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))
+      )
+      .pipe(
+        mergeMap((response: ResponseContext) => {
+          let middlewarePostObservable = of(response);
+          for (const middleware of this.configuration.middleware) {
+            middlewarePostObservable = middlewarePostObservable.pipe(
+              mergeMap((rsp: ResponseContext) => middleware.post(rsp))
+            );
+          }
+          return middlewarePostObservable.pipe(
+            map((rsp: ResponseContext) =>
+              this.responseProcessor.listTagConfigurations(rsp)
+            )
+          );
+        })
+      );
+  }
+
+  /**
+   * Update the tag configuration of a metric or percentile aggregations of a distribution metric. Can only be used with application keys from users with the `Manage Tags for Metrics` permission.
+   * Update a Tag Configuration
+   * @param metricName The name of the metric.
+   * @param body
+   */
+  public updateTagConfiguration(
+    metricName: string,
+    body: MetricTagConfigurationUpdateRequest,
+    options?: Configuration
+  ): Observable<MetricTagConfigurationResponse> {
+    const requestContextPromise = this.requestFactory.updateTagConfiguration(
+      metricName,
+      body,
+      options
+    );
+
+    // build promise chain
+    let middlewarePreObservable = from_<RequestContext>(requestContextPromise);
+    for (const middleware of this.configuration.middleware) {
+      middlewarePreObservable = middlewarePreObservable.pipe(
+        mergeMap((ctx: RequestContext) => middleware.pre(ctx))
+      );
+    }
+
+    return middlewarePreObservable
+      .pipe(
+        mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))
+      )
+      .pipe(
+        mergeMap((response: ResponseContext) => {
+          let middlewarePostObservable = of(response);
+          for (const middleware of this.configuration.middleware) {
+            middlewarePostObservable = middlewarePostObservable.pipe(
+              mergeMap((rsp: ResponseContext) => middleware.post(rsp))
+            );
+          }
+          return middlewarePostObservable.pipe(
+            map((rsp: ResponseContext) =>
+              this.responseProcessor.updateTagConfiguration(rsp)
             )
           );
         })

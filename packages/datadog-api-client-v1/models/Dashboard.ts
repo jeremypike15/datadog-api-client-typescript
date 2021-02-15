@@ -11,8 +11,8 @@
  */
 
 import { DashboardLayoutType } from "./DashboardLayoutType";
+import { DashboardTemplateVariable } from "./DashboardTemplateVariable";
 import { DashboardTemplateVariablePreset } from "./DashboardTemplateVariablePreset";
-import { DashboardTemplateVariables } from "./DashboardTemplateVariables";
 import { Widget } from "./Widget";
 import { HttpFile } from "../http/http";
 
@@ -56,7 +56,7 @@ export class Dashboard {
   /**
    * List of template variables for this dashboard.
    */
-  "templateVariables"?: Array<DashboardTemplateVariables>;
+  "templateVariables"?: Array<DashboardTemplateVariable>;
   /**
    * Title of the dashboard.
    */
@@ -135,7 +135,7 @@ export class Dashboard {
     {
       name: "templateVariables",
       baseName: "template_variables",
-      type: "Array<DashboardTemplateVariables>",
+      type: "Array<DashboardTemplateVariable>",
       format: "",
     },
     {

@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 
-import { AWSTagFilterListResponseFilters } from "./AWSTagFilterListResponseFilters";
+import { AWSTagFilter } from "./AWSTagFilter";
 import { HttpFile } from "../http/http";
 
 /**
@@ -20,7 +20,7 @@ export class AWSTagFilterListResponse {
   /**
    * An array of tag filters.
    */
-  "filters"?: Array<AWSTagFilterListResponseFilters>;
+  "filters"?: Array<AWSTagFilter>;
 
   static readonly discriminator: string | undefined = undefined;
 
@@ -33,7 +33,7 @@ export class AWSTagFilterListResponse {
     {
       name: "filters",
       baseName: "filters",
-      type: "Array<AWSTagFilterListResponseFilters>",
+      type: "Array<AWSTagFilter>",
       format: "",
     },
   ];

@@ -14,7 +14,7 @@ import { FormulaAndFunctionQueryDefinition } from "./FormulaAndFunctionQueryDefi
 import { FormulaAndFunctionResponseFormat } from "./FormulaAndFunctionResponseFormat";
 import { LogQueryDefinition } from "./LogQueryDefinition";
 import { ProcessQueryDefinition } from "./ProcessQueryDefinition";
-import { TimeseriesWidgetRequestMetadata } from "./TimeseriesWidgetRequestMetadata";
+import { TimeseriesWidgetExpressionAlias } from "./TimeseriesWidgetExpressionAlias";
 import { WidgetDisplayType } from "./WidgetDisplayType";
 import { WidgetFormula } from "./WidgetFormula";
 import { WidgetRequestStyle } from "./WidgetRequestStyle";
@@ -35,13 +35,14 @@ export class TimeseriesWidgetRequest {
   /**
    * Used to define expression aliases.
    */
-  "metadata"?: Array<TimeseriesWidgetRequestMetadata>;
+  "metadata"?: Array<TimeseriesWidgetExpressionAlias>;
   "networkQuery"?: LogQueryDefinition;
   /**
    * Whether or not to display a second y-axis on the right.
    */
   "onRightYaxis"?: boolean;
   "processQuery"?: ProcessQueryDefinition;
+  "profileMetricsQuery"?: LogQueryDefinition;
   /**
    * Widget query.
    */
@@ -96,7 +97,7 @@ export class TimeseriesWidgetRequest {
     {
       name: "metadata",
       baseName: "metadata",
-      type: "Array<TimeseriesWidgetRequestMetadata>",
+      type: "Array<TimeseriesWidgetExpressionAlias>",
       format: "",
     },
     {
@@ -115,6 +116,12 @@ export class TimeseriesWidgetRequest {
       name: "processQuery",
       baseName: "process_query",
       type: "ProcessQueryDefinition",
+      format: "",
+    },
+    {
+      name: "profileMetricsQuery",
+      baseName: "profile_metrics_query",
+      type: "LogQueryDefinition",
       format: "",
     },
     {

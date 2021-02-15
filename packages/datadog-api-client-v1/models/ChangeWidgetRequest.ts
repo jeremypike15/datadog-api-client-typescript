@@ -35,6 +35,7 @@ export class ChangeWidgetRequest {
   "orderBy"?: WidgetOrderBy;
   "orderDir"?: WidgetSort;
   "processQuery"?: ProcessQueryDefinition;
+  "profileMetricsQuery"?: LogQueryDefinition;
   /**
    * Query definition.
    */
@@ -112,6 +113,12 @@ export class ChangeWidgetRequest {
       name: "processQuery",
       baseName: "process_query",
       type: "ProcessQueryDefinition",
+      format: "",
+    },
+    {
+      name: "profileMetricsQuery",
+      baseName: "profile_metrics_query",
+      type: "LogQueryDefinition",
       format: "",
     },
     {

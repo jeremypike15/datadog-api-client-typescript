@@ -30,6 +30,7 @@ export class QueryValueWidgetRequest {
   "logQuery"?: LogQueryDefinition;
   "networkQuery"?: LogQueryDefinition;
   "processQuery"?: ProcessQueryDefinition;
+  "profileMetricsQuery"?: LogQueryDefinition;
   /**
    * TODO.
    */
@@ -85,6 +86,12 @@ export class QueryValueWidgetRequest {
       name: "processQuery",
       baseName: "process_query",
       type: "ProcessQueryDefinition",
+      format: "",
+    },
+    {
+      name: "profileMetricsQuery",
+      baseName: "profile_metrics_query",
+      type: "LogQueryDefinition",
       format: "",
     },
     {

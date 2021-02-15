@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 
-import { SLOCorrectionListResponseData } from "./SLOCorrectionListResponseData";
+import { SLOCorrection } from "./SLOCorrection";
 import { HttpFile } from "../http/http";
 
 /**
@@ -20,7 +20,7 @@ export class SLOCorrectionListResponse {
   /**
    * The list of of SLO corrections objects
    */
-  "data"?: Array<SLOCorrectionListResponseData>;
+  "data"?: Array<SLOCorrection>;
 
   static readonly discriminator: string | undefined = undefined;
 
@@ -33,7 +33,7 @@ export class SLOCorrectionListResponse {
     {
       name: "data",
       baseName: "data",
-      type: "Array<SLOCorrectionListResponseData>",
+      type: "Array<SLOCorrection>",
       format: "",
     },
   ];

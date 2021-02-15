@@ -24,6 +24,7 @@ export class DistributionWidgetRequest {
   "logQuery"?: LogQueryDefinition;
   "networkQuery"?: LogQueryDefinition;
   "processQuery"?: ProcessQueryDefinition;
+  "profileMetricsQuery"?: LogQueryDefinition;
   /**
    * Widget query.
    */
@@ -68,6 +69,12 @@ export class DistributionWidgetRequest {
       name: "processQuery",
       baseName: "process_query",
       type: "ProcessQueryDefinition",
+      format: "",
+    },
+    {
+      name: "profileMetricsQuery",
+      baseName: "profile_metrics_query",
+      type: "LogQueryDefinition",
       format: "",
     },
     {

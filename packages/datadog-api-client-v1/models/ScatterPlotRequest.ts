@@ -25,6 +25,7 @@ export class ScatterPlotRequest {
   "logQuery"?: LogQueryDefinition;
   "networkQuery"?: LogQueryDefinition;
   "processQuery"?: ProcessQueryDefinition;
+  "profileMetricsQuery"?: LogQueryDefinition;
   /**
    * Query definition.
    */
@@ -74,6 +75,12 @@ export class ScatterPlotRequest {
       name: "processQuery",
       baseName: "process_query",
       type: "ProcessQueryDefinition",
+      format: "",
+    },
+    {
+      name: "profileMetricsQuery",
+      baseName: "profile_metrics_query",
+      type: "LogQueryDefinition",
       format: "",
     },
     {

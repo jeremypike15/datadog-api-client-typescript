@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 
-import { LogsCategoryProcessorCategories } from "./LogsCategoryProcessorCategories";
+import { LogsCategoryProcessorCategory } from "./LogsCategoryProcessorCategory";
 import { LogsCategoryProcessorType } from "./LogsCategoryProcessorType";
 import { HttpFile } from "../http/http";
 
@@ -21,7 +21,7 @@ export class LogsCategoryProcessor {
   /**
    * Array of filters to match or not a log and their corresponding `name`to assign a custom value to the log.
    */
-  "categories": Array<LogsCategoryProcessorCategories>;
+  "categories": Array<LogsCategoryProcessorCategory>;
   /**
    * Whether or not the processor is enabled.
    */
@@ -47,7 +47,7 @@ export class LogsCategoryProcessor {
     {
       name: "categories",
       baseName: "categories",
-      type: "Array<LogsCategoryProcessorCategories>",
+      type: "Array<LogsCategoryProcessorCategory>",
       format: "",
     },
     {

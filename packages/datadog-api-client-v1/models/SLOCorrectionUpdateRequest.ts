@@ -10,14 +10,14 @@
  * Do not edit the class manually.
  */
 
-import { SLOCorrectionUpdateRequestData } from "./SLOCorrectionUpdateRequestData";
+import { SLOCorrectionUpdateData } from "./SLOCorrectionUpdateData";
 import { HttpFile } from "../http/http";
 
 /**
  * An object that defines a correction to be applied to an SLO
  */
 export class SLOCorrectionUpdateRequest {
-  "data"?: SLOCorrectionUpdateRequestData;
+  "data"?: SLOCorrectionUpdateData;
 
   static readonly discriminator: string | undefined = undefined;
 
@@ -30,7 +30,7 @@ export class SLOCorrectionUpdateRequest {
     {
       name: "data",
       baseName: "data",
-      type: "SLOCorrectionUpdateRequestData",
+      type: "SLOCorrectionUpdateData",
       format: "",
     },
   ];

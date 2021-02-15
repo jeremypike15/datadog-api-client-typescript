@@ -168,6 +168,21 @@ export * from "./LogsResponseMetadataPage";
 export * from "./LogsSort";
 export * from "./LogsSortOrder";
 export * from "./LogsWarning";
+export * from "./Metric";
+export * from "./MetricTagConfiguration";
+export * from "./MetricTagConfigurationAttributes";
+export * from "./MetricTagConfigurationCreateAttributes";
+export * from "./MetricTagConfigurationCreateData";
+export * from "./MetricTagConfigurationCreateRequest";
+export * from "./MetricTagConfigurationMetricTypes";
+export * from "./MetricTagConfigurationResponse";
+export * from "./MetricTagConfigurationType";
+export * from "./MetricTagConfigurationUpdateAttributes";
+export * from "./MetricTagConfigurationUpdateData";
+export * from "./MetricTagConfigurationUpdateRequest";
+export * from "./MetricType";
+export * from "./MetricsAndMetricTagConfigurations";
+export * from "./MetricsAndMetricTagConfigurationsResponse";
 export * from "./Organization";
 export * from "./OrganizationAttributes";
 export * from "./OrganizationsType";
@@ -442,6 +457,21 @@ import { LogsResponseMetadataPage } from "./LogsResponseMetadataPage";
 import { LogsSort } from "./LogsSort";
 import { LogsSortOrder } from "./LogsSortOrder";
 import { LogsWarning } from "./LogsWarning";
+import { Metric } from "./Metric";
+import { MetricTagConfiguration } from "./MetricTagConfiguration";
+import { MetricTagConfigurationAttributes } from "./MetricTagConfigurationAttributes";
+import { MetricTagConfigurationCreateAttributes } from "./MetricTagConfigurationCreateAttributes";
+import { MetricTagConfigurationCreateData } from "./MetricTagConfigurationCreateData";
+import { MetricTagConfigurationCreateRequest } from "./MetricTagConfigurationCreateRequest";
+import { MetricTagConfigurationMetricTypes } from "./MetricTagConfigurationMetricTypes";
+import { MetricTagConfigurationResponse } from "./MetricTagConfigurationResponse";
+import { MetricTagConfigurationType } from "./MetricTagConfigurationType";
+import { MetricTagConfigurationUpdateAttributes } from "./MetricTagConfigurationUpdateAttributes";
+import { MetricTagConfigurationUpdateData } from "./MetricTagConfigurationUpdateData";
+import { MetricTagConfigurationUpdateRequest } from "./MetricTagConfigurationUpdateRequest";
+import { MetricType } from "./MetricType";
+import { MetricsAndMetricTagConfigurations } from "./MetricsAndMetricTagConfigurations";
+import { MetricsAndMetricTagConfigurationsResponse } from "./MetricsAndMetricTagConfigurationsResponse";
 import { Organization } from "./Organization";
 import { OrganizationAttributes } from "./OrganizationAttributes";
 import { OrganizationsType } from "./OrganizationsType";
@@ -593,6 +623,9 @@ const enumsMap: Set<string> = new Set<string>([
   "LogsMetricType",
   "LogsSort",
   "LogsSortOrder",
+  "MetricTagConfigurationMetricTypes",
+  "MetricTagConfigurationType",
+  "MetricType",
   "OrganizationsType",
   "PermissionsType",
   "ProcessSummaryType",
@@ -753,6 +786,18 @@ const typeMap: { [index: string]: any } = {
   LogsResponseMetadata: LogsResponseMetadata,
   LogsResponseMetadataPage: LogsResponseMetadataPage,
   LogsWarning: LogsWarning,
+  Metric: Metric,
+  MetricTagConfiguration: MetricTagConfiguration,
+  MetricTagConfigurationAttributes: MetricTagConfigurationAttributes,
+  MetricTagConfigurationCreateAttributes: MetricTagConfigurationCreateAttributes,
+  MetricTagConfigurationCreateData: MetricTagConfigurationCreateData,
+  MetricTagConfigurationCreateRequest: MetricTagConfigurationCreateRequest,
+  MetricTagConfigurationResponse: MetricTagConfigurationResponse,
+  MetricTagConfigurationUpdateAttributes: MetricTagConfigurationUpdateAttributes,
+  MetricTagConfigurationUpdateData: MetricTagConfigurationUpdateData,
+  MetricTagConfigurationUpdateRequest: MetricTagConfigurationUpdateRequest,
+  MetricsAndMetricTagConfigurations: MetricsAndMetricTagConfigurations,
+  MetricsAndMetricTagConfigurationsResponse: MetricsAndMetricTagConfigurationsResponse,
   Organization: Organization,
   OrganizationAttributes: OrganizationAttributes,
   Pagination: Pagination,

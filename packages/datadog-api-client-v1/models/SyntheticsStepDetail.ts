@@ -13,7 +13,7 @@
 import { SyntheticsBrowserError } from "./SyntheticsBrowserError";
 import { SyntheticsCheckType } from "./SyntheticsCheckType";
 import { SyntheticsPlayingTab } from "./SyntheticsPlayingTab";
-import { SyntheticsStepDetailWarnings } from "./SyntheticsStepDetailWarnings";
+import { SyntheticsStepDetailWarning } from "./SyntheticsStepDetailWarning";
 import { SyntheticsStepType } from "./SyntheticsStepType";
 import { HttpFile } from "../http/http";
 
@@ -75,7 +75,7 @@ export class SyntheticsStepDetail {
   /**
    * Warning collected that didn't failed the step.
    */
-  "warnings"?: Array<SyntheticsStepDetailWarnings>;
+  "warnings"?: Array<SyntheticsStepDetailWarning>;
 
   static readonly discriminator: string | undefined = undefined;
 
@@ -178,7 +178,7 @@ export class SyntheticsStepDetail {
     {
       name: "warnings",
       baseName: "warnings",
-      type: "Array<SyntheticsStepDetailWarnings>",
+      type: "Array<SyntheticsStepDetailWarning>",
       format: "",
     },
   ];

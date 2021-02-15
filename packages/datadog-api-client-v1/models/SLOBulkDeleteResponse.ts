@@ -10,8 +10,8 @@
  * Do not edit the class manually.
  */
 
+import { SLOBulkDeleteError } from "./SLOBulkDeleteError";
 import { SLOBulkDeleteResponseData } from "./SLOBulkDeleteResponseData";
-import { SLOBulkDeleteResponseErrors } from "./SLOBulkDeleteResponseErrors";
 import { HttpFile } from "../http/http";
 
 /**
@@ -22,7 +22,7 @@ export class SLOBulkDeleteResponse {
   /**
    * Array of errors object returned.
    */
-  "errors"?: Array<SLOBulkDeleteResponseErrors>;
+  "errors"?: Array<SLOBulkDeleteError>;
 
   static readonly discriminator: string | undefined = undefined;
 
@@ -41,7 +41,7 @@ export class SLOBulkDeleteResponse {
     {
       name: "errors",
       baseName: "errors",
-      type: "Array<SLOBulkDeleteResponseErrors>",
+      type: "Array<SLOBulkDeleteError>",
       format: "",
     },
   ];

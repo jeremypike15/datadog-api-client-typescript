@@ -13,7 +13,7 @@
 import { LogsArithmeticProcessor } from "./LogsArithmeticProcessor";
 import { LogsAttributeRemapper } from "./LogsAttributeRemapper";
 import { LogsCategoryProcessor } from "./LogsCategoryProcessor";
-import { LogsCategoryProcessorCategories } from "./LogsCategoryProcessorCategories";
+import { LogsCategoryProcessorCategory } from "./LogsCategoryProcessorCategory";
 import { LogsDateRemapper } from "./LogsDateRemapper";
 import { LogsFilter } from "./LogsFilter";
 import { LogsGeoIPParser } from "./LogsGeoIPParser";
@@ -90,7 +90,7 @@ export class LogsProcessor {
   /**
    * Array of filters to match or not a log and their corresponding `name`to assign a custom value to the log.
    */
-  "categories": Array<LogsCategoryProcessorCategories>;
+  "categories": Array<LogsCategoryProcessorCategory>;
   /**
    * Arithmetic operation between one or more log attributes.
    */
@@ -218,7 +218,7 @@ export class LogsProcessor {
     {
       name: "categories",
       baseName: "categories",
-      type: "Array<LogsCategoryProcessorCategories>",
+      type: "Array<LogsCategoryProcessorCategory>",
       format: "",
     },
     {

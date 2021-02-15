@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 
-import { MetricsQueryResponseSeries } from "./MetricsQueryResponseSeries";
+import { MetricsQueryMetadata } from "./MetricsQueryMetadata";
 import { HttpFile } from "../http/http";
 
 /**
@@ -44,7 +44,7 @@ export class MetricsQueryResponse {
   /**
    * List of timeseries queried.
    */
-  "series"?: Array<MetricsQueryResponseSeries>;
+  "series"?: Array<MetricsQueryMetadata>;
   /**
    * Status of the query.
    */
@@ -101,7 +101,7 @@ export class MetricsQueryResponse {
     {
       name: "series",
       baseName: "series",
-      type: "Array<MetricsQueryResponseSeries>",
+      type: "Array<MetricsQueryMetadata>",
       format: "",
     },
     {

@@ -18,13 +18,11 @@ import { HttpFile } from "../http/http";
 export type UsageAttributionSort =
   | "api_percentage"
   | "snmp_usage"
-  | "lambda_percentage"
   | "apm_host_usage"
   | "api_usage"
   | "container_usage"
   | "custom_timeseries_percentage"
   | "container_percentage"
-  | "lambda_usage"
   | "apm_host_percentage"
   | "npm_host_percentage"
   | "browser_percentage"
@@ -33,4 +31,10 @@ export type UsageAttributionSort =
   | "snmp_percentage"
   | "npm_host_usage"
   | "infra_host_usage"
-  | "custom_timeseries_usage";
+  | "custom_timeseries_usage"
+  | "lambda_functions_usage"
+  | "lambda_functions_percentage"
+  | "lambda_invocations_usage"
+  | "lambda_invocations_percentage"
+  | "lambda_usage"
+  | "lambda_percentage";

@@ -15,8 +15,8 @@ import { FormulaAndFunctionProcessQueryDataSource } from "./FormulaAndFunctionPr
 import { QuerySortOrder } from "./QuerySortOrder";
 import { TimeSeriesFormulaAndFunctionEventQueryDefinition } from "./TimeSeriesFormulaAndFunctionEventQueryDefinition";
 import { TimeSeriesFormulaAndFunctionEventQueryDefinitionCompute } from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionCompute";
-import { TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy } from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy";
 import { TimeSeriesFormulaAndFunctionEventQueryDefinitionSearch } from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionSearch";
+import { TimeSeriesFormulaAndFunctionEventQueryGroupBy } from "./TimeSeriesFormulaAndFunctionEventQueryGroupBy";
 import { TimeSeriesFormulaAndFunctionMetricQueryDefinition } from "./TimeSeriesFormulaAndFunctionMetricQueryDefinition";
 import { TimeSeriesFormulaAndFunctionProcessQueryDefinition } from "./TimeSeriesFormulaAndFunctionProcessQueryDefinition";
 import { HttpFile } from "../http/http";
@@ -39,7 +39,7 @@ export class FormulaAndFunctionQueryDefinition {
   /**
    * Group by options.
    */
-  "groupBy"?: Array<TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy>;
+  "groupBy"?: Array<TimeSeriesFormulaAndFunctionEventQueryGroupBy>;
   /**
    * An array of index names to query in the stream. Omit or use `[]` to query all indexes at once.
    */
@@ -108,7 +108,7 @@ export class FormulaAndFunctionQueryDefinition {
     {
       name: "groupBy",
       baseName: "group_by",
-      type: "Array<TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy>",
+      type: "Array<TimeSeriesFormulaAndFunctionEventQueryGroupBy>",
       format: "",
     },
     {

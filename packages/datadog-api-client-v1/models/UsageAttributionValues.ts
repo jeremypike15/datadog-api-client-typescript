@@ -65,11 +65,27 @@ export class UsageAttributionValues {
    */
   "infraHostUsage"?: number;
   /**
-   * The percentage of lambda function usage by tag(s).
+   * The percentage of Lambda function usage by tag(s).
+   */
+  "lambdaFunctionsPercentage"?: number;
+  /**
+   * The Lambda function usage by tag(s).
+   */
+  "lambdaFunctionsUsage"?: number;
+  /**
+   * The percentage of Lambda invocation usage by tag(s).
+   */
+  "lambdaInvocationsPercentage"?: number;
+  /**
+   * The Lambda invocation usage by tag(s).
+   */
+  "lambdaInvocationsUsage"?: number;
+  /**
+   * The percentage of Lambda function usage by tag(s).  **Note** this field is deprecated. Use lambda_functions_percentage instead.
    */
   "lambdaPercentage"?: number;
   /**
-   * The lambda function usage by tag(s).
+   * The Lambda function usage by tag(s).  **Note** this field is deprecated. Use lambda_functions_usage instead.
    */
   "lambdaUsage"?: number;
   /**
@@ -166,6 +182,30 @@ export class UsageAttributionValues {
     {
       name: "infraHostUsage",
       baseName: "infra_host_usage",
+      type: "number",
+      format: "double",
+    },
+    {
+      name: "lambdaFunctionsPercentage",
+      baseName: "lambda_functions_percentage",
+      type: "number",
+      format: "double",
+    },
+    {
+      name: "lambdaFunctionsUsage",
+      baseName: "lambda_functions_usage",
+      type: "number",
+      format: "double",
+    },
+    {
+      name: "lambdaInvocationsPercentage",
+      baseName: "lambda_invocations_percentage",
+      type: "number",
+      format: "double",
+    },
+    {
+      name: "lambdaInvocationsUsage",
+      baseName: "lambda_invocations_usage",
       type: "number",
       format: "double",
     },

@@ -31,6 +31,7 @@ export class UsageBillableSummaryKeys {
   "npmFlowSum"?: UsageBillableSummaryBody;
   "npmHostTop99p"?: UsageBillableSummaryBody;
   "rumSum"?: UsageBillableSummaryBody;
+  "serverlessInvocationSum"?: UsageBillableSummaryBody;
   "siemSum"?: UsageBillableSummaryBody;
   "syntheticsApiTestsSum"?: UsageBillableSummaryBody;
   "syntheticsBrowserChecksSum"?: UsageBillableSummaryBody;
@@ -125,6 +126,12 @@ export class UsageBillableSummaryKeys {
     {
       name: "rumSum",
       baseName: "rum_sum",
+      type: "UsageBillableSummaryBody",
+      format: "",
+    },
+    {
+      name: "serverlessInvocationSum",
+      baseName: "serverless_invocation_sum",
       type: "UsageBillableSummaryBody",
       format: "",
     },

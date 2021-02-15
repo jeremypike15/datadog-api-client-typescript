@@ -3,17 +3,17 @@ export * from "./AWSAccount";
 export * from "./AWSAccountAndLambdaRequest";
 export * from "./AWSAccountCreateResponse";
 export * from "./AWSAccountListResponse";
+export * from "./AWSLogsAsyncError";
 export * from "./AWSLogsAsyncResponse";
-export * from "./AWSLogsAsyncResponseErrors";
+export * from "./AWSLogsLambda";
 export * from "./AWSLogsListResponse";
-export * from "./AWSLogsListResponseLambdas";
 export * from "./AWSLogsListServicesResponse";
 export * from "./AWSLogsServicesRequest";
 export * from "./AWSNamespace";
+export * from "./AWSTagFilter";
 export * from "./AWSTagFilterCreateRequest";
 export * from "./AWSTagFilterDeleteRequest";
 export * from "./AWSTagFilterListResponse";
-export * from "./AWSTagFilterListResponseFilters";
 export * from "./AccessRole";
 export * from "./AlertGraphWidgetDefinition";
 export * from "./AlertGraphWidgetDefinitionType";
@@ -49,10 +49,10 @@ export * from "./DashboardList";
 export * from "./DashboardListDeleteResponse";
 export * from "./DashboardListListResponse";
 export * from "./DashboardSummary";
-export * from "./DashboardSummaryDashboards";
+export * from "./DashboardSummaryDefinition";
+export * from "./DashboardTemplateVariable";
 export * from "./DashboardTemplateVariablePreset";
 export * from "./DashboardTemplateVariablePresetValue";
-export * from "./DashboardTemplateVariables";
 export * from "./DeletedMonitor";
 export * from "./DistributionWidgetDefinition";
 export * from "./DistributionWidgetDefinitionType";
@@ -79,6 +79,11 @@ export * from "./FormulaAndFunctionResponseFormat";
 export * from "./FreeTextWidgetDefinition";
 export * from "./FreeTextWidgetDefinitionType";
 export * from "./GCPAccount";
+export * from "./GeomapWidgetDefinition";
+export * from "./GeomapWidgetDefinitionStyle";
+export * from "./GeomapWidgetDefinitionType";
+export * from "./GeomapWidgetDefinitionView";
+export * from "./GeomapWidgetRequest";
 export * from "./GraphSnapshot";
 export * from "./GroupWidgetDefinition";
 export * from "./GroupWidgetDefinitionType";
@@ -117,8 +122,8 @@ export * from "./Log";
 export * from "./LogContent";
 export * from "./LogQueryDefinition";
 export * from "./LogQueryDefinitionGroupBy";
+export * from "./LogQueryDefinitionGroupBySort";
 export * from "./LogQueryDefinitionSearch";
-export * from "./LogQueryDefinitionSort";
 export * from "./LogStreamWidgetDefinition";
 export * from "./LogStreamWidgetDefinitionType";
 export * from "./LogsAPIError";
@@ -128,7 +133,7 @@ export * from "./LogsArithmeticProcessorType";
 export * from "./LogsAttributeRemapper";
 export * from "./LogsAttributeRemapperType";
 export * from "./LogsCategoryProcessor";
-export * from "./LogsCategoryProcessorCategories";
+export * from "./LogsCategoryProcessorCategory";
 export * from "./LogsCategoryProcessorType";
 export * from "./LogsDateRemapper";
 export * from "./LogsDateRemapperType";
@@ -174,9 +179,9 @@ export * from "./MetricMetadata";
 export * from "./MetricSearchResponse";
 export * from "./MetricSearchResponseResults";
 export * from "./MetricsListResponse";
+export * from "./MetricsQueryMetadata";
 export * from "./MetricsQueryResponse";
-export * from "./MetricsQueryResponseSeries";
-export * from "./MetricsQueryResponseUnit";
+export * from "./MetricsQueryUnit";
 export * from "./Monitor";
 export * from "./MonitorDeviceID";
 export * from "./MonitorOptions";
@@ -212,21 +217,21 @@ export * from "./QuerySortOrder";
 export * from "./QueryValueWidgetDefinition";
 export * from "./QueryValueWidgetDefinitionType";
 export * from "./QueryValueWidgetRequest";
+export * from "./SLOBulkDeleteError";
 export * from "./SLOBulkDeleteResponse";
 export * from "./SLOBulkDeleteResponseData";
-export * from "./SLOBulkDeleteResponseErrors";
+export * from "./SLOCorrection";
 export * from "./SLOCorrectionCategory";
+export * from "./SLOCorrectionCreateData";
 export * from "./SLOCorrectionCreateRequest";
 export * from "./SLOCorrectionCreateRequestAttributes";
-export * from "./SLOCorrectionCreateRequestData";
 export * from "./SLOCorrectionListResponse";
-export * from "./SLOCorrectionListResponseData";
 export * from "./SLOCorrectionResponse";
 export * from "./SLOCorrectionResponseAttributes";
-export * from "./SLOCorrectionResponseData";
+export * from "./SLOCorrectionType";
+export * from "./SLOCorrectionUpdateData";
 export * from "./SLOCorrectionUpdateRequest";
 export * from "./SLOCorrectionUpdateRequestAttributes";
-export * from "./SLOCorrectionUpdateRequestData";
 export * from "./SLODeleteResponse";
 export * from "./SLOErrorTimeframe";
 export * from "./SLOHistoryMetrics";
@@ -288,7 +293,7 @@ export * from "./SyntheticsConfigVariable";
 export * from "./SyntheticsConfigVariableType";
 export * from "./SyntheticsDeleteTestsPayload";
 export * from "./SyntheticsDeleteTestsResponse";
-export * from "./SyntheticsDeleteTestsResponseDeletedTests";
+export * from "./SyntheticsDeletedTest";
 export * from "./SyntheticsDevice";
 export * from "./SyntheticsDeviceID";
 export * from "./SyntheticsErrorCode";
@@ -315,7 +320,7 @@ export * from "./SyntheticsSSLCertificateIssuer";
 export * from "./SyntheticsSSLCertificateSubject";
 export * from "./SyntheticsStep";
 export * from "./SyntheticsStepDetail";
-export * from "./SyntheticsStepDetailWarnings";
+export * from "./SyntheticsStepDetailWarning";
 export * from "./SyntheticsStepType";
 export * from "./SyntheticsTestConfig";
 export * from "./SyntheticsTestDetails";
@@ -332,9 +337,9 @@ export * from "./SyntheticsTestRequestCertificate";
 export * from "./SyntheticsTestRequestCertificateItem";
 export * from "./SyntheticsTickInterval";
 export * from "./SyntheticsTiming";
+export * from "./SyntheticsTriggerCITestLocation";
+export * from "./SyntheticsTriggerCITestRunResult";
 export * from "./SyntheticsTriggerCITestsResponse";
-export * from "./SyntheticsTriggerCITestsResponseLocations";
-export * from "./SyntheticsTriggerCITestsResponseResults";
 export * from "./SyntheticsUpdateTestPauseStatusPayload";
 export * from "./SyntheticsWarningType";
 export * from "./TableWidgetCellDisplayMode";
@@ -346,15 +351,15 @@ export * from "./TagToHosts";
 export * from "./TargetFormatType";
 export * from "./TimeSeriesFormulaAndFunctionEventQueryDefinition";
 export * from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionCompute";
-export * from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy";
 export * from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionSearch";
-export * from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionSort";
+export * from "./TimeSeriesFormulaAndFunctionEventQueryGroupBy";
+export * from "./TimeSeriesFormulaAndFunctionEventQueryGroupBySort";
 export * from "./TimeSeriesFormulaAndFunctionMetricQueryDefinition";
 export * from "./TimeSeriesFormulaAndFunctionProcessQueryDefinition";
 export * from "./TimeseriesWidgetDefinition";
 export * from "./TimeseriesWidgetDefinitionType";
+export * from "./TimeseriesWidgetExpressionAlias";
 export * from "./TimeseriesWidgetRequest";
-export * from "./TimeseriesWidgetRequestMetadata";
 export * from "./ToplistWidgetDefinition";
 export * from "./ToplistWidgetDefinitionType";
 export * from "./ToplistWidgetRequest";
@@ -483,17 +488,17 @@ import { AWSAccount } from "./AWSAccount";
 import { AWSAccountAndLambdaRequest } from "./AWSAccountAndLambdaRequest";
 import { AWSAccountCreateResponse } from "./AWSAccountCreateResponse";
 import { AWSAccountListResponse } from "./AWSAccountListResponse";
+import { AWSLogsAsyncError } from "./AWSLogsAsyncError";
 import { AWSLogsAsyncResponse } from "./AWSLogsAsyncResponse";
-import { AWSLogsAsyncResponseErrors } from "./AWSLogsAsyncResponseErrors";
+import { AWSLogsLambda } from "./AWSLogsLambda";
 import { AWSLogsListResponse } from "./AWSLogsListResponse";
-import { AWSLogsListResponseLambdas } from "./AWSLogsListResponseLambdas";
 import { AWSLogsListServicesResponse } from "./AWSLogsListServicesResponse";
 import { AWSLogsServicesRequest } from "./AWSLogsServicesRequest";
 import { AWSNamespace } from "./AWSNamespace";
+import { AWSTagFilter } from "./AWSTagFilter";
 import { AWSTagFilterCreateRequest } from "./AWSTagFilterCreateRequest";
 import { AWSTagFilterDeleteRequest } from "./AWSTagFilterDeleteRequest";
 import { AWSTagFilterListResponse } from "./AWSTagFilterListResponse";
-import { AWSTagFilterListResponseFilters } from "./AWSTagFilterListResponseFilters";
 import { AccessRole } from "./AccessRole";
 import { AlertGraphWidgetDefinition } from "./AlertGraphWidgetDefinition";
 import { AlertGraphWidgetDefinitionType } from "./AlertGraphWidgetDefinitionType";
@@ -529,10 +534,10 @@ import { DashboardList } from "./DashboardList";
 import { DashboardListDeleteResponse } from "./DashboardListDeleteResponse";
 import { DashboardListListResponse } from "./DashboardListListResponse";
 import { DashboardSummary } from "./DashboardSummary";
-import { DashboardSummaryDashboards } from "./DashboardSummaryDashboards";
+import { DashboardSummaryDefinition } from "./DashboardSummaryDefinition";
+import { DashboardTemplateVariable } from "./DashboardTemplateVariable";
 import { DashboardTemplateVariablePreset } from "./DashboardTemplateVariablePreset";
 import { DashboardTemplateVariablePresetValue } from "./DashboardTemplateVariablePresetValue";
-import { DashboardTemplateVariables } from "./DashboardTemplateVariables";
 import { DeletedMonitor } from "./DeletedMonitor";
 import { DistributionWidgetDefinition } from "./DistributionWidgetDefinition";
 import { DistributionWidgetDefinitionType } from "./DistributionWidgetDefinitionType";
@@ -559,6 +564,11 @@ import { FormulaAndFunctionResponseFormat } from "./FormulaAndFunctionResponseFo
 import { FreeTextWidgetDefinition } from "./FreeTextWidgetDefinition";
 import { FreeTextWidgetDefinitionType } from "./FreeTextWidgetDefinitionType";
 import { GCPAccount } from "./GCPAccount";
+import { GeomapWidgetDefinition } from "./GeomapWidgetDefinition";
+import { GeomapWidgetDefinitionStyle } from "./GeomapWidgetDefinitionStyle";
+import { GeomapWidgetDefinitionType } from "./GeomapWidgetDefinitionType";
+import { GeomapWidgetDefinitionView } from "./GeomapWidgetDefinitionView";
+import { GeomapWidgetRequest } from "./GeomapWidgetRequest";
 import { GraphSnapshot } from "./GraphSnapshot";
 import { GroupWidgetDefinition } from "./GroupWidgetDefinition";
 import { GroupWidgetDefinitionType } from "./GroupWidgetDefinitionType";
@@ -597,8 +607,8 @@ import { Log } from "./Log";
 import { LogContent } from "./LogContent";
 import { LogQueryDefinition } from "./LogQueryDefinition";
 import { LogQueryDefinitionGroupBy } from "./LogQueryDefinitionGroupBy";
+import { LogQueryDefinitionGroupBySort } from "./LogQueryDefinitionGroupBySort";
 import { LogQueryDefinitionSearch } from "./LogQueryDefinitionSearch";
-import { LogQueryDefinitionSort } from "./LogQueryDefinitionSort";
 import { LogStreamWidgetDefinition } from "./LogStreamWidgetDefinition";
 import { LogStreamWidgetDefinitionType } from "./LogStreamWidgetDefinitionType";
 import { LogsAPIError } from "./LogsAPIError";
@@ -608,7 +618,7 @@ import { LogsArithmeticProcessorType } from "./LogsArithmeticProcessorType";
 import { LogsAttributeRemapper } from "./LogsAttributeRemapper";
 import { LogsAttributeRemapperType } from "./LogsAttributeRemapperType";
 import { LogsCategoryProcessor } from "./LogsCategoryProcessor";
-import { LogsCategoryProcessorCategories } from "./LogsCategoryProcessorCategories";
+import { LogsCategoryProcessorCategory } from "./LogsCategoryProcessorCategory";
 import { LogsCategoryProcessorType } from "./LogsCategoryProcessorType";
 import { LogsDateRemapper } from "./LogsDateRemapper";
 import { LogsDateRemapperType } from "./LogsDateRemapperType";
@@ -654,9 +664,9 @@ import { MetricMetadata } from "./MetricMetadata";
 import { MetricSearchResponse } from "./MetricSearchResponse";
 import { MetricSearchResponseResults } from "./MetricSearchResponseResults";
 import { MetricsListResponse } from "./MetricsListResponse";
+import { MetricsQueryMetadata } from "./MetricsQueryMetadata";
 import { MetricsQueryResponse } from "./MetricsQueryResponse";
-import { MetricsQueryResponseSeries } from "./MetricsQueryResponseSeries";
-import { MetricsQueryResponseUnit } from "./MetricsQueryResponseUnit";
+import { MetricsQueryUnit } from "./MetricsQueryUnit";
 import { Monitor } from "./Monitor";
 import { MonitorDeviceID } from "./MonitorDeviceID";
 import { MonitorOptions } from "./MonitorOptions";
@@ -692,21 +702,21 @@ import { QuerySortOrder } from "./QuerySortOrder";
 import { QueryValueWidgetDefinition } from "./QueryValueWidgetDefinition";
 import { QueryValueWidgetDefinitionType } from "./QueryValueWidgetDefinitionType";
 import { QueryValueWidgetRequest } from "./QueryValueWidgetRequest";
+import { SLOBulkDeleteError } from "./SLOBulkDeleteError";
 import { SLOBulkDeleteResponse } from "./SLOBulkDeleteResponse";
 import { SLOBulkDeleteResponseData } from "./SLOBulkDeleteResponseData";
-import { SLOBulkDeleteResponseErrors } from "./SLOBulkDeleteResponseErrors";
+import { SLOCorrection } from "./SLOCorrection";
 import { SLOCorrectionCategory } from "./SLOCorrectionCategory";
+import { SLOCorrectionCreateData } from "./SLOCorrectionCreateData";
 import { SLOCorrectionCreateRequest } from "./SLOCorrectionCreateRequest";
 import { SLOCorrectionCreateRequestAttributes } from "./SLOCorrectionCreateRequestAttributes";
-import { SLOCorrectionCreateRequestData } from "./SLOCorrectionCreateRequestData";
 import { SLOCorrectionListResponse } from "./SLOCorrectionListResponse";
-import { SLOCorrectionListResponseData } from "./SLOCorrectionListResponseData";
 import { SLOCorrectionResponse } from "./SLOCorrectionResponse";
 import { SLOCorrectionResponseAttributes } from "./SLOCorrectionResponseAttributes";
-import { SLOCorrectionResponseData } from "./SLOCorrectionResponseData";
+import { SLOCorrectionType } from "./SLOCorrectionType";
+import { SLOCorrectionUpdateData } from "./SLOCorrectionUpdateData";
 import { SLOCorrectionUpdateRequest } from "./SLOCorrectionUpdateRequest";
 import { SLOCorrectionUpdateRequestAttributes } from "./SLOCorrectionUpdateRequestAttributes";
-import { SLOCorrectionUpdateRequestData } from "./SLOCorrectionUpdateRequestData";
 import { SLODeleteResponse } from "./SLODeleteResponse";
 import { SLOErrorTimeframe } from "./SLOErrorTimeframe";
 import { SLOHistoryMetrics } from "./SLOHistoryMetrics";
@@ -768,7 +778,7 @@ import { SyntheticsConfigVariable } from "./SyntheticsConfigVariable";
 import { SyntheticsConfigVariableType } from "./SyntheticsConfigVariableType";
 import { SyntheticsDeleteTestsPayload } from "./SyntheticsDeleteTestsPayload";
 import { SyntheticsDeleteTestsResponse } from "./SyntheticsDeleteTestsResponse";
-import { SyntheticsDeleteTestsResponseDeletedTests } from "./SyntheticsDeleteTestsResponseDeletedTests";
+import { SyntheticsDeletedTest } from "./SyntheticsDeletedTest";
 import { SyntheticsDevice } from "./SyntheticsDevice";
 import { SyntheticsDeviceID } from "./SyntheticsDeviceID";
 import { SyntheticsErrorCode } from "./SyntheticsErrorCode";
@@ -795,7 +805,7 @@ import { SyntheticsSSLCertificateIssuer } from "./SyntheticsSSLCertificateIssuer
 import { SyntheticsSSLCertificateSubject } from "./SyntheticsSSLCertificateSubject";
 import { SyntheticsStep } from "./SyntheticsStep";
 import { SyntheticsStepDetail } from "./SyntheticsStepDetail";
-import { SyntheticsStepDetailWarnings } from "./SyntheticsStepDetailWarnings";
+import { SyntheticsStepDetailWarning } from "./SyntheticsStepDetailWarning";
 import { SyntheticsStepType } from "./SyntheticsStepType";
 import { SyntheticsTestConfig } from "./SyntheticsTestConfig";
 import { SyntheticsTestDetails } from "./SyntheticsTestDetails";
@@ -812,9 +822,9 @@ import { SyntheticsTestRequestCertificate } from "./SyntheticsTestRequestCertifi
 import { SyntheticsTestRequestCertificateItem } from "./SyntheticsTestRequestCertificateItem";
 import { SyntheticsTickInterval } from "./SyntheticsTickInterval";
 import { SyntheticsTiming } from "./SyntheticsTiming";
+import { SyntheticsTriggerCITestLocation } from "./SyntheticsTriggerCITestLocation";
+import { SyntheticsTriggerCITestRunResult } from "./SyntheticsTriggerCITestRunResult";
 import { SyntheticsTriggerCITestsResponse } from "./SyntheticsTriggerCITestsResponse";
-import { SyntheticsTriggerCITestsResponseLocations } from "./SyntheticsTriggerCITestsResponseLocations";
-import { SyntheticsTriggerCITestsResponseResults } from "./SyntheticsTriggerCITestsResponseResults";
 import { SyntheticsUpdateTestPauseStatusPayload } from "./SyntheticsUpdateTestPauseStatusPayload";
 import { SyntheticsWarningType } from "./SyntheticsWarningType";
 import { TableWidgetCellDisplayMode } from "./TableWidgetCellDisplayMode";
@@ -826,15 +836,15 @@ import { TagToHosts } from "./TagToHosts";
 import { TargetFormatType } from "./TargetFormatType";
 import { TimeSeriesFormulaAndFunctionEventQueryDefinition } from "./TimeSeriesFormulaAndFunctionEventQueryDefinition";
 import { TimeSeriesFormulaAndFunctionEventQueryDefinitionCompute } from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionCompute";
-import { TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy } from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy";
 import { TimeSeriesFormulaAndFunctionEventQueryDefinitionSearch } from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionSearch";
-import { TimeSeriesFormulaAndFunctionEventQueryDefinitionSort } from "./TimeSeriesFormulaAndFunctionEventQueryDefinitionSort";
+import { TimeSeriesFormulaAndFunctionEventQueryGroupBy } from "./TimeSeriesFormulaAndFunctionEventQueryGroupBy";
+import { TimeSeriesFormulaAndFunctionEventQueryGroupBySort } from "./TimeSeriesFormulaAndFunctionEventQueryGroupBySort";
 import { TimeSeriesFormulaAndFunctionMetricQueryDefinition } from "./TimeSeriesFormulaAndFunctionMetricQueryDefinition";
 import { TimeSeriesFormulaAndFunctionProcessQueryDefinition } from "./TimeSeriesFormulaAndFunctionProcessQueryDefinition";
 import { TimeseriesWidgetDefinition } from "./TimeseriesWidgetDefinition";
 import { TimeseriesWidgetDefinitionType } from "./TimeseriesWidgetDefinitionType";
+import { TimeseriesWidgetExpressionAlias } from "./TimeseriesWidgetExpressionAlias";
 import { TimeseriesWidgetRequest } from "./TimeseriesWidgetRequest";
-import { TimeseriesWidgetRequestMetadata } from "./TimeseriesWidgetRequestMetadata";
 import { ToplistWidgetDefinition } from "./ToplistWidgetDefinition";
 import { ToplistWidgetDefinitionType } from "./ToplistWidgetDefinitionType";
 import { ToplistWidgetRequest } from "./ToplistWidgetRequest";
@@ -996,6 +1006,7 @@ const enumsMap: Set<string> = new Set<string>([
   "FormulaAndFunctionProcessQueryDataSource",
   "FormulaAndFunctionResponseFormat",
   "FreeTextWidgetDefinitionType",
+  "GeomapWidgetDefinitionType",
   "GroupWidgetDefinitionType",
   "HTTPMethod",
   "HeatMapWidgetDefinitionType",
@@ -1027,6 +1038,7 @@ const enumsMap: Set<string> = new Set<string>([
   "QuerySortOrder",
   "QueryValueWidgetDefinitionType",
   "SLOCorrectionCategory",
+  "SLOCorrectionType",
   "SLOErrorTimeframe",
   "SLOTimeframe",
   "SLOType",
@@ -1103,16 +1115,16 @@ const typeMap: { [index: string]: any } = {
   AWSAccountAndLambdaRequest: AWSAccountAndLambdaRequest,
   AWSAccountCreateResponse: AWSAccountCreateResponse,
   AWSAccountListResponse: AWSAccountListResponse,
+  AWSLogsAsyncError: AWSLogsAsyncError,
   AWSLogsAsyncResponse: AWSLogsAsyncResponse,
-  AWSLogsAsyncResponseErrors: AWSLogsAsyncResponseErrors,
+  AWSLogsLambda: AWSLogsLambda,
   AWSLogsListResponse: AWSLogsListResponse,
-  AWSLogsListResponseLambdas: AWSLogsListResponseLambdas,
   AWSLogsListServicesResponse: AWSLogsListServicesResponse,
   AWSLogsServicesRequest: AWSLogsServicesRequest,
+  AWSTagFilter: AWSTagFilter,
   AWSTagFilterCreateRequest: AWSTagFilterCreateRequest,
   AWSTagFilterDeleteRequest: AWSTagFilterDeleteRequest,
   AWSTagFilterListResponse: AWSTagFilterListResponse,
-  AWSTagFilterListResponseFilters: AWSTagFilterListResponseFilters,
   AlertGraphWidgetDefinition: AlertGraphWidgetDefinition,
   AlertValueWidgetDefinition: AlertValueWidgetDefinition,
   ApiKey: ApiKey,
@@ -1141,10 +1153,10 @@ const typeMap: { [index: string]: any } = {
   DashboardListDeleteResponse: DashboardListDeleteResponse,
   DashboardListListResponse: DashboardListListResponse,
   DashboardSummary: DashboardSummary,
-  DashboardSummaryDashboards: DashboardSummaryDashboards,
+  DashboardSummaryDefinition: DashboardSummaryDefinition,
+  DashboardTemplateVariable: DashboardTemplateVariable,
   DashboardTemplateVariablePreset: DashboardTemplateVariablePreset,
   DashboardTemplateVariablePresetValue: DashboardTemplateVariablePresetValue,
-  DashboardTemplateVariables: DashboardTemplateVariables,
   DeletedMonitor: DeletedMonitor,
   DistributionWidgetDefinition: DistributionWidgetDefinition,
   DistributionWidgetRequest: DistributionWidgetRequest,
@@ -1159,6 +1171,10 @@ const typeMap: { [index: string]: any } = {
   FormulaAndFunctionQueryDefinition: FormulaAndFunctionQueryDefinition,
   FreeTextWidgetDefinition: FreeTextWidgetDefinition,
   GCPAccount: GCPAccount,
+  GeomapWidgetDefinition: GeomapWidgetDefinition,
+  GeomapWidgetDefinitionStyle: GeomapWidgetDefinitionStyle,
+  GeomapWidgetDefinitionView: GeomapWidgetDefinitionView,
+  GeomapWidgetRequest: GeomapWidgetRequest,
   GraphSnapshot: GraphSnapshot,
   GroupWidgetDefinition: GroupWidgetDefinition,
   HeatMapWidgetDefinition: HeatMapWidgetDefinition,
@@ -1191,15 +1207,15 @@ const typeMap: { [index: string]: any } = {
   LogContent: LogContent,
   LogQueryDefinition: LogQueryDefinition,
   LogQueryDefinitionGroupBy: LogQueryDefinitionGroupBy,
+  LogQueryDefinitionGroupBySort: LogQueryDefinitionGroupBySort,
   LogQueryDefinitionSearch: LogQueryDefinitionSearch,
-  LogQueryDefinitionSort: LogQueryDefinitionSort,
   LogStreamWidgetDefinition: LogStreamWidgetDefinition,
   LogsAPIError: LogsAPIError,
   LogsAPIErrorResponse: LogsAPIErrorResponse,
   LogsArithmeticProcessor: LogsArithmeticProcessor,
   LogsAttributeRemapper: LogsAttributeRemapper,
   LogsCategoryProcessor: LogsCategoryProcessor,
-  LogsCategoryProcessorCategories: LogsCategoryProcessorCategories,
+  LogsCategoryProcessorCategory: LogsCategoryProcessorCategory,
   LogsDateRemapper: LogsDateRemapper,
   LogsExclusion: LogsExclusion,
   LogsExclusionFilter: LogsExclusionFilter,
@@ -1231,9 +1247,9 @@ const typeMap: { [index: string]: any } = {
   MetricSearchResponse: MetricSearchResponse,
   MetricSearchResponseResults: MetricSearchResponseResults,
   MetricsListResponse: MetricsListResponse,
+  MetricsQueryMetadata: MetricsQueryMetadata,
   MetricsQueryResponse: MetricsQueryResponse,
-  MetricsQueryResponseSeries: MetricsQueryResponseSeries,
-  MetricsQueryResponseUnit: MetricsQueryResponseUnit,
+  MetricsQueryUnit: MetricsQueryUnit,
   Monitor: Monitor,
   MonitorOptions: MonitorOptions,
   MonitorOptionsAggregation: MonitorOptionsAggregation,
@@ -1262,20 +1278,19 @@ const typeMap: { [index: string]: any } = {
   ProcessQueryDefinition: ProcessQueryDefinition,
   QueryValueWidgetDefinition: QueryValueWidgetDefinition,
   QueryValueWidgetRequest: QueryValueWidgetRequest,
+  SLOBulkDeleteError: SLOBulkDeleteError,
   SLOBulkDeleteResponse: SLOBulkDeleteResponse,
   SLOBulkDeleteResponseData: SLOBulkDeleteResponseData,
-  SLOBulkDeleteResponseErrors: SLOBulkDeleteResponseErrors,
+  SLOCorrection: SLOCorrection,
+  SLOCorrectionCreateData: SLOCorrectionCreateData,
   SLOCorrectionCreateRequest: SLOCorrectionCreateRequest,
   SLOCorrectionCreateRequestAttributes: SLOCorrectionCreateRequestAttributes,
-  SLOCorrectionCreateRequestData: SLOCorrectionCreateRequestData,
   SLOCorrectionListResponse: SLOCorrectionListResponse,
-  SLOCorrectionListResponseData: SLOCorrectionListResponseData,
   SLOCorrectionResponse: SLOCorrectionResponse,
   SLOCorrectionResponseAttributes: SLOCorrectionResponseAttributes,
-  SLOCorrectionResponseData: SLOCorrectionResponseData,
+  SLOCorrectionUpdateData: SLOCorrectionUpdateData,
   SLOCorrectionUpdateRequest: SLOCorrectionUpdateRequest,
   SLOCorrectionUpdateRequestAttributes: SLOCorrectionUpdateRequestAttributes,
-  SLOCorrectionUpdateRequestData: SLOCorrectionUpdateRequestData,
   SLODeleteResponse: SLODeleteResponse,
   SLOHistoryMetrics: SLOHistoryMetrics,
   SLOHistoryMetricsSeries: SLOHistoryMetricsSeries,
@@ -1322,7 +1337,7 @@ const typeMap: { [index: string]: any } = {
   SyntheticsConfigVariable: SyntheticsConfigVariable,
   SyntheticsDeleteTestsPayload: SyntheticsDeleteTestsPayload,
   SyntheticsDeleteTestsResponse: SyntheticsDeleteTestsResponse,
-  SyntheticsDeleteTestsResponseDeletedTests: SyntheticsDeleteTestsResponseDeletedTests,
+  SyntheticsDeletedTest: SyntheticsDeletedTest,
   SyntheticsDevice: SyntheticsDevice,
   SyntheticsGetAPITestLatestResultsResponse: SyntheticsGetAPITestLatestResultsResponse,
   SyntheticsGetBrowserTestLatestResultsResponse: SyntheticsGetBrowserTestLatestResultsResponse,
@@ -1344,7 +1359,7 @@ const typeMap: { [index: string]: any } = {
   SyntheticsSSLCertificateSubject: SyntheticsSSLCertificateSubject,
   SyntheticsStep: SyntheticsStep,
   SyntheticsStepDetail: SyntheticsStepDetail,
-  SyntheticsStepDetailWarnings: SyntheticsStepDetailWarnings,
+  SyntheticsStepDetailWarning: SyntheticsStepDetailWarning,
   SyntheticsTestConfig: SyntheticsTestConfig,
   SyntheticsTestDetails: SyntheticsTestDetails,
   SyntheticsTestOptions: SyntheticsTestOptions,
@@ -1354,23 +1369,23 @@ const typeMap: { [index: string]: any } = {
   SyntheticsTestRequestCertificate: SyntheticsTestRequestCertificate,
   SyntheticsTestRequestCertificateItem: SyntheticsTestRequestCertificateItem,
   SyntheticsTiming: SyntheticsTiming,
+  SyntheticsTriggerCITestLocation: SyntheticsTriggerCITestLocation,
+  SyntheticsTriggerCITestRunResult: SyntheticsTriggerCITestRunResult,
   SyntheticsTriggerCITestsResponse: SyntheticsTriggerCITestsResponse,
-  SyntheticsTriggerCITestsResponseLocations: SyntheticsTriggerCITestsResponseLocations,
-  SyntheticsTriggerCITestsResponseResults: SyntheticsTriggerCITestsResponseResults,
   SyntheticsUpdateTestPauseStatusPayload: SyntheticsUpdateTestPauseStatusPayload,
   TableWidgetDefinition: TableWidgetDefinition,
   TableWidgetRequest: TableWidgetRequest,
   TagToHosts: TagToHosts,
   TimeSeriesFormulaAndFunctionEventQueryDefinition: TimeSeriesFormulaAndFunctionEventQueryDefinition,
   TimeSeriesFormulaAndFunctionEventQueryDefinitionCompute: TimeSeriesFormulaAndFunctionEventQueryDefinitionCompute,
-  TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy: TimeSeriesFormulaAndFunctionEventQueryDefinitionGroupBy,
   TimeSeriesFormulaAndFunctionEventQueryDefinitionSearch: TimeSeriesFormulaAndFunctionEventQueryDefinitionSearch,
-  TimeSeriesFormulaAndFunctionEventQueryDefinitionSort: TimeSeriesFormulaAndFunctionEventQueryDefinitionSort,
+  TimeSeriesFormulaAndFunctionEventQueryGroupBy: TimeSeriesFormulaAndFunctionEventQueryGroupBy,
+  TimeSeriesFormulaAndFunctionEventQueryGroupBySort: TimeSeriesFormulaAndFunctionEventQueryGroupBySort,
   TimeSeriesFormulaAndFunctionMetricQueryDefinition: TimeSeriesFormulaAndFunctionMetricQueryDefinition,
   TimeSeriesFormulaAndFunctionProcessQueryDefinition: TimeSeriesFormulaAndFunctionProcessQueryDefinition,
   TimeseriesWidgetDefinition: TimeseriesWidgetDefinition,
+  TimeseriesWidgetExpressionAlias: TimeseriesWidgetExpressionAlias,
   TimeseriesWidgetRequest: TimeseriesWidgetRequest,
-  TimeseriesWidgetRequestMetadata: TimeseriesWidgetRequestMetadata,
   ToplistWidgetDefinition: ToplistWidgetDefinition,
   ToplistWidgetRequest: ToplistWidgetRequest,
   UsageAnalyzedLogsHour: UsageAnalyzedLogsHour,
