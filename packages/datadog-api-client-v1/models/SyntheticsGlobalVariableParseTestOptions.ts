@@ -10,52 +10,48 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsGlobalVariableParseTestOptionsParser } from "./SyntheticsGlobalVariableParseTestOptionsParser";
-import { SyntheticsGlobalVariableParseTestOptionsType } from "./SyntheticsGlobalVariableParseTestOptionsType";
-import { HttpFile } from "../http/http";
+import { SyntheticsGlobalVariableParseTestOptionsParser } from './SyntheticsGlobalVariableParseTestOptionsParser';
+import { SyntheticsGlobalVariableParseTestOptionsType } from './SyntheticsGlobalVariableParseTestOptionsType';
+import { HttpFile } from '../http/http';
 
 /**
- * Parser options to use for retrieving a Synthetics global variable from a Synthetics Test. Used in conjunction with `parse_test_public_id`.
- */
+* Parser options to use for retrieving a Synthetics global variable from a Synthetics Test. Used in conjunction with `parse_test_public_id`.
+*/
 export class SyntheticsGlobalVariableParseTestOptions {
-  /**
-   * When type is `http_header`, name of the header to use to extract the value.
-   */
-  "field"?: string;
-  "parser": SyntheticsGlobalVariableParseTestOptionsParser;
-  "type": SyntheticsGlobalVariableParseTestOptionsType;
+    /**
+    * When type is `http_header`, name of the header to use to extract the value.
+    */
+    'field'?: string;
+    'parser': SyntheticsGlobalVariableParseTestOptionsParser;
+    'type': SyntheticsGlobalVariableParseTestOptionsType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "field",
-      baseName: "field",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "parser",
-      baseName: "parser",
-      type: "SyntheticsGlobalVariableParseTestOptionsParser",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "SyntheticsGlobalVariableParseTestOptionsType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "field",
+            "baseName": "field",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "parser",
+            "baseName": "parser",
+            "type": "SyntheticsGlobalVariableParseTestOptionsParser",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "SyntheticsGlobalVariableParseTestOptionsType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SyntheticsGlobalVariableParseTestOptions.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SyntheticsGlobalVariableParseTestOptions.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

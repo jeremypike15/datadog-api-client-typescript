@@ -10,44 +10,40 @@
  * Do not edit the class manually.
  */
 
-import { IncidentFieldAttributesValueType } from "./IncidentFieldAttributesValueType";
-import { HttpFile } from "../http/http";
+import { IncidentFieldAttributesValueType } from './IncidentFieldAttributesValueType';
+import { HttpFile } from '../http/http';
 
 /**
- * A field with potentially multiple values selected.
- */
+* A field with potentially multiple values selected.
+*/
 export class IncidentFieldAttributesMultipleValue {
-  "type"?: IncidentFieldAttributesValueType;
-  /**
-   * The multiple values selected for this field.
-   */
-  "value"?: Array<string>;
+    'type'?: IncidentFieldAttributesValueType;
+    /**
+    * The multiple values selected for this field.
+    */
+    'value'?: Array<string>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "type",
-      baseName: "type",
-      type: "IncidentFieldAttributesValueType",
-      format: "",
-    },
-    {
-      name: "value",
-      baseName: "value",
-      type: "Array<string>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "IncidentFieldAttributesValueType",
+            "format": ""
+        },
+        {
+            "name": "value",
+            "baseName": "value",
+            "type": "Array<string>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return IncidentFieldAttributesMultipleValue.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return IncidentFieldAttributesMultipleValue.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

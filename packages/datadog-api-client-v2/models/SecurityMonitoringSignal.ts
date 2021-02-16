@@ -10,52 +10,48 @@
  * Do not edit the class manually.
  */
 
-import { SecurityMonitoringSignalAttributes } from "./SecurityMonitoringSignalAttributes";
-import { SecurityMonitoringSignalType } from "./SecurityMonitoringSignalType";
-import { HttpFile } from "../http/http";
+import { SecurityMonitoringSignalAttributes } from './SecurityMonitoringSignalAttributes';
+import { SecurityMonitoringSignalType } from './SecurityMonitoringSignalType';
+import { HttpFile } from '../http/http';
 
 /**
- * Object description of a security signal.
- */
+* Object description of a security signal.
+*/
 export class SecurityMonitoringSignal {
-  "attributes"?: SecurityMonitoringSignalAttributes;
-  /**
-   * The unique ID of the security signal.
-   */
-  "id"?: string;
-  "type"?: SecurityMonitoringSignalType;
+    'attributes'?: SecurityMonitoringSignalAttributes;
+    /**
+    * The unique ID of the security signal.
+    */
+    'id'?: string;
+    'type'?: SecurityMonitoringSignalType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "attributes",
-      baseName: "attributes",
-      type: "SecurityMonitoringSignalAttributes",
-      format: "",
-    },
-    {
-      name: "id",
-      baseName: "id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "SecurityMonitoringSignalType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "SecurityMonitoringSignalAttributes",
+            "format": ""
+        },
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "SecurityMonitoringSignalType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SecurityMonitoringSignal.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SecurityMonitoringSignal.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

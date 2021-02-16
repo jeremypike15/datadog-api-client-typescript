@@ -10,46 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Total number of host currently monitored by Datadog.
- */
+* Total number of host currently monitored by Datadog.
+*/
 export class HostTotals {
-  /**
-   * Total number of active host (UP and ???) reporting to Datadog.
-   */
-  "totalActive"?: number;
-  /**
-   * Number of host that are UP and reporting to Datadog.
-   */
-  "totalUp"?: number;
+    /**
+    * Total number of active host (UP and ???) reporting to Datadog.
+    */
+    'totalActive'?: number;
+    /**
+    * Number of host that are UP and reporting to Datadog.
+    */
+    'totalUp'?: number;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "totalActive",
-      baseName: "total_active",
-      type: "number",
-      format: "int64",
-    },
-    {
-      name: "totalUp",
-      baseName: "total_up",
-      type: "number",
-      format: "int64",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "totalActive",
+            "baseName": "total_active",
+            "type": "number",
+            "format": "int64"
+        },
+        {
+            "name": "totalUp",
+            "baseName": "total_up",
+            "type": "number",
+            "format": "int64"
+        }    ];
 
-  static getAttributeTypeMap() {
-    return HostTotals.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return HostTotals.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

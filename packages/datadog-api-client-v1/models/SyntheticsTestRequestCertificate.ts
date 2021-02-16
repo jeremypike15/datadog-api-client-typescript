@@ -10,41 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsTestRequestCertificateItem } from "./SyntheticsTestRequestCertificateItem";
-import { HttpFile } from "../http/http";
+import { SyntheticsTestRequestCertificateItem } from './SyntheticsTestRequestCertificateItem';
+import { HttpFile } from '../http/http';
 
 /**
- * Client certificate to use when performing the test request.
- */
+* Client certificate to use when performing the test request.
+*/
 export class SyntheticsTestRequestCertificate {
-  "cert"?: SyntheticsTestRequestCertificateItem;
-  "key"?: SyntheticsTestRequestCertificateItem;
+    'cert'?: SyntheticsTestRequestCertificateItem;
+    'key'?: SyntheticsTestRequestCertificateItem;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "cert",
-      baseName: "cert",
-      type: "SyntheticsTestRequestCertificateItem",
-      format: "",
-    },
-    {
-      name: "key",
-      baseName: "key",
-      type: "SyntheticsTestRequestCertificateItem",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "cert",
+            "baseName": "cert",
+            "type": "SyntheticsTestRequestCertificateItem",
+            "format": ""
+        },
+        {
+            "name": "key",
+            "baseName": "key",
+            "type": "SyntheticsTestRequestCertificateItem",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SyntheticsTestRequestCertificate.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SyntheticsTestRequestCertificate.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

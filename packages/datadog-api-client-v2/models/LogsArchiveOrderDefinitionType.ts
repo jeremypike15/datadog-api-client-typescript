@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Type of the archive order definition.
- */
-export type LogsArchiveOrderDefinitionType = "archive_order";
+* Type of the archive order definition.
+*/
+export type LogsArchiveOrderDefinitionType = "archive_order" ;

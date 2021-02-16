@@ -10,46 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The hours of trace usage.
- */
+* The hours of trace usage.
+*/
 export class UsageTraceHour {
-  /**
-   * The hour for the usage.
-   */
-  "hour"?: Date;
-  /**
-   * Contains the number of Indexed Spans indexed.
-   */
-  "indexedEventsCount"?: number;
+    /**
+    * The hour for the usage.
+    */
+    'hour'?: Date;
+    /**
+    * Contains the number of Indexed Spans indexed.
+    */
+    'indexedEventsCount'?: number;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "hour",
-      baseName: "hour",
-      type: "Date",
-      format: "date-time",
-    },
-    {
-      name: "indexedEventsCount",
-      baseName: "indexed_events_count",
-      type: "number",
-      format: "int64",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "hour",
+            "baseName": "hour",
+            "type": "Date",
+            "format": "date-time"
+        },
+        {
+            "name": "indexedEventsCount",
+            "baseName": "indexed_events_count",
+            "type": "number",
+            "format": "int64"
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UsageTraceHour.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UsageTraceHour.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

@@ -10,52 +10,48 @@
  * Do not edit the class manually.
  */
 
-import { ApplicationKeyUpdateAttributes } from "./ApplicationKeyUpdateAttributes";
-import { ApplicationKeysType } from "./ApplicationKeysType";
-import { HttpFile } from "../http/http";
+import { ApplicationKeyUpdateAttributes } from './ApplicationKeyUpdateAttributes';
+import { ApplicationKeysType } from './ApplicationKeysType';
+import { HttpFile } from '../http/http';
 
 /**
- * Object used to update an application key.
- */
+* Object used to update an application key.
+*/
 export class ApplicationKeyUpdateData {
-  "attributes": ApplicationKeyUpdateAttributes;
-  /**
-   * ID of the application key.
-   */
-  "id": string;
-  "type": ApplicationKeysType;
+    'attributes': ApplicationKeyUpdateAttributes;
+    /**
+    * ID of the application key.
+    */
+    'id': string;
+    'type': ApplicationKeysType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "attributes",
-      baseName: "attributes",
-      type: "ApplicationKeyUpdateAttributes",
-      format: "",
-    },
-    {
-      name: "id",
-      baseName: "id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "ApplicationKeysType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "ApplicationKeyUpdateAttributes",
+            "format": ""
+        },
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "ApplicationKeysType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return ApplicationKeyUpdateData.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return ApplicationKeyUpdateData.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

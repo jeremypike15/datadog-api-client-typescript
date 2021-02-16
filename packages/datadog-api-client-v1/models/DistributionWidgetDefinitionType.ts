@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Type of the distribution widget.
- */
-export type DistributionWidgetDefinitionType = "distribution";
+* Type of the distribution widget.
+*/
+export type DistributionWidgetDefinitionType = "distribution" ;

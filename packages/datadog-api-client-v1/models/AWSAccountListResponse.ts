@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { AWSAccount } from "./AWSAccount";
-import { HttpFile } from "../http/http";
+import { AWSAccount } from './AWSAccount';
+import { HttpFile } from '../http/http';
 
 /**
- * List of enabled AWS accounts.
- */
+* List of enabled AWS accounts.
+*/
 export class AWSAccountListResponse {
-  /**
-   * List of enabled AWS accounts.
-   */
-  "accounts"?: Array<AWSAccount>;
+    /**
+    * List of enabled AWS accounts.
+    */
+    'accounts'?: Array<AWSAccount>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "accounts",
-      baseName: "accounts",
-      type: "Array<AWSAccount>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "accounts",
+            "baseName": "accounts",
+            "type": "Array<AWSAccount>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return AWSAccountListResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return AWSAccountListResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

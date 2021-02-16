@@ -10,36 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Paging settings
- */
+* Paging settings
+*/
 export class LogsAggregateRequestPage {
-  /**
-   * The returned paging point to use to get the next results
-   */
-  "cursor"?: string;
+    /**
+    * The returned paging point to use to get the next results
+    */
+    'cursor'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "cursor",
-      baseName: "cursor",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "cursor",
+            "baseName": "cursor",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsAggregateRequestPage.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsAggregateRequestPage.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

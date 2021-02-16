@@ -10,86 +10,82 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Object describing the issuer of a SSL certificate.
- */
+* Object describing the issuer of a SSL certificate.
+*/
 export class SyntheticsSSLCertificateIssuer {
-  /**
-   * Country Name that issued the certificate.
-   */
-  "C"?: string;
-  /**
-   * Common Name that issued certificate.
-   */
-  "CN"?: string;
-  /**
-   * Locality that issued the certificate.
-   */
-  "L"?: string;
-  /**
-   * Organization that issued the certificate.
-   */
-  "O"?: string;
-  /**
-   * Organizational Unit that issued the certificate.
-   */
-  "OU"?: string;
-  /**
-   * State Or Province Name that issued the certificate.
-   */
-  "ST"?: string;
+    /**
+    * Country Name that issued the certificate.
+    */
+    'C'?: string;
+    /**
+    * Common Name that issued certificate.
+    */
+    'CN'?: string;
+    /**
+    * Locality that issued the certificate.
+    */
+    'L'?: string;
+    /**
+    * Organization that issued the certificate.
+    */
+    'O'?: string;
+    /**
+    * Organizational Unit that issued the certificate.
+    */
+    'OU'?: string;
+    /**
+    * State Or Province Name that issued the certificate.
+    */
+    'ST'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "C",
-      baseName: "C",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "CN",
-      baseName: "CN",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "L",
-      baseName: "L",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "O",
-      baseName: "O",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "OU",
-      baseName: "OU",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "ST",
-      baseName: "ST",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "C",
+            "baseName": "C",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "CN",
+            "baseName": "CN",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "L",
+            "baseName": "L",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "O",
+            "baseName": "O",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "OU",
+            "baseName": "OU",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "ST",
+            "baseName": "ST",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SyntheticsSSLCertificateIssuer.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SyntheticsSSLCertificateIssuer.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

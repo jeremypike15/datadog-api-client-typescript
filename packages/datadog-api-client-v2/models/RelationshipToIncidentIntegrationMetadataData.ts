@@ -10,44 +10,40 @@
  * Do not edit the class manually.
  */
 
-import { IncidentIntegrationMetadataType } from "./IncidentIntegrationMetadataType";
-import { HttpFile } from "../http/http";
+import { IncidentIntegrationMetadataType } from './IncidentIntegrationMetadataType';
+import { HttpFile } from '../http/http';
 
 /**
- * A relationship reference for an integration metadata object.
- */
+* A relationship reference for an integration metadata object.
+*/
 export class RelationshipToIncidentIntegrationMetadataData {
-  /**
-   * A unique identifier that represents the integration metadata.
-   */
-  "id": string;
-  "type": IncidentIntegrationMetadataType;
+    /**
+    * A unique identifier that represents the integration metadata.
+    */
+    'id': string;
+    'type': IncidentIntegrationMetadataType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "id",
-      baseName: "id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "IncidentIntegrationMetadataType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "IncidentIntegrationMetadataType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return RelationshipToIncidentIntegrationMetadataData.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return RelationshipToIncidentIntegrationMetadataData.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

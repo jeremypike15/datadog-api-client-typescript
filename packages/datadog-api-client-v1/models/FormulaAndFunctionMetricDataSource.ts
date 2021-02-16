@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Data source for metrics queries.
- */
-export type FormulaAndFunctionMetricDataSource = "metrics";
+* Data source for metrics queries.
+*/
+export type FormulaAndFunctionMetricDataSource = "metrics" ;

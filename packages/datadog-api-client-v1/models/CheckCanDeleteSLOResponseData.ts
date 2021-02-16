@@ -10,36 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * An array of service level objective objects.
- */
+* An array of service level objective objects.
+*/
 export class CheckCanDeleteSLOResponseData {
-  /**
-   * An array of of SLO IDs that can be safely deleted.
-   */
-  "ok"?: Array<string>;
+    /**
+    * An array of of SLO IDs that can be safely deleted.
+    */
+    'ok'?: Array<string>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "ok",
-      baseName: "ok",
-      type: "Array<string>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "ok",
+            "baseName": "ok",
+            "type": "Array<string>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return CheckCanDeleteSLOResponseData.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return CheckCanDeleteSLOResponseData.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

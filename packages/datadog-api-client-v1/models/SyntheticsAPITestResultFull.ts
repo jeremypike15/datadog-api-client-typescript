@@ -10,90 +10,86 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsAPITestResultData } from "./SyntheticsAPITestResultData";
-import { SyntheticsAPITestResultFullCheck } from "./SyntheticsAPITestResultFullCheck";
-import { SyntheticsTestMonitorStatus } from "./SyntheticsTestMonitorStatus";
-import { HttpFile } from "../http/http";
+import { SyntheticsAPITestResultData } from './SyntheticsAPITestResultData';
+import { SyntheticsAPITestResultFullCheck } from './SyntheticsAPITestResultFullCheck';
+import { SyntheticsTestMonitorStatus } from './SyntheticsTestMonitorStatus';
+import { HttpFile } from '../http/http';
 
 /**
- * Object returned describing a API test result.
- */
+* Object returned describing a API test result.
+*/
 export class SyntheticsAPITestResultFull {
-  "check"?: SyntheticsAPITestResultFullCheck;
-  /**
-   * When the API test was conducted.
-   */
-  "checkTime"?: number;
-  /**
-   * Version of the API test used.
-   */
-  "checkVersion"?: number;
-  /**
-   * Locations for which to query the API test results.
-   */
-  "probeDc"?: string;
-  "result"?: SyntheticsAPITestResultData;
-  /**
-   * ID of the API test result.
-   */
-  "resultId"?: string;
-  "status"?: SyntheticsTestMonitorStatus;
+    'check'?: SyntheticsAPITestResultFullCheck;
+    /**
+    * When the API test was conducted.
+    */
+    'checkTime'?: number;
+    /**
+    * Version of the API test used.
+    */
+    'checkVersion'?: number;
+    /**
+    * Locations for which to query the API test results.
+    */
+    'probeDc'?: string;
+    'result'?: SyntheticsAPITestResultData;
+    /**
+    * ID of the API test result.
+    */
+    'resultId'?: string;
+    'status'?: SyntheticsTestMonitorStatus;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "check",
-      baseName: "check",
-      type: "SyntheticsAPITestResultFullCheck",
-      format: "",
-    },
-    {
-      name: "checkTime",
-      baseName: "check_time",
-      type: "number",
-      format: "double",
-    },
-    {
-      name: "checkVersion",
-      baseName: "check_version",
-      type: "number",
-      format: "int64",
-    },
-    {
-      name: "probeDc",
-      baseName: "probe_dc",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "result",
-      baseName: "result",
-      type: "SyntheticsAPITestResultData",
-      format: "",
-    },
-    {
-      name: "resultId",
-      baseName: "result_id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "status",
-      baseName: "status",
-      type: "SyntheticsTestMonitorStatus",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "check",
+            "baseName": "check",
+            "type": "SyntheticsAPITestResultFullCheck",
+            "format": ""
+        },
+        {
+            "name": "checkTime",
+            "baseName": "check_time",
+            "type": "number",
+            "format": "double"
+        },
+        {
+            "name": "checkVersion",
+            "baseName": "check_version",
+            "type": "number",
+            "format": "int64"
+        },
+        {
+            "name": "probeDc",
+            "baseName": "probe_dc",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "result",
+            "baseName": "result",
+            "type": "SyntheticsAPITestResultData",
+            "format": ""
+        },
+        {
+            "name": "resultId",
+            "baseName": "result_id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "status",
+            "baseName": "status",
+            "type": "SyntheticsTestMonitorStatus",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SyntheticsAPITestResultFull.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SyntheticsAPITestResultFull.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

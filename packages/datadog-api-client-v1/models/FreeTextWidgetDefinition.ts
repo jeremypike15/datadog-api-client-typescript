@@ -10,72 +10,68 @@
  * Do not edit the class manually.
  */
 
-import { FreeTextWidgetDefinitionType } from "./FreeTextWidgetDefinitionType";
-import { WidgetTextAlign } from "./WidgetTextAlign";
-import { HttpFile } from "../http/http";
+import { FreeTextWidgetDefinitionType } from './FreeTextWidgetDefinitionType';
+import { WidgetTextAlign } from './WidgetTextAlign';
+import { HttpFile } from '../http/http';
 
 /**
- * Free text is a widget that allows you to add headings to your screenboard. Commonly used to state the overall purpose of the dashboard. Only available on FREE layout dashboards.
- */
+* Free text is a widget that allows you to add headings to your screenboard. Commonly used to state the overall purpose of the dashboard. Only available on FREE layout dashboards.
+*/
 export class FreeTextWidgetDefinition {
-  /**
-   * Color of the text.
-   */
-  "color"?: string;
-  /**
-   * Size of the text.
-   */
-  "fontSize"?: string;
-  /**
-   * Text to display.
-   */
-  "text": string;
-  "textAlign"?: WidgetTextAlign;
-  "type": FreeTextWidgetDefinitionType;
+    /**
+    * Color of the text.
+    */
+    'color'?: string;
+    /**
+    * Size of the text.
+    */
+    'fontSize'?: string;
+    /**
+    * Text to display.
+    */
+    'text': string;
+    'textAlign'?: WidgetTextAlign;
+    'type': FreeTextWidgetDefinitionType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "color",
-      baseName: "color",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "fontSize",
-      baseName: "font_size",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "text",
-      baseName: "text",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "textAlign",
-      baseName: "text_align",
-      type: "WidgetTextAlign",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "FreeTextWidgetDefinitionType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "color",
+            "baseName": "color",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "fontSize",
+            "baseName": "font_size",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "text",
+            "baseName": "text",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "textAlign",
+            "baseName": "text_align",
+            "type": "WidgetTextAlign",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "FreeTextWidgetDefinitionType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return FreeTextWidgetDefinition.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return FreeTextWidgetDefinition.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

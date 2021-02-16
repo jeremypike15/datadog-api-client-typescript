@@ -10,20 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * An aggregation function
- */
-export type LogsAggregationFunction =
-  | "count"
-  | "cardinality"
-  | "pc75"
-  | "pc90"
-  | "pc95"
-  | "pc98"
-  | "pc99"
-  | "sum"
-  | "min"
-  | "max"
-  | "avg";
+* An aggregation function
+*/
+export type LogsAggregationFunction = "count" | "cardinality" | "pc75" | "pc90" | "pc95" | "pc98" | "pc99" | "sum" | "min" | "max" | "avg" ;

@@ -10,54 +10,50 @@
  * Do not edit the class manually.
  */
 
-import { LogsArchiveAttributes } from "./LogsArchiveAttributes";
-import { HttpFile } from "../http/http";
+import { LogsArchiveAttributes } from './LogsArchiveAttributes';
+import { HttpFile } from '../http/http';
 
 /**
- * The definition of an archive.
- */
+* The definition of an archive.
+*/
 export class LogsArchiveDefinition {
-  "attributes"?: LogsArchiveAttributes;
-  /**
-   * The archive ID.
-   */
-  "id"?: string;
-  /**
-   * The type of the resource. The value should always be archives.
-   */
-  "type": string;
+    'attributes'?: LogsArchiveAttributes;
+    /**
+    * The archive ID.
+    */
+    'id'?: string;
+    /**
+    * The type of the resource. The value should always be archives.
+    */
+    'type': string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "attributes",
-      baseName: "attributes",
-      type: "LogsArchiveAttributes",
-      format: "",
-    },
-    {
-      name: "id",
-      baseName: "id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "LogsArchiveAttributes",
+            "format": ""
+        },
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsArchiveDefinition.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsArchiveDefinition.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

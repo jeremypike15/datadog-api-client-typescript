@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * User locator used.
- */
-export type SyntheticsWarningType = "user_locator";
+* User locator used.
+*/
+export type SyntheticsWarningType = "user_locator" ;

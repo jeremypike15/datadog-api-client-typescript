@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Type of logs status remapper.
- */
-export type LogsStatusRemapperType = "status-remapper";
+* Type of logs status remapper.
+*/
+export type LogsStatusRemapperType = "status-remapper" ;

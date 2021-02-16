@@ -10,64 +10,60 @@
  * Do not edit the class manually.
  */
 
-import { RelationshipToIncidentIntegrationMetadatas } from "./RelationshipToIncidentIntegrationMetadatas";
-import { RelationshipToIncidentPostmortem } from "./RelationshipToIncidentPostmortem";
-import { RelationshipToUser } from "./RelationshipToUser";
-import { HttpFile } from "../http/http";
+import { RelationshipToIncidentIntegrationMetadatas } from './RelationshipToIncidentIntegrationMetadatas';
+import { RelationshipToIncidentPostmortem } from './RelationshipToIncidentPostmortem';
+import { RelationshipToUser } from './RelationshipToUser';
+import { HttpFile } from '../http/http';
 
 /**
- * The incident's relationships from a response.
- */
+* The incident's relationships from a response.
+*/
 export class IncidentResponseRelationships {
-  "commanderUser"?: RelationshipToUser;
-  "createdByUser"?: RelationshipToUser;
-  "integrations"?: RelationshipToIncidentIntegrationMetadatas;
-  "lastModifiedByUser"?: RelationshipToUser;
-  "postmortem"?: RelationshipToIncidentPostmortem;
+    'commanderUser'?: RelationshipToUser;
+    'createdByUser'?: RelationshipToUser;
+    'integrations'?: RelationshipToIncidentIntegrationMetadatas;
+    'lastModifiedByUser'?: RelationshipToUser;
+    'postmortem'?: RelationshipToIncidentPostmortem;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "commanderUser",
-      baseName: "commander_user",
-      type: "RelationshipToUser",
-      format: "",
-    },
-    {
-      name: "createdByUser",
-      baseName: "created_by_user",
-      type: "RelationshipToUser",
-      format: "",
-    },
-    {
-      name: "integrations",
-      baseName: "integrations",
-      type: "RelationshipToIncidentIntegrationMetadatas",
-      format: "",
-    },
-    {
-      name: "lastModifiedByUser",
-      baseName: "last_modified_by_user",
-      type: "RelationshipToUser",
-      format: "",
-    },
-    {
-      name: "postmortem",
-      baseName: "postmortem",
-      type: "RelationshipToIncidentPostmortem",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "commanderUser",
+            "baseName": "commander_user",
+            "type": "RelationshipToUser",
+            "format": ""
+        },
+        {
+            "name": "createdByUser",
+            "baseName": "created_by_user",
+            "type": "RelationshipToUser",
+            "format": ""
+        },
+        {
+            "name": "integrations",
+            "baseName": "integrations",
+            "type": "RelationshipToIncidentIntegrationMetadatas",
+            "format": ""
+        },
+        {
+            "name": "lastModifiedByUser",
+            "baseName": "last_modified_by_user",
+            "type": "RelationshipToUser",
+            "format": ""
+        },
+        {
+            "name": "postmortem",
+            "baseName": "postmortem",
+            "type": "RelationshipToIncidentPostmortem",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return IncidentResponseRelationships.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return IncidentResponseRelationships.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

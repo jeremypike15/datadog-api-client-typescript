@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The field to sort by.
- */
-export type UsageSort = "computed_on" | "size" | "start_date" | "end_date";
+* The field to sort by.
+*/
+export type UsageSort = "computed_on" | "size" | "start_date" | "end_date" ;

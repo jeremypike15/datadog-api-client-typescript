@@ -47,9 +47,28 @@ String.prototype.toOperationName = function (): string {
 };
 
 String.prototype.toAttributeName = function (): string {
-  return String(this).replace(/_(.)/g, function (...matches) {
+  return String(this).replace(/[^A-Za-z0-9](.)/g, function (...matches) {
     return matches[1].toUpperCase();
-  });
+  }).replace(/[^A-Za-z0-9]+/g, '');
 };
 
-export { pathLookup };
+function getProperty<T, K extends keyof T>(obj: T, name: string): T[K] {
+  let key = name as K;
+  return obj[key];
+}
+
+function fixKeys(key: string, value: any) {
+  if (typeof value === 'object') {
+    const keys = Object.keys(value);
+    keys.forEach((k) => {
+      if (k.toAttributeName() != k) {
+        value[k.toAttributeName()] = value[k];
+        delete value[k];
+      }
+    });
+  }
+  return value;
+}
+
+
+export { pathLookup, getProperty, fixKeys };

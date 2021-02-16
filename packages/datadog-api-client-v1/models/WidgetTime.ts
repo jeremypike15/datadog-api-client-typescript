@@ -10,34 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { WidgetLiveSpan } from "./WidgetLiveSpan";
-import { HttpFile } from "../http/http";
+import { WidgetLiveSpan } from './WidgetLiveSpan';
+import { HttpFile } from '../http/http';
 
 /**
- * Time setting for the widget.
- */
+* Time setting for the widget.
+*/
 export class WidgetTime {
-  "liveSpan"?: WidgetLiveSpan;
+    'liveSpan'?: WidgetLiveSpan;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "liveSpan",
-      baseName: "live_span",
-      type: "WidgetLiveSpan",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "liveSpan",
+            "baseName": "live_span",
+            "type": "WidgetLiveSpan",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return WidgetTime.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return WidgetTime.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

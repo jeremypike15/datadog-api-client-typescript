@@ -10,34 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { APIKeyCreateData } from "./APIKeyCreateData";
-import { HttpFile } from "../http/http";
+import { APIKeyCreateData } from './APIKeyCreateData';
+import { HttpFile } from '../http/http';
 
 /**
- * Request used to create an API key.
- */
+* Request used to create an API key.
+*/
 export class APIKeyCreateRequest {
-  "data": APIKeyCreateData;
+    'data': APIKeyCreateData;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "APIKeyCreateData",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "APIKeyCreateData",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return APIKeyCreateRequest.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return APIKeyCreateRequest.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

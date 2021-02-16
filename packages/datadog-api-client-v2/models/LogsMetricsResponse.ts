@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { LogsMetricResponseData } from "./LogsMetricResponseData";
-import { HttpFile } from "../http/http";
+import { LogsMetricResponseData } from './LogsMetricResponseData';
+import { HttpFile } from '../http/http';
 
 /**
- * All the available log-based metric objects.
- */
+* All the available log-based metric objects.
+*/
 export class LogsMetricsResponse {
-  /**
-   * A list of log-based metric objects.
-   */
-  "data"?: Array<LogsMetricResponseData>;
+    /**
+    * A list of log-based metric objects.
+    */
+    'data'?: Array<LogsMetricResponseData>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "Array<LogsMetricResponseData>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "Array<LogsMetricResponseData>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsMetricsResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsMetricsResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

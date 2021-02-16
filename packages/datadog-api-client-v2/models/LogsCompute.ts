@@ -10,62 +10,58 @@
  * Do not edit the class manually.
  */
 
-import { LogsAggregationFunction } from "./LogsAggregationFunction";
-import { LogsComputeType } from "./LogsComputeType";
-import { HttpFile } from "../http/http";
+import { LogsAggregationFunction } from './LogsAggregationFunction';
+import { LogsComputeType } from './LogsComputeType';
+import { HttpFile } from '../http/http';
 
 /**
- * A compute rule to compute metrics or timeseries
- */
+* A compute rule to compute metrics or timeseries
+*/
 export class LogsCompute {
-  "aggregation": LogsAggregationFunction;
-  /**
-   * The time buckets' size (only used for type=timeseries) Defaults to a resolution of 150 points
-   */
-  "interval"?: string;
-  /**
-   * The metric to use
-   */
-  "metric"?: string;
-  "type"?: LogsComputeType;
+    'aggregation': LogsAggregationFunction;
+    /**
+    * The time buckets' size (only used for type=timeseries) Defaults to a resolution of 150 points
+    */
+    'interval'?: string;
+    /**
+    * The metric to use
+    */
+    'metric'?: string;
+    'type'?: LogsComputeType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "aggregation",
-      baseName: "aggregation",
-      type: "LogsAggregationFunction",
-      format: "",
-    },
-    {
-      name: "interval",
-      baseName: "interval",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "metric",
-      baseName: "metric",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "LogsComputeType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "aggregation",
+            "baseName": "aggregation",
+            "type": "LogsAggregationFunction",
+            "format": ""
+        },
+        {
+            "name": "interval",
+            "baseName": "interval",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "metric",
+            "baseName": "metric",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "LogsComputeType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsCompute.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsCompute.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

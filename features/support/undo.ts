@@ -37,7 +37,7 @@ function buildUndoFor(
   response: any
 ): { (): void } {
   return function (): void {
-    const apiName = operation.tag.replace(/\s/, "");
+    const apiName = operation.tag.replace(/\s/g, "");
     const operationName = operation.undo.operationId.toOperationName();
 
     const api = (datadogApiClient as any)[apiVersion];

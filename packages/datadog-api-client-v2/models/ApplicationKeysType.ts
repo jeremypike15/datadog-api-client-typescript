@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Application Keys resource type.
- */
-export type ApplicationKeysType = "application_keys";
+* Application Keys resource type.
+*/
+export type ApplicationKeysType = "application_keys" ;

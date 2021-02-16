@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Incident postmortem resource type.
- */
-export type IncidentPostmortemType = "incident_postmortems";
+* Incident postmortem resource type.
+*/
+export type IncidentPostmortemType = "incident_postmortems" ;

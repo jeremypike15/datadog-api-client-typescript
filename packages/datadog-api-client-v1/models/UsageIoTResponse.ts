@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { UsageIoTHour } from "./UsageIoTHour";
-import { HttpFile } from "../http/http";
+import { UsageIoTHour } from './UsageIoTHour';
+import { HttpFile } from '../http/http';
 
 /**
- * Response containing the IoT usage for each hour for a given organization.
- */
+* Response containing the IoT usage for each hour for a given organization.
+*/
 export class UsageIoTResponse {
-  /**
-   * Get hourly usage for IoT.
-   */
-  "usage"?: Array<UsageIoTHour>;
+    /**
+    * Get hourly usage for IoT.
+    */
+    'usage'?: Array<UsageIoTHour>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "usage",
-      baseName: "usage",
-      type: "Array<UsageIoTHour>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "usage",
+            "baseName": "usage",
+            "type": "Array<UsageIoTHour>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UsageIoTResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UsageIoTResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

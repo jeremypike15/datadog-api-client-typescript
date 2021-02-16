@@ -10,36 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Widget style definition.
- */
+* Widget style definition.
+*/
 export class WidgetStyle {
-  /**
-   * Color palette to apply to the widget.
-   */
-  "palette"?: string;
+    /**
+    * Color palette to apply to the widget.
+    */
+    'palette'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "palette",
-      baseName: "palette",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "palette",
+            "baseName": "palette",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return WidgetStyle.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return WidgetStyle.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

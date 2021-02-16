@@ -10,36 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Metadata associated with your host.
- */
+* Metadata associated with your host.
+*/
 export class HostMeta {
-  /**
-   * Array of Unix versions.
-   */
-  "nixV"?: Array<string>;
+    /**
+    * Array of Unix versions.
+    */
+    'nixV'?: Array<string>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "nixV",
-      baseName: "nixV",
-      type: "Array<string>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "nixV",
+            "baseName": "nixV",
+            "type": "Array<string>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return HostMeta.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return HostMeta.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

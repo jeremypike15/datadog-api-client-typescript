@@ -10,102 +10,98 @@
  * Do not edit the class manually.
  */
 
-import { LogQueryDefinition } from "./LogQueryDefinition";
-import { ProcessQueryDefinition } from "./ProcessQueryDefinition";
-import { WidgetAggregator } from "./WidgetAggregator";
-import { HttpFile } from "../http/http";
+import { LogQueryDefinition } from './LogQueryDefinition';
+import { ProcessQueryDefinition } from './ProcessQueryDefinition';
+import { WidgetAggregator } from './WidgetAggregator';
+import { HttpFile } from '../http/http';
 
 /**
- * Updated scatter plot.
- */
+* Updated scatter plot.
+*/
 export class ScatterPlotRequest {
-  "aggregator"?: WidgetAggregator;
-  "apmQuery"?: LogQueryDefinition;
-  "eventQuery"?: LogQueryDefinition;
-  "logQuery"?: LogQueryDefinition;
-  "networkQuery"?: LogQueryDefinition;
-  "processQuery"?: ProcessQueryDefinition;
-  "profileMetricsQuery"?: LogQueryDefinition;
-  /**
-   * Query definition.
-   */
-  "q"?: string;
-  "rumQuery"?: LogQueryDefinition;
-  "securityQuery"?: LogQueryDefinition;
+    'aggregator'?: WidgetAggregator;
+    'apmQuery'?: LogQueryDefinition;
+    'eventQuery'?: LogQueryDefinition;
+    'logQuery'?: LogQueryDefinition;
+    'networkQuery'?: LogQueryDefinition;
+    'processQuery'?: ProcessQueryDefinition;
+    'profileMetricsQuery'?: LogQueryDefinition;
+    /**
+    * Query definition.
+    */
+    'q'?: string;
+    'rumQuery'?: LogQueryDefinition;
+    'securityQuery'?: LogQueryDefinition;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "aggregator",
-      baseName: "aggregator",
-      type: "WidgetAggregator",
-      format: "",
-    },
-    {
-      name: "apmQuery",
-      baseName: "apm_query",
-      type: "LogQueryDefinition",
-      format: "",
-    },
-    {
-      name: "eventQuery",
-      baseName: "event_query",
-      type: "LogQueryDefinition",
-      format: "",
-    },
-    {
-      name: "logQuery",
-      baseName: "log_query",
-      type: "LogQueryDefinition",
-      format: "",
-    },
-    {
-      name: "networkQuery",
-      baseName: "network_query",
-      type: "LogQueryDefinition",
-      format: "",
-    },
-    {
-      name: "processQuery",
-      baseName: "process_query",
-      type: "ProcessQueryDefinition",
-      format: "",
-    },
-    {
-      name: "profileMetricsQuery",
-      baseName: "profile_metrics_query",
-      type: "LogQueryDefinition",
-      format: "",
-    },
-    {
-      name: "q",
-      baseName: "q",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "rumQuery",
-      baseName: "rum_query",
-      type: "LogQueryDefinition",
-      format: "",
-    },
-    {
-      name: "securityQuery",
-      baseName: "security_query",
-      type: "LogQueryDefinition",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "aggregator",
+            "baseName": "aggregator",
+            "type": "WidgetAggregator",
+            "format": ""
+        },
+        {
+            "name": "apmQuery",
+            "baseName": "apm_query",
+            "type": "LogQueryDefinition",
+            "format": ""
+        },
+        {
+            "name": "eventQuery",
+            "baseName": "event_query",
+            "type": "LogQueryDefinition",
+            "format": ""
+        },
+        {
+            "name": "logQuery",
+            "baseName": "log_query",
+            "type": "LogQueryDefinition",
+            "format": ""
+        },
+        {
+            "name": "networkQuery",
+            "baseName": "network_query",
+            "type": "LogQueryDefinition",
+            "format": ""
+        },
+        {
+            "name": "processQuery",
+            "baseName": "process_query",
+            "type": "ProcessQueryDefinition",
+            "format": ""
+        },
+        {
+            "name": "profileMetricsQuery",
+            "baseName": "profile_metrics_query",
+            "type": "LogQueryDefinition",
+            "format": ""
+        },
+        {
+            "name": "q",
+            "baseName": "q",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "rumQuery",
+            "baseName": "rum_query",
+            "type": "LogQueryDefinition",
+            "format": ""
+        },
+        {
+            "name": "securityQuery",
+            "baseName": "security_query",
+            "type": "LogQueryDefinition",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return ScatterPlotRequest.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return ScatterPlotRequest.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

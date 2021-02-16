@@ -10,50 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { IncidentCreateAttributes } from "./IncidentCreateAttributes";
-import { IncidentCreateRelationships } from "./IncidentCreateRelationships";
-import { IncidentType } from "./IncidentType";
-import { HttpFile } from "../http/http";
+import { IncidentCreateAttributes } from './IncidentCreateAttributes';
+import { IncidentCreateRelationships } from './IncidentCreateRelationships';
+import { IncidentType } from './IncidentType';
+import { HttpFile } from '../http/http';
 
 /**
- * Incident data for a create request.
- */
+* Incident data for a create request.
+*/
 export class IncidentCreateData {
-  "attributes": IncidentCreateAttributes;
-  "relationships"?: IncidentCreateRelationships;
-  "type": IncidentType;
+    'attributes': IncidentCreateAttributes;
+    'relationships'?: IncidentCreateRelationships;
+    'type': IncidentType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "attributes",
-      baseName: "attributes",
-      type: "IncidentCreateAttributes",
-      format: "",
-    },
-    {
-      name: "relationships",
-      baseName: "relationships",
-      type: "IncidentCreateRelationships",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "IncidentType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "IncidentCreateAttributes",
+            "format": ""
+        },
+        {
+            "name": "relationships",
+            "baseName": "relationships",
+            "type": "IncidentCreateRelationships",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "IncidentType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return IncidentCreateData.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return IncidentCreateData.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

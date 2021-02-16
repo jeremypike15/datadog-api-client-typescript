@@ -10,64 +10,60 @@
  * Do not edit the class manually.
  */
 
-import { LogsMessageRemapperType } from "./LogsMessageRemapperType";
-import { HttpFile } from "../http/http";
+import { LogsMessageRemapperType } from './LogsMessageRemapperType';
+import { HttpFile } from '../http/http';
 
 /**
- * The message is a key attribute in Datadog. It is displayed in the message column of the Log Explorer and you can do full string search on it. Use this Processor to define one or more attributes as the official log message.  **Note:** If multiple log message remapper processors can be applied to a given log, only the first one (according to the pipeline order) is taken into account.
- */
+* The message is a key attribute in Datadog. It is displayed in the message column of the Log Explorer and you can do full string search on it. Use this Processor to define one or more attributes as the official log message.  **Note:** If multiple log message remapper processors can be applied to a given log, only the first one (according to the pipeline order) is taken into account.
+*/
 export class LogsMessageRemapper {
-  /**
-   * Whether or not the processor is enabled.
-   */
-  "isEnabled"?: boolean;
-  /**
-   * Name of the processor.
-   */
-  "name"?: string;
-  /**
-   * Array of source attributes.
-   */
-  "sources": Array<string>;
-  "type": LogsMessageRemapperType;
+    /**
+    * Whether or not the processor is enabled.
+    */
+    'isEnabled'?: boolean;
+    /**
+    * Name of the processor.
+    */
+    'name'?: string;
+    /**
+    * Array of source attributes.
+    */
+    'sources': Array<string>;
+    'type': LogsMessageRemapperType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "isEnabled",
-      baseName: "is_enabled",
-      type: "boolean",
-      format: "",
-    },
-    {
-      name: "name",
-      baseName: "name",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "sources",
-      baseName: "sources",
-      type: "Array<string>",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "LogsMessageRemapperType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "isEnabled",
+            "baseName": "is_enabled",
+            "type": "boolean",
+            "format": ""
+        },
+        {
+            "name": "name",
+            "baseName": "name",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "sources",
+            "baseName": "sources",
+            "type": "Array<string>",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "LogsMessageRemapperType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsMessageRemapper.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsMessageRemapper.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

@@ -10,51 +10,47 @@
  * Do not edit the class manually.
  */
 
-import { LogQueryDefinition } from "./LogQueryDefinition";
-import { HttpFile } from "../http/http";
+import { LogQueryDefinition } from './LogQueryDefinition';
+import { HttpFile } from '../http/http';
 
 /**
- * An updated geomap widget.
- */
+* An updated geomap widget.
+*/
 export class GeomapWidgetRequest {
-  "logQuery"?: LogQueryDefinition;
-  /**
-   * The widget metrics query.
-   */
-  "q"?: string;
-  "rumQuery"?: LogQueryDefinition;
+    'logQuery'?: LogQueryDefinition;
+    /**
+    * The widget metrics query.
+    */
+    'q'?: string;
+    'rumQuery'?: LogQueryDefinition;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "logQuery",
-      baseName: "log_query",
-      type: "LogQueryDefinition",
-      format: "",
-    },
-    {
-      name: "q",
-      baseName: "q",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "rumQuery",
-      baseName: "rum_query",
-      type: "LogQueryDefinition",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "logQuery",
+            "baseName": "log_query",
+            "type": "LogQueryDefinition",
+            "format": ""
+        },
+        {
+            "name": "q",
+            "baseName": "q",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "rumQuery",
+            "baseName": "rum_query",
+            "type": "LogQueryDefinition",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return GeomapWidgetRequest.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return GeomapWidgetRequest.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

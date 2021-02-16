@@ -10,56 +10,52 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Attributes of the created role.
- */
+* Attributes of the created role.
+*/
 export class RoleCreateAttributes {
-  /**
-   * Creation time of the role.
-   */
-  "createdAt"?: Date;
-  /**
-   * Time of last role modification.
-   */
-  "modifiedAt"?: Date;
-  /**
-   * Name of the role.
-   */
-  "name": string;
+    /**
+    * Creation time of the role.
+    */
+    'createdAt'?: Date;
+    /**
+    * Time of last role modification.
+    */
+    'modifiedAt'?: Date;
+    /**
+    * Name of the role.
+    */
+    'name': string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "createdAt",
-      baseName: "created_at",
-      type: "Date",
-      format: "date-time",
-    },
-    {
-      name: "modifiedAt",
-      baseName: "modified_at",
-      type: "Date",
-      format: "date-time",
-    },
-    {
-      name: "name",
-      baseName: "name",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "createdAt",
+            "baseName": "created_at",
+            "type": "Date",
+            "format": "date-time"
+        },
+        {
+            "name": "modifiedAt",
+            "baseName": "modified_at",
+            "type": "Date",
+            "format": "date-time"
+        },
+        {
+            "name": "name",
+            "baseName": "name",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return RoleCreateAttributes.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return RoleCreateAttributes.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

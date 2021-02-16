@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The priority of the event. For example, `normal` or `low`.
- */
-export type EventPriority = "normal" | "low";
+* The priority of the event. For example, `normal` or `low`.
+*/
+export type EventPriority = "normal" | "low" ;

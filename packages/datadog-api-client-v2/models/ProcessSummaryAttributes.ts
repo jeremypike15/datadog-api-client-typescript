@@ -10,106 +10,102 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Attributes for a process summary.
- */
+* Attributes for a process summary.
+*/
 export class ProcessSummaryAttributes {
-  /**
-   * Process command line.
-   */
-  "cmdline"?: string;
-  /**
-   * Host running the process.
-   */
-  "host"?: string;
-  /**
-   * Process ID.
-   */
-  "pid"?: number;
-  /**
-   * Parent process ID.
-   */
-  "ppid"?: number;
-  /**
-   * Time the process was started.
-   */
-  "start"?: string;
-  /**
-   * List of tags associated with the process.
-   */
-  "tags"?: Array<string>;
-  /**
-   * Time the process was seen.
-   */
-  "timestamp"?: string;
-  /**
-   * Process owner.
-   */
-  "user"?: string;
+    /**
+    * Process command line.
+    */
+    'cmdline'?: string;
+    /**
+    * Host running the process.
+    */
+    'host'?: string;
+    /**
+    * Process ID.
+    */
+    'pid'?: number;
+    /**
+    * Parent process ID.
+    */
+    'ppid'?: number;
+    /**
+    * Time the process was started.
+    */
+    'start'?: string;
+    /**
+    * List of tags associated with the process.
+    */
+    'tags'?: Array<string>;
+    /**
+    * Time the process was seen.
+    */
+    'timestamp'?: string;
+    /**
+    * Process owner.
+    */
+    'user'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "cmdline",
-      baseName: "cmdline",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "host",
-      baseName: "host",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "pid",
-      baseName: "pid",
-      type: "number",
-      format: "int64",
-    },
-    {
-      name: "ppid",
-      baseName: "ppid",
-      type: "number",
-      format: "int64",
-    },
-    {
-      name: "start",
-      baseName: "start",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "tags",
-      baseName: "tags",
-      type: "Array<string>",
-      format: "",
-    },
-    {
-      name: "timestamp",
-      baseName: "timestamp",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "user",
-      baseName: "user",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "cmdline",
+            "baseName": "cmdline",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "host",
+            "baseName": "host",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "pid",
+            "baseName": "pid",
+            "type": "number",
+            "format": "int64"
+        },
+        {
+            "name": "ppid",
+            "baseName": "ppid",
+            "type": "number",
+            "format": "int64"
+        },
+        {
+            "name": "start",
+            "baseName": "start",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "tags",
+            "baseName": "tags",
+            "type": "Array<string>",
+            "format": ""
+        },
+        {
+            "name": "timestamp",
+            "baseName": "timestamp",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "user",
+            "baseName": "user",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return ProcessSummaryAttributes.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return ProcessSummaryAttributes.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

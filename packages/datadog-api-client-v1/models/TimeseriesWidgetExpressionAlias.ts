@@ -10,46 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Define an expression alias.
- */
+* Define an expression alias.
+*/
 export class TimeseriesWidgetExpressionAlias {
-  /**
-   * Expression alias.
-   */
-  "aliasName"?: string;
-  /**
-   * Expression name.
-   */
-  "expression": string;
+    /**
+    * Expression alias.
+    */
+    'aliasName'?: string;
+    /**
+    * Expression name.
+    */
+    'expression': string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "aliasName",
-      baseName: "alias_name",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "expression",
-      baseName: "expression",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "aliasName",
+            "baseName": "alias_name",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "expression",
+            "baseName": "expression",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return TimeseriesWidgetExpressionAlias.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return TimeseriesWidgetExpressionAlias.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

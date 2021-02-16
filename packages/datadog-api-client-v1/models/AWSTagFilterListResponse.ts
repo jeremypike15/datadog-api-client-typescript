@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { AWSTagFilter } from "./AWSTagFilter";
-import { HttpFile } from "../http/http";
+import { AWSTagFilter } from './AWSTagFilter';
+import { HttpFile } from '../http/http';
 
 /**
- * An array of tag filter rules by `namespace` and tag filter string.
- */
+* An array of tag filter rules by `namespace` and tag filter string.
+*/
 export class AWSTagFilterListResponse {
-  /**
-   * An array of tag filters.
-   */
-  "filters"?: Array<AWSTagFilter>;
+    /**
+    * An array of tag filters.
+    */
+    'filters'?: Array<AWSTagFilter>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "filters",
-      baseName: "filters",
-      type: "Array<AWSTagFilter>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "filters",
+            "baseName": "filters",
+            "type": "Array<AWSTagFilter>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return AWSTagFilterListResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return AWSTagFilterListResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

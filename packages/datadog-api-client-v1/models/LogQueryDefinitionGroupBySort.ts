@@ -10,54 +10,50 @@
  * Do not edit the class manually.
  */
 
-import { WidgetSort } from "./WidgetSort";
-import { HttpFile } from "../http/http";
+import { WidgetSort } from './WidgetSort';
+import { HttpFile } from '../http/http';
 
 /**
- * Define a sorting method.
- */
+* Define a sorting method.
+*/
 export class LogQueryDefinitionGroupBySort {
-  /**
-   * The aggregation method.
-   */
-  "aggregation": string;
-  /**
-   * Facet name.
-   */
-  "facet"?: string;
-  "order": WidgetSort;
+    /**
+    * The aggregation method.
+    */
+    'aggregation': string;
+    /**
+    * Facet name.
+    */
+    'facet'?: string;
+    'order': WidgetSort;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "aggregation",
-      baseName: "aggregation",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "facet",
-      baseName: "facet",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "order",
-      baseName: "order",
-      type: "WidgetSort",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "aggregation",
+            "baseName": "aggregation",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "facet",
+            "baseName": "facet",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "order",
+            "baseName": "order",
+            "type": "WidgetSort",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogQueryDefinitionGroupBySort.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogQueryDefinitionGroupBySort.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

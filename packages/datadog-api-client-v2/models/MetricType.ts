@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The metric resource type.
- */
-export type MetricType = "metrics";
+* The metric resource type.
+*/
+export type MetricType = "metrics" ;

@@ -10,62 +10,58 @@
  * Do not edit the class manually.
  */
 
-import { LogsArchiveDestinationS3Type } from "./LogsArchiveDestinationS3Type";
-import { LogsArchiveIntegrationS3 } from "./LogsArchiveIntegrationS3";
-import { HttpFile } from "../http/http";
+import { LogsArchiveDestinationS3Type } from './LogsArchiveDestinationS3Type';
+import { LogsArchiveIntegrationS3 } from './LogsArchiveIntegrationS3';
+import { HttpFile } from '../http/http';
 
 /**
- * The S3 archive destination.
- */
+* The S3 archive destination.
+*/
 export class LogsArchiveDestinationS3 {
-  /**
-   * The bucket where the archive will be stored.
-   */
-  "bucket": string;
-  "integration": LogsArchiveIntegrationS3;
-  /**
-   * The archive path.
-   */
-  "path"?: string;
-  "type": LogsArchiveDestinationS3Type;
+    /**
+    * The bucket where the archive will be stored.
+    */
+    'bucket': string;
+    'integration': LogsArchiveIntegrationS3;
+    /**
+    * The archive path.
+    */
+    'path'?: string;
+    'type': LogsArchiveDestinationS3Type;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "bucket",
-      baseName: "bucket",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "integration",
-      baseName: "integration",
-      type: "LogsArchiveIntegrationS3",
-      format: "",
-    },
-    {
-      name: "path",
-      baseName: "path",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "LogsArchiveDestinationS3Type",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "bucket",
+            "baseName": "bucket",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "integration",
+            "baseName": "integration",
+            "type": "LogsArchiveIntegrationS3",
+            "format": ""
+        },
+        {
+            "name": "path",
+            "baseName": "path",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "LogsArchiveDestinationS3Type",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsArchiveDestinationS3.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsArchiveDestinationS3.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

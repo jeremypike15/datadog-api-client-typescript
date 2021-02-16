@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The type of reports.
- */
-export type UsageReportsType = "reports";
+* The type of reports.
+*/
+export type UsageReportsType = "reports" ;

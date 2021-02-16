@@ -10,46 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Synthetic location that can be used when creating or editing a test.
- */
+* Synthetic location that can be used when creating or editing a test.
+*/
 export class SyntheticsLocation {
-  /**
-   * Unique identifier of the location.
-   */
-  "id"?: string;
-  /**
-   * Name of the location.
-   */
-  "name"?: string;
+    /**
+    * Unique identifier of the location.
+    */
+    'id'?: string;
+    /**
+    * Name of the location.
+    */
+    'name'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "id",
-      baseName: "id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "name",
-      baseName: "name",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "name",
+            "baseName": "name",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SyntheticsLocation.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SyntheticsLocation.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

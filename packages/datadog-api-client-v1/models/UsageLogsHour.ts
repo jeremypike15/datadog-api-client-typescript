@@ -10,106 +10,102 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Hour usage for logs.
- */
+* Hour usage for logs.
+*/
 export class UsageLogsHour {
-  /**
-   * Contains the number of billable log bytes ingested.
-   */
-  "billableIngestedBytes"?: number;
-  /**
-   * The hour for the usage.
-   */
-  "hour"?: Date;
-  /**
-   * Contains the number of log events indexed.
-   */
-  "indexedEventsCount"?: number;
-  /**
-   * Contains the number of log bytes ingested.
-   */
-  "ingestedEventsBytes"?: number;
-  /**
-   * Contains the number of live log events indexed (data available as of December 1, 2020).
-   */
-  "logsLiveIndexedCount"?: number;
-  /**
-   * Contains the number of live log bytes ingested (data available as of December 1, 2020).
-   */
-  "logsLiveIngestedBytes"?: number;
-  /**
-   * Contains the number of rehydrated log events indexed (data available as of December 1, 2020).
-   */
-  "logsRehydratedIndexedCount"?: number;
-  /**
-   * Contains the number of rehydrated log bytes ingested (data available as of December 1, 2020).
-   */
-  "logsRehydratedIngestedBytes"?: number;
+    /**
+    * Contains the number of billable log bytes ingested.
+    */
+    'billableIngestedBytes'?: number;
+    /**
+    * The hour for the usage.
+    */
+    'hour'?: Date;
+    /**
+    * Contains the number of log events indexed.
+    */
+    'indexedEventsCount'?: number;
+    /**
+    * Contains the number of log bytes ingested.
+    */
+    'ingestedEventsBytes'?: number;
+    /**
+    * Contains the number of live log events indexed (data available as of December 1, 2020).
+    */
+    'logsLiveIndexedCount'?: number;
+    /**
+    * Contains the number of live log bytes ingested (data available as of December 1, 2020).
+    */
+    'logsLiveIngestedBytes'?: number;
+    /**
+    * Contains the number of rehydrated log events indexed (data available as of December 1, 2020).
+    */
+    'logsRehydratedIndexedCount'?: number;
+    /**
+    * Contains the number of rehydrated log bytes ingested (data available as of December 1, 2020).
+    */
+    'logsRehydratedIngestedBytes'?: number;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "billableIngestedBytes",
-      baseName: "billable_ingested_bytes",
-      type: "number",
-      format: "int64",
-    },
-    {
-      name: "hour",
-      baseName: "hour",
-      type: "Date",
-      format: "date-time",
-    },
-    {
-      name: "indexedEventsCount",
-      baseName: "indexed_events_count",
-      type: "number",
-      format: "int64",
-    },
-    {
-      name: "ingestedEventsBytes",
-      baseName: "ingested_events_bytes",
-      type: "number",
-      format: "int64",
-    },
-    {
-      name: "logsLiveIndexedCount",
-      baseName: "logs_live_indexed_count",
-      type: "number",
-      format: "int64",
-    },
-    {
-      name: "logsLiveIngestedBytes",
-      baseName: "logs_live_ingested_bytes",
-      type: "number",
-      format: "int64",
-    },
-    {
-      name: "logsRehydratedIndexedCount",
-      baseName: "logs_rehydrated_indexed_count",
-      type: "number",
-      format: "int64",
-    },
-    {
-      name: "logsRehydratedIngestedBytes",
-      baseName: "logs_rehydrated_ingested_bytes",
-      type: "number",
-      format: "int64",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "billableIngestedBytes",
+            "baseName": "billable_ingested_bytes",
+            "type": "number",
+            "format": "int64"
+        },
+        {
+            "name": "hour",
+            "baseName": "hour",
+            "type": "Date",
+            "format": "date-time"
+        },
+        {
+            "name": "indexedEventsCount",
+            "baseName": "indexed_events_count",
+            "type": "number",
+            "format": "int64"
+        },
+        {
+            "name": "ingestedEventsBytes",
+            "baseName": "ingested_events_bytes",
+            "type": "number",
+            "format": "int64"
+        },
+        {
+            "name": "logsLiveIndexedCount",
+            "baseName": "logs_live_indexed_count",
+            "type": "number",
+            "format": "int64"
+        },
+        {
+            "name": "logsLiveIngestedBytes",
+            "baseName": "logs_live_ingested_bytes",
+            "type": "number",
+            "format": "int64"
+        },
+        {
+            "name": "logsRehydratedIndexedCount",
+            "baseName": "logs_rehydrated_indexed_count",
+            "type": "number",
+            "format": "int64"
+        },
+        {
+            "name": "logsRehydratedIngestedBytes",
+            "baseName": "logs_rehydrated_ingested_bytes",
+            "type": "number",
+            "format": "int64"
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UsageLogsHour.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UsageLogsHour.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

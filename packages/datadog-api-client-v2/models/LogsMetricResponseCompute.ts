@@ -10,44 +10,40 @@
  * Do not edit the class manually.
  */
 
-import { LogsMetricResponseComputeAggregationType } from "./LogsMetricResponseComputeAggregationType";
-import { HttpFile } from "../http/http";
+import { LogsMetricResponseComputeAggregationType } from './LogsMetricResponseComputeAggregationType';
+import { HttpFile } from '../http/http';
 
 /**
- * The compute rule to compute the log-based metric.
- */
+* The compute rule to compute the log-based metric.
+*/
 export class LogsMetricResponseCompute {
-  "aggregationType"?: LogsMetricResponseComputeAggregationType;
-  /**
-   * The path to the value the log-based metric will aggregate on (only used if the aggregation type is a \"distribution\").
-   */
-  "path"?: string;
+    'aggregationType'?: LogsMetricResponseComputeAggregationType;
+    /**
+    * The path to the value the log-based metric will aggregate on (only used if the aggregation type is a \"distribution\").
+    */
+    'path'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "aggregationType",
-      baseName: "aggregation_type",
-      type: "LogsMetricResponseComputeAggregationType",
-      format: "",
-    },
-    {
-      name: "path",
-      baseName: "path",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "aggregationType",
+            "baseName": "aggregation_type",
+            "type": "LogsMetricResponseComputeAggregationType",
+            "format": ""
+        },
+        {
+            "name": "path",
+            "baseName": "path",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsMetricResponseCompute.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsMetricResponseCompute.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

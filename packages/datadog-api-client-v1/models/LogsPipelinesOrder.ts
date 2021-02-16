@@ -10,36 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Object containing the ordered list of pipeline IDs.
- */
+* Object containing the ordered list of pipeline IDs.
+*/
 export class LogsPipelinesOrder {
-  /**
-   * Ordered Array of `<PIPELINE_ID>` strings, the order of pipeline IDs in the array define the overall Pipelines order for Datadog.
-   */
-  "pipelineIds": Array<string>;
+    /**
+    * Ordered Array of `<PIPELINE_ID>` strings, the order of pipeline IDs in the array define the overall Pipelines order for Datadog.
+    */
+    'pipelineIds': Array<string>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "pipelineIds",
-      baseName: "pipeline_ids",
-      type: "Array<string>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "pipelineIds",
+            "baseName": "pipeline_ids",
+            "type": "Array<string>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsPipelinesOrder.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsPipelinesOrder.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

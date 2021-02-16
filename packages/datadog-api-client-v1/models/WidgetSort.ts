@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Widget sorting methods.
- */
-export type WidgetSort = "asc" | "desc";
+* Widget sorting methods.
+*/
+export type WidgetSort = "asc" | "desc" ;

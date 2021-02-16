@@ -10,48 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { ApplicationKeyResponseIncludedItem } from "./ApplicationKeyResponseIncludedItem";
-import { PartialApplicationKey } from "./PartialApplicationKey";
-import { HttpFile } from "../http/http";
+import { ApplicationKeyResponseIncludedItem } from './ApplicationKeyResponseIncludedItem';
+import { PartialApplicationKey } from './PartialApplicationKey';
+import { HttpFile } from '../http/http';
 
 /**
- * Response for a list of application keys.
- */
+* Response for a list of application keys.
+*/
 export class ListApplicationKeysResponse {
-  /**
-   * Array of application keys.
-   */
-  "data"?: Array<PartialApplicationKey>;
-  /**
-   * Array of objects related to the application key.
-   */
-  "included"?: Array<ApplicationKeyResponseIncludedItem>;
+    /**
+    * Array of application keys.
+    */
+    'data'?: Array<PartialApplicationKey>;
+    /**
+    * Array of objects related to the application key.
+    */
+    'included'?: Array<ApplicationKeyResponseIncludedItem>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "Array<PartialApplicationKey>",
-      format: "",
-    },
-    {
-      name: "included",
-      baseName: "included",
-      type: "Array<ApplicationKeyResponseIncludedItem>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "Array<PartialApplicationKey>",
+            "format": ""
+        },
+        {
+            "name": "included",
+            "baseName": "included",
+            "type": "Array<ApplicationKeyResponseIncludedItem>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return ListApplicationKeysResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return ListApplicationKeysResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

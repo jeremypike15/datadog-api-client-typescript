@@ -10,56 +10,52 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Define a request certificate.
- */
+* Define a request certificate.
+*/
 export class SyntheticsTestRequestCertificateItem {
-  /**
-   * Content of the certificate or key.
-   */
-  "content"?: string;
-  /**
-   * File name for the certificate or key.
-   */
-  "filename"?: string;
-  /**
-   * Date of update of the certificate or key, ISO format.
-   */
-  "updatedAt"?: string;
+    /**
+    * Content of the certificate or key.
+    */
+    'content'?: string;
+    /**
+    * File name for the certificate or key.
+    */
+    'filename'?: string;
+    /**
+    * Date of update of the certificate or key, ISO format.
+    */
+    'updatedAt'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "content",
-      baseName: "content",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "filename",
-      baseName: "filename",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "updatedAt",
-      baseName: "updatedAt",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "content",
+            "baseName": "content",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "filename",
+            "baseName": "filename",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "updatedAt",
+            "baseName": "updatedAt",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SyntheticsTestRequestCertificateItem.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SyntheticsTestRequestCertificateItem.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

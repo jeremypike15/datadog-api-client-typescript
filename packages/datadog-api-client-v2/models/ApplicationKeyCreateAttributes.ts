@@ -10,36 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Attributes used to create an application Key.
- */
+* Attributes used to create an application Key.
+*/
 export class ApplicationKeyCreateAttributes {
-  /**
-   * Name of the application key.
-   */
-  "name": string;
+    /**
+    * Name of the application key.
+    */
+    'name': string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "name",
-      baseName: "name",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "name",
+            "baseName": "name",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return ApplicationKeyCreateAttributes.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return ApplicationKeyCreateAttributes.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

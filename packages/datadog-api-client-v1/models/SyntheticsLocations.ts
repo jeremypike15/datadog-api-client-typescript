@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsLocation } from "./SyntheticsLocation";
-import { HttpFile } from "../http/http";
+import { SyntheticsLocation } from './SyntheticsLocation';
+import { HttpFile } from '../http/http';
 
 /**
- * List of Synthetics locations.
- */
+* List of Synthetics locations.
+*/
 export class SyntheticsLocations {
-  /**
-   * List of Synthetics locations.
-   */
-  "locations"?: Array<SyntheticsLocation>;
+    /**
+    * List of Synthetics locations.
+    */
+    'locations'?: Array<SyntheticsLocation>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "locations",
-      baseName: "locations",
-      type: "Array<SyntheticsLocation>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "locations",
+            "baseName": "locations",
+            "type": "Array<SyntheticsLocation>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SyntheticsLocations.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SyntheticsLocations.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

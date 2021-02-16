@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Navigate between different tabs for your browser test.
- */
-export type SyntheticsPlayingTab = "-1" | "0" | "1" | "2" | "3";
+* Navigate between different tabs for your browser test.
+*/
+export type SyntheticsPlayingTab = "-1" | "0" | "1" | "2" | "3" ;

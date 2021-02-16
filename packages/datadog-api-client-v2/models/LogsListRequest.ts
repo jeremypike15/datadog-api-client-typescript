@@ -10,58 +10,54 @@
  * Do not edit the class manually.
  */
 
-import { LogsListRequestPage } from "./LogsListRequestPage";
-import { LogsQueryFilter } from "./LogsQueryFilter";
-import { LogsQueryOptions } from "./LogsQueryOptions";
-import { LogsSort } from "./LogsSort";
-import { HttpFile } from "../http/http";
+import { LogsListRequestPage } from './LogsListRequestPage';
+import { LogsQueryFilter } from './LogsQueryFilter';
+import { LogsQueryOptions } from './LogsQueryOptions';
+import { LogsSort } from './LogsSort';
+import { HttpFile } from '../http/http';
 
 /**
- * The request for a logs list.
- */
+* The request for a logs list.
+*/
 export class LogsListRequest {
-  "filter"?: LogsQueryFilter;
-  "options"?: LogsQueryOptions;
-  "page"?: LogsListRequestPage;
-  "sort"?: LogsSort;
+    'filter'?: LogsQueryFilter;
+    'options'?: LogsQueryOptions;
+    'page'?: LogsListRequestPage;
+    'sort'?: LogsSort;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "filter",
-      baseName: "filter",
-      type: "LogsQueryFilter",
-      format: "",
-    },
-    {
-      name: "options",
-      baseName: "options",
-      type: "LogsQueryOptions",
-      format: "",
-    },
-    {
-      name: "page",
-      baseName: "page",
-      type: "LogsListRequestPage",
-      format: "",
-    },
-    {
-      name: "sort",
-      baseName: "sort",
-      type: "LogsSort",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "filter",
+            "baseName": "filter",
+            "type": "LogsQueryFilter",
+            "format": ""
+        },
+        {
+            "name": "options",
+            "baseName": "options",
+            "type": "LogsQueryOptions",
+            "format": ""
+        },
+        {
+            "name": "page",
+            "baseName": "page",
+            "type": "LogsListRequestPage",
+            "format": ""
+        },
+        {
+            "name": "sort",
+            "baseName": "sort",
+            "type": "LogsSort",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsListRequest.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsListRequest.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

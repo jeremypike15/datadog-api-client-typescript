@@ -10,50 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { RoleCreateAttributes } from "./RoleCreateAttributes";
-import { RoleRelationships } from "./RoleRelationships";
-import { RolesType } from "./RolesType";
-import { HttpFile } from "../http/http";
+import { RoleCreateAttributes } from './RoleCreateAttributes';
+import { RoleRelationships } from './RoleRelationships';
+import { RolesType } from './RolesType';
+import { HttpFile } from '../http/http';
 
 /**
- * Data related to the creation of a role.
- */
+* Data related to the creation of a role.
+*/
 export class RoleCreateData {
-  "attributes": RoleCreateAttributes;
-  "relationships"?: RoleRelationships;
-  "type"?: RolesType;
+    'attributes': RoleCreateAttributes;
+    'relationships'?: RoleRelationships;
+    'type'?: RolesType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "attributes",
-      baseName: "attributes",
-      type: "RoleCreateAttributes",
-      format: "",
-    },
-    {
-      name: "relationships",
-      baseName: "relationships",
-      type: "RoleRelationships",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "RolesType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "RoleCreateAttributes",
+            "format": ""
+        },
+        {
+            "name": "relationships",
+            "baseName": "relationships",
+            "type": "RoleRelationships",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "RolesType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return RoleCreateData.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return RoleCreateData.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

@@ -10,76 +10,72 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Object containing the metric unit family, scale factor, name, and short name.
- */
+* Object containing the metric unit family, scale factor, name, and short name.
+*/
 export class MetricsQueryUnit {
-  /**
-   * Unit family, allows for conversion between units of the same family, for scaling.
-   */
-  "family"?: string;
-  /**
-   * Unit name
-   */
-  "name"?: string;
-  /**
-   * Plural form of the unit name.
-   */
-  "plural"?: string;
-  /**
-   * Factor for scaling between units of the same family.
-   */
-  "scaleFactor"?: number;
-  /**
-   * Abbreviation of the unit.
-   */
-  "shortName"?: string;
+    /**
+    * Unit family, allows for conversion between units of the same family, for scaling.
+    */
+    'family'?: string;
+    /**
+    * Unit name
+    */
+    'name'?: string;
+    /**
+    * Plural form of the unit name.
+    */
+    'plural'?: string;
+    /**
+    * Factor for scaling between units of the same family.
+    */
+    'scaleFactor'?: number;
+    /**
+    * Abbreviation of the unit.
+    */
+    'shortName'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "family",
-      baseName: "family",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "name",
-      baseName: "name",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "plural",
-      baseName: "plural",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "scaleFactor",
-      baseName: "scale_factor",
-      type: "number",
-      format: "double",
-    },
-    {
-      name: "shortName",
-      baseName: "short_name",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "family",
+            "baseName": "family",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "name",
+            "baseName": "name",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "plural",
+            "baseName": "plural",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "scaleFactor",
+            "baseName": "scale_factor",
+            "type": "number",
+            "format": "double"
+        },
+        {
+            "name": "shortName",
+            "baseName": "short_name",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return MetricsQueryUnit.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return MetricsQueryUnit.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

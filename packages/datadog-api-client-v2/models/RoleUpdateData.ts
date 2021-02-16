@@ -10,52 +10,48 @@
  * Do not edit the class manually.
  */
 
-import { RoleUpdateAttributes } from "./RoleUpdateAttributes";
-import { RolesType } from "./RolesType";
-import { HttpFile } from "../http/http";
+import { RoleUpdateAttributes } from './RoleUpdateAttributes';
+import { RolesType } from './RolesType';
+import { HttpFile } from '../http/http';
 
 /**
- * Data related to the update of a role.
- */
+* Data related to the update of a role.
+*/
 export class RoleUpdateData {
-  "attributes": RoleUpdateAttributes;
-  /**
-   * ID of the role.
-   */
-  "id": string;
-  "type": RolesType;
+    'attributes': RoleUpdateAttributes;
+    /**
+    * ID of the role.
+    */
+    'id': string;
+    'type': RolesType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "attributes",
-      baseName: "attributes",
-      type: "RoleUpdateAttributes",
-      format: "",
-    },
-    {
-      name: "id",
-      baseName: "id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "RolesType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "RoleUpdateAttributes",
+            "format": ""
+        },
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "RolesType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return RoleUpdateData.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return RoleUpdateData.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

@@ -2,7 +2,7 @@ import { Given, Then, When } from "@cucumber/cucumber";
 import { expect } from "chai";
 import { World } from "../support/world";
 
-import { pathLookup } from "../support/templating";
+import { fixKeys, pathLookup } from "../support/templating";
 import { Store } from "../support/store";
 import { buildUndoFor, UndoActions } from "../support/undo";
 import * as datadogApiClient from "../../index";
@@ -29,7 +29,7 @@ Given(
 );
 
 Given(/body (.*)/, function (this: World, body: string) {
-  this.opts["body"] = JSON.parse(body.templated(this.fixtures));
+  this.opts["body"] = JSON.parse(body.templated(this.fixtures), fixKeys);
 });
 
 Given(

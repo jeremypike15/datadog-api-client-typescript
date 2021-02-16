@@ -10,44 +10,40 @@
  * Do not edit the class manually.
  */
 
-import { LogsArchiveCreateRequestAttributes } from "./LogsArchiveCreateRequestAttributes";
-import { HttpFile } from "../http/http";
+import { LogsArchiveCreateRequestAttributes } from './LogsArchiveCreateRequestAttributes';
+import { HttpFile } from '../http/http';
 
 /**
- * The definition of an archive.
- */
+* The definition of an archive.
+*/
 export class LogsArchiveCreateRequestDefinition {
-  "attributes"?: LogsArchiveCreateRequestAttributes;
-  /**
-   * The type of the resource. The value should always be archives.
-   */
-  "type": string;
+    'attributes'?: LogsArchiveCreateRequestAttributes;
+    /**
+    * The type of the resource. The value should always be archives.
+    */
+    'type': string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "attributes",
-      baseName: "attributes",
-      type: "LogsArchiveCreateRequestAttributes",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "LogsArchiveCreateRequestAttributes",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsArchiveCreateRequestDefinition.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsArchiveCreateRequestDefinition.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

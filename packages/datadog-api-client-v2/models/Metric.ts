@@ -10,44 +10,40 @@
  * Do not edit the class manually.
  */
 
-import { MetricType } from "./MetricType";
-import { HttpFile } from "../http/http";
+import { MetricType } from './MetricType';
+import { HttpFile } from '../http/http';
 
 /**
- * Object for a single metric tag configuration.
- */
+* Object for a single metric tag configuration.
+*/
 export class Metric {
-  /**
-   * The metric name for this resource.
-   */
-  "id"?: string;
-  "type"?: MetricType;
+    /**
+    * The metric name for this resource.
+    */
+    'id'?: string;
+    'type'?: MetricType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "id",
-      baseName: "id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "MetricType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "MetricType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return Metric.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return Metric.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

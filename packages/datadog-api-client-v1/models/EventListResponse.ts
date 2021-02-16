@@ -10,47 +10,43 @@
  * Do not edit the class manually.
  */
 
-import { Event } from "./Event";
-import { HttpFile } from "../http/http";
+import { Event } from './Event';
+import { HttpFile } from '../http/http';
 
 /**
- * An event list response.
- */
+* An event list response.
+*/
 export class EventListResponse {
-  /**
-   * An array of events.
-   */
-  "events"?: Array<Event>;
-  /**
-   * A status.
-   */
-  "status"?: string;
+    /**
+    * An array of events.
+    */
+    'events'?: Array<Event>;
+    /**
+    * A status.
+    */
+    'status'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "events",
-      baseName: "events",
-      type: "Array<Event>",
-      format: "",
-    },
-    {
-      name: "status",
-      baseName: "status",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "events",
+            "baseName": "events",
+            "type": "Array<Event>",
+            "format": ""
+        },
+        {
+            "name": "status",
+            "baseName": "status",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return EventListResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return EventListResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

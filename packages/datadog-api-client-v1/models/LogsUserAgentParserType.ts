@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Type of logs User-Agent parser.
- */
-export type LogsUserAgentParserType = "user-agent-parser";
+* Type of logs User-Agent parser.
+*/
+export type LogsUserAgentParserType = "user-agent-parser" ;

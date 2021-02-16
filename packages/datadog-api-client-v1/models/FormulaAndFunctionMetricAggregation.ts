@@ -10,16 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The aggregation methods available for metrics queries.
- */
-export type FormulaAndFunctionMetricAggregation =
-  | "avg"
-  | "min"
-  | "max"
-  | "sum"
-  | "last"
-  | "area"
-  | "l2norm";
+* The aggregation methods available for metrics queries.
+*/
+export type FormulaAndFunctionMetricAggregation = "avg" | "min" | "max" | "sum" | "last" | "area" | "l2norm" ;

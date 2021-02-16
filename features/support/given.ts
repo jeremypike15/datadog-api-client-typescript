@@ -4,7 +4,7 @@ import fs from "fs";
 import path from "path";
 
 import { World } from "../support/world";
-import { pathLookup } from "./templating";
+import { fixKeys, getProperty, pathLookup } from "./templating";
 import { UndoActions, buildUndoFor } from "./undo";
 import * as datadogApiClient from "../../index";
 
@@ -23,25 +23,28 @@ interface IGivenStep {
   source?: string;
 }
 
-for (const apiVersion of ["v1", "v2"]) {
+const Versions = ["v1", "v2"] as const;
+type VersionsType = typeof Versions[number];
+
+for (const apiVersion of Versions) {
   const content = fs
     .readFileSync(path.join(__dirname, `../${apiVersion}/given.json`))
     .toString();
   const givenSteps = JSON.parse(content) as IGivenStep[];
   for (const operation of givenSteps) {
     Given(operation.step, async function (this: World) {
-      const apiName = operation.tag.replace(/\s/, "");
-      const operationName = operation.operationId.toOperationName();
+      const apiName: string = operation.tag.replace(/\s/g, "");
+      const operationName: string = operation.operationId.toOperationName();
 
       // make sure we have a fresh instance of API client and configuration
-      const api = (datadogApiClient as any)[apiVersion];
+      const api = getProperty(datadogApiClient, apiVersion);
       const configuration = api.createConfiguration({
         authMethods: {
           apiKeyAuth: process.env.DD_TEST_CLIENT_API_KEY,
           appKeyAuth: process.env.DD_TEST_CLIENT_APP_KEY,
         },
       });
-      const apiInstance = new api[`${apiName}Api`](configuration);
+      const apiInstance = new (api as any)[`${apiName}Api`](configuration);
 
       // find undo method
       const undoAction = UndoActions[apiVersion][operation.operationId];
@@ -62,7 +65,7 @@ for (const apiVersion of ["v1", "v2"]) {
           let value: any;
           if (p.value !== undefined) {
             opts[p.name.toAttributeName()] = JSON.parse(
-              p.value?.templated(this.fixtures)
+              p.value?.templated(this.fixtures), fixKeys
             );
           }
           if (p.source !== undefined) {

@@ -10,90 +10,86 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsBrowserTestResultData } from "./SyntheticsBrowserTestResultData";
-import { SyntheticsBrowserTestResultFullCheck } from "./SyntheticsBrowserTestResultFullCheck";
-import { SyntheticsTestMonitorStatus } from "./SyntheticsTestMonitorStatus";
-import { HttpFile } from "../http/http";
+import { SyntheticsBrowserTestResultData } from './SyntheticsBrowserTestResultData';
+import { SyntheticsBrowserTestResultFullCheck } from './SyntheticsBrowserTestResultFullCheck';
+import { SyntheticsTestMonitorStatus } from './SyntheticsTestMonitorStatus';
+import { HttpFile } from '../http/http';
 
 /**
- * Object returned describing a browser test result.
- */
+* Object returned describing a browser test result.
+*/
 export class SyntheticsBrowserTestResultFull {
-  "check"?: SyntheticsBrowserTestResultFullCheck;
-  /**
-   * When the browser test was conducted.
-   */
-  "checkTime"?: number;
-  /**
-   * Version of the browser test used.
-   */
-  "checkVersion"?: number;
-  /**
-   * Location from which the browser test was performed.
-   */
-  "probeDc"?: string;
-  "result"?: SyntheticsBrowserTestResultData;
-  /**
-   * ID of the browser test result.
-   */
-  "resultId"?: string;
-  "status"?: SyntheticsTestMonitorStatus;
+    'check'?: SyntheticsBrowserTestResultFullCheck;
+    /**
+    * When the browser test was conducted.
+    */
+    'checkTime'?: number;
+    /**
+    * Version of the browser test used.
+    */
+    'checkVersion'?: number;
+    /**
+    * Location from which the browser test was performed.
+    */
+    'probeDc'?: string;
+    'result'?: SyntheticsBrowserTestResultData;
+    /**
+    * ID of the browser test result.
+    */
+    'resultId'?: string;
+    'status'?: SyntheticsTestMonitorStatus;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "check",
-      baseName: "check",
-      type: "SyntheticsBrowserTestResultFullCheck",
-      format: "",
-    },
-    {
-      name: "checkTime",
-      baseName: "check_time",
-      type: "number",
-      format: "double",
-    },
-    {
-      name: "checkVersion",
-      baseName: "check_version",
-      type: "number",
-      format: "int64",
-    },
-    {
-      name: "probeDc",
-      baseName: "probe_dc",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "result",
-      baseName: "result",
-      type: "SyntheticsBrowserTestResultData",
-      format: "",
-    },
-    {
-      name: "resultId",
-      baseName: "result_id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "status",
-      baseName: "status",
-      type: "SyntheticsTestMonitorStatus",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "check",
+            "baseName": "check",
+            "type": "SyntheticsBrowserTestResultFullCheck",
+            "format": ""
+        },
+        {
+            "name": "checkTime",
+            "baseName": "check_time",
+            "type": "number",
+            "format": "double"
+        },
+        {
+            "name": "checkVersion",
+            "baseName": "check_version",
+            "type": "number",
+            "format": "int64"
+        },
+        {
+            "name": "probeDc",
+            "baseName": "probe_dc",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "result",
+            "baseName": "result",
+            "type": "SyntheticsBrowserTestResultData",
+            "format": ""
+        },
+        {
+            "name": "resultId",
+            "baseName": "result_id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "status",
+            "baseName": "status",
+            "type": "SyntheticsTestMonitorStatus",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SyntheticsBrowserTestResultFull.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SyntheticsBrowserTestResultFull.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

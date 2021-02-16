@@ -10,34 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { APIKeyUpdateData } from "./APIKeyUpdateData";
-import { HttpFile } from "../http/http";
+import { APIKeyUpdateData } from './APIKeyUpdateData';
+import { HttpFile } from '../http/http';
 
 /**
- * Request used to update an API key.
- */
+* Request used to update an API key.
+*/
 export class APIKeyUpdateRequest {
-  "data": APIKeyUpdateData;
+    'data': APIKeyUpdateData;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "APIKeyUpdateData",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "APIKeyUpdateData",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return APIKeyUpdateRequest.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return APIKeyUpdateRequest.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

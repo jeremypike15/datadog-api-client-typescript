@@ -10,42 +10,38 @@
  * Do not edit the class manually.
  */
 
-import { RelationshipToPermissions } from "./RelationshipToPermissions";
-import { RelationshipToUsers } from "./RelationshipToUsers";
-import { HttpFile } from "../http/http";
+import { RelationshipToPermissions } from './RelationshipToPermissions';
+import { RelationshipToUsers } from './RelationshipToUsers';
+import { HttpFile } from '../http/http';
 
 /**
- * Relationships of the role object.
- */
+* Relationships of the role object.
+*/
 export class RoleRelationships {
-  "permissions"?: RelationshipToPermissions;
-  "users"?: RelationshipToUsers;
+    'permissions'?: RelationshipToPermissions;
+    'users'?: RelationshipToUsers;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "permissions",
-      baseName: "permissions",
-      type: "RelationshipToPermissions",
-      format: "",
-    },
-    {
-      name: "users",
-      baseName: "users",
-      type: "RelationshipToUsers",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "permissions",
+            "baseName": "permissions",
+            "type": "RelationshipToPermissions",
+            "format": ""
+        },
+        {
+            "name": "users",
+            "baseName": "users",
+            "type": "RelationshipToUsers",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return RoleRelationships.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return RoleRelationships.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

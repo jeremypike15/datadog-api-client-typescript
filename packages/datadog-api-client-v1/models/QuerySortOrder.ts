@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Direction of sort.
- */
-export type QuerySortOrder = "asc" | "desc";
+* Direction of sort.
+*/
+export type QuerySortOrder = "asc" | "desc" ;

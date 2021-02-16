@@ -10,56 +10,52 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Template variable.
- */
+* Template variable.
+*/
 export class DashboardTemplateVariable {
-  /**
-   * The default value for the template variable on dashboard load.
-   */
-  "_default"?: string;
-  /**
-   * The name of the variable.
-   */
-  "name": string;
-  /**
-   * The tag prefix associated with the variable. Only tags with this prefix appear in the variable drop-down.
-   */
-  "prefix"?: string;
+    /**
+    * The default value for the template variable on dashboard load.
+    */
+    '_default'?: string;
+    /**
+    * The name of the variable.
+    */
+    'name': string;
+    /**
+    * The tag prefix associated with the variable. Only tags with this prefix appear in the variable drop-down.
+    */
+    'prefix'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "_default",
-      baseName: "default",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "name",
-      baseName: "name",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "prefix",
-      baseName: "prefix",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "_default",
+            "baseName": "default",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "name",
+            "baseName": "name",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "prefix",
+            "baseName": "prefix",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return DashboardTemplateVariable.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return DashboardTemplateVariable.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

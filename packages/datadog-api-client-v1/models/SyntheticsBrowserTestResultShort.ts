@@ -10,72 +10,68 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsBrowserTestResultShortResult } from "./SyntheticsBrowserTestResultShortResult";
-import { SyntheticsTestMonitorStatus } from "./SyntheticsTestMonitorStatus";
-import { HttpFile } from "../http/http";
+import { SyntheticsBrowserTestResultShortResult } from './SyntheticsBrowserTestResultShortResult';
+import { SyntheticsTestMonitorStatus } from './SyntheticsTestMonitorStatus';
+import { HttpFile } from '../http/http';
 
 /**
- * Object with the results of a single Synthetic browser test.
- */
+* Object with the results of a single Synthetic browser test.
+*/
 export class SyntheticsBrowserTestResultShort {
-  /**
-   * Last time the browser test was performed.
-   */
-  "checkTime"?: number;
-  /**
-   * Location from which the Browser test was performed.
-   */
-  "probeDc"?: string;
-  "result"?: SyntheticsBrowserTestResultShortResult;
-  /**
-   * ID of the browser test result.
-   */
-  "resultId"?: string;
-  "status"?: SyntheticsTestMonitorStatus;
+    /**
+    * Last time the browser test was performed.
+    */
+    'checkTime'?: number;
+    /**
+    * Location from which the Browser test was performed.
+    */
+    'probeDc'?: string;
+    'result'?: SyntheticsBrowserTestResultShortResult;
+    /**
+    * ID of the browser test result.
+    */
+    'resultId'?: string;
+    'status'?: SyntheticsTestMonitorStatus;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "checkTime",
-      baseName: "check_time",
-      type: "number",
-      format: "double",
-    },
-    {
-      name: "probeDc",
-      baseName: "probe_dc",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "result",
-      baseName: "result",
-      type: "SyntheticsBrowserTestResultShortResult",
-      format: "",
-    },
-    {
-      name: "resultId",
-      baseName: "result_id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "status",
-      baseName: "status",
-      type: "SyntheticsTestMonitorStatus",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "checkTime",
+            "baseName": "check_time",
+            "type": "number",
+            "format": "double"
+        },
+        {
+            "name": "probeDc",
+            "baseName": "probe_dc",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "result",
+            "baseName": "result",
+            "type": "SyntheticsBrowserTestResultShortResult",
+            "format": ""
+        },
+        {
+            "name": "resultId",
+            "baseName": "result_id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "status",
+            "baseName": "status",
+            "type": "SyntheticsTestMonitorStatus",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SyntheticsBrowserTestResultShort.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SyntheticsBrowserTestResultShort.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

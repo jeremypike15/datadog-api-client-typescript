@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { Organization } from "./Organization";
-import { HttpFile } from "../http/http";
+import { Organization } from './Organization';
+import { HttpFile } from '../http/http';
 
 /**
- * Response with the list of organizations.
- */
+* Response with the list of organizations.
+*/
 export class OrganizationListResponse {
-  /**
-   * Array of organization objects.
-   */
-  "orgs"?: Array<Organization>;
+    /**
+    * Array of organization objects.
+    */
+    'orgs'?: Array<Organization>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "orgs",
-      baseName: "orgs",
-      type: "Array<Organization>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "orgs",
+            "baseName": "orgs",
+            "type": "Array<Organization>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return OrganizationListResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return OrganizationListResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { UsageTopAvgMetricsHour } from "./UsageTopAvgMetricsHour";
-import { HttpFile } from "../http/http";
+import { UsageTopAvgMetricsHour } from './UsageTopAvgMetricsHour';
+import { HttpFile } from '../http/http';
 
 /**
- * Response containing the number of hourly recorded custom metrics for a given organization.
- */
+* Response containing the number of hourly recorded custom metrics for a given organization.
+*/
 export class UsageTopAvgMetricsResponse {
-  /**
-   * Number of hourly recorded custom metrics for a given organization.
-   */
-  "usage"?: Array<UsageTopAvgMetricsHour>;
+    /**
+    * Number of hourly recorded custom metrics for a given organization.
+    */
+    'usage'?: Array<UsageTopAvgMetricsHour>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "usage",
-      baseName: "usage",
-      type: "Array<UsageTopAvgMetricsHour>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "usage",
+            "baseName": "usage",
+            "type": "Array<UsageTopAvgMetricsHour>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UsageTopAvgMetricsResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UsageTopAvgMetricsResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

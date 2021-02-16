@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { UsageLogsHour } from "./UsageLogsHour";
-import { HttpFile } from "../http/http";
+import { UsageLogsHour } from './UsageLogsHour';
+import { HttpFile } from '../http/http';
 
 /**
- * Response containing the number of logs for each hour.
- */
+* Response containing the number of logs for each hour.
+*/
 export class UsageLogsResponse {
-  /**
-   * An array of objects regarding hourly usage of logs.
-   */
-  "usage"?: Array<UsageLogsHour>;
+    /**
+    * An array of objects regarding hourly usage of logs.
+    */
+    'usage'?: Array<UsageLogsHour>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "usage",
-      baseName: "usage",
-      type: "Array<UsageLogsHour>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "usage",
+            "baseName": "usage",
+            "type": "Array<UsageLogsHour>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UsageLogsResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UsageLogsResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

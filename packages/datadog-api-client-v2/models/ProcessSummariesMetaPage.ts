@@ -10,46 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Paging attributes.
- */
+* Paging attributes.
+*/
 export class ProcessSummariesMetaPage {
-  /**
-   * The cursor used to get the next results, if any. To make the next request, use the same parameters with the addition of the `page[cursor]`.
-   */
-  "after"?: string;
-  /**
-   * Number of results returned.
-   */
-  "size"?: number;
+    /**
+    * The cursor used to get the next results, if any. To make the next request, use the same parameters with the addition of the `page[cursor]`.
+    */
+    'after'?: string;
+    /**
+    * Number of results returned.
+    */
+    'size'?: number;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "after",
-      baseName: "after",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "size",
-      baseName: "size",
-      type: "number",
-      format: "int32",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "after",
+            "baseName": "after",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "size",
+            "baseName": "size",
+            "type": "number",
+            "format": "int32"
+        }    ];
 
-  static getAttributeTypeMap() {
-    return ProcessSummariesMetaPage.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return ProcessSummariesMetaPage.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

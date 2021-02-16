@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The type of compute
- */
-export type LogsComputeType = "timeseries" | "total";
+* The type of compute
+*/
+export type LogsComputeType = "timeseries" | "total" ;

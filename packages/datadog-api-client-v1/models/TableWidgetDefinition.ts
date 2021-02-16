@@ -10,100 +10,96 @@
  * Do not edit the class manually.
  */
 
-import { TableWidgetDefinitionType } from "./TableWidgetDefinitionType";
-import { TableWidgetHasSearchBar } from "./TableWidgetHasSearchBar";
-import { TableWidgetRequest } from "./TableWidgetRequest";
-import { WidgetCustomLink } from "./WidgetCustomLink";
-import { WidgetTextAlign } from "./WidgetTextAlign";
-import { WidgetTime } from "./WidgetTime";
-import { HttpFile } from "../http/http";
+import { TableWidgetDefinitionType } from './TableWidgetDefinitionType';
+import { TableWidgetHasSearchBar } from './TableWidgetHasSearchBar';
+import { TableWidgetRequest } from './TableWidgetRequest';
+import { WidgetCustomLink } from './WidgetCustomLink';
+import { WidgetTextAlign } from './WidgetTextAlign';
+import { WidgetTime } from './WidgetTime';
+import { HttpFile } from '../http/http';
 
 /**
- * The table visualization is available on timeboards and screenboards. It displays columns of metrics grouped by tag key.
- */
+* The table visualization is available on timeboards and screenboards. It displays columns of metrics grouped by tag key.
+*/
 export class TableWidgetDefinition {
-  /**
-   * List of custom links.
-   */
-  "customLinks"?: Array<WidgetCustomLink>;
-  "hasSearchBar"?: TableWidgetHasSearchBar;
-  /**
-   * Widget definition.
-   */
-  "requests": Array<TableWidgetRequest>;
-  "time"?: WidgetTime;
-  /**
-   * Title of your widget.
-   */
-  "title"?: string;
-  "titleAlign"?: WidgetTextAlign;
-  /**
-   * Size of the title.
-   */
-  "titleSize"?: string;
-  "type": TableWidgetDefinitionType;
+    /**
+    * List of custom links.
+    */
+    'customLinks'?: Array<WidgetCustomLink>;
+    'hasSearchBar'?: TableWidgetHasSearchBar;
+    /**
+    * Widget definition.
+    */
+    'requests': Array<TableWidgetRequest>;
+    'time'?: WidgetTime;
+    /**
+    * Title of your widget.
+    */
+    'title'?: string;
+    'titleAlign'?: WidgetTextAlign;
+    /**
+    * Size of the title.
+    */
+    'titleSize'?: string;
+    'type': TableWidgetDefinitionType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "customLinks",
-      baseName: "custom_links",
-      type: "Array<WidgetCustomLink>",
-      format: "",
-    },
-    {
-      name: "hasSearchBar",
-      baseName: "has_search_bar",
-      type: "TableWidgetHasSearchBar",
-      format: "",
-    },
-    {
-      name: "requests",
-      baseName: "requests",
-      type: "Array<TableWidgetRequest>",
-      format: "",
-    },
-    {
-      name: "time",
-      baseName: "time",
-      type: "WidgetTime",
-      format: "",
-    },
-    {
-      name: "title",
-      baseName: "title",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "titleAlign",
-      baseName: "title_align",
-      type: "WidgetTextAlign",
-      format: "",
-    },
-    {
-      name: "titleSize",
-      baseName: "title_size",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "TableWidgetDefinitionType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "customLinks",
+            "baseName": "custom_links",
+            "type": "Array<WidgetCustomLink>",
+            "format": ""
+        },
+        {
+            "name": "hasSearchBar",
+            "baseName": "has_search_bar",
+            "type": "TableWidgetHasSearchBar",
+            "format": ""
+        },
+        {
+            "name": "requests",
+            "baseName": "requests",
+            "type": "Array<TableWidgetRequest>",
+            "format": ""
+        },
+        {
+            "name": "time",
+            "baseName": "time",
+            "type": "WidgetTime",
+            "format": ""
+        },
+        {
+            "name": "title",
+            "baseName": "title",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "titleAlign",
+            "baseName": "title_align",
+            "type": "WidgetTextAlign",
+            "format": ""
+        },
+        {
+            "name": "titleSize",
+            "baseName": "title_size",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "TableWidgetDefinitionType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return TableWidgetDefinition.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return TableWidgetDefinition.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

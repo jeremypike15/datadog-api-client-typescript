@@ -64,15 +64,27 @@ Before(function (
   } else {
     date = new Date();
     if (this.polly?.mode == MODES.RECORD) {
+      fs.mkdirSync(path.dirname(frozen), {recursive: true});
       fs.writeFileSync(frozen, JSON.stringify(date));
     }
   }
 
-  const now = date.getTime();
+  const now = date.getTime() / 1000;
   const name = pickle.name?.replace(/[^A-Za-z0-9]+/g, "_").substr(0, 100);
   const unique = `Typescript-${name}-${now}`;
   this.fixtures["unique"] = unique;
   this.fixtures["unique_lower"] = unique.toLowerCase();
+  this.fixtures["unique_alnum"] = unique.replace(/[^A-Za-z0-9]+/g, "");
+  this.fixtures["now_ts"] = now;
+  this.fixtures["now_iso"] = date.toISOString();
+  const hourLater = new Date(JSON.stringify(date));
+  hourLater.setTime(date.getTime() + 60*60*1000);
+  this.fixtures["hour_later_ts"] = hourLater.getTime() / 1000;
+  this.fixtures["hour_later_iso"] = hourLater.toISOString();
+  const hourAgo = new Date(JSON.stringify(date));
+  hourAgo.setTime(date.getTime() - 60*60*1000);
+  this.fixtures["hour_ago_ts"] = hourAgo.getTime() / 1000;
+  this.fixtures["hour_ago_iso"] = hourAgo.toISOString();
 
   // make sure that we are not recording APM traces
   server.any((tracer as any)._tracer._url.host).passthrough();

@@ -10,34 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { UserCreateData } from "./UserCreateData";
-import { HttpFile } from "../http/http";
+import { UserCreateData } from './UserCreateData';
+import { HttpFile } from '../http/http';
 
 /**
- * Create a user.
- */
+* Create a user.
+*/
 export class UserCreateRequest {
-  "data": UserCreateData;
+    'data': UserCreateData;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "UserCreateData",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "UserCreateData",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UserCreateRequest.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UserCreateRequest.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

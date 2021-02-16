@@ -10,52 +10,48 @@
  * Do not edit the class manually.
  */
 
-import { SLOCorrectionResponseAttributes } from "./SLOCorrectionResponseAttributes";
-import { SLOCorrectionType } from "./SLOCorrectionType";
-import { HttpFile } from "../http/http";
+import { SLOCorrectionResponseAttributes } from './SLOCorrectionResponseAttributes';
+import { SLOCorrectionType } from './SLOCorrectionType';
+import { HttpFile } from '../http/http';
 
 /**
- * The response object of a list of SLO corrections
- */
+* The response object of a list of SLO corrections
+*/
 export class SLOCorrection {
-  "attributes"?: SLOCorrectionResponseAttributes;
-  /**
-   * The ID of the SLO correction
-   */
-  "id"?: string;
-  "type"?: SLOCorrectionType;
+    'attributes'?: SLOCorrectionResponseAttributes;
+    /**
+    * The ID of the SLO correction
+    */
+    'id'?: string;
+    'type'?: SLOCorrectionType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "attributes",
-      baseName: "attributes",
-      type: "SLOCorrectionResponseAttributes",
-      format: "",
-    },
-    {
-      name: "id",
-      baseName: "id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "SLOCorrectionType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "SLOCorrectionResponseAttributes",
+            "format": ""
+        },
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "SLOCorrectionType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SLOCorrection.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SLOCorrection.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

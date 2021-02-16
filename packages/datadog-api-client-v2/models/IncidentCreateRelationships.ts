@@ -10,34 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { RelationshipToUser } from "./RelationshipToUser";
-import { HttpFile } from "../http/http";
+import { RelationshipToUser } from './RelationshipToUser';
+import { HttpFile } from '../http/http';
 
 /**
- * The relationships the incident will have with other resources once created.
- */
+* The relationships the incident will have with other resources once created.
+*/
 export class IncidentCreateRelationships {
-  "commander": RelationshipToUser;
+    'commander': RelationshipToUser;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "commander",
-      baseName: "commander",
-      type: "RelationshipToUser",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "commander",
+            "baseName": "commander",
+            "type": "RelationshipToUser",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return IncidentCreateRelationships.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return IncidentCreateRelationships.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

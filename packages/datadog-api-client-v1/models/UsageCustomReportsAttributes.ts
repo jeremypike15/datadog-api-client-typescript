@@ -10,76 +10,72 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The response containing attributes for custom reports.
- */
+* The response containing attributes for custom reports.
+*/
 export class UsageCustomReportsAttributes {
-  /**
-   * The date the specified custom report was computed.
-   */
-  "computedOn"?: string;
-  /**
-   * The ending date of custom report.
-   */
-  "endDate"?: string;
-  /**
-   * size
-   */
-  "size"?: number;
-  /**
-   * The starting date of custom report.
-   */
-  "startDate"?: string;
-  /**
-   * A list of tags to apply to custom reports.
-   */
-  "tags"?: Array<string>;
+    /**
+    * The date the specified custom report was computed.
+    */
+    'computedOn'?: string;
+    /**
+    * The ending date of custom report.
+    */
+    'endDate'?: string;
+    /**
+    * size
+    */
+    'size'?: number;
+    /**
+    * The starting date of custom report.
+    */
+    'startDate'?: string;
+    /**
+    * A list of tags to apply to custom reports.
+    */
+    'tags'?: Array<string>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "computedOn",
-      baseName: "computed_on",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "endDate",
-      baseName: "end_date",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "size",
-      baseName: "size",
-      type: "number",
-      format: "int64",
-    },
-    {
-      name: "startDate",
-      baseName: "start_date",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "tags",
-      baseName: "tags",
-      type: "Array<string>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "computedOn",
+            "baseName": "computed_on",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "endDate",
+            "baseName": "end_date",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "size",
+            "baseName": "size",
+            "type": "number",
+            "format": "int64"
+        },
+        {
+            "name": "startDate",
+            "baseName": "start_date",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "tags",
+            "baseName": "tags",
+            "type": "Array<string>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UsageCustomReportsAttributes.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UsageCustomReportsAttributes.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

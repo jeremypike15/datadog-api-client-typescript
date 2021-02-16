@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Type of the host map widget.
- */
-export type HostMapWidgetDefinitionType = "hostmap";
+* Type of the host map widget.
+*/
+export type HostMapWidgetDefinitionType = "hostmap" ;

@@ -10,34 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { RelationshipToUser } from "./RelationshipToUser";
-import { HttpFile } from "../http/http";
+import { RelationshipToUser } from './RelationshipToUser';
+import { HttpFile } from '../http/http';
 
 /**
- * Resources related to the application key.
- */
+* Resources related to the application key.
+*/
 export class ApplicationKeyRelationships {
-  "createdBy"?: RelationshipToUser;
+    'createdBy'?: RelationshipToUser;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "createdBy",
-      baseName: "created_by",
-      type: "RelationshipToUser",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "createdBy",
+            "baseName": "created_by",
+            "type": "RelationshipToUser",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return ApplicationKeyRelationships.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return ApplicationKeyRelationships.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

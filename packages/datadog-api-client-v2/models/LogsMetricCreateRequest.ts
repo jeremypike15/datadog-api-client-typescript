@@ -10,34 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { LogsMetricCreateData } from "./LogsMetricCreateData";
-import { HttpFile } from "../http/http";
+import { LogsMetricCreateData } from './LogsMetricCreateData';
+import { HttpFile } from '../http/http';
 
 /**
- * The new log-based metric body.
- */
+* The new log-based metric body.
+*/
 export class LogsMetricCreateRequest {
-  "data": LogsMetricCreateData;
+    'data': LogsMetricCreateData;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "LogsMetricCreateData",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "LogsMetricCreateData",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsMetricCreateRequest.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsMetricCreateRequest.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

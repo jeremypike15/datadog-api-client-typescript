@@ -10,46 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Value of the global variable.
- */
+* Value of the global variable.
+*/
 export class SyntheticsGlobalVariableValue {
-  /**
-   * Determines if the variable is secure.
-   */
-  "secure"?: boolean;
-  /**
-   * Value of the global variable. When reading a global variable, the value will not be present if the variable is secure.
-   */
-  "value": string;
+    /**
+    * Determines if the variable is secure.
+    */
+    'secure'?: boolean;
+    /**
+    * Value of the global variable. When reading a global variable, the value will not be present if the variable is secure.
+    */
+    'value': string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "secure",
-      baseName: "secure",
-      type: "boolean",
-      format: "",
-    },
-    {
-      name: "value",
-      baseName: "value",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "secure",
+            "baseName": "secure",
+            "type": "boolean",
+            "format": ""
+        },
+        {
+            "name": "value",
+            "baseName": "value",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SyntheticsGlobalVariableValue.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SyntheticsGlobalVariableValue.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

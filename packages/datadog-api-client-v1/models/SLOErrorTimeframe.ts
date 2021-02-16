@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The timeframe of the threshold associated with this error or \"all\" if all thresholds are affected.
- */
-export type SLOErrorTimeframe = "7d" | "30d" | "90d" | "all";
+* The timeframe of the threshold associated with this error or \"all\" if all thresholds are affected.
+*/
+export type SLOErrorTimeframe = "7d" | "30d" | "90d" | "all" ;

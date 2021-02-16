@@ -10,66 +10,62 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The style to apply to the widget.
- */
+* The style to apply to the widget.
+*/
 export class HostMapWidgetDefinitionStyle {
-  /**
-   * Max value to use to color the map.
-   */
-  "fillMax"?: string;
-  /**
-   * Min value to use to color the map.
-   */
-  "fillMin"?: string;
-  /**
-   * Color palette to apply to the widget.
-   */
-  "palette"?: string;
-  /**
-   * Whether to flip the palette tones.
-   */
-  "paletteFlip"?: boolean;
+    /**
+    * Max value to use to color the map.
+    */
+    'fillMax'?: string;
+    /**
+    * Min value to use to color the map.
+    */
+    'fillMin'?: string;
+    /**
+    * Color palette to apply to the widget.
+    */
+    'palette'?: string;
+    /**
+    * Whether to flip the palette tones.
+    */
+    'paletteFlip'?: boolean;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "fillMax",
-      baseName: "fill_max",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "fillMin",
-      baseName: "fill_min",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "palette",
-      baseName: "palette",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "paletteFlip",
-      baseName: "palette_flip",
-      type: "boolean",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "fillMax",
+            "baseName": "fill_max",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "fillMin",
+            "baseName": "fill_min",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "palette",
+            "baseName": "palette",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "paletteFlip",
+            "baseName": "palette_flip",
+            "type": "boolean",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return HostMapWidgetDefinitionStyle.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return HostMapWidgetDefinitionStyle.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

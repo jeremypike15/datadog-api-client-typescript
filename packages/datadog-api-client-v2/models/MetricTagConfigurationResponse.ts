@@ -10,34 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { MetricTagConfiguration } from "./MetricTagConfiguration";
-import { HttpFile } from "../http/http";
+import { MetricTagConfiguration } from './MetricTagConfiguration';
+import { HttpFile } from '../http/http';
 
 /**
- * Response object which includes a single metric's tag configuration.
- */
+* Response object which includes a single metric's tag configuration.
+*/
 export class MetricTagConfigurationResponse {
-  "data"?: MetricTagConfiguration;
+    'data'?: MetricTagConfiguration;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "MetricTagConfiguration",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "MetricTagConfiguration",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return MetricTagConfigurationResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return MetricTagConfigurationResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

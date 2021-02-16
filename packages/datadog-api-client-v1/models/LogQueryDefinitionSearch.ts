@@ -10,36 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The query being made on the logs.
- */
+* The query being made on the logs.
+*/
 export class LogQueryDefinitionSearch {
-  /**
-   * Search value to apply.
-   */
-  "query": string;
+    /**
+    * Search value to apply.
+    */
+    'query': string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "query",
-      baseName: "query",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "query",
+            "baseName": "query",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogQueryDefinitionSearch.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogQueryDefinitionSearch.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

@@ -10,36 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Private key for the private location.
- */
+* Private key for the private location.
+*/
 export class SyntheticsPrivateLocationSecretsConfigDecryption {
-  /**
-   * Private key for the private location.
-   */
-  "key"?: string;
+    /**
+    * Private key for the private location.
+    */
+    'key'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "key",
-      baseName: "key",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "key",
+            "baseName": "key",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SyntheticsPrivateLocationSecretsConfigDecryption.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SyntheticsPrivateLocationSecretsConfigDecryption.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

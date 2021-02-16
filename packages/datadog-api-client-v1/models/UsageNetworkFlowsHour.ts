@@ -10,46 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Number of netflow events indexed for each hour for a given organization.
- */
+* Number of netflow events indexed for each hour for a given organization.
+*/
 export class UsageNetworkFlowsHour {
-  /**
-   * The hour for the usage.
-   */
-  "hour"?: Date;
-  /**
-   * Contains the number of netflow events indexed.
-   */
-  "indexedEventCount"?: number;
+    /**
+    * The hour for the usage.
+    */
+    'hour'?: Date;
+    /**
+    * Contains the number of netflow events indexed.
+    */
+    'indexedEventCount'?: number;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "hour",
-      baseName: "hour",
-      type: "Date",
-      format: "date-time",
-    },
-    {
-      name: "indexedEventCount",
-      baseName: "indexed_event_count",
-      type: "number",
-      format: "int64",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "hour",
+            "baseName": "hour",
+            "type": "Date",
+            "format": "date-time"
+        },
+        {
+            "name": "indexedEventCount",
+            "baseName": "indexed_event_count",
+            "type": "number",
+            "format": "int64"
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UsageNetworkFlowsHour.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UsageNetworkFlowsHour.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

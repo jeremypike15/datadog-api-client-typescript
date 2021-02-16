@@ -10,52 +10,48 @@
  * Do not edit the class manually.
  */
 
-import { MetricTagConfigurationCreateAttributes } from "./MetricTagConfigurationCreateAttributes";
-import { MetricTagConfigurationType } from "./MetricTagConfigurationType";
-import { HttpFile } from "../http/http";
+import { MetricTagConfigurationCreateAttributes } from './MetricTagConfigurationCreateAttributes';
+import { MetricTagConfigurationType } from './MetricTagConfigurationType';
+import { HttpFile } from '../http/http';
 
 /**
- * Object for a single metric to be configure tags on.
- */
+* Object for a single metric to be configure tags on.
+*/
 export class MetricTagConfigurationCreateData {
-  "attributes"?: MetricTagConfigurationCreateAttributes;
-  /**
-   * The metric name for this resource.
-   */
-  "id": string;
-  "type": MetricTagConfigurationType;
+    'attributes'?: MetricTagConfigurationCreateAttributes;
+    /**
+    * The metric name for this resource.
+    */
+    'id': string;
+    'type': MetricTagConfigurationType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "attributes",
-      baseName: "attributes",
-      type: "MetricTagConfigurationCreateAttributes",
-      format: "",
-    },
-    {
-      name: "id",
-      baseName: "id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "MetricTagConfigurationType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "MetricTagConfigurationCreateAttributes",
+            "format": ""
+        },
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "MetricTagConfigurationType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return MetricTagConfigurationCreateData.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return MetricTagConfigurationCreateData.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

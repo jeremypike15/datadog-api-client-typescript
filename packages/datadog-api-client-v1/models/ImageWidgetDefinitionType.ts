@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Type of the image widget.
- */
-export type ImageWidgetDefinitionType = "image";
+* Type of the image widget.
+*/
+export type ImageWidgetDefinitionType = "image" ;

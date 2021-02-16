@@ -10,56 +10,52 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Search filters for listing security signals.
- */
+* Search filters for listing security signals.
+*/
 export class SecurityMonitoringSignalListRequestFilter {
-  /**
-   * The minimum timestamp for requested security signals.
-   */
-  "from"?: Date;
-  /**
-   * Search query for listing security signals.
-   */
-  "query"?: string;
-  /**
-   * The maximum timestamp for requested security signals.
-   */
-  "to"?: Date;
+    /**
+    * The minimum timestamp for requested security signals.
+    */
+    'from'?: Date;
+    /**
+    * Search query for listing security signals.
+    */
+    'query'?: string;
+    /**
+    * The maximum timestamp for requested security signals.
+    */
+    'to'?: Date;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "from",
-      baseName: "from",
-      type: "Date",
-      format: "date-time",
-    },
-    {
-      name: "query",
-      baseName: "query",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "to",
-      baseName: "to",
-      type: "Date",
-      format: "date-time",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "from",
+            "baseName": "from",
+            "type": "Date",
+            "format": "date-time"
+        },
+        {
+            "name": "query",
+            "baseName": "query",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "to",
+            "baseName": "to",
+            "type": "Date",
+            "format": "date-time"
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SecurityMonitoringSignalListRequestFilter.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SecurityMonitoringSignalListRequestFilter.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

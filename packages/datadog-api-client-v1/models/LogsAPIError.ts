@@ -10,56 +10,52 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Error returned by the Logs API
- */
+* Error returned by the Logs API
+*/
 export class LogsAPIError {
-  /**
-   * Code identifying the error
-   */
-  "code"?: string;
-  /**
-   * Additional error details
-   */
-  "details"?: Array<LogsAPIError>;
-  /**
-   * Error message
-   */
-  "message"?: string;
+    /**
+    * Code identifying the error
+    */
+    'code'?: string;
+    /**
+    * Additional error details
+    */
+    'details'?: Array<LogsAPIError>;
+    /**
+    * Error message
+    */
+    'message'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "code",
-      baseName: "code",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "details",
-      baseName: "details",
-      type: "Array<LogsAPIError>",
-      format: "",
-    },
-    {
-      name: "message",
-      baseName: "message",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "code",
+            "baseName": "code",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "details",
+            "baseName": "details",
+            "type": "Array<LogsAPIError>",
+            "format": ""
+        },
+        {
+            "name": "message",
+            "baseName": "message",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsAPIError.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsAPIError.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

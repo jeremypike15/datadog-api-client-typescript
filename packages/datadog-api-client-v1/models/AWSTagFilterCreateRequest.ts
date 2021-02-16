@@ -10,54 +10,50 @@
  * Do not edit the class manually.
  */
 
-import { AWSNamespace } from "./AWSNamespace";
-import { HttpFile } from "../http/http";
+import { AWSNamespace } from './AWSNamespace';
+import { HttpFile } from '../http/http';
 
 /**
- * The objects used to set an AWS tag filter.
- */
+* The objects used to set an AWS tag filter.
+*/
 export class AWSTagFilterCreateRequest {
-  /**
-   * Your AWS Account ID without dashes.
-   */
-  "accountId"?: string;
-  "namespace"?: AWSNamespace;
-  /**
-   * The tag filter string.
-   */
-  "tagFilterStr"?: string;
+    /**
+    * Your AWS Account ID without dashes.
+    */
+    'accountId'?: string;
+    'namespace'?: AWSNamespace;
+    /**
+    * The tag filter string.
+    */
+    'tagFilterStr'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "accountId",
-      baseName: "account_id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "namespace",
-      baseName: "namespace",
-      type: "AWSNamespace",
-      format: "",
-    },
-    {
-      name: "tagFilterStr",
-      baseName: "tag_filter_str",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "accountId",
+            "baseName": "account_id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "namespace",
+            "baseName": "namespace",
+            "type": "AWSNamespace",
+            "format": ""
+        },
+        {
+            "name": "tagFilterStr",
+            "baseName": "tag_filter_str",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return AWSTagFilterCreateRequest.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return AWSTagFilterCreateRequest.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

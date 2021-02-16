@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { UsageHostHour } from "./UsageHostHour";
-import { HttpFile } from "../http/http";
+import { UsageHostHour } from './UsageHostHour';
+import { HttpFile } from '../http/http';
 
 /**
- * Host usage response.
- */
+* Host usage response.
+*/
 export class UsageHostsResponse {
-  /**
-   * An array of objects related to host usage.
-   */
-  "usage"?: Array<UsageHostHour>;
+    /**
+    * An array of objects related to host usage.
+    */
+    'usage'?: Array<UsageHostHour>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "usage",
-      baseName: "usage",
-      type: "Array<UsageHostHour>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "usage",
+            "baseName": "usage",
+            "type": "Array<UsageHostHour>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UsageHostsResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UsageHostsResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

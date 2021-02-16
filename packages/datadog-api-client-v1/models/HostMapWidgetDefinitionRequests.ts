@@ -10,41 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { HostMapRequest } from "./HostMapRequest";
-import { HttpFile } from "../http/http";
+import { HostMapRequest } from './HostMapRequest';
+import { HttpFile } from '../http/http';
 
 /**
- * List of definitions.
- */
+* List of definitions.
+*/
 export class HostMapWidgetDefinitionRequests {
-  "fill"?: HostMapRequest;
-  "size"?: HostMapRequest;
+    'fill'?: HostMapRequest;
+    'size'?: HostMapRequest;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "fill",
-      baseName: "fill",
-      type: "HostMapRequest",
-      format: "",
-    },
-    {
-      name: "size",
-      baseName: "size",
-      type: "HostMapRequest",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "fill",
+            "baseName": "fill",
+            "type": "HostMapRequest",
+            "format": ""
+        },
+        {
+            "name": "size",
+            "baseName": "size",
+            "type": "HostMapRequest",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return HostMapWidgetDefinitionRequests.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return HostMapWidgetDefinitionRequests.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

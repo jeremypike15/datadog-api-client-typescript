@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Type of the check status widget.
- */
-export type CheckStatusWidgetDefinitionType = "check_status";
+* Type of the check status widget.
+*/
+export type CheckStatusWidgetDefinitionType = "check_status" ;

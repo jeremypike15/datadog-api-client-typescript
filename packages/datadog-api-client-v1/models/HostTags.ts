@@ -10,46 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Set of tags to associate with your host.
- */
+* Set of tags to associate with your host.
+*/
 export class HostTags {
-  /**
-   * Your host name.
-   */
-  "host"?: string;
-  /**
-   * A list of tags to apply to the host.
-   */
-  "tags"?: Array<string>;
+    /**
+    * Your host name.
+    */
+    'host'?: string;
+    /**
+    * A list of tags to apply to the host.
+    */
+    'tags'?: Array<string>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "host",
-      baseName: "host",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "tags",
-      baseName: "tags",
-      type: "Array<string>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "host",
+            "baseName": "host",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "tags",
+            "baseName": "tags",
+            "type": "Array<string>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return HostTags.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return HostTags.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

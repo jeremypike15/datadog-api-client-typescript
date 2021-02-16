@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Which summary type should be used.
- */
-export type WidgetSummaryType = "monitors" | "groups" | "combined";
+* Which summary type should be used.
+*/
+export type WidgetSummaryType = "monitors" | "groups" | "combined" ;

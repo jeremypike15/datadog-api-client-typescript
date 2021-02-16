@@ -10,46 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Synthetics location.
- */
+* Synthetics location.
+*/
 export class SyntheticsTriggerCITestLocation {
-  /**
-   * Unique identifier of the location.
-   */
-  "id"?: number;
-  /**
-   * Name of the location.
-   */
-  "name"?: string;
+    /**
+    * Unique identifier of the location.
+    */
+    'id'?: number;
+    /**
+    * Name of the location.
+    */
+    'name'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "id",
-      baseName: "id",
-      type: "number",
-      format: "int64",
-    },
-    {
-      name: "name",
-      baseName: "name",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "number",
+            "format": "int64"
+        },
+        {
+            "name": "name",
+            "baseName": "name",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SyntheticsTriggerCITestLocation.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SyntheticsTriggerCITestLocation.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

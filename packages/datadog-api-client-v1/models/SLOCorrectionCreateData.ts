@@ -10,42 +10,38 @@
  * Do not edit the class manually.
  */
 
-import { SLOCorrectionCreateRequestAttributes } from "./SLOCorrectionCreateRequestAttributes";
-import { SLOCorrectionType } from "./SLOCorrectionType";
-import { HttpFile } from "../http/http";
+import { SLOCorrectionCreateRequestAttributes } from './SLOCorrectionCreateRequestAttributes';
+import { SLOCorrectionType } from './SLOCorrectionType';
+import { HttpFile } from '../http/http';
 
 /**
- * The data object associated with the SLO correction to be created
- */
+* The data object associated with the SLO correction to be created
+*/
 export class SLOCorrectionCreateData {
-  "attributes"?: SLOCorrectionCreateRequestAttributes;
-  "type"?: SLOCorrectionType;
+    'attributes'?: SLOCorrectionCreateRequestAttributes;
+    'type'?: SLOCorrectionType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "attributes",
-      baseName: "attributes",
-      type: "SLOCorrectionCreateRequestAttributes",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "SLOCorrectionType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "SLOCorrectionCreateRequestAttributes",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "SLOCorrectionType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SLOCorrectionCreateData.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SLOCorrectionCreateData.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

@@ -10,44 +10,40 @@
  * Do not edit the class manually.
  */
 
-import { IFrameWidgetDefinitionType } from "./IFrameWidgetDefinitionType";
-import { HttpFile } from "../http/http";
+import { IFrameWidgetDefinitionType } from './IFrameWidgetDefinitionType';
+import { HttpFile } from '../http/http';
 
 /**
- * The iframe widget allows you to embed a portion of any other web page on your dashboard. Only available on FREE layout dashboards.
- */
+* The iframe widget allows you to embed a portion of any other web page on your dashboard. Only available on FREE layout dashboards.
+*/
 export class IFrameWidgetDefinition {
-  "type": IFrameWidgetDefinitionType;
-  /**
-   * URL of the iframe.
-   */
-  "url": string;
+    'type': IFrameWidgetDefinitionType;
+    /**
+    * URL of the iframe.
+    */
+    'url': string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "type",
-      baseName: "type",
-      type: "IFrameWidgetDefinitionType",
-      format: "",
-    },
-    {
-      name: "url",
-      baseName: "url",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "IFrameWidgetDefinitionType",
+            "format": ""
+        },
+        {
+            "name": "url",
+            "baseName": "url",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return IFrameWidgetDefinition.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return IFrameWidgetDefinition.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

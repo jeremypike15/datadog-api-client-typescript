@@ -10,46 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Public key for the result encryption.
- */
+* Public key for the result encryption.
+*/
 export class SyntheticsPrivateLocationCreationResponseResultEncryption {
-  /**
-   * Fingerprint for the encryption key.
-   */
-  "id"?: string;
-  /**
-   * Public key for result encryption.
-   */
-  "key"?: string;
+    /**
+    * Fingerprint for the encryption key.
+    */
+    'id'?: string;
+    /**
+    * Public key for result encryption.
+    */
+    'key'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "id",
-      baseName: "id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "key",
-      baseName: "key",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "key",
+            "baseName": "key",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SyntheticsPrivateLocationCreationResponseResultEncryption.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SyntheticsPrivateLocationCreationResponseResultEncryption.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

@@ -10,52 +10,48 @@
  * Do not edit the class manually.
  */
 
-import { OrganizationAttributes } from "./OrganizationAttributes";
-import { OrganizationsType } from "./OrganizationsType";
-import { HttpFile } from "../http/http";
+import { OrganizationAttributes } from './OrganizationAttributes';
+import { OrganizationsType } from './OrganizationsType';
+import { HttpFile } from '../http/http';
 
 /**
- * Organization object.
- */
+* Organization object.
+*/
 export class Organization {
-  "attributes"?: OrganizationAttributes;
-  /**
-   * ID of the organization.
-   */
-  "id"?: string;
-  "type": OrganizationsType;
+    'attributes'?: OrganizationAttributes;
+    /**
+    * ID of the organization.
+    */
+    'id'?: string;
+    'type': OrganizationsType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "attributes",
-      baseName: "attributes",
-      type: "OrganizationAttributes",
-      format: "",
-    },
-    {
-      name: "id",
-      baseName: "id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "OrganizationsType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "OrganizationAttributes",
+            "format": ""
+        },
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "OrganizationsType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return Organization.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return Organization.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

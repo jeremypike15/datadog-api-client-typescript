@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Type of the SLO widget.
- */
-export type SLOWidgetDefinitionType = "slo";
+* Type of the SLO widget.
+*/
+export type SLOWidgetDefinitionType = "slo" ;

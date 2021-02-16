@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * How to size the image on the widget.
- */
-export type WidgetImageSizing = "zoom" | "fit" | "center";
+* How to size the image on the widget.
+*/
+export type WidgetImageSizing = "zoom" | "fit" | "center" ;

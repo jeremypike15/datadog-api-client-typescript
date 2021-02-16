@@ -10,34 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { ApplicationKeyUpdateData } from "./ApplicationKeyUpdateData";
-import { HttpFile } from "../http/http";
+import { ApplicationKeyUpdateData } from './ApplicationKeyUpdateData';
+import { HttpFile } from '../http/http';
 
 /**
- * Request used to update an application key.
- */
+* Request used to update an application key.
+*/
 export class ApplicationKeyUpdateRequest {
-  "data": ApplicationKeyUpdateData;
+    'data': ApplicationKeyUpdateData;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "ApplicationKeyUpdateData",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "ApplicationKeyUpdateData",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return ApplicationKeyUpdateRequest.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return ApplicationKeyUpdateRequest.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Type of the service summary widget.
- */
-export type ServiceSummaryWidgetDefinitionType = "trace_service";
+* Type of the service summary widget.
+*/
+export type ServiceSummaryWidgetDefinitionType = "trace_service" ;

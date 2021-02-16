@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { LogsAggregateBucket } from "./LogsAggregateBucket";
-import { HttpFile } from "../http/http";
+import { LogsAggregateBucket } from './LogsAggregateBucket';
+import { HttpFile } from '../http/http';
 
 /**
- * The query results
- */
+* The query results
+*/
 export class LogsAggregateResponseData {
-  /**
-   * The list of matching buckets, one item per bucket
-   */
-  "buckets"?: Array<LogsAggregateBucket>;
+    /**
+    * The list of matching buckets, one item per bucket
+    */
+    'buckets'?: Array<LogsAggregateBucket>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "buckets",
-      baseName: "buckets",
-      type: "Array<LogsAggregateBucket>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "buckets",
+            "baseName": "buckets",
+            "type": "Array<LogsAggregateBucket>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsAggregateResponseData.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsAggregateResponseData.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

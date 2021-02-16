@@ -10,36 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The object containing page total count.
- */
+* The object containing page total count.
+*/
 export class UsageCustomReportsPage {
-  /**
-   * Total page count.
-   */
-  "totalCount"?: number;
+    /**
+    * Total page count.
+    */
+    'totalCount'?: number;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "totalCount",
-      baseName: "total_count",
-      type: "number",
-      format: "int64",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "totalCount",
+            "baseName": "total_count",
+            "type": "number",
+            "format": "int64"
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UsageCustomReportsPage.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UsageCustomReportsPage.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

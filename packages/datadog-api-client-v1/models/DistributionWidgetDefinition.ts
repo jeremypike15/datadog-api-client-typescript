@@ -10,101 +10,97 @@
  * Do not edit the class manually.
  */
 
-import { DistributionWidgetDefinitionType } from "./DistributionWidgetDefinitionType";
-import { DistributionWidgetRequest } from "./DistributionWidgetRequest";
-import { WidgetTextAlign } from "./WidgetTextAlign";
-import { WidgetTime } from "./WidgetTime";
-import { HttpFile } from "../http/http";
+import { DistributionWidgetDefinitionType } from './DistributionWidgetDefinitionType';
+import { DistributionWidgetRequest } from './DistributionWidgetRequest';
+import { WidgetTextAlign } from './WidgetTextAlign';
+import { WidgetTime } from './WidgetTime';
+import { HttpFile } from '../http/http';
 
 /**
- * The Distribution visualization is another way of showing metrics aggregated across one or several tags, such as hosts. Unlike the heat map, a distribution graph’s x-axis is quantity rather than time.
- */
+* The Distribution visualization is another way of showing metrics aggregated across one or several tags, such as hosts. Unlike the heat map, a distribution graph’s x-axis is quantity rather than time.
+*/
 export class DistributionWidgetDefinition {
-  /**
-   * Available legend sizes for a widget. Should be one of \"0\", \"2\", \"4\", \"8\", \"16\", or \"auto\".
-   */
-  "legendSize"?: string;
-  /**
-   * Array of one request object to display in the widget.  See the dedicated [Request JSON schema documentation](https://docs.datadoghq.com/dashboards/graphing_json/request_json)  to learn how to build the `REQUEST_SCHEMA`.
-   */
-  "requests": Array<DistributionWidgetRequest>;
-  /**
-   * Whether or not to display the legend on this widget.
-   */
-  "showLegend"?: boolean;
-  "time"?: WidgetTime;
-  /**
-   * Title of the widget.
-   */
-  "title"?: string;
-  "titleAlign"?: WidgetTextAlign;
-  /**
-   * Size of the title.
-   */
-  "titleSize"?: string;
-  "type": DistributionWidgetDefinitionType;
+    /**
+    * Available legend sizes for a widget. Should be one of \"0\", \"2\", \"4\", \"8\", \"16\", or \"auto\".
+    */
+    'legendSize'?: string;
+    /**
+    * Array of one request object to display in the widget.  See the dedicated [Request JSON schema documentation](https://docs.datadoghq.com/dashboards/graphing_json/request_json)  to learn how to build the `REQUEST_SCHEMA`.
+    */
+    'requests': Array<DistributionWidgetRequest>;
+    /**
+    * Whether or not to display the legend on this widget.
+    */
+    'showLegend'?: boolean;
+    'time'?: WidgetTime;
+    /**
+    * Title of the widget.
+    */
+    'title'?: string;
+    'titleAlign'?: WidgetTextAlign;
+    /**
+    * Size of the title.
+    */
+    'titleSize'?: string;
+    'type': DistributionWidgetDefinitionType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "legendSize",
-      baseName: "legend_size",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "requests",
-      baseName: "requests",
-      type: "Array<DistributionWidgetRequest>",
-      format: "",
-    },
-    {
-      name: "showLegend",
-      baseName: "show_legend",
-      type: "boolean",
-      format: "",
-    },
-    {
-      name: "time",
-      baseName: "time",
-      type: "WidgetTime",
-      format: "",
-    },
-    {
-      name: "title",
-      baseName: "title",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "titleAlign",
-      baseName: "title_align",
-      type: "WidgetTextAlign",
-      format: "",
-    },
-    {
-      name: "titleSize",
-      baseName: "title_size",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "DistributionWidgetDefinitionType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "legendSize",
+            "baseName": "legend_size",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "requests",
+            "baseName": "requests",
+            "type": "Array<DistributionWidgetRequest>",
+            "format": ""
+        },
+        {
+            "name": "showLegend",
+            "baseName": "show_legend",
+            "type": "boolean",
+            "format": ""
+        },
+        {
+            "name": "time",
+            "baseName": "time",
+            "type": "WidgetTime",
+            "format": ""
+        },
+        {
+            "name": "title",
+            "baseName": "title",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "titleAlign",
+            "baseName": "title_align",
+            "type": "WidgetTextAlign",
+            "format": ""
+        },
+        {
+            "name": "titleSize",
+            "baseName": "title_size",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "DistributionWidgetDefinitionType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return DistributionWidgetDefinition.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return DistributionWidgetDefinition.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

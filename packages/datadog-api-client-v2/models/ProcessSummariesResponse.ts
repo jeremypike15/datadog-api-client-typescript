@@ -10,45 +10,41 @@
  * Do not edit the class manually.
  */
 
-import { ProcessSummariesMeta } from "./ProcessSummariesMeta";
-import { ProcessSummary } from "./ProcessSummary";
-import { HttpFile } from "../http/http";
+import { ProcessSummariesMeta } from './ProcessSummariesMeta';
+import { ProcessSummary } from './ProcessSummary';
+import { HttpFile } from '../http/http';
 
 /**
- * List of process summaries.
- */
+* List of process summaries.
+*/
 export class ProcessSummariesResponse {
-  /**
-   * Array of process summary objects.
-   */
-  "data"?: Array<ProcessSummary>;
-  "meta"?: ProcessSummariesMeta;
+    /**
+    * Array of process summary objects.
+    */
+    'data'?: Array<ProcessSummary>;
+    'meta'?: ProcessSummariesMeta;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "Array<ProcessSummary>",
-      format: "",
-    },
-    {
-      name: "meta",
-      baseName: "meta",
-      type: "ProcessSummariesMeta",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "Array<ProcessSummary>",
+            "format": ""
+        },
+        {
+            "name": "meta",
+            "baseName": "meta",
+            "type": "ProcessSummariesMeta",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return ProcessSummariesResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return ProcessSummariesResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * User invitations type.
- */
-export type UserInvitationsType = "user_invitations";
+* User invitations type.
+*/
+export type UserInvitationsType = "user_invitations" ;

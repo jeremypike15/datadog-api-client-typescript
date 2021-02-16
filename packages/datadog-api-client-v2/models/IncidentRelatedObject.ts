@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Object related to an incident.
- */
-export type IncidentRelatedObject = "users";
+* Object related to an incident.
+*/
+export type IncidentRelatedObject = "users" ;

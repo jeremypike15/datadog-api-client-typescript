@@ -10,54 +10,50 @@
  * Do not edit the class manually.
  */
 
-import { WidgetFormulaLimit } from "./WidgetFormulaLimit";
-import { HttpFile } from "../http/http";
+import { WidgetFormulaLimit } from './WidgetFormulaLimit';
+import { HttpFile } from '../http/http';
 
 /**
- * Formula to be used in a widget query.
- */
+* Formula to be used in a widget query.
+*/
 export class WidgetFormula {
-  /**
-   * Expression alias.
-   */
-  "alias"?: string;
-  /**
-   * String expression built from queries, formulas, and functions.
-   */
-  "formula": string;
-  "limit"?: WidgetFormulaLimit;
+    /**
+    * Expression alias.
+    */
+    'alias'?: string;
+    /**
+    * String expression built from queries, formulas, and functions.
+    */
+    'formula': string;
+    'limit'?: WidgetFormulaLimit;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "alias",
-      baseName: "alias",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "formula",
-      baseName: "formula",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "limit",
-      baseName: "limit",
-      type: "WidgetFormulaLimit",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "alias",
+            "baseName": "alias",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "formula",
+            "baseName": "formula",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "limit",
+            "baseName": "limit",
+            "type": "WidgetFormulaLimit",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return WidgetFormula.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return WidgetFormula.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

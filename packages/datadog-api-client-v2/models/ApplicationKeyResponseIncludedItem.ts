@@ -10,62 +10,58 @@
  * Do not edit the class manually.
  */
 
-import { Role } from "./Role";
-import { RoleAttributes } from "./RoleAttributes";
-import { RoleResponseRelationships } from "./RoleResponseRelationships";
-import { RolesType } from "./RolesType";
-import { User } from "./User";
-import { HttpFile } from "../http/http";
+import { Role } from './Role';
+import { RoleAttributes } from './RoleAttributes';
+import { RoleResponseRelationships } from './RoleResponseRelationships';
+import { RolesType } from './RolesType';
+import { User } from './User';
+import { HttpFile } from '../http/http';
 
 /**
- * An object related to an application key.
- */
+* An object related to an application key.
+*/
 export class ApplicationKeyResponseIncludedItem {
-  "attributes"?: RoleAttributes;
-  /**
-   * ID of the role.
-   */
-  "id"?: string;
-  "relationships"?: RoleResponseRelationships;
-  "type": RolesType;
+    'attributes'?: RoleAttributes;
+    /**
+    * ID of the role.
+    */
+    'id'?: string;
+    'relationships'?: RoleResponseRelationships;
+    'type': RolesType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "attributes",
-      baseName: "attributes",
-      type: "RoleAttributes",
-      format: "",
-    },
-    {
-      name: "id",
-      baseName: "id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "relationships",
-      baseName: "relationships",
-      type: "RoleResponseRelationships",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "RolesType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "RoleAttributes",
+            "format": ""
+        },
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "relationships",
+            "baseName": "relationships",
+            "type": "RoleResponseRelationships",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "RolesType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return ApplicationKeyResponseIncludedItem.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return ApplicationKeyResponseIncludedItem.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

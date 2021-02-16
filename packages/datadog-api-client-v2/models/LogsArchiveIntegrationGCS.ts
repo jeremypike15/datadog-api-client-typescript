@@ -10,46 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The GCS archive's integration destination.
- */
+* The GCS archive's integration destination.
+*/
 export class LogsArchiveIntegrationGCS {
-  /**
-   * A client email.
-   */
-  "clientEmail": string;
-  /**
-   * A project ID.
-   */
-  "projectId": string;
+    /**
+    * A client email.
+    */
+    'clientEmail': string;
+    /**
+    * A project ID.
+    */
+    'projectId': string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "clientEmail",
-      baseName: "client_email",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "projectId",
-      baseName: "project_id",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "clientEmail",
+            "baseName": "client_email",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "projectId",
+            "baseName": "project_id",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsArchiveIntegrationGCS.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsArchiveIntegrationGCS.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

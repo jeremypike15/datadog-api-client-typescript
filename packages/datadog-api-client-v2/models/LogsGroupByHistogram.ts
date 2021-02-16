@@ -10,56 +10,52 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Used to perform a histogram computation (only for measure facets). Note: At most 100 buckets are allowed, the number of buckets is (max - min)/interval.
- */
+* Used to perform a histogram computation (only for measure facets). Note: At most 100 buckets are allowed, the number of buckets is (max - min)/interval.
+*/
 export class LogsGroupByHistogram {
-  /**
-   * The bin size of the histogram buckets
-   */
-  "interval": number;
-  /**
-   * The maximum value for the measure used in the histogram (values greater than this one are filtered out)
-   */
-  "max": number;
-  /**
-   * The minimum value for the measure used in the histogram (values smaller than this one are filtered out)
-   */
-  "min": number;
+    /**
+    * The bin size of the histogram buckets
+    */
+    'interval': number;
+    /**
+    * The maximum value for the measure used in the histogram (values greater than this one are filtered out)
+    */
+    'max': number;
+    /**
+    * The minimum value for the measure used in the histogram (values smaller than this one are filtered out)
+    */
+    'min': number;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "interval",
-      baseName: "interval",
-      type: "number",
-      format: "double",
-    },
-    {
-      name: "max",
-      baseName: "max",
-      type: "number",
-      format: "double",
-    },
-    {
-      name: "min",
-      baseName: "min",
-      type: "number",
-      format: "double",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "interval",
+            "baseName": "interval",
+            "type": "number",
+            "format": "double"
+        },
+        {
+            "name": "max",
+            "baseName": "max",
+            "type": "number",
+            "format": "double"
+        },
+        {
+            "name": "min",
+            "baseName": "min",
+            "type": "number",
+            "format": "double"
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsGroupByHistogram.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsGroupByHistogram.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

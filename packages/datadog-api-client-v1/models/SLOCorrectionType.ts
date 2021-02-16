@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * SLO correction resource type.
- */
-export type SLOCorrectionType = "correction";
+* SLO correction resource type.
+*/
+export type SLOCorrectionType = "correction" ;

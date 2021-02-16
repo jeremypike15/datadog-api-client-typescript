@@ -10,45 +10,41 @@
  * Do not edit the class manually.
  */
 
-import { User } from "./User";
-import { UserResponseIncludedItem } from "./UserResponseIncludedItem";
-import { HttpFile } from "../http/http";
+import { User } from './User';
+import { UserResponseIncludedItem } from './UserResponseIncludedItem';
+import { HttpFile } from '../http/http';
 
 /**
- * Response containing information about a single user.
- */
+* Response containing information about a single user.
+*/
 export class UserResponse {
-  "data"?: User;
-  /**
-   * Array of objects related to the user.
-   */
-  "included"?: Array<UserResponseIncludedItem>;
+    'data'?: User;
+    /**
+    * Array of objects related to the user.
+    */
+    'included'?: Array<UserResponseIncludedItem>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "User",
-      format: "",
-    },
-    {
-      name: "included",
-      baseName: "included",
-      type: "Array<UserResponseIncludedItem>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "User",
+            "format": ""
+        },
+        {
+            "name": "included",
+            "baseName": "included",
+            "type": "Array<UserResponseIncludedItem>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UserResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UserResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

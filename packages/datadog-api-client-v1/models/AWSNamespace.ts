@@ -10,16 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The namespace associated with the tag filter entry.
- */
-export type AWSNamespace =
-  | "elb"
-  | "application_elb"
-  | "sqs"
-  | "rds"
-  | "custom"
-  | "network_elb"
-  | "lambda";
+* The namespace associated with the tag filter entry.
+*/
+export type AWSNamespace = "elb" | "application_elb" | "sqs" | "rds" | "custom" | "network_elb" | "lambda" ;

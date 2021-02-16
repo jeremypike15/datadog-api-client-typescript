@@ -10,52 +10,48 @@
  * Do not edit the class manually.
  */
 
-import { UsageCustomReportsAttributes } from "./UsageCustomReportsAttributes";
-import { UsageReportsType } from "./UsageReportsType";
-import { HttpFile } from "../http/http";
+import { UsageCustomReportsAttributes } from './UsageCustomReportsAttributes';
+import { UsageReportsType } from './UsageReportsType';
+import { HttpFile } from '../http/http';
 
 /**
- * The response containing the date and type for custom reports.
- */
+* The response containing the date and type for custom reports.
+*/
 export class UsageCustomReportsData {
-  "attributes"?: UsageCustomReportsAttributes;
-  /**
-   * The date for specified custom reports.
-   */
-  "id"?: string;
-  "type"?: UsageReportsType;
+    'attributes'?: UsageCustomReportsAttributes;
+    /**
+    * The date for specified custom reports.
+    */
+    'id'?: string;
+    'type'?: UsageReportsType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "attributes",
-      baseName: "attributes",
-      type: "UsageCustomReportsAttributes",
-      format: "",
-    },
-    {
-      name: "id",
-      baseName: "id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "UsageReportsType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "UsageCustomReportsAttributes",
+            "format": ""
+        },
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "UsageReportsType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UsageCustomReportsData.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UsageCustomReportsData.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

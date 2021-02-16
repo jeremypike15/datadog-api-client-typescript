@@ -10,54 +10,50 @@
  * Do not edit the class manually.
  */
 
-import { LogsExclusionFilter } from "./LogsExclusionFilter";
-import { HttpFile } from "../http/http";
+import { LogsExclusionFilter } from './LogsExclusionFilter';
+import { HttpFile } from '../http/http';
 
 /**
- * Represents the index exclusion filter object from configuration API.
- */
+* Represents the index exclusion filter object from configuration API.
+*/
 export class LogsExclusion {
-  "filter"?: LogsExclusionFilter;
-  /**
-   * Whether or not the exclusion filter is active.
-   */
-  "isEnabled"?: boolean;
-  /**
-   * Name of the index exclusion filter.
-   */
-  "name": string;
+    'filter'?: LogsExclusionFilter;
+    /**
+    * Whether or not the exclusion filter is active.
+    */
+    'isEnabled'?: boolean;
+    /**
+    * Name of the index exclusion filter.
+    */
+    'name': string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "filter",
-      baseName: "filter",
-      type: "LogsExclusionFilter",
-      format: "",
-    },
-    {
-      name: "isEnabled",
-      baseName: "is_enabled",
-      type: "boolean",
-      format: "",
-    },
-    {
-      name: "name",
-      baseName: "name",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "filter",
+            "baseName": "filter",
+            "type": "LogsExclusionFilter",
+            "format": ""
+        },
+        {
+            "name": "isEnabled",
+            "baseName": "is_enabled",
+            "type": "boolean",
+            "format": ""
+        },
+        {
+            "name": "name",
+            "baseName": "name",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsExclusion.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsExclusion.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

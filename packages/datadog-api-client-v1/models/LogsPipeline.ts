@@ -10,95 +10,91 @@
  * Do not edit the class manually.
  */
 
-import { LogsFilter } from "./LogsFilter";
-import { LogsProcessor } from "./LogsProcessor";
-import { HttpFile } from "../http/http";
+import { LogsFilter } from './LogsFilter';
+import { LogsProcessor } from './LogsProcessor';
+import { HttpFile } from '../http/http';
 
 /**
- * Pipelines and processors operate on incoming logs, parsing and transforming them into structured attributes for easier querying.  **Note**: These endpoints are only available for admin users. Make sure to use an application key created by an admin.
- */
+* Pipelines and processors operate on incoming logs, parsing and transforming them into structured attributes for easier querying.  **Note**: These endpoints are only available for admin users. Make sure to use an application key created by an admin.
+*/
 export class LogsPipeline {
-  "filter"?: LogsFilter;
-  /**
-   * ID of the pipeline.
-   */
-  "id"?: string;
-  /**
-   * Whether or not the pipeline is enabled.
-   */
-  "isEnabled"?: boolean;
-  /**
-   * Whether or not the pipeline can be edited.
-   */
-  "isReadOnly"?: boolean;
-  /**
-   * Name of the pipeline.
-   */
-  "name": string;
-  /**
-   * Ordered list of processors in this pipeline.
-   */
-  "processors"?: Array<LogsProcessor>;
-  /**
-   * Type of pipeline.
-   */
-  "type"?: string;
+    'filter'?: LogsFilter;
+    /**
+    * ID of the pipeline.
+    */
+    'id'?: string;
+    /**
+    * Whether or not the pipeline is enabled.
+    */
+    'isEnabled'?: boolean;
+    /**
+    * Whether or not the pipeline can be edited.
+    */
+    'isReadOnly'?: boolean;
+    /**
+    * Name of the pipeline.
+    */
+    'name': string;
+    /**
+    * Ordered list of processors in this pipeline.
+    */
+    'processors'?: Array<LogsProcessor>;
+    /**
+    * Type of pipeline.
+    */
+    'type'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "filter",
-      baseName: "filter",
-      type: "LogsFilter",
-      format: "",
-    },
-    {
-      name: "id",
-      baseName: "id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "isEnabled",
-      baseName: "is_enabled",
-      type: "boolean",
-      format: "",
-    },
-    {
-      name: "isReadOnly",
-      baseName: "is_read_only",
-      type: "boolean",
-      format: "",
-    },
-    {
-      name: "name",
-      baseName: "name",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "processors",
-      baseName: "processors",
-      type: "Array<LogsProcessor>",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "filter",
+            "baseName": "filter",
+            "type": "LogsFilter",
+            "format": ""
+        },
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "isEnabled",
+            "baseName": "is_enabled",
+            "type": "boolean",
+            "format": ""
+        },
+        {
+            "name": "isReadOnly",
+            "baseName": "is_read_only",
+            "type": "boolean",
+            "format": ""
+        },
+        {
+            "name": "name",
+            "baseName": "name",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "processors",
+            "baseName": "processors",
+            "type": "Array<LogsProcessor>",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsPipeline.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsPipeline.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

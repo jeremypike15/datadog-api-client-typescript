@@ -10,36 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The Markdown timeline cell contents.
- */
+* The Markdown timeline cell contents.
+*/
 export class IncidentTimelineCellMarkdownCreateAttributesContent {
-  /**
-   * The Markdown content of the cell.
-   */
-  "content"?: string;
+    /**
+    * The Markdown content of the cell.
+    */
+    'content'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "content",
-      baseName: "content",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "content",
+            "baseName": "content",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return IncidentTimelineCellMarkdownCreateAttributesContent.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return IncidentTimelineCellMarkdownCreateAttributesContent.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

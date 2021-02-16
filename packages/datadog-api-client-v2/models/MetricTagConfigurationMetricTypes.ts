@@ -10,12 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The metric's type.
- */
-export type MetricTagConfigurationMetricTypes =
-  | "gauge"
-  | "count"
-  | "distribution";
+* The metric's type.
+*/
+export type MetricTagConfigurationMetricTypes = "gauge" | "count" | "distribution" ;

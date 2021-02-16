@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Type of the free text widget.
- */
-export type FreeTextWidgetDefinitionType = "free_text";
+* Type of the free text widget.
+*/
+export type FreeTextWidgetDefinitionType = "free_text" ;

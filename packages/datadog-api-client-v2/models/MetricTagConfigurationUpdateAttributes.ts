@@ -10,46 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Object containing the definition of a metric tag configuration to be updated.
- */
+* Object containing the definition of a metric tag configuration to be updated.
+*/
 export class MetricTagConfigurationUpdateAttributes {
-  /**
-   * Toggle to include/exclude percentiles for a distribution metric. Defaults to false. Can only be applied to metrics that have a `metric_type` of `distribution`.
-   */
-  "includePercentiles"?: boolean;
-  /**
-   * A list of tag keys that will be queryable for your metric.
-   */
-  "tags"?: Array<string>;
+    /**
+    * Toggle to include/exclude percentiles for a distribution metric. Defaults to false. Can only be applied to metrics that have a `metric_type` of `distribution`.
+    */
+    'includePercentiles'?: boolean;
+    /**
+    * A list of tag keys that will be queryable for your metric.
+    */
+    'tags'?: Array<string>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "includePercentiles",
-      baseName: "include_percentiles",
-      type: "boolean",
-      format: "",
-    },
-    {
-      name: "tags",
-      baseName: "tags",
-      type: "Array<string>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "includePercentiles",
+            "baseName": "include_percentiles",
+            "type": "boolean",
+            "format": ""
+        },
+        {
+            "name": "tags",
+            "baseName": "tags",
+            "type": "Array<string>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return MetricTagConfigurationUpdateAttributes.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return MetricTagConfigurationUpdateAttributes.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

@@ -10,90 +10,86 @@
  * Do not edit the class manually.
  */
 
-import { OrganizationBilling } from "./OrganizationBilling";
-import { OrganizationSettings } from "./OrganizationSettings";
-import { OrganizationSubscription } from "./OrganizationSubscription";
-import { HttpFile } from "../http/http";
+import { OrganizationBilling } from './OrganizationBilling';
+import { OrganizationSettings } from './OrganizationSettings';
+import { OrganizationSubscription } from './OrganizationSubscription';
+import { HttpFile } from '../http/http';
 
 /**
- * Create, edit, and manage organizations.
- */
+* Create, edit, and manage organizations.
+*/
 export class Organization {
-  "billing"?: OrganizationBilling;
-  /**
-   * Date of the organization creation.
-   */
-  "created"?: string;
-  /**
-   * Description of the organization.
-   */
-  "description"?: string;
-  /**
-   * The name of the new child-organization, limited to 32 characters.
-   */
-  "name"?: string;
-  /**
-   * The `public_id` of the organization you are operating within.
-   */
-  "publicId"?: string;
-  "settings"?: OrganizationSettings;
-  "subscription"?: OrganizationSubscription;
+    'billing'?: OrganizationBilling;
+    /**
+    * Date of the organization creation.
+    */
+    'created'?: string;
+    /**
+    * Description of the organization.
+    */
+    'description'?: string;
+    /**
+    * The name of the new child-organization, limited to 32 characters.
+    */
+    'name'?: string;
+    /**
+    * The `public_id` of the organization you are operating within.
+    */
+    'publicId'?: string;
+    'settings'?: OrganizationSettings;
+    'subscription'?: OrganizationSubscription;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "billing",
-      baseName: "billing",
-      type: "OrganizationBilling",
-      format: "",
-    },
-    {
-      name: "created",
-      baseName: "created",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "description",
-      baseName: "description",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "name",
-      baseName: "name",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "publicId",
-      baseName: "public_id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "settings",
-      baseName: "settings",
-      type: "OrganizationSettings",
-      format: "",
-    },
-    {
-      name: "subscription",
-      baseName: "subscription",
-      type: "OrganizationSubscription",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "billing",
+            "baseName": "billing",
+            "type": "OrganizationBilling",
+            "format": ""
+        },
+        {
+            "name": "created",
+            "baseName": "created",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "description",
+            "baseName": "description",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "name",
+            "baseName": "name",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "publicId",
+            "baseName": "public_id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "settings",
+            "baseName": "settings",
+            "type": "OrganizationSettings",
+            "format": ""
+        },
+        {
+            "name": "subscription",
+            "baseName": "subscription",
+            "type": "OrganizationSubscription",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return Organization.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return Organization.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

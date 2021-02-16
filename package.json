@@ -31,7 +31,8 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "prepare": "npm run build",
-    "test": "tsc && cucumber-js features/"
+    "test": "tsc && cucumber-js features/",
+    "test:rerecord": "tsc && RECORD=true cucumber-js @rerun.txt"
   },
   "dependencies": {
     "@types/node": "*",

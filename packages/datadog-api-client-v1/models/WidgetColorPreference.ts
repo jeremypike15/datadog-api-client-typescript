@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Which color to use on the widget.
- */
-export type WidgetColorPreference = "background" | "text";
+* Which color to use on the widget.
+*/
+export type WidgetColorPreference = "background" | "text" ;

@@ -10,46 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * IoT usage for a given organization for a given hour.
- */
+* IoT usage for a given organization for a given hour.
+*/
 export class UsageIoTHour {
-  /**
-   * The hour for the usage.
-   */
-  "hour"?: Date;
-  /**
-   * The total number of IoT device hours from the start of the given hour's month until the given hour.
-   */
-  "iotDeviceCount"?: number;
+    /**
+    * The hour for the usage.
+    */
+    'hour'?: Date;
+    /**
+    * The total number of IoT device hours from the start of the given hour's month until the given hour.
+    */
+    'iotDeviceCount'?: number;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "hour",
-      baseName: "hour",
-      type: "Date",
-      format: "date-time",
-    },
-    {
-      name: "iotDeviceCount",
-      baseName: "iot_device_count",
-      type: "number",
-      format: "int64",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "hour",
+            "baseName": "hour",
+            "type": "Date",
+            "format": "date-time"
+        },
+        {
+            "name": "iotDeviceCount",
+            "baseName": "iot_device_count",
+            "type": "number",
+            "format": "int64"
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UsageIoTHour.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UsageIoTHour.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

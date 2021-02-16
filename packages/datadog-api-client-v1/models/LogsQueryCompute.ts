@@ -10,56 +10,52 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Define computation for a log query.
- */
+* Define computation for a log query.
+*/
 export class LogsQueryCompute {
-  /**
-   * The aggregation method.
-   */
-  "aggregation": string;
-  /**
-   * Facet name.
-   */
-  "facet"?: string;
-  /**
-   * Define a time interval in seconds.
-   */
-  "interval"?: number;
+    /**
+    * The aggregation method.
+    */
+    'aggregation': string;
+    /**
+    * Facet name.
+    */
+    'facet'?: string;
+    /**
+    * Define a time interval in seconds.
+    */
+    'interval'?: number;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "aggregation",
-      baseName: "aggregation",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "facet",
-      baseName: "facet",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "interval",
-      baseName: "interval",
-      type: "number",
-      format: "int64",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "aggregation",
+            "baseName": "aggregation",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "facet",
+            "baseName": "facet",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "interval",
+            "baseName": "interval",
+            "type": "number",
+            "format": "int64"
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsQueryCompute.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsQueryCompute.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

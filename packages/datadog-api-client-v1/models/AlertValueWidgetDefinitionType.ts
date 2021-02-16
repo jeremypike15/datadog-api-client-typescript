@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Type of the alert value widget.
- */
-export type AlertValueWidgetDefinitionType = "alert_value";
+* Type of the alert value widget.
+*/
+export type AlertValueWidgetDefinitionType = "alert_value" ;

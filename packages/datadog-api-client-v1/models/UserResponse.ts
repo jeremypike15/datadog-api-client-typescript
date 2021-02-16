@@ -10,34 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { User } from "./User";
-import { HttpFile } from "../http/http";
+import { User } from './User';
+import { HttpFile } from '../http/http';
 
 /**
- * A Datadog User.
- */
+* A Datadog User.
+*/
 export class UserResponse {
-  "user"?: User;
+    'user'?: User;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "user",
-      baseName: "user",
-      type: "User",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "user",
+            "baseName": "user",
+            "type": "User",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UserResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UserResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

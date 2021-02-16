@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { User } from "./User";
-import { HttpFile } from "../http/http";
+import { User } from './User';
+import { HttpFile } from '../http/http';
 
 /**
- * Array of Datadog users for a given organization.
- */
+* Array of Datadog users for a given organization.
+*/
 export class UserListResponse {
-  /**
-   * Array of users.
-   */
-  "users"?: Array<User>;
+    /**
+    * Array of users.
+    */
+    'users'?: Array<User>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "users",
-      baseName: "users",
-      type: "Array<User>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "users",
+            "baseName": "users",
+            "type": "Array<User>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UserListResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UserListResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

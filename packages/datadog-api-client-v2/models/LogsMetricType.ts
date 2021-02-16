@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The type of the resource. The value should always be logs_metrics.
- */
-export type LogsMetricType = "logs_metrics";
+* The type of the resource. The value should always be logs_metrics.
+*/
+export type LogsMetricType = "logs_metrics" ;

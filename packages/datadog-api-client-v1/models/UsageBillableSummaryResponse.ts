@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { UsageBillableSummaryHour } from "./UsageBillableSummaryHour";
-import { HttpFile } from "../http/http";
+import { UsageBillableSummaryHour } from './UsageBillableSummaryHour';
+import { HttpFile } from '../http/http';
 
 /**
- * Response with monthly summary of data billed by Datadog.
- */
+* Response with monthly summary of data billed by Datadog.
+*/
 export class UsageBillableSummaryResponse {
-  /**
-   * An array of objects regarding usage of billable summary.
-   */
-  "usage"?: Array<UsageBillableSummaryHour>;
+    /**
+    * An array of objects regarding usage of billable summary.
+    */
+    'usage'?: Array<UsageBillableSummaryHour>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "usage",
-      baseName: "usage",
-      type: "Array<UsageBillableSummaryHour>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "usage",
+            "baseName": "usage",
+            "type": "Array<UsageBillableSummaryHour>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UsageBillableSummaryResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UsageBillableSummaryResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

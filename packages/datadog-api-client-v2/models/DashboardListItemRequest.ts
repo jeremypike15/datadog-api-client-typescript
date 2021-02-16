@@ -10,44 +10,40 @@
  * Do not edit the class manually.
  */
 
-import { DashboardType } from "./DashboardType";
-import { HttpFile } from "../http/http";
+import { DashboardType } from './DashboardType';
+import { HttpFile } from '../http/http';
 
 /**
- * A dashboard within a list.
- */
+* A dashboard within a list.
+*/
 export class DashboardListItemRequest {
-  /**
-   * ID of the dashboard.
-   */
-  "id": string;
-  "type": DashboardType;
+    /**
+    * ID of the dashboard.
+    */
+    'id': string;
+    'type': DashboardType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "id",
-      baseName: "id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "DashboardType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "DashboardType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return DashboardListItemRequest.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return DashboardListItemRequest.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

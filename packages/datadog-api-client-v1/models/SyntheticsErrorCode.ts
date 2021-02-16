@@ -10,16 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Error code that can be returned by a Synthetic test.
- */
-export type SyntheticsErrorCode =
-  | "NO_ERROR"
-  | "UNKNOWN"
-  | "DNS"
-  | "SSL"
-  | "TIMEOUT"
-  | "DENIED"
-  | "INCORRECT_ASSERTION";
+* Error code that can be returned by a Synthetic test.
+*/
+export type SyntheticsErrorCode = "NO_ERROR" | "UNKNOWN" | "DNS" | "SSL" | "TIMEOUT" | "DENIED" | "INCORRECT_ASSERTION" ;

@@ -10,56 +10,52 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * A warning message indicating something that went wrong with the query
- */
+* A warning message indicating something that went wrong with the query
+*/
 export class LogsWarning {
-  /**
-   * A unique code for this type of warning
-   */
-  "code"?: string;
-  /**
-   * A detailed explanation of this specific warning
-   */
-  "detail"?: string;
-  /**
-   * A short human-readable summary of the warning
-   */
-  "title"?: string;
+    /**
+    * A unique code for this type of warning
+    */
+    'code'?: string;
+    /**
+    * A detailed explanation of this specific warning
+    */
+    'detail'?: string;
+    /**
+    * A short human-readable summary of the warning
+    */
+    'title'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "code",
-      baseName: "code",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "detail",
-      baseName: "detail",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "title",
-      baseName: "title",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "code",
+            "baseName": "code",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "detail",
+            "baseName": "detail",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "title",
+            "baseName": "title",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsWarning.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsWarning.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

@@ -10,42 +10,38 @@
  * Do not edit the class manually.
  */
 
-import { LogsAggregateResponseData } from "./LogsAggregateResponseData";
-import { LogsResponseMetadata } from "./LogsResponseMetadata";
-import { HttpFile } from "../http/http";
+import { LogsAggregateResponseData } from './LogsAggregateResponseData';
+import { LogsResponseMetadata } from './LogsResponseMetadata';
+import { HttpFile } from '../http/http';
 
 /**
- * The response object for the logs aggregate API endpoint
- */
+* The response object for the logs aggregate API endpoint
+*/
 export class LogsAggregateResponse {
-  "data"?: LogsAggregateResponseData;
-  "meta"?: LogsResponseMetadata;
+    'data'?: LogsAggregateResponseData;
+    'meta'?: LogsResponseMetadata;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "LogsAggregateResponseData",
-      format: "",
-    },
-    {
-      name: "meta",
-      baseName: "meta",
-      type: "LogsResponseMetadata",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "LogsAggregateResponseData",
+            "format": ""
+        },
+        {
+            "name": "meta",
+            "baseName": "meta",
+            "type": "LogsResponseMetadata",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsAggregateResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsAggregateResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

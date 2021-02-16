@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { MetricsAndMetricTagConfigurations } from "./MetricsAndMetricTagConfigurations";
-import { HttpFile } from "../http/http";
+import { MetricsAndMetricTagConfigurations } from './MetricsAndMetricTagConfigurations';
+import { HttpFile } from '../http/http';
 
 /**
- * Response object that includes metrics and metric tag configurations.
- */
+* Response object that includes metrics and metric tag configurations.
+*/
 export class MetricsAndMetricTagConfigurationsResponse {
-  /**
-   * Array of metrics and metric tag configurations.
-   */
-  "data"?: Array<MetricsAndMetricTagConfigurations>;
+    /**
+    * Array of metrics and metric tag configurations.
+    */
+    'data'?: Array<MetricsAndMetricTagConfigurations>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "Array<MetricsAndMetricTagConfigurations>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "Array<MetricsAndMetricTagConfigurations>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return MetricsAndMetricTagConfigurationsResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return MetricsAndMetricTagConfigurationsResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

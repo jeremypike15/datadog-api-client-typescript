@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Type of process summary.
- */
-export type ProcessSummaryType = "process";
+* Type of process summary.
+*/
+export type ProcessSummaryType = "process" ;

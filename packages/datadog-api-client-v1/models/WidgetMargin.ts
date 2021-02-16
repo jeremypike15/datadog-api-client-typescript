@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Size of the margins around the image.
- */
-export type WidgetMargin = "small" | "large";
+* Size of the margins around the image.
+*/
+export type WidgetMargin = "small" | "large" ;

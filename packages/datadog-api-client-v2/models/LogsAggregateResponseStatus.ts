@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The status of the response
- */
-export type LogsAggregateResponseStatus = "done" | "timeout";
+* The status of the response
+*/
+export type LogsAggregateResponseStatus = "done" | "timeout" ;

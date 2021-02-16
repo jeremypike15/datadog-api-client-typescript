@@ -10,36 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Object containing the options for a Synthetic test as a monitor (for example, renotification).
- */
+* Object containing the options for a Synthetic test as a monitor (for example, renotification).
+*/
 export class SyntheticsTestOptionsMonitorOptions {
-  /**
-   * Time interval before renotifying if the test is still failing (in minutes).
-   */
-  "renotifyInterval"?: number;
+    /**
+    * Time interval before renotifying if the test is still failing (in minutes).
+    */
+    'renotifyInterval'?: number;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "renotifyInterval",
-      baseName: "renotify_interval",
-      type: "number",
-      format: "int64",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "renotifyInterval",
+            "baseName": "renotify_interval",
+            "type": "number",
+            "format": "int64"
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SyntheticsTestOptionsMonitorOptions.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SyntheticsTestOptionsMonitorOptions.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

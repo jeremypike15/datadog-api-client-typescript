@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Type of the event stream widget.
- */
-export type EventStreamWidgetDefinitionType = "event_stream";
+* Type of the event stream widget.
+*/
+export type EventStreamWidgetDefinitionType = "event_stream" ;

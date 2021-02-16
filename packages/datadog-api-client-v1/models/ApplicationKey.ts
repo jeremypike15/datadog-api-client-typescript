@@ -10,56 +10,52 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * An application key with its associated metadata.
- */
+* An application key with its associated metadata.
+*/
 export class ApplicationKey {
-  /**
-   * Hash of an application key.
-   */
-  "hash"?: string;
-  /**
-   * Name of an application key.
-   */
-  "name"?: string;
-  /**
-   * Owner of an application key.
-   */
-  "owner"?: string;
+    /**
+    * Hash of an application key.
+    */
+    'hash'?: string;
+    /**
+    * Name of an application key.
+    */
+    'name'?: string;
+    /**
+    * Owner of an application key.
+    */
+    'owner'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "hash",
-      baseName: "hash",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "name",
-      baseName: "name",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "owner",
-      baseName: "owner",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "hash",
+            "baseName": "hash",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "name",
+            "baseName": "name",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "owner",
+            "baseName": "owner",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return ApplicationKey.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return ApplicationKey.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

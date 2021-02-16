@@ -10,64 +10,60 @@
  * Do not edit the class manually.
  */
 
-import { SLOHistoryMetricsSeriesMetadata } from "./SLOHistoryMetricsSeriesMetadata";
-import { HttpFile } from "../http/http";
+import { SLOHistoryMetricsSeriesMetadata } from './SLOHistoryMetricsSeriesMetadata';
+import { HttpFile } from '../http/http';
 
 /**
- * A representation of `metric` based SLO time series for the provided queries. This is the same response type from `batch_query` endpoint.
- */
+* A representation of `metric` based SLO time series for the provided queries. This is the same response type from `batch_query` endpoint.
+*/
 export class SLOHistoryMetricsSeries {
-  /**
-   * Count of submitted metrics.
-   */
-  "count": number;
-  "metadata": SLOHistoryMetricsSeriesMetadata;
-  /**
-   * Total sum of the query.
-   */
-  "sum": number;
-  /**
-   * The query values for each metric.
-   */
-  "values": Array<number>;
+    /**
+    * Count of submitted metrics.
+    */
+    'count': number;
+    'metadata': SLOHistoryMetricsSeriesMetadata;
+    /**
+    * Total sum of the query.
+    */
+    'sum': number;
+    /**
+    * The query values for each metric.
+    */
+    'values': Array<number>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "count",
-      baseName: "count",
-      type: "number",
-      format: "int64",
-    },
-    {
-      name: "metadata",
-      baseName: "metadata",
-      type: "SLOHistoryMetricsSeriesMetadata",
-      format: "",
-    },
-    {
-      name: "sum",
-      baseName: "sum",
-      type: "number",
-      format: "double",
-    },
-    {
-      name: "values",
-      baseName: "values",
-      type: "Array<number>",
-      format: "double",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "count",
+            "baseName": "count",
+            "type": "number",
+            "format": "int64"
+        },
+        {
+            "name": "metadata",
+            "baseName": "metadata",
+            "type": "SLOHistoryMetricsSeriesMetadata",
+            "format": ""
+        },
+        {
+            "name": "sum",
+            "baseName": "sum",
+            "type": "number",
+            "format": "double"
+        },
+        {
+            "name": "values",
+            "baseName": "values",
+            "type": "Array<number>",
+            "format": "double"
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SLOHistoryMetricsSeries.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SLOHistoryMetricsSeries.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

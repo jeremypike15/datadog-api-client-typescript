@@ -10,36 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Links attributes.
- */
+* Links attributes.
+*/
 export class SecurityMonitoringSignalsListResponseLinks {
-  /**
-   * The link for the next set of results. **Note**: The request can also be made using the POST endpoint.
-   */
-  "next"?: string;
+    /**
+    * The link for the next set of results. **Note**: The request can also be made using the POST endpoint.
+    */
+    'next'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "next",
-      baseName: "next",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "next",
+            "baseName": "next",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SecurityMonitoringSignalsListResponseLinks.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SecurityMonitoringSignalsListResponseLinks.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

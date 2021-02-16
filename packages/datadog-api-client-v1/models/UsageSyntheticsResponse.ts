@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { UsageSyntheticsHour } from "./UsageSyntheticsHour";
-import { HttpFile } from "../http/http";
+import { UsageSyntheticsHour } from './UsageSyntheticsHour';
+import { HttpFile } from '../http/http';
 
 /**
- * Response containing the number of Synthetics API tests run for each hour for a given organization.
- */
+* Response containing the number of Synthetics API tests run for each hour for a given organization.
+*/
 export class UsageSyntheticsResponse {
-  /**
-   * Array with the number of hourly Synthetics test run for a given organization.
-   */
-  "usage"?: Array<UsageSyntheticsHour>;
+    /**
+    * Array with the number of hourly Synthetics test run for a given organization.
+    */
+    'usage'?: Array<UsageSyntheticsHour>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "usage",
-      baseName: "usage",
-      type: "Array<UsageSyntheticsHour>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "usage",
+            "baseName": "usage",
+            "type": "Array<UsageSyntheticsHour>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UsageSyntheticsResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UsageSyntheticsResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

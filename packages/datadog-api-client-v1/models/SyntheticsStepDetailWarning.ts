@@ -10,44 +10,40 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsWarningType } from "./SyntheticsWarningType";
-import { HttpFile } from "../http/http";
+import { SyntheticsWarningType } from './SyntheticsWarningType';
+import { HttpFile } from '../http/http';
 
 /**
- * Object collecting warnings for a given step.
- */
+* Object collecting warnings for a given step.
+*/
 export class SyntheticsStepDetailWarning {
-  /**
-   * Message for the warning.
-   */
-  "message": string;
-  "type": SyntheticsWarningType;
+    /**
+    * Message for the warning.
+    */
+    'message': string;
+    'type': SyntheticsWarningType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "message",
-      baseName: "message",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "SyntheticsWarningType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "message",
+            "baseName": "message",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "SyntheticsWarningType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SyntheticsStepDetailWarning.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SyntheticsStepDetailWarning.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

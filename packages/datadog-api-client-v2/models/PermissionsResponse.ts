@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { Permission } from "./Permission";
-import { HttpFile } from "../http/http";
+import { Permission } from './Permission';
+import { HttpFile } from '../http/http';
 
 /**
- * Payload with API-returned permissions.
- */
+* Payload with API-returned permissions.
+*/
 export class PermissionsResponse {
-  /**
-   * Array of permissions.
-   */
-  "data"?: Array<Permission>;
+    /**
+    * Array of permissions.
+    */
+    'data'?: Array<Permission>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "Array<Permission>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "Array<Permission>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return PermissionsResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return PermissionsResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

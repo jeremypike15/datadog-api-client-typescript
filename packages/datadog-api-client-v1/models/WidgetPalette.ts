@@ -10,28 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Color palette to apply.
- */
-export type WidgetPalette =
-  | "blue"
-  | "custom_bg"
-  | "custom_image"
-  | "custom_text"
-  | "gray_on_white"
-  | "grey"
-  | "green"
-  | "orange"
-  | "red"
-  | "red_on_white"
-  | "white_on_gray"
-  | "white_on_green"
-  | "green_on_white"
-  | "white_on_red"
-  | "white_on_yellow"
-  | "yellow_on_white"
-  | "black_on_light_yellow"
-  | "black_on_light_green"
-  | "black_on_light_red";
+* Color palette to apply.
+*/
+export type WidgetPalette = "blue" | "custom_bg" | "custom_image" | "custom_text" | "gray_on_white" | "grey" | "green" | "orange" | "red" | "red_on_white" | "white_on_gray" | "white_on_green" | "green_on_white" | "white_on_red" | "white_on_yellow" | "yellow_on_white" | "black_on_light_yellow" | "black_on_light_green" | "black_on_light_red" ;

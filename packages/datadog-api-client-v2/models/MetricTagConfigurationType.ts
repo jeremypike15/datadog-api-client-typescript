@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The metric tag configuration resource type.
- */
-export type MetricTagConfigurationType = "manage_tags";
+* The metric tag configuration resource type.
+*/
+export type MetricTagConfigurationType = "manage_tags" ;

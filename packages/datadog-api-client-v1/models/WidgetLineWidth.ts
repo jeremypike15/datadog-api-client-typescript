@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Width of line displayed.
- */
-export type WidgetLineWidth = "normal" | "thick" | "thin";
+* Width of line displayed.
+*/
+export type WidgetLineWidth = "normal" | "thick" | "thin" ;

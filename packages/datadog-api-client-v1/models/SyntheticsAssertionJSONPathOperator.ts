@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Assertion operator to apply.
- */
-export type SyntheticsAssertionJSONPathOperator = "validatesJSONPath";
+* Assertion operator to apply.
+*/
+export type SyntheticsAssertionJSONPathOperator = "validatesJSONPath" ;

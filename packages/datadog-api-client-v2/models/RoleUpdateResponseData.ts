@@ -10,60 +10,56 @@
  * Do not edit the class manually.
  */
 
-import { RoleResponseRelationships } from "./RoleResponseRelationships";
-import { RoleUpdateAttributes } from "./RoleUpdateAttributes";
-import { RolesType } from "./RolesType";
-import { HttpFile } from "../http/http";
+import { RoleResponseRelationships } from './RoleResponseRelationships';
+import { RoleUpdateAttributes } from './RoleUpdateAttributes';
+import { RolesType } from './RolesType';
+import { HttpFile } from '../http/http';
 
 /**
- * Role object returned by the API.
- */
+* Role object returned by the API.
+*/
 export class RoleUpdateResponseData {
-  "attributes"?: RoleUpdateAttributes;
-  /**
-   * ID of the role.
-   */
-  "id"?: string;
-  "relationships"?: RoleResponseRelationships;
-  "type": RolesType;
+    'attributes'?: RoleUpdateAttributes;
+    /**
+    * ID of the role.
+    */
+    'id'?: string;
+    'relationships'?: RoleResponseRelationships;
+    'type': RolesType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "attributes",
-      baseName: "attributes",
-      type: "RoleUpdateAttributes",
-      format: "",
-    },
-    {
-      name: "id",
-      baseName: "id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "relationships",
-      baseName: "relationships",
-      type: "RoleResponseRelationships",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "RolesType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "RoleUpdateAttributes",
+            "format": ""
+        },
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "relationships",
+            "baseName": "relationships",
+            "type": "RoleResponseRelationships",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "RolesType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return RoleUpdateResponseData.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return RoleUpdateResponseData.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

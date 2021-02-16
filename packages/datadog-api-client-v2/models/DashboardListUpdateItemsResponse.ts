@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { DashboardListItemResponse } from "./DashboardListItemResponse";
-import { HttpFile } from "../http/http";
+import { DashboardListItemResponse } from './DashboardListItemResponse';
+import { HttpFile } from '../http/http';
 
 /**
- * Response containing a list of updated dashboards.
- */
+* Response containing a list of updated dashboards.
+*/
 export class DashboardListUpdateItemsResponse {
-  /**
-   * List of dashboards in the dashboard list.
-   */
-  "dashboards"?: Array<DashboardListItemResponse>;
+    /**
+    * List of dashboards in the dashboard list.
+    */
+    'dashboards'?: Array<DashboardListItemResponse>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "dashboards",
-      baseName: "dashboards",
-      type: "Array<DashboardListItemResponse>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "dashboards",
+            "baseName": "dashboards",
+            "type": "Array<DashboardListItemResponse>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return DashboardListUpdateItemsResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return DashboardListUpdateItemsResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

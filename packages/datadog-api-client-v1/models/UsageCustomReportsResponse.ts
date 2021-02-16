@@ -10,45 +10,41 @@
  * Do not edit the class manually.
  */
 
-import { UsageCustomReportsData } from "./UsageCustomReportsData";
-import { UsageCustomReportsMeta } from "./UsageCustomReportsMeta";
-import { HttpFile } from "../http/http";
+import { UsageCustomReportsData } from './UsageCustomReportsData';
+import { UsageCustomReportsMeta } from './UsageCustomReportsMeta';
+import { HttpFile } from '../http/http';
 
 /**
- * Response containing available custom reports.
- */
+* Response containing available custom reports.
+*/
 export class UsageCustomReportsResponse {
-  /**
-   * An array of available custom reports.
-   */
-  "data"?: Array<UsageCustomReportsData>;
-  "meta"?: UsageCustomReportsMeta;
+    /**
+    * An array of available custom reports.
+    */
+    'data'?: Array<UsageCustomReportsData>;
+    'meta'?: UsageCustomReportsMeta;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "Array<UsageCustomReportsData>",
-      format: "",
-    },
-    {
-      name: "meta",
-      baseName: "meta",
-      type: "UsageCustomReportsMeta",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "Array<UsageCustomReportsData>",
+            "format": ""
+        },
+        {
+            "name": "meta",
+            "baseName": "meta",
+            "type": "UsageCustomReportsMeta",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UsageCustomReportsResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UsageCustomReportsResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

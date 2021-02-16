@@ -10,52 +10,48 @@
  * Do not edit the class manually.
  */
 
-import { PermissionAttributes } from "./PermissionAttributes";
-import { PermissionsType } from "./PermissionsType";
-import { HttpFile } from "../http/http";
+import { PermissionAttributes } from './PermissionAttributes';
+import { PermissionsType } from './PermissionsType';
+import { HttpFile } from '../http/http';
 
 /**
- * Permission object.
- */
+* Permission object.
+*/
 export class Permission {
-  "attributes"?: PermissionAttributes;
-  /**
-   * ID of the permission.
-   */
-  "id"?: string;
-  "type": PermissionsType;
+    'attributes'?: PermissionAttributes;
+    /**
+    * ID of the permission.
+    */
+    'id'?: string;
+    'type': PermissionsType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "attributes",
-      baseName: "attributes",
-      type: "PermissionAttributes",
-      format: "",
-    },
-    {
-      name: "id",
-      baseName: "id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "PermissionsType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "PermissionAttributes",
+            "format": ""
+        },
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "PermissionsType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return Permission.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return Permission.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

@@ -10,57 +10,53 @@
  * Do not edit the class manually.
  */
 
-import { AWSLogsLambda } from "./AWSLogsLambda";
-import { HttpFile } from "../http/http";
+import { AWSLogsLambda } from './AWSLogsLambda';
+import { HttpFile } from '../http/http';
 
 /**
- * A list of all Datadog-AWS logs integrations available in your Datadog organization.
- */
+* A list of all Datadog-AWS logs integrations available in your Datadog organization.
+*/
 export class AWSLogsListResponse {
-  /**
-   * Your AWS Account ID without dashes.
-   */
-  "accountId"?: string;
-  /**
-   * List of ARNs configured in your Datadog account.
-   */
-  "lambdas"?: Array<AWSLogsLambda>;
-  /**
-   * Array of services IDs.
-   */
-  "services"?: Array<string>;
+    /**
+    * Your AWS Account ID without dashes.
+    */
+    'accountId'?: string;
+    /**
+    * List of ARNs configured in your Datadog account.
+    */
+    'lambdas'?: Array<AWSLogsLambda>;
+    /**
+    * Array of services IDs.
+    */
+    'services'?: Array<string>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "accountId",
-      baseName: "account_id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "lambdas",
-      baseName: "lambdas",
-      type: "Array<AWSLogsLambda>",
-      format: "",
-    },
-    {
-      name: "services",
-      baseName: "services",
-      type: "Array<string>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "accountId",
+            "baseName": "account_id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "lambdas",
+            "baseName": "lambdas",
+            "type": "Array<AWSLogsLambda>",
+            "format": ""
+        },
+        {
+            "name": "services",
+            "baseName": "services",
+            "type": "Array<string>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return AWSLogsListResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return AWSLogsListResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

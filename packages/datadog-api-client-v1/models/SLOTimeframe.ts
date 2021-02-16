@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The SLO time window options.
- */
-export type SLOTimeframe = "7d" | "30d" | "90d";
+* The SLO time window options.
+*/
+export type SLOTimeframe = "7d" | "30d" | "90d" ;

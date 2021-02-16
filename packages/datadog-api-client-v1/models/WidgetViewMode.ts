@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Define how you want the SLO to be displayed.
- */
-export type WidgetViewMode = "overall" | "component" | "both";
+* Define how you want the SLO to be displayed.
+*/
+export type WidgetViewMode = "overall" | "component" | "both" ;

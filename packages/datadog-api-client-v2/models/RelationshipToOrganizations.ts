@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { RelationshipToOrganizationData } from "./RelationshipToOrganizationData";
-import { HttpFile } from "../http/http";
+import { RelationshipToOrganizationData } from './RelationshipToOrganizationData';
+import { HttpFile } from '../http/http';
 
 /**
- * Relationship to organizations.
- */
+* Relationship to organizations.
+*/
 export class RelationshipToOrganizations {
-  /**
-   * Relationships to organization objects.
-   */
-  "data": Array<RelationshipToOrganizationData>;
+    /**
+    * Relationships to organization objects.
+    */
+    'data': Array<RelationshipToOrganizationData>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "Array<RelationshipToOrganizationData>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "Array<RelationshipToOrganizationData>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return RelationshipToOrganizations.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return RelationshipToOrganizations.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

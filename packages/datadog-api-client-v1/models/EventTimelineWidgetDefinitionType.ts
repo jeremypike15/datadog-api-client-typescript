@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Type of the event timeline widget.
- */
-export type EventTimelineWidgetDefinitionType = "event_timeline";
+* Type of the event timeline widget.
+*/
+export type EventTimelineWidgetDefinitionType = "event_timeline" ;

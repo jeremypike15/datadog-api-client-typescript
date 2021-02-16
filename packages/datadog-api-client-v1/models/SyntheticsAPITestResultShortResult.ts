@@ -10,34 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsTiming } from "./SyntheticsTiming";
-import { HttpFile } from "../http/http";
+import { SyntheticsTiming } from './SyntheticsTiming';
+import { HttpFile } from '../http/http';
 
 /**
- * Result of the last API test run.
- */
+* Result of the last API test run.
+*/
 export class SyntheticsAPITestResultShortResult {
-  "timings"?: SyntheticsTiming;
+    'timings'?: SyntheticsTiming;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "timings",
-      baseName: "timings",
-      type: "SyntheticsTiming",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "timings",
+            "baseName": "timings",
+            "type": "SyntheticsTiming",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SyntheticsAPITestResultShortResult.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SyntheticsAPITestResultShortResult.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

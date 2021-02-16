@@ -10,45 +10,41 @@
  * Do not edit the class manually.
  */
 
-import { IncidentResponseData } from "./IncidentResponseData";
-import { IncidentResponseIncludedItem } from "./IncidentResponseIncludedItem";
-import { HttpFile } from "../http/http";
+import { IncidentResponseData } from './IncidentResponseData';
+import { IncidentResponseIncludedItem } from './IncidentResponseIncludedItem';
+import { HttpFile } from '../http/http';
 
 /**
- * Response with an incident.
- */
+* Response with an incident.
+*/
 export class IncidentResponse {
-  "data": IncidentResponseData;
-  /**
-   * Included related resources that the user requested.
-   */
-  "included"?: Array<IncidentResponseIncludedItem>;
+    'data': IncidentResponseData;
+    /**
+    * Included related resources that the user requested.
+    */
+    'included'?: Array<IncidentResponseIncludedItem>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "IncidentResponseData",
-      format: "",
-    },
-    {
-      name: "included",
-      baseName: "included",
-      type: "Array<IncidentResponseIncludedItem>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "IncidentResponseData",
+            "format": ""
+        },
+        {
+            "name": "included",
+            "baseName": "included",
+            "type": "Array<IncidentResponseIncludedItem>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return IncidentResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return IncidentResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

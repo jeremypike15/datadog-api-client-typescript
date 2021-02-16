@@ -10,46 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Incident management usage for a given organization for a given hour.
- */
+* Incident management usage for a given organization for a given hour.
+*/
 export class UsageIncidentManagementHour {
-  /**
-   * The hour for the usage.
-   */
-  "hour"?: Date;
-  /**
-   * Contains the total number monthly active users from the start of the given hour's month until the given hour.
-   */
-  "monthlyActiveUsers"?: number;
+    /**
+    * The hour for the usage.
+    */
+    'hour'?: Date;
+    /**
+    * Contains the total number monthly active users from the start of the given hour's month until the given hour.
+    */
+    'monthlyActiveUsers'?: number;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "hour",
-      baseName: "hour",
-      type: "Date",
-      format: "date-time",
-    },
-    {
-      name: "monthlyActiveUsers",
-      baseName: "monthly_active_users",
-      type: "number",
-      format: "int64",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "hour",
+            "baseName": "hour",
+            "type": "Date",
+            "format": "date-time"
+        },
+        {
+            "name": "monthlyActiveUsers",
+            "baseName": "monthly_active_users",
+            "type": "number",
+            "format": "int64"
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UsageIncidentManagementHour.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UsageIncidentManagementHour.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

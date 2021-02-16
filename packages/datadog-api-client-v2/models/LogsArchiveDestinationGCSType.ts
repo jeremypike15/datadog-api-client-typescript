@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Type of the GCS archive destination.
- */
-export type LogsArchiveDestinationGCSType = "gcs";
+* Type of the GCS archive destination.
+*/
+export type LogsArchiveDestinationGCSType = "gcs" ;

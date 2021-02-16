@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { DashboardSummaryDefinition } from "./DashboardSummaryDefinition";
-import { HttpFile } from "../http/http";
+import { DashboardSummaryDefinition } from './DashboardSummaryDefinition';
+import { HttpFile } from '../http/http';
 
 /**
- * Dashboard summary response.
- */
+* Dashboard summary response.
+*/
 export class DashboardSummary {
-  /**
-   * List of dashboard definitions.
-   */
-  "dashboards"?: Array<DashboardSummaryDefinition>;
+    /**
+    * List of dashboard definitions.
+    */
+    'dashboards'?: Array<DashboardSummaryDefinition>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "dashboards",
-      baseName: "dashboards",
-      type: "Array<DashboardSummaryDefinition>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "dashboards",
+            "baseName": "dashboards",
+            "type": "Array<DashboardSummaryDefinition>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return DashboardSummary.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return DashboardSummary.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

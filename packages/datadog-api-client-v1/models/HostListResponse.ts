@@ -10,57 +10,53 @@
  * Do not edit the class manually.
  */
 
-import { Host } from "./Host";
-import { HttpFile } from "../http/http";
+import { Host } from './Host';
+import { HttpFile } from '../http/http';
 
 /**
- * Response with Host information from Datadog.
- */
+* Response with Host information from Datadog.
+*/
 export class HostListResponse {
-  /**
-   * Array of hosts.
-   */
-  "hostList"?: Array<Host>;
-  /**
-   * Number of host matching the query.
-   */
-  "totalMatching"?: number;
-  /**
-   * Number of host returned.
-   */
-  "totalReturned"?: number;
+    /**
+    * Array of hosts.
+    */
+    'hostList'?: Array<Host>;
+    /**
+    * Number of host matching the query.
+    */
+    'totalMatching'?: number;
+    /**
+    * Number of host returned.
+    */
+    'totalReturned'?: number;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "hostList",
-      baseName: "host_list",
-      type: "Array<Host>",
-      format: "",
-    },
-    {
-      name: "totalMatching",
-      baseName: "total_matching",
-      type: "number",
-      format: "int64",
-    },
-    {
-      name: "totalReturned",
-      baseName: "total_returned",
-      type: "number",
-      format: "int64",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "hostList",
+            "baseName": "host_list",
+            "type": "Array<Host>",
+            "format": ""
+        },
+        {
+            "name": "totalMatching",
+            "baseName": "total_matching",
+            "type": "number",
+            "format": "int64"
+        },
+        {
+            "name": "totalReturned",
+            "baseName": "total_returned",
+            "type": "number",
+            "format": "int64"
+        }    ];
 
-  static getAttributeTypeMap() {
-    return HostListResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return HostListResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

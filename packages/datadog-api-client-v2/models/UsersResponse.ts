@@ -10,56 +10,52 @@
  * Do not edit the class manually.
  */
 
-import { ResponseMetaAttributes } from "./ResponseMetaAttributes";
-import { User } from "./User";
-import { UserResponseIncludedItem } from "./UserResponseIncludedItem";
-import { HttpFile } from "../http/http";
+import { ResponseMetaAttributes } from './ResponseMetaAttributes';
+import { User } from './User';
+import { UserResponseIncludedItem } from './UserResponseIncludedItem';
+import { HttpFile } from '../http/http';
 
 /**
- * Response containing information about multiple users.
- */
+* Response containing information about multiple users.
+*/
 export class UsersResponse {
-  /**
-   * Array of returned users.
-   */
-  "data"?: Array<User>;
-  /**
-   * Array of objects related to the users.
-   */
-  "included"?: Array<UserResponseIncludedItem>;
-  "meta"?: ResponseMetaAttributes;
+    /**
+    * Array of returned users.
+    */
+    'data'?: Array<User>;
+    /**
+    * Array of objects related to the users.
+    */
+    'included'?: Array<UserResponseIncludedItem>;
+    'meta'?: ResponseMetaAttributes;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "Array<User>",
-      format: "",
-    },
-    {
-      name: "included",
-      baseName: "included",
-      type: "Array<UserResponseIncludedItem>",
-      format: "",
-    },
-    {
-      name: "meta",
-      baseName: "meta",
-      type: "ResponseMetaAttributes",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "Array<User>",
+            "format": ""
+        },
+        {
+            "name": "included",
+            "baseName": "included",
+            "type": "Array<UserResponseIncludedItem>",
+            "format": ""
+        },
+        {
+            "name": "meta",
+            "baseName": "meta",
+            "type": "ResponseMetaAttributes",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UsersResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UsersResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

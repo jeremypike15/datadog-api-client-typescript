@@ -10,34 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { MetricTagConfigurationCreateData } from "./MetricTagConfigurationCreateData";
-import { HttpFile } from "../http/http";
+import { MetricTagConfigurationCreateData } from './MetricTagConfigurationCreateData';
+import { HttpFile } from '../http/http';
 
 /**
- * Request object that includes the metric that you would like to configure tags for.
- */
+* Request object that includes the metric that you would like to configure tags for.
+*/
 export class MetricTagConfigurationCreateRequest {
-  "data": MetricTagConfigurationCreateData;
+    'data': MetricTagConfigurationCreateData;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "MetricTagConfigurationCreateData",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "MetricTagConfigurationCreateData",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return MetricTagConfigurationCreateRequest.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return MetricTagConfigurationCreateRequest.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

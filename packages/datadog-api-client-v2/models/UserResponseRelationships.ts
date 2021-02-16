@@ -10,58 +10,54 @@
  * Do not edit the class manually.
  */
 
-import { RelationshipToOrganization } from "./RelationshipToOrganization";
-import { RelationshipToOrganizations } from "./RelationshipToOrganizations";
-import { RelationshipToRoles } from "./RelationshipToRoles";
-import { RelationshipToUsers } from "./RelationshipToUsers";
-import { HttpFile } from "../http/http";
+import { RelationshipToOrganization } from './RelationshipToOrganization';
+import { RelationshipToOrganizations } from './RelationshipToOrganizations';
+import { RelationshipToRoles } from './RelationshipToRoles';
+import { RelationshipToUsers } from './RelationshipToUsers';
+import { HttpFile } from '../http/http';
 
 /**
- * Relationships of the user object returned by the API.
- */
+* Relationships of the user object returned by the API.
+*/
 export class UserResponseRelationships {
-  "org"?: RelationshipToOrganization;
-  "otherOrgs"?: RelationshipToOrganizations;
-  "otherUsers"?: RelationshipToUsers;
-  "roles"?: RelationshipToRoles;
+    'org'?: RelationshipToOrganization;
+    'otherOrgs'?: RelationshipToOrganizations;
+    'otherUsers'?: RelationshipToUsers;
+    'roles'?: RelationshipToRoles;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "org",
-      baseName: "org",
-      type: "RelationshipToOrganization",
-      format: "",
-    },
-    {
-      name: "otherOrgs",
-      baseName: "other_orgs",
-      type: "RelationshipToOrganizations",
-      format: "",
-    },
-    {
-      name: "otherUsers",
-      baseName: "other_users",
-      type: "RelationshipToUsers",
-      format: "",
-    },
-    {
-      name: "roles",
-      baseName: "roles",
-      type: "RelationshipToRoles",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "org",
+            "baseName": "org",
+            "type": "RelationshipToOrganization",
+            "format": ""
+        },
+        {
+            "name": "otherOrgs",
+            "baseName": "other_orgs",
+            "type": "RelationshipToOrganizations",
+            "format": ""
+        },
+        {
+            "name": "otherUsers",
+            "baseName": "other_users",
+            "type": "RelationshipToUsers",
+            "format": ""
+        },
+        {
+            "name": "roles",
+            "baseName": "roles",
+            "type": "RelationshipToRoles",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UserResponseRelationships.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UserResponseRelationships.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

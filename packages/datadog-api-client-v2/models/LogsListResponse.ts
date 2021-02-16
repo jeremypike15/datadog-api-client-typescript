@@ -10,53 +10,49 @@
  * Do not edit the class manually.
  */
 
-import { Log } from "./Log";
-import { LogsListResponseLinks } from "./LogsListResponseLinks";
-import { LogsResponseMetadata } from "./LogsResponseMetadata";
-import { HttpFile } from "../http/http";
+import { Log } from './Log';
+import { LogsListResponseLinks } from './LogsListResponseLinks';
+import { LogsResponseMetadata } from './LogsResponseMetadata';
+import { HttpFile } from '../http/http';
 
 /**
- * Response object with all logs matching the request and pagination information.
- */
+* Response object with all logs matching the request and pagination information.
+*/
 export class LogsListResponse {
-  /**
-   * Array of logs matching the request.
-   */
-  "data"?: Array<Log>;
-  "links"?: LogsListResponseLinks;
-  "meta"?: LogsResponseMetadata;
+    /**
+    * Array of logs matching the request.
+    */
+    'data'?: Array<Log>;
+    'links'?: LogsListResponseLinks;
+    'meta'?: LogsResponseMetadata;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "Array<Log>",
-      format: "",
-    },
-    {
-      name: "links",
-      baseName: "links",
-      type: "LogsListResponseLinks",
-      format: "",
-    },
-    {
-      name: "meta",
-      baseName: "meta",
-      type: "LogsResponseMetadata",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "Array<Log>",
+            "format": ""
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "LogsListResponseLinks",
+            "format": ""
+        },
+        {
+            "name": "meta",
+            "baseName": "meta",
+            "type": "LogsResponseMetadata",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsListResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsListResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

@@ -10,64 +10,60 @@
  * Do not edit the class manually.
  */
 
-import { UsageMetricCategory } from "./UsageMetricCategory";
-import { HttpFile } from "../http/http";
+import { UsageMetricCategory } from './UsageMetricCategory';
+import { HttpFile } from '../http/http';
 
 /**
- * Number of hourly recorded custom metrics for a given organization.
- */
+* Number of hourly recorded custom metrics for a given organization.
+*/
 export class UsageTopAvgMetricsHour {
-  /**
-   * Average number of timeseries per hour in which the metric occurs.
-   */
-  "avgMetricHour"?: number;
-  /**
-   * Maximum number of timeseries per hour in which the metric occurs.
-   */
-  "maxMetricHour"?: number;
-  "metricCategory"?: UsageMetricCategory;
-  /**
-   * Contains the custom metric name.
-   */
-  "metricName"?: string;
+    /**
+    * Average number of timeseries per hour in which the metric occurs.
+    */
+    'avgMetricHour'?: number;
+    /**
+    * Maximum number of timeseries per hour in which the metric occurs.
+    */
+    'maxMetricHour'?: number;
+    'metricCategory'?: UsageMetricCategory;
+    /**
+    * Contains the custom metric name.
+    */
+    'metricName'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "avgMetricHour",
-      baseName: "avg_metric_hour",
-      type: "number",
-      format: "int64",
-    },
-    {
-      name: "maxMetricHour",
-      baseName: "max_metric_hour",
-      type: "number",
-      format: "int64",
-    },
-    {
-      name: "metricCategory",
-      baseName: "metric_category",
-      type: "UsageMetricCategory",
-      format: "",
-    },
-    {
-      name: "metricName",
-      baseName: "metric_name",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "avgMetricHour",
+            "baseName": "avg_metric_hour",
+            "type": "number",
+            "format": "int64"
+        },
+        {
+            "name": "maxMetricHour",
+            "baseName": "max_metric_hour",
+            "type": "number",
+            "format": "int64"
+        },
+        {
+            "name": "metricCategory",
+            "baseName": "metric_category",
+            "type": "UsageMetricCategory",
+            "format": ""
+        },
+        {
+            "name": "metricName",
+            "baseName": "metric_name",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UsageTopAvgMetricsHour.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UsageTopAvgMetricsHour.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

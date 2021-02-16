@@ -10,14 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Type of browser test variable.
- */
-export type SyntheticsBrowserVariableType =
-  | "element"
-  | "email"
-  | "global"
-  | "javascript"
-  | "text";
+* Type of browser test variable.
+*/
+export type SyntheticsBrowserVariableType = "element" | "email" | "global" | "javascript" | "text" ;

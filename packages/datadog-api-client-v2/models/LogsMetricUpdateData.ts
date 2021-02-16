@@ -10,42 +10,38 @@
  * Do not edit the class manually.
  */
 
-import { LogsMetricType } from "./LogsMetricType";
-import { LogsMetricUpdateAttributes } from "./LogsMetricUpdateAttributes";
-import { HttpFile } from "../http/http";
+import { LogsMetricType } from './LogsMetricType';
+import { LogsMetricUpdateAttributes } from './LogsMetricUpdateAttributes';
+import { HttpFile } from '../http/http';
 
 /**
- * The new log-based metric properties.
- */
+* The new log-based metric properties.
+*/
 export class LogsMetricUpdateData {
-  "attributes": LogsMetricUpdateAttributes;
-  "type": LogsMetricType;
+    'attributes': LogsMetricUpdateAttributes;
+    'type': LogsMetricType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "attributes",
-      baseName: "attributes",
-      type: "LogsMetricUpdateAttributes",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "LogsMetricType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "LogsMetricUpdateAttributes",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "LogsMetricType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsMetricUpdateData.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsMetricUpdateData.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

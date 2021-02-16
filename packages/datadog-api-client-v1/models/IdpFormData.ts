@@ -10,36 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Object describing the IdP configuration.
- */
+* Object describing the IdP configuration.
+*/
 export class IdpFormData {
-  /**
-   * The path to the XML metadata file you wish to upload.
-   */
-  "idpFile": HttpFile;
+    /**
+    * The path to the XML metadata file you wish to upload.
+    */
+    'idpFile': HttpFile;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "idpFile",
-      baseName: "idp_file",
-      type: "HttpFile",
-      format: "binary",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "idpFile",
+            "baseName": "idp_file",
+            "type": "HttpFile",
+            "format": "binary"
+        }    ];
 
-  static getAttributeTypeMap() {
-    return IdpFormData.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return IdpFormData.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

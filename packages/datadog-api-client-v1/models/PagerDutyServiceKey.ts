@@ -10,36 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * PagerDuty service object key.
- */
+* PagerDuty service object key.
+*/
 export class PagerDutyServiceKey {
-  /**
-   * Your service key in PagerDuty.
-   */
-  "serviceKey": string;
+    /**
+    * Your service key in PagerDuty.
+    */
+    'serviceKey': string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "serviceKey",
-      baseName: "service_key",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "serviceKey",
+            "baseName": "service_key",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return PagerDutyServiceKey.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return PagerDutyServiceKey.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

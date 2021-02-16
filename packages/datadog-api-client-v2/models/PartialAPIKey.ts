@@ -10,60 +10,56 @@
  * Do not edit the class manually.
  */
 
-import { APIKeyRelationships } from "./APIKeyRelationships";
-import { APIKeysType } from "./APIKeysType";
-import { PartialAPIKeyAttributes } from "./PartialAPIKeyAttributes";
-import { HttpFile } from "../http/http";
+import { APIKeyRelationships } from './APIKeyRelationships';
+import { APIKeysType } from './APIKeysType';
+import { PartialAPIKeyAttributes } from './PartialAPIKeyAttributes';
+import { HttpFile } from '../http/http';
 
 /**
- * Partial Datadog API key.
- */
+* Partial Datadog API key.
+*/
 export class PartialAPIKey {
-  "attributes"?: PartialAPIKeyAttributes;
-  /**
-   * ID of the API key.
-   */
-  "id"?: string;
-  "relationships"?: APIKeyRelationships;
-  "type"?: APIKeysType;
+    'attributes'?: PartialAPIKeyAttributes;
+    /**
+    * ID of the API key.
+    */
+    'id'?: string;
+    'relationships'?: APIKeyRelationships;
+    'type'?: APIKeysType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "attributes",
-      baseName: "attributes",
-      type: "PartialAPIKeyAttributes",
-      format: "",
-    },
-    {
-      name: "id",
-      baseName: "id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "relationships",
-      baseName: "relationships",
-      type: "APIKeyRelationships",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "APIKeysType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "PartialAPIKeyAttributes",
+            "format": ""
+        },
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "relationships",
+            "baseName": "relationships",
+            "type": "APIKeyRelationships",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "APIKeysType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return PartialAPIKey.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return PartialAPIKey.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

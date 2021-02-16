@@ -10,36 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Error response object.
- */
+* Error response object.
+*/
 export class APIErrorResponse {
-  /**
-   * Array of errors returned by the API.
-   */
-  "errors": Array<string>;
+    /**
+    * Array of errors returned by the API.
+    */
+    'errors': Array<string>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "errors",
-      baseName: "errors",
-      type: "Array<string>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "errors",
+            "baseName": "errors",
+            "type": "Array<string>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return APIErrorResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return APIErrorResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

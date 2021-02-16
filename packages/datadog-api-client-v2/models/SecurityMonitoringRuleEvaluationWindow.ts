@@ -10,17 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * A time window is specified to match when at least one of the cases matches true. This is a sliding window and evaluates in real time.
- */
-export type SecurityMonitoringRuleEvaluationWindow =
-  | "0"
-  | "60"
-  | "300"
-  | "600"
-  | "900"
-  | "1800"
-  | "3600"
-  | "7200";
+* A time window is specified to match when at least one of the cases matches true. This is a sliding window and evaluates in real time.
+*/
+export type SecurityMonitoringRuleEvaluationWindow = "0" | "60" | "300" | "600" | "900" | "1800" | "3600" | "7200" ;

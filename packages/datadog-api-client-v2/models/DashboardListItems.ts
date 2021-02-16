@@ -10,47 +10,43 @@
  * Do not edit the class manually.
  */
 
-import { DashboardListItem } from "./DashboardListItem";
-import { HttpFile } from "../http/http";
+import { DashboardListItem } from './DashboardListItem';
+import { HttpFile } from '../http/http';
 
 /**
- * Dashboards within a list.
- */
+* Dashboards within a list.
+*/
 export class DashboardListItems {
-  /**
-   * List of dashboards in the dashboard list.
-   */
-  "dashboards": Array<DashboardListItem>;
-  /**
-   * Number of dashboards in the dashboard list.
-   */
-  "total"?: number;
+    /**
+    * List of dashboards in the dashboard list.
+    */
+    'dashboards': Array<DashboardListItem>;
+    /**
+    * Number of dashboards in the dashboard list.
+    */
+    'total'?: number;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "dashboards",
-      baseName: "dashboards",
-      type: "Array<DashboardListItem>",
-      format: "",
-    },
-    {
-      name: "total",
-      baseName: "total",
-      type: "number",
-      format: "int64",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "dashboards",
+            "baseName": "dashboards",
+            "type": "Array<DashboardListItem>",
+            "format": ""
+        },
+        {
+            "name": "total",
+            "baseName": "total",
+            "type": "number",
+            "format": "int64"
+        }    ];
 
-  static getAttributeTypeMap() {
-    return DashboardListItems.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return DashboardListItems.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

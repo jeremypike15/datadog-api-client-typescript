@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The type of event.
- */
-export type SecurityMonitoringSignalType = "signal";
+* The type of event.
+*/
+export type SecurityMonitoringSignalType = "signal" ;

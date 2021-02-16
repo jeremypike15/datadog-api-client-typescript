@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Contains the metric category.
- */
-export type UsageMetricCategory = "standard" | "custom";
+* Contains the metric category.
+*/
+export type UsageMetricCategory = "standard" | "custom" ;

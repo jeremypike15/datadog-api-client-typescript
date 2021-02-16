@@ -10,34 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { LogsArchiveCreateRequestDefinition } from "./LogsArchiveCreateRequestDefinition";
-import { HttpFile } from "../http/http";
+import { LogsArchiveCreateRequestDefinition } from './LogsArchiveCreateRequestDefinition';
+import { HttpFile } from '../http/http';
 
 /**
- * The logs archive.
- */
+* The logs archive.
+*/
 export class LogsArchiveCreateRequest {
-  "data"?: LogsArchiveCreateRequestDefinition;
+    'data'?: LogsArchiveCreateRequestDefinition;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "LogsArchiveCreateRequestDefinition",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "LogsArchiveCreateRequestDefinition",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsArchiveCreateRequest.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsArchiveCreateRequest.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

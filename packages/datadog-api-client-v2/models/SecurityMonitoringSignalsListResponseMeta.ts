@@ -10,34 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { SecurityMonitoringSignalsListResponseMetaPage } from "./SecurityMonitoringSignalsListResponseMetaPage";
-import { HttpFile } from "../http/http";
+import { SecurityMonitoringSignalsListResponseMetaPage } from './SecurityMonitoringSignalsListResponseMetaPage';
+import { HttpFile } from '../http/http';
 
 /**
- * Meta attributes.
- */
+* Meta attributes.
+*/
 export class SecurityMonitoringSignalsListResponseMeta {
-  "page"?: SecurityMonitoringSignalsListResponseMetaPage;
+    'page'?: SecurityMonitoringSignalsListResponseMetaPage;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "page",
-      baseName: "page",
-      type: "SecurityMonitoringSignalsListResponseMetaPage",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "page",
+            "baseName": "page",
+            "type": "SecurityMonitoringSignalsListResponseMetaPage",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SecurityMonitoringSignalsListResponseMeta.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SecurityMonitoringSignalsListResponseMeta.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

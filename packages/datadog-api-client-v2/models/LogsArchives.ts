@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { LogsArchiveDefinition } from "./LogsArchiveDefinition";
-import { HttpFile } from "../http/http";
+import { LogsArchiveDefinition } from './LogsArchiveDefinition';
+import { HttpFile } from '../http/http';
 
 /**
- * The available archives.
- */
+* The available archives.
+*/
 export class LogsArchives {
-  /**
-   * A list of archives.
-   */
-  "data"?: Array<LogsArchiveDefinition>;
+    /**
+    * A list of archives.
+    */
+    'data'?: Array<LogsArchiveDefinition>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "Array<LogsArchiveDefinition>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "Array<LogsArchiveDefinition>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsArchives.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsArchives.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

@@ -10,16 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The HTTP method.
- */
-export type HTTPMethod =
-  | "GET"
-  | "POST"
-  | "PATCH"
-  | "PUT"
-  | "DELETE"
-  | "HEAD"
-  | "OPTIONS";
+* The HTTP method.
+*/
+export type HTTPMethod = "GET" | "POST" | "PATCH" | "PUT" | "DELETE" | "HEAD" | "OPTIONS" ;

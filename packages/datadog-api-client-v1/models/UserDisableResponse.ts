@@ -10,36 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Array of user disabled for a given organization.
- */
+* Array of user disabled for a given organization.
+*/
 export class UserDisableResponse {
-  /**
-   * Information pertaining to a user disabled for a given organization.
-   */
-  "message"?: string;
+    /**
+    * Information pertaining to a user disabled for a given organization.
+    */
+    'message'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "message",
-      baseName: "message",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "message",
+            "baseName": "message",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UserDisableResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UserDisableResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

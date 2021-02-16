@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Define whether you want to start (`live`) or pause (`paused`) a Synthetic test.
- */
-export type SyntheticsTestPauseStatus = "live" | "paused";
+* Define whether you want to start (`live`) or pause (`paused`) a Synthetic test.
+*/
+export type SyntheticsTestPauseStatus = "live" | "paused" ;

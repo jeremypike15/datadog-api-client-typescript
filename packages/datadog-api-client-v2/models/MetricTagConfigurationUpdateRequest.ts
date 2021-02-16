@@ -10,34 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { MetricTagConfigurationUpdateData } from "./MetricTagConfigurationUpdateData";
-import { HttpFile } from "../http/http";
+import { MetricTagConfigurationUpdateData } from './MetricTagConfigurationUpdateData';
+import { HttpFile } from '../http/http';
 
 /**
- * Request object that includes the metric that you would like to edit the tag configuration on.
- */
+* Request object that includes the metric that you would like to edit the tag configuration on.
+*/
 export class MetricTagConfigurationUpdateRequest {
-  "data": MetricTagConfigurationUpdateData;
+    'data': MetricTagConfigurationUpdateData;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "MetricTagConfigurationUpdateData",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "MetricTagConfigurationUpdateData",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return MetricTagConfigurationUpdateRequest.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return MetricTagConfigurationUpdateRequest.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

@@ -10,34 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { RelationshipToPermissions } from "./RelationshipToPermissions";
-import { HttpFile } from "../http/http";
+import { RelationshipToPermissions } from './RelationshipToPermissions';
+import { HttpFile } from '../http/http';
 
 /**
- * Relationships of the role object returned by the API.
- */
+* Relationships of the role object returned by the API.
+*/
 export class RoleResponseRelationships {
-  "permissions"?: RelationshipToPermissions;
+    'permissions'?: RelationshipToPermissions;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "permissions",
-      baseName: "permissions",
-      type: "RelationshipToPermissions",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "permissions",
+            "baseName": "permissions",
+            "type": "RelationshipToPermissions",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return RoleResponseRelationships.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return RoleResponseRelationships.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

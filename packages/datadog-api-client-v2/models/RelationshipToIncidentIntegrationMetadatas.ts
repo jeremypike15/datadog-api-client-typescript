@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { RelationshipToIncidentIntegrationMetadataData } from "./RelationshipToIncidentIntegrationMetadataData";
-import { HttpFile } from "../http/http";
+import { RelationshipToIncidentIntegrationMetadataData } from './RelationshipToIncidentIntegrationMetadataData';
+import { HttpFile } from '../http/http';
 
 /**
- * A relationship reference for multiple integration metadata objects.
- */
+* A relationship reference for multiple integration metadata objects.
+*/
 export class RelationshipToIncidentIntegrationMetadatas {
-  /**
-   * The integration metadata relationship array
-   */
-  "data": Array<RelationshipToIncidentIntegrationMetadataData>;
+    /**
+    * The integration metadata relationship array
+    */
+    'data': Array<RelationshipToIncidentIntegrationMetadataData>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "Array<RelationshipToIncidentIntegrationMetadataData>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "Array<RelationshipToIncidentIntegrationMetadataData>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return RelationshipToIncidentIntegrationMetadatas.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return RelationshipToIncidentIntegrationMetadatas.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

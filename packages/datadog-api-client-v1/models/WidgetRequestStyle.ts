@@ -10,52 +10,48 @@
  * Do not edit the class manually.
  */
 
-import { WidgetLineType } from "./WidgetLineType";
-import { WidgetLineWidth } from "./WidgetLineWidth";
-import { HttpFile } from "../http/http";
+import { WidgetLineType } from './WidgetLineType';
+import { WidgetLineWidth } from './WidgetLineWidth';
+import { HttpFile } from '../http/http';
 
 /**
- * Define request widget style.
- */
+* Define request widget style.
+*/
 export class WidgetRequestStyle {
-  "lineType"?: WidgetLineType;
-  "lineWidth"?: WidgetLineWidth;
-  /**
-   * Color palette to apply to the widget.
-   */
-  "palette"?: string;
+    'lineType'?: WidgetLineType;
+    'lineWidth'?: WidgetLineWidth;
+    /**
+    * Color palette to apply to the widget.
+    */
+    'palette'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "lineType",
-      baseName: "line_type",
-      type: "WidgetLineType",
-      format: "",
-    },
-    {
-      name: "lineWidth",
-      baseName: "line_width",
-      type: "WidgetLineWidth",
-      format: "",
-    },
-    {
-      name: "palette",
-      baseName: "palette",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "lineType",
+            "baseName": "line_type",
+            "type": "WidgetLineType",
+            "format": ""
+        },
+        {
+            "name": "lineWidth",
+            "baseName": "line_width",
+            "type": "WidgetLineWidth",
+            "format": ""
+        },
+        {
+            "name": "palette",
+            "baseName": "palette",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return WidgetRequestStyle.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return WidgetRequestStyle.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

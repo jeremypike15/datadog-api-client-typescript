@@ -10,45 +10,41 @@
  * Do not edit the class manually.
  */
 
-import { SLOHistoryResponseData } from "./SLOHistoryResponseData";
-import { SLOHistoryResponseError } from "./SLOHistoryResponseError";
-import { HttpFile } from "../http/http";
+import { SLOHistoryResponseData } from './SLOHistoryResponseData';
+import { SLOHistoryResponseError } from './SLOHistoryResponseError';
+import { HttpFile } from '../http/http';
 
 /**
- * A service level objective history response.
- */
+* A service level objective history response.
+*/
 export class SLOHistoryResponse {
-  "data"?: SLOHistoryResponseData;
-  /**
-   * A list of errors while querying the history data for the service level objective.
-   */
-  "errors"?: Array<SLOHistoryResponseError>;
+    'data'?: SLOHistoryResponseData;
+    /**
+    * A list of errors while querying the history data for the service level objective.
+    */
+    'errors'?: Array<SLOHistoryResponseError>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "SLOHistoryResponseData",
-      format: "",
-    },
-    {
-      name: "errors",
-      baseName: "errors",
-      type: "Array<SLOHistoryResponseError>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "SLOHistoryResponseData",
+            "format": ""
+        },
+        {
+            "name": "errors",
+            "baseName": "errors",
+            "type": "Array<SLOHistoryResponseError>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SLOHistoryResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SLOHistoryResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

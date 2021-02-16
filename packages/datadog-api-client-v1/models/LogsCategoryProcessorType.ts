@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Type of logs category processor.
- */
-export type LogsCategoryProcessorType = "category-processor";
+* Type of logs category processor.
+*/
+export type LogsCategoryProcessorType = "category-processor" ;

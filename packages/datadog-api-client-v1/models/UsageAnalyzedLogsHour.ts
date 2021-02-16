@@ -10,46 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The number of analyzed logs for each hour for a given organization.
- */
+* The number of analyzed logs for each hour for a given organization.
+*/
 export class UsageAnalyzedLogsHour {
-  /**
-   * Contains the number of analyzed logs.
-   */
-  "analyzedLogs"?: number;
-  /**
-   * The hour for the usage.
-   */
-  "hour"?: Date;
+    /**
+    * Contains the number of analyzed logs.
+    */
+    'analyzedLogs'?: number;
+    /**
+    * The hour for the usage.
+    */
+    'hour'?: Date;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "analyzedLogs",
-      baseName: "analyzed_logs",
-      type: "number",
-      format: "int64",
-    },
-    {
-      name: "hour",
-      baseName: "hour",
-      type: "Date",
-      format: "date-time",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "analyzedLogs",
+            "baseName": "analyzed_logs",
+            "type": "number",
+            "format": "int64"
+        },
+        {
+            "name": "hour",
+            "baseName": "hour",
+            "type": "Date",
+            "format": "date-time"
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UsageAnalyzedLogsHour.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UsageAnalyzedLogsHour.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

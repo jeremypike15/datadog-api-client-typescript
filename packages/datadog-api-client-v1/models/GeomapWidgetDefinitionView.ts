@@ -10,36 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The view of the world that the map should render.
- */
+* The view of the world that the map should render.
+*/
 export class GeomapWidgetDefinitionView {
-  /**
-   * The 2-letter ISO code of a country to focus the map on. Or `WORLD`.
-   */
-  "focus": string;
+    /**
+    * The 2-letter ISO code of a country to focus the map on. Or `WORLD`.
+    */
+    'focus': string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "focus",
-      baseName: "focus",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "focus",
+            "baseName": "focus",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return GeomapWidgetDefinitionView.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return GeomapWidgetDefinitionView.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

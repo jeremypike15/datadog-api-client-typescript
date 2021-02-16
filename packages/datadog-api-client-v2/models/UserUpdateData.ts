@@ -10,52 +10,48 @@
  * Do not edit the class manually.
  */
 
-import { UserUpdateAttributes } from "./UserUpdateAttributes";
-import { UsersType } from "./UsersType";
-import { HttpFile } from "../http/http";
+import { UserUpdateAttributes } from './UserUpdateAttributes';
+import { UsersType } from './UsersType';
+import { HttpFile } from '../http/http';
 
 /**
- * Object to update a user.
- */
+* Object to update a user.
+*/
 export class UserUpdateData {
-  "attributes": UserUpdateAttributes;
-  /**
-   * ID of the user.
-   */
-  "id": string;
-  "type": UsersType;
+    'attributes': UserUpdateAttributes;
+    /**
+    * ID of the user.
+    */
+    'id': string;
+    'type': UsersType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "attributes",
-      baseName: "attributes",
-      type: "UserUpdateAttributes",
-      format: "",
-    },
-    {
-      name: "id",
-      baseName: "id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "UsersType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "UserUpdateAttributes",
+            "format": ""
+        },
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "UsersType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UserUpdateData.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UserUpdateData.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

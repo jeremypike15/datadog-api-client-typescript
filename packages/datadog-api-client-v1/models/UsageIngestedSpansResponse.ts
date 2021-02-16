@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { UsageIngestedSpansHour } from "./UsageIngestedSpansHour";
-import { HttpFile } from "../http/http";
+import { UsageIngestedSpansHour } from './UsageIngestedSpansHour';
+import { HttpFile } from '../http/http';
 
 /**
- * Response containing the ingested spans usage for each hour for a given organization.
- */
+* Response containing the ingested spans usage for each hour for a given organization.
+*/
 export class UsageIngestedSpansResponse {
-  /**
-   * Get hourly usage for ingested spans.
-   */
-  "usage"?: Array<UsageIngestedSpansHour>;
+    /**
+    * Get hourly usage for ingested spans.
+    */
+    'usage'?: Array<UsageIngestedSpansHour>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "usage",
-      baseName: "usage",
-      type: "Array<UsageIngestedSpansHour>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "usage",
+            "baseName": "usage",
+            "type": "Array<UsageIngestedSpansHour>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return UsageIngestedSpansResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return UsageIngestedSpansResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

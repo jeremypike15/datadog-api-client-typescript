@@ -10,46 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Global query options that are used during the query. Note: You should only supply timezone or time offset but not both otherwise the query will fail.
- */
+* Global query options that are used during the query. Note: You should only supply timezone or time offset but not both otherwise the query will fail.
+*/
 export class LogsQueryOptions {
-  /**
-   * The time offset (in seconds) to apply to the query.
-   */
-  "timeOffset"?: number;
-  /**
-   * The timezone can be specified both as an offset, for example: \"UTC+03:00\".
-   */
-  "timezone"?: string;
+    /**
+    * The time offset (in seconds) to apply to the query.
+    */
+    'timeOffset'?: number;
+    /**
+    * The timezone can be specified both as an offset, for example: \"UTC+03:00\".
+    */
+    'timezone'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "timeOffset",
-      baseName: "timeOffset",
-      type: "number",
-      format: "int64",
-    },
-    {
-      name: "timezone",
-      baseName: "timezone",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "timeOffset",
+            "baseName": "timeOffset",
+            "type": "number",
+            "format": "int64"
+        },
+        {
+            "name": "timezone",
+            "baseName": "timezone",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return LogsQueryOptions.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return LogsQueryOptions.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

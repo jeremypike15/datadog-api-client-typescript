@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsTestDetails } from "./SyntheticsTestDetails";
-import { HttpFile } from "../http/http";
+import { SyntheticsTestDetails } from './SyntheticsTestDetails';
+import { HttpFile } from '../http/http';
 
 /**
- * Object containing an array of Synthetic tests configuration.
- */
+* Object containing an array of Synthetic tests configuration.
+*/
 export class SyntheticsListTestsResponse {
-  /**
-   * Array of Synthetic tests configuration.
-   */
-  "tests"?: Array<SyntheticsTestDetails>;
+    /**
+    * Array of Synthetic tests configuration.
+    */
+    'tests'?: Array<SyntheticsTestDetails>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "tests",
-      baseName: "tests",
-      type: "Array<SyntheticsTestDetails>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "tests",
+            "baseName": "tests",
+            "type": "Array<SyntheticsTestDetails>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SyntheticsListTestsResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SyntheticsListTestsResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

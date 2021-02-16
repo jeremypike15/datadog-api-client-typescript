@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Type of the monitor summary widget.
- */
-export type MonitorSummaryWidgetDefinitionType = "manage_status";
+* Type of the monitor summary widget.
+*/
+export type MonitorSummaryWidgetDefinitionType = "manage_status" ;

@@ -10,46 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The PagerDuty service that is available for integration with Datadog.
- */
+* The PagerDuty service that is available for integration with Datadog.
+*/
 export class PagerDutyService {
-  /**
-   * Your service key in PagerDuty.
-   */
-  "serviceKey": string;
-  /**
-   * Your service name associated with a service key in PagerDuty.
-   */
-  "serviceName": string;
+    /**
+    * Your service key in PagerDuty.
+    */
+    'serviceKey': string;
+    /**
+    * Your service name associated with a service key in PagerDuty.
+    */
+    'serviceName': string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "serviceKey",
-      baseName: "service_key",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "serviceName",
-      baseName: "service_name",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "serviceKey",
+            "baseName": "service_key",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "serviceName",
+            "baseName": "service_name",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return PagerDutyService.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return PagerDutyService.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

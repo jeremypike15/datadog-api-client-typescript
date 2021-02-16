@@ -10,74 +10,70 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsDeviceID } from "./SyntheticsDeviceID";
-import { HttpFile } from "../http/http";
+import { SyntheticsDeviceID } from './SyntheticsDeviceID';
+import { HttpFile } from '../http/http';
 
 /**
- * Object describing the device used to perform the Synthetic test.
- */
+* Object describing the device used to perform the Synthetic test.
+*/
 export class SyntheticsDevice {
-  /**
-   * Screen height of the device.
-   */
-  "height": number;
-  "id": SyntheticsDeviceID;
-  /**
-   * Whether or not the device is a mobile.
-   */
-  "isMobile"?: boolean;
-  /**
-   * The device name.
-   */
-  "name": string;
-  /**
-   * Screen width of the device.
-   */
-  "width": number;
+    /**
+    * Screen height of the device.
+    */
+    'height': number;
+    'id': SyntheticsDeviceID;
+    /**
+    * Whether or not the device is a mobile.
+    */
+    'isMobile'?: boolean;
+    /**
+    * The device name.
+    */
+    'name': string;
+    /**
+    * Screen width of the device.
+    */
+    'width': number;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "height",
-      baseName: "height",
-      type: "number",
-      format: "int64",
-    },
-    {
-      name: "id",
-      baseName: "id",
-      type: "SyntheticsDeviceID",
-      format: "",
-    },
-    {
-      name: "isMobile",
-      baseName: "isMobile",
-      type: "boolean",
-      format: "",
-    },
-    {
-      name: "name",
-      baseName: "name",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "width",
-      baseName: "width",
-      type: "number",
-      format: "int64",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "height",
+            "baseName": "height",
+            "type": "number",
+            "format": "int64"
+        },
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "SyntheticsDeviceID",
+            "format": ""
+        },
+        {
+            "name": "isMobile",
+            "baseName": "isMobile",
+            "type": "boolean",
+            "format": ""
+        },
+        {
+            "name": "name",
+            "baseName": "name",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "width",
+            "baseName": "width",
+            "type": "number",
+            "format": "int64"
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SyntheticsDevice.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SyntheticsDevice.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

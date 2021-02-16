@@ -10,44 +10,40 @@
  * Do not edit the class manually.
  */
 
-import { Event } from "./Event";
-import { HttpFile } from "../http/http";
+import { Event } from './Event';
+import { HttpFile } from '../http/http';
 
 /**
- * Object containing an event response.
- */
+* Object containing an event response.
+*/
 export class EventResponse {
-  "event"?: Event;
-  /**
-   * A status.
-   */
-  "status"?: string;
+    'event'?: Event;
+    /**
+    * A status.
+    */
+    'status'?: string;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "event",
-      baseName: "event",
-      type: "Event",
-      format: "",
-    },
-    {
-      name: "status",
-      baseName: "status",
-      type: "string",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "event",
+            "baseName": "event",
+            "type": "Event",
+            "format": ""
+        },
+        {
+            "name": "status",
+            "baseName": "status",
+            "type": "string",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return EventResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return EventResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

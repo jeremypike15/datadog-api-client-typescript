@@ -10,44 +10,40 @@
  * Do not edit the class manually.
  */
 
-import { UsersType } from "./UsersType";
-import { HttpFile } from "../http/http";
+import { UsersType } from './UsersType';
+import { HttpFile } from '../http/http';
 
 /**
- * Relationship to user object.
- */
+* Relationship to user object.
+*/
 export class RelationshipToUserData {
-  /**
-   * A unique identifier that represents the user.
-   */
-  "id": string;
-  "type": UsersType;
+    /**
+    * A unique identifier that represents the user.
+    */
+    'id': string;
+    'type': UsersType;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "id",
-      baseName: "id",
-      type: "string",
-      format: "",
-    },
-    {
-      name: "type",
-      baseName: "type",
-      type: "UsersType",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "UsersType",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return RelationshipToUserData.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return RelationshipToUserData.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

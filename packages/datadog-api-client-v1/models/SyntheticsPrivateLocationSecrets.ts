@@ -10,42 +10,38 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsPrivateLocationSecretsAuthentication } from "./SyntheticsPrivateLocationSecretsAuthentication";
-import { SyntheticsPrivateLocationSecretsConfigDecryption } from "./SyntheticsPrivateLocationSecretsConfigDecryption";
-import { HttpFile } from "../http/http";
+import { SyntheticsPrivateLocationSecretsAuthentication } from './SyntheticsPrivateLocationSecretsAuthentication';
+import { SyntheticsPrivateLocationSecretsConfigDecryption } from './SyntheticsPrivateLocationSecretsConfigDecryption';
+import { HttpFile } from '../http/http';
 
 /**
- * Secrets for the private location. Only present in the response when creating the private location.
- */
+* Secrets for the private location. Only present in the response when creating the private location.
+*/
 export class SyntheticsPrivateLocationSecrets {
-  "authentication"?: SyntheticsPrivateLocationSecretsAuthentication;
-  "configDecryption"?: SyntheticsPrivateLocationSecretsConfigDecryption;
+    'authentication'?: SyntheticsPrivateLocationSecretsAuthentication;
+    'configDecryption'?: SyntheticsPrivateLocationSecretsConfigDecryption;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "authentication",
-      baseName: "authentication",
-      type: "SyntheticsPrivateLocationSecretsAuthentication",
-      format: "",
-    },
-    {
-      name: "configDecryption",
-      baseName: "config_decryption",
-      type: "SyntheticsPrivateLocationSecretsConfigDecryption",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "authentication",
+            "baseName": "authentication",
+            "type": "SyntheticsPrivateLocationSecretsAuthentication",
+            "format": ""
+        },
+        {
+            "name": "configDecryption",
+            "baseName": "config_decryption",
+            "type": "SyntheticsPrivateLocationSecretsConfigDecryption",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SyntheticsPrivateLocationSecrets.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SyntheticsPrivateLocationSecrets.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

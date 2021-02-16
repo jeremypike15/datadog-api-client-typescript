@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Type of the note widget.
- */
-export type NoteWidgetDefinitionType = "note";
+* Type of the note widget.
+*/
+export type NoteWidgetDefinitionType = "note" ;

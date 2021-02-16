@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * Type of the Synthetic test, either `api` or `browser`.
- */
-export type SyntheticsTestDetailsType = "api" | "browser";
+* Type of the Synthetic test, either `api` or `browser`.
+*/
+export type SyntheticsTestDetailsType = "api" | "browser" ;

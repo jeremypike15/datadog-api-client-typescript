@@ -10,37 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { DashboardListItemRequest } from "./DashboardListItemRequest";
-import { HttpFile } from "../http/http";
+import { DashboardListItemRequest } from './DashboardListItemRequest';
+import { HttpFile } from '../http/http';
 
 /**
- * Request containing a list of dashboards to delete.
- */
+* Request containing a list of dashboards to delete.
+*/
 export class DashboardListDeleteItemsRequest {
-  /**
-   * List of dashboards to delete from the dashboard list.
-   */
-  "dashboards"?: Array<DashboardListItemRequest>;
+    /**
+    * List of dashboards to delete from the dashboard list.
+    */
+    'dashboards'?: Array<DashboardListItemRequest>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "dashboards",
-      baseName: "dashboards",
-      type: "Array<DashboardListItemRequest>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "dashboards",
+            "baseName": "dashboards",
+            "type": "Array<DashboardListItemRequest>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return DashboardListDeleteItemsRequest.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return DashboardListDeleteItemsRequest.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

@@ -10,45 +10,41 @@
  * Do not edit the class manually.
  */
 
-import { SLOBulkDeleteError } from "./SLOBulkDeleteError";
-import { SLOBulkDeleteResponseData } from "./SLOBulkDeleteResponseData";
-import { HttpFile } from "../http/http";
+import { SLOBulkDeleteError } from './SLOBulkDeleteError';
+import { SLOBulkDeleteResponseData } from './SLOBulkDeleteResponseData';
+import { HttpFile } from '../http/http';
 
 /**
- * The bulk partial delete service level objective object endpoint response.  This endpoint operates on multiple service level objective objects, so it may be partially successful. In such cases, the \"data\" and \"error\" fields in this response indicate which deletions succeeded and failed.
- */
+* The bulk partial delete service level objective object endpoint response.  This endpoint operates on multiple service level objective objects, so it may be partially successful. In such cases, the \"data\" and \"error\" fields in this response indicate which deletions succeeded and failed.
+*/
 export class SLOBulkDeleteResponse {
-  "data"?: SLOBulkDeleteResponseData;
-  /**
-   * Array of errors object returned.
-   */
-  "errors"?: Array<SLOBulkDeleteError>;
+    'data'?: SLOBulkDeleteResponseData;
+    /**
+    * Array of errors object returned.
+    */
+    'errors'?: Array<SLOBulkDeleteError>;
 
-  static readonly discriminator: string | undefined = undefined;
+    static readonly discriminator: string | undefined = undefined;
 
-  static readonly attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-    format: string;
-  }> = [
-    {
-      name: "data",
-      baseName: "data",
-      type: "SLOBulkDeleteResponseData",
-      format: "",
-    },
-    {
-      name: "errors",
-      baseName: "errors",
-      type: "Array<SLOBulkDeleteError>",
-      format: "",
-    },
-  ];
+    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "SLOBulkDeleteResponseData",
+            "format": ""
+        },
+        {
+            "name": "errors",
+            "baseName": "errors",
+            "type": "Array<SLOBulkDeleteError>",
+            "format": ""
+        }    ];
 
-  static getAttributeTypeMap() {
-    return SLOBulkDeleteResponse.attributeTypeMap;
-  }
-
-  public constructor() {}
+    static getAttributeTypeMap() {
+        return SLOBulkDeleteResponse.attributeTypeMap;
+    }
+    
+    public constructor() {
+    }
 }
+

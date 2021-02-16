@@ -10,9 +10,9 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from "../http/http";
+import { HttpFile } from '../http/http';
 
 /**
- * The access role of the user. Options are **st** (standard user), **adm** (admin user), or **ro** (read-only user).
- */
-export type AccessRole = "st" | "adm" | "ro" | "ERROR";
+* The access role of the user. Options are **st** (standard user), **adm** (admin user), or **ro** (read-only user).
+*/
+export type AccessRole = "st" | "adm" | "ro" | "ERROR" ;
