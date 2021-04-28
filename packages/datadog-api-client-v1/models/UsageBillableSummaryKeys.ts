@@ -24,12 +24,18 @@ export class UsageBillableSummaryKeys {
     'infraContainerSum'?: UsageBillableSummaryBody;
     'infraHostSum'?: UsageBillableSummaryBody;
     'infraHostTop99p'?: UsageBillableSummaryBody;
+    'iotSum'?: UsageBillableSummaryBody;
     'iotTop99p'?: UsageBillableSummaryBody;
     'lambdaFunctionAverage'?: UsageBillableSummaryBody;
     'logsIndexedSum'?: UsageBillableSummaryBody;
     'logsIngestedSum'?: UsageBillableSummaryBody;
+    'networkDeviceTop99p'?: UsageBillableSummaryBody;
     'npmFlowSum'?: UsageBillableSummaryBody;
+    'npmHostSum'?: UsageBillableSummaryBody;
     'npmHostTop99p'?: UsageBillableSummaryBody;
+    'profContainerSum'?: UsageBillableSummaryBody;
+    'profHostSum'?: UsageBillableSummaryBody;
+    'profHostTop99p'?: UsageBillableSummaryBody;
     'rumSum'?: UsageBillableSummaryBody;
     'serverlessInvocationSum'?: UsageBillableSummaryBody;
     'siemSum'?: UsageBillableSummaryBody;
@@ -75,6 +81,11 @@ export class UsageBillableSummaryKeys {
             "type": "UsageBillableSummaryBody",
             "format": ""
         },
+        "iotSum": {
+            "baseName": "iot_sum",
+            "type": "UsageBillableSummaryBody",
+            "format": ""
+        },
         "iotTop99p": {
             "baseName": "iot_top99p",
             "type": "UsageBillableSummaryBody",
@@ -95,13 +106,38 @@ export class UsageBillableSummaryKeys {
             "type": "UsageBillableSummaryBody",
             "format": ""
         },
+        "networkDeviceTop99p": {
+            "baseName": "network_device_top99p",
+            "type": "UsageBillableSummaryBody",
+            "format": ""
+        },
         "npmFlowSum": {
             "baseName": "npm_flow_sum",
             "type": "UsageBillableSummaryBody",
             "format": ""
         },
+        "npmHostSum": {
+            "baseName": "npm_host_sum",
+            "type": "UsageBillableSummaryBody",
+            "format": ""
+        },
         "npmHostTop99p": {
             "baseName": "npm_host_top99p",
+            "type": "UsageBillableSummaryBody",
+            "format": ""
+        },
+        "profContainerSum": {
+            "baseName": "prof_container_sum",
+            "type": "UsageBillableSummaryBody",
+            "format": ""
+        },
+        "profHostSum": {
+            "baseName": "prof_host_sum",
+            "type": "UsageBillableSummaryBody",
+            "format": ""
+        },
+        "profHostTop99p": {
+            "baseName": "prof_host_top99p",
             "type": "UsageBillableSummaryBody",
             "format": ""
         },
@@ -157,6 +193,8 @@ export class UsageBillableSummaryKeys {
 
       res.infraHostTop99p = ObjectSerializer.deserialize(data.infra_host_top99p, "UsageBillableSummaryBody", "")
 
+      res.iotSum = ObjectSerializer.deserialize(data.iot_sum, "UsageBillableSummaryBody", "")
+
       res.iotTop99p = ObjectSerializer.deserialize(data.iot_top99p, "UsageBillableSummaryBody", "")
 
       res.lambdaFunctionAverage = ObjectSerializer.deserialize(data.lambda_function_average, "UsageBillableSummaryBody", "")
@@ -165,9 +203,19 @@ export class UsageBillableSummaryKeys {
 
       res.logsIngestedSum = ObjectSerializer.deserialize(data.logs_ingested_sum, "UsageBillableSummaryBody", "")
 
+      res.networkDeviceTop99p = ObjectSerializer.deserialize(data.network_device_top99p, "UsageBillableSummaryBody", "")
+
       res.npmFlowSum = ObjectSerializer.deserialize(data.npm_flow_sum, "UsageBillableSummaryBody", "")
 
+      res.npmHostSum = ObjectSerializer.deserialize(data.npm_host_sum, "UsageBillableSummaryBody", "")
+
       res.npmHostTop99p = ObjectSerializer.deserialize(data.npm_host_top99p, "UsageBillableSummaryBody", "")
+
+      res.profContainerSum = ObjectSerializer.deserialize(data.prof_container_sum, "UsageBillableSummaryBody", "")
+
+      res.profHostSum = ObjectSerializer.deserialize(data.prof_host_sum, "UsageBillableSummaryBody", "")
+
+      res.profHostTop99p = ObjectSerializer.deserialize(data.prof_host_top99p, "UsageBillableSummaryBody", "")
 
       res.rumSum = ObjectSerializer.deserialize(data.rum_sum, "UsageBillableSummaryBody", "")
 
@@ -207,6 +255,8 @@ export class UsageBillableSummaryKeys {
 
         res.infra_host_top99p = ObjectSerializer.serialize(data.infraHostTop99p, "UsageBillableSummaryBody", "")
 
+        res.iot_sum = ObjectSerializer.serialize(data.iotSum, "UsageBillableSummaryBody", "")
+
         res.iot_top99p = ObjectSerializer.serialize(data.iotTop99p, "UsageBillableSummaryBody", "")
 
         res.lambda_function_average = ObjectSerializer.serialize(data.lambdaFunctionAverage, "UsageBillableSummaryBody", "")
@@ -215,9 +265,19 @@ export class UsageBillableSummaryKeys {
 
         res.logs_ingested_sum = ObjectSerializer.serialize(data.logsIngestedSum, "UsageBillableSummaryBody", "")
 
+        res.network_device_top99p = ObjectSerializer.serialize(data.networkDeviceTop99p, "UsageBillableSummaryBody", "")
+
         res.npm_flow_sum = ObjectSerializer.serialize(data.npmFlowSum, "UsageBillableSummaryBody", "")
 
+        res.npm_host_sum = ObjectSerializer.serialize(data.npmHostSum, "UsageBillableSummaryBody", "")
+
         res.npm_host_top99p = ObjectSerializer.serialize(data.npmHostTop99p, "UsageBillableSummaryBody", "")
+
+        res.prof_container_sum = ObjectSerializer.serialize(data.profContainerSum, "UsageBillableSummaryBody", "")
+
+        res.prof_host_sum = ObjectSerializer.serialize(data.profHostSum, "UsageBillableSummaryBody", "")
+
+        res.prof_host_top99p = ObjectSerializer.serialize(data.profHostTop99p, "UsageBillableSummaryBody", "")
 
         res.rum_sum = ObjectSerializer.serialize(data.rumSum, "UsageBillableSummaryBody", "")
 

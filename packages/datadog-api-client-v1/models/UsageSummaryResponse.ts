@@ -56,7 +56,7 @@ export class UsageSummaryResponse {
     /**
     * Shows the sum of all compliance containers over all hours in the current months for all organizations.
     */
-    'complianceContainerAggSum'?: Object;
+    'complianceContainerAggSum'?: number;
     /**
     * Shows the sum of all compliance hosts over all hours in the current months for all organizations.
     */
@@ -256,8 +256,8 @@ export class UsageSummaryResponse {
         },
         "complianceContainerAggSum": {
             "baseName": "compliance_container_agg_sum",
-            "type": "Object",
-            "format": ""
+            "type": "number",
+            "format": "int64"
         },
         "complianceHostAggSum": {
             "baseName": "compliance_host_agg_sum",
@@ -470,7 +470,7 @@ export class UsageSummaryResponse {
 
       res.billableIngestedBytesAggSum = ObjectSerializer.deserialize(data.billable_ingested_bytes_agg_sum, "number", "int64")
 
-      res.complianceContainerAggSum = ObjectSerializer.deserialize(data.compliance_container_agg_sum, "Object", "")
+      res.complianceContainerAggSum = ObjectSerializer.deserialize(data.compliance_container_agg_sum, "number", "int64")
 
       res.complianceHostAggSum = ObjectSerializer.deserialize(data.compliance_host_agg_sum, "number", "int64")
 
@@ -576,7 +576,7 @@ export class UsageSummaryResponse {
 
         res.billable_ingested_bytes_agg_sum = ObjectSerializer.serialize(data.billableIngestedBytesAggSum, "number", "int64")
 
-        res.compliance_container_agg_sum = ObjectSerializer.serialize(data.complianceContainerAggSum, "Object", "")
+        res.compliance_container_agg_sum = ObjectSerializer.serialize(data.complianceContainerAggSum, "number", "int64")
 
         res.compliance_host_agg_sum = ObjectSerializer.serialize(data.complianceHostAggSum, "number", "int64")
 

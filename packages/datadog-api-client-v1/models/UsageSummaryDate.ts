@@ -52,7 +52,7 @@ export class UsageSummaryDate {
     /**
     * Shows the sum of compliance containers over all hours in the current date for all organizations.
     */
-    'complianceContainerCountSum'?: Object;
+    'complianceContainerCountSum'?: number;
     /**
     * Shows the sum of compliance hosts over all hours in the current date for all organizations.
     */
@@ -219,8 +219,8 @@ export class UsageSummaryDate {
         },
         "complianceContainerCountSum": {
             "baseName": "compliance_container_count_sum",
-            "type": "Object",
-            "format": ""
+            "type": "number",
+            "format": "int64"
         },
         "complianceHostCountSum": {
             "baseName": "compliance_host_count_sum",
@@ -396,7 +396,7 @@ export class UsageSummaryDate {
 
       res.billableIngestedBytesSum = ObjectSerializer.deserialize(data.billable_ingested_bytes_sum, "number", "int64")
 
-      res.complianceContainerCountSum = ObjectSerializer.deserialize(data.compliance_container_count_sum, "Object", "")
+      res.complianceContainerCountSum = ObjectSerializer.deserialize(data.compliance_container_count_sum, "number", "int64")
 
       res.complianceHostCountSum = ObjectSerializer.deserialize(data.compliance_host_count_sum, "number", "int64")
 
@@ -486,7 +486,7 @@ export class UsageSummaryDate {
 
         res.billable_ingested_bytes_sum = ObjectSerializer.serialize(data.billableIngestedBytesSum, "number", "int64")
 
-        res.compliance_container_count_sum = ObjectSerializer.serialize(data.complianceContainerCountSum, "Object", "")
+        res.compliance_container_count_sum = ObjectSerializer.serialize(data.complianceContainerCountSum, "number", "int64")
 
         res.compliance_host_count_sum = ObjectSerializer.serialize(data.complianceHostCountSum, "number", "int64")
 
