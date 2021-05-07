@@ -27,13 +27,13 @@ export class MetricTagConfigurationAttributes {
     'includePercentiles'?: boolean;
     'metricType'?: MetricTagConfigurationMetricTypes;
     /**
-    * Timestamp when the tag configuration was last modified.
-    */
-    'modifiedAt'?: Date;
-    /**
     * List of tag keys on which to group.
     */
     'tags'?: Array<string>;
+    /**
+    * Timestamp when the tag configuration was last updated.
+    */
+    'updatedAt'?: Date;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -53,15 +53,15 @@ export class MetricTagConfigurationAttributes {
             "type": "MetricTagConfigurationMetricTypes",
             "format": ""
         },
-        "modifiedAt": {
-            "baseName": "modified_at",
-            "type": "Date",
-            "format": "date-time"
-        },
         "tags": {
             "baseName": "tags",
             "type": "Array<string>",
             "format": ""
+        },
+        "updatedAt": {
+            "baseName": "updated_at",
+            "type": "Date",
+            "format": "date-time"
         }    };
 
     static getAttributeTypeMap() {
@@ -81,9 +81,9 @@ export class MetricTagConfigurationAttributes {
           throw TypeError(`invalid enum value ${ data.metric_type } for metric_type`);
       }
 
-      res.modifiedAt = ObjectSerializer.deserialize(data.modified_at, "Date", "date-time")
-
       res.tags = ObjectSerializer.deserialize(data.tags, "Array<string>", "")
+
+      res.updatedAt = ObjectSerializer.deserialize(data.updated_at, "Date", "date-time")
 
 
       return res;
@@ -107,9 +107,9 @@ export class MetricTagConfigurationAttributes {
             throw TypeError(`invalid enum value ${ data.metricType } for metricType`);
         }
 
-        res.modified_at = ObjectSerializer.serialize(data.modifiedAt, "Date", "date-time")
-
         res.tags = ObjectSerializer.serialize(data.tags, "Array<string>", "")
+
+        res.updated_at = ObjectSerializer.serialize(data.updatedAt, "Date", "date-time")
 
         return res
     }
