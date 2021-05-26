@@ -692,7 +692,7 @@ export class ObjectAWSIntegrationApi {
      * @param param the request object
      */
     public createAWSAccount(param: AWSIntegrationApiCreateAWSAccountRequest, options?: Configuration): Promise<AWSAccountCreateResponse> {
-        return this.api.createAWSAccount(param.body,  options).toPromise();
+        return this.api.createAWSAccount(param.body, options).toPromise();
     }
 
     /**
@@ -701,7 +701,7 @@ export class ObjectAWSIntegrationApi {
      * @param param the request object
      */
     public createAWSTagFilter(param: AWSIntegrationApiCreateAWSTagFilterRequest, options?: Configuration): Promise<any> {
-        return this.api.createAWSTagFilter(param.body,  options).toPromise();
+        return this.api.createAWSTagFilter(param.body, options).toPromise();
     }
 
     /**
@@ -710,7 +710,7 @@ export class ObjectAWSIntegrationApi {
      * @param param the request object
      */
     public createNewAWSExternalID(param: AWSIntegrationApiCreateNewAWSExternalIDRequest, options?: Configuration): Promise<AWSAccountCreateResponse> {
-        return this.api.createNewAWSExternalID(param.body,  options).toPromise();
+        return this.api.createNewAWSExternalID(param.body, options).toPromise();
     }
 
     /**
@@ -719,7 +719,7 @@ export class ObjectAWSIntegrationApi {
      * @param param the request object
      */
     public deleteAWSAccount(param: AWSIntegrationApiDeleteAWSAccountRequest, options?: Configuration): Promise<any> {
-        return this.api.deleteAWSAccount(param.body,  options).toPromise();
+        return this.api.deleteAWSAccount(param.body, options).toPromise();
     }
 
     /**
@@ -728,7 +728,7 @@ export class ObjectAWSIntegrationApi {
      * @param param the request object
      */
     public deleteAWSTagFilter(param: AWSIntegrationApiDeleteAWSTagFilterRequest, options?: Configuration): Promise<any> {
-        return this.api.deleteAWSTagFilter(param.body,  options).toPromise();
+        return this.api.deleteAWSTagFilter(param.body, options).toPromise();
     }
 
     /**
@@ -737,7 +737,7 @@ export class ObjectAWSIntegrationApi {
      * @param param the request object
      */
     public listAWSAccounts(param: AWSIntegrationApiListAWSAccountsRequest, options?: Configuration): Promise<AWSAccountListResponse> {
-        return this.api.listAWSAccounts(param.accountId, param.roleName, param.accessKeyId,  options).toPromise();
+        return this.api.listAWSAccounts(param.accountId, param.roleName, param.accessKeyId, options).toPromise();
     }
 
     /**
@@ -746,16 +746,15 @@ export class ObjectAWSIntegrationApi {
      * @param param the request object
      */
     public listAWSTagFilters(param: AWSIntegrationApiListAWSTagFiltersRequest, options?: Configuration): Promise<AWSTagFilterListResponse> {
-        return this.api.listAWSTagFilters(param.accountId,  options).toPromise();
+        return this.api.listAWSTagFilters(param.accountId, options).toPromise();
     }
 
     /**
      * List all namespace rules for a given Datadog-AWS integration. This endpoint takes no arguments.
      * List namespace rules
-     * @param param the request object
      */
-    public listAvailableAWSNamespaces(param: AWSIntegrationApiListAvailableAWSNamespacesRequest, options?: Configuration): Promise<Array<string>> {
-        return this.api.listAvailableAWSNamespaces( options).toPromise();
+    public listAvailableAWSNamespaces(options?: Configuration): Promise<Array<string>> {
+        return this.api.listAvailableAWSNamespaces(options).toPromise();
     }
 
     /**
@@ -764,7 +763,7 @@ export class ObjectAWSIntegrationApi {
      * @param param the request object
      */
     public updateAWSAccount(param: AWSIntegrationApiUpdateAWSAccountRequest, options?: Configuration): Promise<any> {
-        return this.api.updateAWSAccount(param.body, param.accountId, param.roleName, param.accessKeyId,  options).toPromise();
+        return this.api.updateAWSAccount(param.body, param.accountId, param.roleName, param.accessKeyId, options).toPromise();
     }
 
 }
@@ -836,7 +835,7 @@ export class ObjectAWSLogsIntegrationApi {
      * @param param the request object
      */
     public checkAWSLogsLambdaAsync(param: AWSLogsIntegrationApiCheckAWSLogsLambdaAsyncRequest, options?: Configuration): Promise<AWSLogsAsyncResponse> {
-        return this.api.checkAWSLogsLambdaAsync(param.body,  options).toPromise();
+        return this.api.checkAWSLogsLambdaAsync(param.body, options).toPromise();
     }
 
     /**
@@ -845,7 +844,7 @@ export class ObjectAWSLogsIntegrationApi {
      * @param param the request object
      */
     public checkAWSLogsServicesAsync(param: AWSLogsIntegrationApiCheckAWSLogsServicesAsyncRequest, options?: Configuration): Promise<AWSLogsAsyncResponse> {
-        return this.api.checkAWSLogsServicesAsync(param.body,  options).toPromise();
+        return this.api.checkAWSLogsServicesAsync(param.body, options).toPromise();
     }
 
     /**
@@ -854,7 +853,7 @@ export class ObjectAWSLogsIntegrationApi {
      * @param param the request object
      */
     public createAWSLambdaARN(param: AWSLogsIntegrationApiCreateAWSLambdaARNRequest, options?: Configuration): Promise<any> {
-        return this.api.createAWSLambdaARN(param.body,  options).toPromise();
+        return this.api.createAWSLambdaARN(param.body, options).toPromise();
     }
 
     /**
@@ -863,7 +862,7 @@ export class ObjectAWSLogsIntegrationApi {
      * @param param the request object
      */
     public deleteAWSLambdaARN(param: AWSLogsIntegrationApiDeleteAWSLambdaARNRequest, options?: Configuration): Promise<any> {
-        return this.api.deleteAWSLambdaARN(param.body,  options).toPromise();
+        return this.api.deleteAWSLambdaARN(param.body, options).toPromise();
     }
 
     /**
@@ -872,25 +871,23 @@ export class ObjectAWSLogsIntegrationApi {
      * @param param the request object
      */
     public enableAWSLogServices(param: AWSLogsIntegrationApiEnableAWSLogServicesRequest, options?: Configuration): Promise<any> {
-        return this.api.enableAWSLogServices(param.body,  options).toPromise();
+        return this.api.enableAWSLogServices(param.body, options).toPromise();
     }
 
     /**
      * List all Datadog-AWS Logs integrations configured in your Datadog account.
      * List all AWS Logs integrations
-     * @param param the request object
      */
-    public listAWSLogsIntegrations(param: AWSLogsIntegrationApiListAWSLogsIntegrationsRequest, options?: Configuration): Promise<Array<AWSLogsListResponse>> {
-        return this.api.listAWSLogsIntegrations( options).toPromise();
+    public listAWSLogsIntegrations(options?: Configuration): Promise<Array<AWSLogsListResponse>> {
+        return this.api.listAWSLogsIntegrations(options).toPromise();
     }
 
     /**
      * Get the list of current AWS services that Datadog offers automatic log collection. Use returned service IDs with the services parameter for the Enable an AWS service log collection API endpoint.
      * Get list of AWS log ready services
-     * @param param the request object
      */
-    public listAWSLogsServices(param: AWSLogsIntegrationApiListAWSLogsServicesRequest, options?: Configuration): Promise<Array<AWSLogsListServicesResponse>> {
-        return this.api.listAWSLogsServices( options).toPromise();
+    public listAWSLogsServices(options?: Configuration): Promise<Array<AWSLogsListServicesResponse>> {
+        return this.api.listAWSLogsServices(options).toPromise();
     }
 
 }
@@ -911,10 +908,9 @@ export class ObjectAuthenticationApi {
     /**
      * Check if the API key (not the APP key) is valid. If invalid, a 403 is returned.
      * Validate API key
-     * @param param the request object
      */
-    public validate(param: AuthenticationApiValidateRequest, options?: Configuration): Promise<AuthenticationValidationResponse> {
-        return this.api.validate( options).toPromise();
+    public validate(options?: Configuration): Promise<AuthenticationValidationResponse> {
+        return this.api.validate(options).toPromise();
     }
 
 }
@@ -974,7 +970,7 @@ export class ObjectAzureIntegrationApi {
      * @param param the request object
      */
     public createAzureIntegration(param: AzureIntegrationApiCreateAzureIntegrationRequest, options?: Configuration): Promise<any> {
-        return this.api.createAzureIntegration(param.body,  options).toPromise();
+        return this.api.createAzureIntegration(param.body, options).toPromise();
     }
 
     /**
@@ -983,16 +979,15 @@ export class ObjectAzureIntegrationApi {
      * @param param the request object
      */
     public deleteAzureIntegration(param: AzureIntegrationApiDeleteAzureIntegrationRequest, options?: Configuration): Promise<any> {
-        return this.api.deleteAzureIntegration(param.body,  options).toPromise();
+        return this.api.deleteAzureIntegration(param.body, options).toPromise();
     }
 
     /**
      * List all Datadog-Azure integrations configured in your Datadog account.
      * List all Azure integrations
-     * @param param the request object
      */
-    public listAzureIntegration(param: AzureIntegrationApiListAzureIntegrationRequest, options?: Configuration): Promise<Array<AzureAccount>> {
-        return this.api.listAzureIntegration( options).toPromise();
+    public listAzureIntegration(options?: Configuration): Promise<Array<AzureAccount>> {
+        return this.api.listAzureIntegration(options).toPromise();
     }
 
     /**
@@ -1001,7 +996,7 @@ export class ObjectAzureIntegrationApi {
      * @param param the request object
      */
     public updateAzureHostFilters(param: AzureIntegrationApiUpdateAzureHostFiltersRequest, options?: Configuration): Promise<any> {
-        return this.api.updateAzureHostFilters(param.body,  options).toPromise();
+        return this.api.updateAzureHostFilters(param.body, options).toPromise();
     }
 
     /**
@@ -1010,7 +1005,7 @@ export class ObjectAzureIntegrationApi {
      * @param param the request object
      */
     public updateAzureIntegration(param: AzureIntegrationApiUpdateAzureIntegrationRequest, options?: Configuration): Promise<any> {
-        return this.api.updateAzureIntegration(param.body,  options).toPromise();
+        return this.api.updateAzureIntegration(param.body, options).toPromise();
     }
 
 }
@@ -1076,7 +1071,7 @@ export class ObjectDashboardListsApi {
      * @param param the request object
      */
     public createDashboardList(param: DashboardListsApiCreateDashboardListRequest, options?: Configuration): Promise<DashboardList> {
-        return this.api.createDashboardList(param.body,  options).toPromise();
+        return this.api.createDashboardList(param.body, options).toPromise();
     }
 
     /**
@@ -1085,7 +1080,7 @@ export class ObjectDashboardListsApi {
      * @param param the request object
      */
     public deleteDashboardList(param: DashboardListsApiDeleteDashboardListRequest, options?: Configuration): Promise<DashboardListDeleteResponse> {
-        return this.api.deleteDashboardList(param.listId,  options).toPromise();
+        return this.api.deleteDashboardList(param.listId, options).toPromise();
     }
 
     /**
@@ -1094,16 +1089,15 @@ export class ObjectDashboardListsApi {
      * @param param the request object
      */
     public getDashboardList(param: DashboardListsApiGetDashboardListRequest, options?: Configuration): Promise<DashboardList> {
-        return this.api.getDashboardList(param.listId,  options).toPromise();
+        return this.api.getDashboardList(param.listId, options).toPromise();
     }
 
     /**
      * Fetch all of your existing dashboard list definitions.
      * Get all dashboard lists
-     * @param param the request object
      */
-    public listDashboardLists(param: DashboardListsApiListDashboardListsRequest, options?: Configuration): Promise<DashboardListListResponse> {
-        return this.api.listDashboardLists( options).toPromise();
+    public listDashboardLists(options?: Configuration): Promise<DashboardListListResponse> {
+        return this.api.listDashboardLists(options).toPromise();
     }
 
     /**
@@ -1112,7 +1106,7 @@ export class ObjectDashboardListsApi {
      * @param param the request object
      */
     public updateDashboardList(param: DashboardListsApiUpdateDashboardListRequest, options?: Configuration): Promise<DashboardList> {
-        return this.api.updateDashboardList(param.listId, param.body,  options).toPromise();
+        return this.api.updateDashboardList(param.listId, param.body, options).toPromise();
     }
 
 }
@@ -1184,7 +1178,7 @@ export class ObjectDashboardsApi {
      * @param param the request object
      */
     public createDashboard(param: DashboardsApiCreateDashboardRequest, options?: Configuration): Promise<Dashboard> {
-        return this.api.createDashboard(param.body,  options).toPromise();
+        return this.api.createDashboard(param.body, options).toPromise();
     }
 
     /**
@@ -1193,7 +1187,7 @@ export class ObjectDashboardsApi {
      * @param param the request object
      */
     public deleteDashboard(param: DashboardsApiDeleteDashboardRequest, options?: Configuration): Promise<DashboardDeleteResponse> {
-        return this.api.deleteDashboard(param.dashboardId,  options).toPromise();
+        return this.api.deleteDashboard(param.dashboardId, options).toPromise();
     }
 
     /**
@@ -1202,7 +1196,7 @@ export class ObjectDashboardsApi {
      * @param param the request object
      */
     public getDashboard(param: DashboardsApiGetDashboardRequest, options?: Configuration): Promise<Dashboard> {
-        return this.api.getDashboard(param.dashboardId,  options).toPromise();
+        return this.api.getDashboard(param.dashboardId, options).toPromise();
     }
 
     /**
@@ -1211,7 +1205,7 @@ export class ObjectDashboardsApi {
      * @param param the request object
      */
     public listDashboards(param: DashboardsApiListDashboardsRequest, options?: Configuration): Promise<DashboardSummary> {
-        return this.api.listDashboards(param.filterShared,  options).toPromise();
+        return this.api.listDashboards(param.filterShared, options).toPromise();
     }
 
     /**
@@ -1220,7 +1214,7 @@ export class ObjectDashboardsApi {
      * @param param the request object
      */
     public updateDashboard(param: DashboardsApiUpdateDashboardRequest, options?: Configuration): Promise<Dashboard> {
-        return this.api.updateDashboard(param.dashboardId, param.body,  options).toPromise();
+        return this.api.updateDashboard(param.dashboardId, param.body, options).toPromise();
     }
 
 }
@@ -1310,7 +1304,7 @@ export class ObjectDowntimesApi {
      * @param param the request object
      */
     public cancelDowntime(param: DowntimesApiCancelDowntimeRequest, options?: Configuration): Promise<void> {
-        return this.api.cancelDowntime(param.downtimeId,  options).toPromise();
+        return this.api.cancelDowntime(param.downtimeId, options).toPromise();
     }
 
     /**
@@ -1319,7 +1313,7 @@ export class ObjectDowntimesApi {
      * @param param the request object
      */
     public cancelDowntimesByScope(param: DowntimesApiCancelDowntimesByScopeRequest, options?: Configuration): Promise<CanceledDowntimesIds> {
-        return this.api.cancelDowntimesByScope(param.body,  options).toPromise();
+        return this.api.cancelDowntimesByScope(param.body, options).toPromise();
     }
 
     /**
@@ -1328,7 +1322,7 @@ export class ObjectDowntimesApi {
      * @param param the request object
      */
     public createDowntime(param: DowntimesApiCreateDowntimeRequest, options?: Configuration): Promise<Downtime> {
-        return this.api.createDowntime(param.body,  options).toPromise();
+        return this.api.createDowntime(param.body, options).toPromise();
     }
 
     /**
@@ -1337,7 +1331,7 @@ export class ObjectDowntimesApi {
      * @param param the request object
      */
     public getDowntime(param: DowntimesApiGetDowntimeRequest, options?: Configuration): Promise<Downtime> {
-        return this.api.getDowntime(param.downtimeId,  options).toPromise();
+        return this.api.getDowntime(param.downtimeId, options).toPromise();
     }
 
     /**
@@ -1346,7 +1340,7 @@ export class ObjectDowntimesApi {
      * @param param the request object
      */
     public listDowntimes(param: DowntimesApiListDowntimesRequest, options?: Configuration): Promise<Array<Downtime>> {
-        return this.api.listDowntimes(param.currentOnly,  options).toPromise();
+        return this.api.listDowntimes(param.currentOnly, options).toPromise();
     }
 
     /**
@@ -1355,7 +1349,7 @@ export class ObjectDowntimesApi {
      * @param param the request object
      */
     public listMonitorDowntimes(param: DowntimesApiListMonitorDowntimesRequest, options?: Configuration): Promise<Array<Downtime>> {
-        return this.api.listMonitorDowntimes(param.monitorId,  options).toPromise();
+        return this.api.listMonitorDowntimes(param.monitorId, options).toPromise();
     }
 
     /**
@@ -1364,7 +1358,7 @@ export class ObjectDowntimesApi {
      * @param param the request object
      */
     public updateDowntime(param: DowntimesApiUpdateDowntimeRequest, options?: Configuration): Promise<Downtime> {
-        return this.api.updateDowntime(param.downtimeId, param.body,  options).toPromise();
+        return this.api.updateDowntime(param.downtimeId, param.body, options).toPromise();
     }
 
 }
@@ -1454,7 +1448,7 @@ export class ObjectEventsApi {
      * @param param the request object
      */
     public createEvent(param: EventsApiCreateEventRequest, options?: Configuration): Promise<EventCreateResponse> {
-        return this.api.createEvent(param.body,  options).toPromise();
+        return this.api.createEvent(param.body, options).toPromise();
     }
 
     /**
@@ -1463,7 +1457,7 @@ export class ObjectEventsApi {
      * @param param the request object
      */
     public getEvent(param: EventsApiGetEventRequest, options?: Configuration): Promise<EventResponse> {
-        return this.api.getEvent(param.eventId,  options).toPromise();
+        return this.api.getEvent(param.eventId, options).toPromise();
     }
 
     /**
@@ -1472,7 +1466,7 @@ export class ObjectEventsApi {
      * @param param the request object
      */
     public listEvents(param: EventsApiListEventsRequest, options?: Configuration): Promise<EventListResponse> {
-        return this.api.listEvents(param.start, param.end, param.priority, param.sources, param.tags, param.unaggregated, param.excludeAggregate, param.page,  options).toPromise();
+        return this.api.listEvents(param.start, param.end, param.priority, param.sources, param.tags, param.unaggregated, param.excludeAggregate, param.page, options).toPromise();
     }
 
 }
@@ -1523,7 +1517,7 @@ export class ObjectGCPIntegrationApi {
      * @param param the request object
      */
     public createGCPIntegration(param: GCPIntegrationApiCreateGCPIntegrationRequest, options?: Configuration): Promise<any> {
-        return this.api.createGCPIntegration(param.body,  options).toPromise();
+        return this.api.createGCPIntegration(param.body, options).toPromise();
     }
 
     /**
@@ -1532,16 +1526,15 @@ export class ObjectGCPIntegrationApi {
      * @param param the request object
      */
     public deleteGCPIntegration(param: GCPIntegrationApiDeleteGCPIntegrationRequest, options?: Configuration): Promise<any> {
-        return this.api.deleteGCPIntegration(param.body,  options).toPromise();
+        return this.api.deleteGCPIntegration(param.body, options).toPromise();
     }
 
     /**
      * List all Datadog-GCP integrations configured in your Datadog account.
      * List all GCP integrations
-     * @param param the request object
      */
-    public listGCPIntegration(param: GCPIntegrationApiListGCPIntegrationRequest, options?: Configuration): Promise<Array<GCPAccount>> {
-        return this.api.listGCPIntegration( options).toPromise();
+    public listGCPIntegration(options?: Configuration): Promise<Array<GCPAccount>> {
+        return this.api.listGCPIntegration(options).toPromise();
     }
 
     /**
@@ -1550,7 +1543,7 @@ export class ObjectGCPIntegrationApi {
      * @param param the request object
      */
     public updateGCPIntegration(param: GCPIntegrationApiUpdateGCPIntegrationRequest, options?: Configuration): Promise<any> {
-        return this.api.updateGCPIntegration(param.body,  options).toPromise();
+        return this.api.updateGCPIntegration(param.body, options).toPromise();
     }
 
 }
@@ -1655,7 +1648,7 @@ export class ObjectHostsApi {
      * @param param the request object
      */
     public getHostTotals(param: HostsApiGetHostTotalsRequest, options?: Configuration): Promise<HostTotals> {
-        return this.api.getHostTotals(param.from,  options).toPromise();
+        return this.api.getHostTotals(param.from, options).toPromise();
     }
 
     /**
@@ -1664,7 +1657,7 @@ export class ObjectHostsApi {
      * @param param the request object
      */
     public listHosts(param: HostsApiListHostsRequest, options?: Configuration): Promise<HostListResponse> {
-        return this.api.listHosts(param.filter, param.sortField, param.sortDir, param.start, param.count, param.from, param.includeMutedHostsData, param.includeHostsMetadata,  options).toPromise();
+        return this.api.listHosts(param.filter, param.sortField, param.sortDir, param.start, param.count, param.from, param.includeMutedHostsData, param.includeHostsMetadata, options).toPromise();
     }
 
     /**
@@ -1673,7 +1666,7 @@ export class ObjectHostsApi {
      * @param param the request object
      */
     public muteHost(param: HostsApiMuteHostRequest, options?: Configuration): Promise<HostMuteResponse> {
-        return this.api.muteHost(param.hostName, param.body,  options).toPromise();
+        return this.api.muteHost(param.hostName, param.body, options).toPromise();
     }
 
     /**
@@ -1682,7 +1675,7 @@ export class ObjectHostsApi {
      * @param param the request object
      */
     public unmuteHost(param: HostsApiUnmuteHostRequest, options?: Configuration): Promise<HostMuteResponse> {
-        return this.api.unmuteHost(param.hostName,  options).toPromise();
+        return this.api.unmuteHost(param.hostName, options).toPromise();
     }
 
 }
@@ -1703,10 +1696,9 @@ export class ObjectIPRangesApi {
     /**
      * Get information about Datadog IP ranges.
      * List IP Ranges
-     * @param param the request object
      */
-    public getIPRanges(param: IPRangesApiGetIPRangesRequest, options?: Configuration): Promise<IPRanges> {
-        return this.api.getIPRanges( options).toPromise();
+    public getIPRanges(options?: Configuration): Promise<IPRanges> {
+        return this.api.getIPRanges(options).toPromise();
     }
 
 }
@@ -1817,7 +1809,7 @@ export class ObjectKeyManagementApi {
      * @param param the request object
      */
     public createAPIKey(param: KeyManagementApiCreateAPIKeyRequest, options?: Configuration): Promise<ApiKeyResponse> {
-        return this.api.createAPIKey(param.body,  options).toPromise();
+        return this.api.createAPIKey(param.body, options).toPromise();
     }
 
     /**
@@ -1826,7 +1818,7 @@ export class ObjectKeyManagementApi {
      * @param param the request object
      */
     public createApplicationKey(param: KeyManagementApiCreateApplicationKeyRequest, options?: Configuration): Promise<ApplicationKeyResponse> {
-        return this.api.createApplicationKey(param.body,  options).toPromise();
+        return this.api.createApplicationKey(param.body, options).toPromise();
     }
 
     /**
@@ -1835,7 +1827,7 @@ export class ObjectKeyManagementApi {
      * @param param the request object
      */
     public deleteAPIKey(param: KeyManagementApiDeleteAPIKeyRequest, options?: Configuration): Promise<ApiKeyResponse> {
-        return this.api.deleteAPIKey(param.key,  options).toPromise();
+        return this.api.deleteAPIKey(param.key, options).toPromise();
     }
 
     /**
@@ -1844,7 +1836,7 @@ export class ObjectKeyManagementApi {
      * @param param the request object
      */
     public deleteApplicationKey(param: KeyManagementApiDeleteApplicationKeyRequest, options?: Configuration): Promise<ApplicationKeyResponse> {
-        return this.api.deleteApplicationKey(param.key,  options).toPromise();
+        return this.api.deleteApplicationKey(param.key, options).toPromise();
     }
 
     /**
@@ -1853,7 +1845,7 @@ export class ObjectKeyManagementApi {
      * @param param the request object
      */
     public getAPIKey(param: KeyManagementApiGetAPIKeyRequest, options?: Configuration): Promise<ApiKeyResponse> {
-        return this.api.getAPIKey(param.key,  options).toPromise();
+        return this.api.getAPIKey(param.key, options).toPromise();
     }
 
     /**
@@ -1862,25 +1854,23 @@ export class ObjectKeyManagementApi {
      * @param param the request object
      */
     public getApplicationKey(param: KeyManagementApiGetApplicationKeyRequest, options?: Configuration): Promise<ApplicationKeyResponse> {
-        return this.api.getApplicationKey(param.key,  options).toPromise();
+        return this.api.getApplicationKey(param.key, options).toPromise();
     }
 
     /**
      * Get all API keys available for your account.
      * Get all API keys
-     * @param param the request object
      */
-    public listAPIKeys(param: KeyManagementApiListAPIKeysRequest, options?: Configuration): Promise<ApiKeyListResponse> {
-        return this.api.listAPIKeys( options).toPromise();
+    public listAPIKeys(options?: Configuration): Promise<ApiKeyListResponse> {
+        return this.api.listAPIKeys(options).toPromise();
     }
 
     /**
      * Get all application keys available for your Datadog account.
      * Get all application keys
-     * @param param the request object
      */
-    public listApplicationKeys(param: KeyManagementApiListApplicationKeysRequest, options?: Configuration): Promise<ApplicationKeyListResponse> {
-        return this.api.listApplicationKeys( options).toPromise();
+    public listApplicationKeys(options?: Configuration): Promise<ApplicationKeyListResponse> {
+        return this.api.listApplicationKeys(options).toPromise();
     }
 
     /**
@@ -1889,7 +1879,7 @@ export class ObjectKeyManagementApi {
      * @param param the request object
      */
     public updateAPIKey(param: KeyManagementApiUpdateAPIKeyRequest, options?: Configuration): Promise<ApiKeyResponse> {
-        return this.api.updateAPIKey(param.key, param.body,  options).toPromise();
+        return this.api.updateAPIKey(param.key, param.body, options).toPromise();
     }
 
     /**
@@ -1898,7 +1888,7 @@ export class ObjectKeyManagementApi {
      * @param param the request object
      */
     public updateApplicationKey(param: KeyManagementApiUpdateApplicationKeyRequest, options?: Configuration): Promise<ApplicationKeyResponse> {
-        return this.api.updateApplicationKey(param.key, param.body,  options).toPromise();
+        return this.api.updateApplicationKey(param.key, param.body, options).toPromise();
     }
 
 }
@@ -1949,7 +1939,7 @@ export class ObjectLogsApi {
      * @param param the request object
      */
     public listLogs(param: LogsApiListLogsRequest, options?: Configuration): Promise<LogsListResponse> {
-        return this.api.listLogs(param.body,  options).toPromise();
+        return this.api.listLogs(param.body, options).toPromise();
     }
 
     /**
@@ -1958,7 +1948,7 @@ export class ObjectLogsApi {
      * @param param the request object
      */
     public submitLog(param: LogsApiSubmitLogRequest, options?: Configuration): Promise<any> {
-        return this.api.submitLog(param.body, param.contentEncoding, param.ddtags,  options).toPromise();
+        return this.api.submitLog(param.body, param.contentEncoding, param.ddtags, options).toPromise();
     }
 
 }
@@ -2027,7 +2017,7 @@ export class ObjectLogsIndexesApi {
      * @param param the request object
      */
     public createLogsIndex(param: LogsIndexesApiCreateLogsIndexRequest, options?: Configuration): Promise<LogsIndex> {
-        return this.api.createLogsIndex(param.body,  options).toPromise();
+        return this.api.createLogsIndex(param.body, options).toPromise();
     }
 
     /**
@@ -2036,25 +2026,23 @@ export class ObjectLogsIndexesApi {
      * @param param the request object
      */
     public getLogsIndex(param: LogsIndexesApiGetLogsIndexRequest, options?: Configuration): Promise<LogsIndex> {
-        return this.api.getLogsIndex(param.name,  options).toPromise();
+        return this.api.getLogsIndex(param.name, options).toPromise();
     }
 
     /**
      * Get the current order of your log indexes. This endpoint takes no JSON arguments.
      * Get indexes order
-     * @param param the request object
      */
-    public getLogsIndexOrder(param: LogsIndexesApiGetLogsIndexOrderRequest, options?: Configuration): Promise<LogsIndexesOrder> {
-        return this.api.getLogsIndexOrder( options).toPromise();
+    public getLogsIndexOrder(options?: Configuration): Promise<LogsIndexesOrder> {
+        return this.api.getLogsIndexOrder(options).toPromise();
     }
 
     /**
      * The Index object describes the configuration of a log index. This endpoint returns an array of the `LogIndex` objects of your organization.
      * Get all indexes
-     * @param param the request object
      */
-    public listLogIndexes(param: LogsIndexesApiListLogIndexesRequest, options?: Configuration): Promise<LogsIndexListResponse> {
-        return this.api.listLogIndexes( options).toPromise();
+    public listLogIndexes(options?: Configuration): Promise<LogsIndexListResponse> {
+        return this.api.listLogIndexes(options).toPromise();
     }
 
     /**
@@ -2063,7 +2051,7 @@ export class ObjectLogsIndexesApi {
      * @param param the request object
      */
     public updateLogsIndex(param: LogsIndexesApiUpdateLogsIndexRequest, options?: Configuration): Promise<LogsIndex> {
-        return this.api.updateLogsIndex(param.name, param.body,  options).toPromise();
+        return this.api.updateLogsIndex(param.name, param.body, options).toPromise();
     }
 
     /**
@@ -2072,7 +2060,7 @@ export class ObjectLogsIndexesApi {
      * @param param the request object
      */
     public updateLogsIndexOrder(param: LogsIndexesApiUpdateLogsIndexOrderRequest, options?: Configuration): Promise<LogsIndexesOrder> {
-        return this.api.updateLogsIndexOrder(param.body,  options).toPromise();
+        return this.api.updateLogsIndexOrder(param.body, options).toPromise();
     }
 
 }
@@ -2150,7 +2138,7 @@ export class ObjectLogsPipelinesApi {
      * @param param the request object
      */
     public createLogsPipeline(param: LogsPipelinesApiCreateLogsPipelineRequest, options?: Configuration): Promise<LogsPipeline> {
-        return this.api.createLogsPipeline(param.body,  options).toPromise();
+        return this.api.createLogsPipeline(param.body, options).toPromise();
     }
 
     /**
@@ -2159,7 +2147,7 @@ export class ObjectLogsPipelinesApi {
      * @param param the request object
      */
     public deleteLogsPipeline(param: LogsPipelinesApiDeleteLogsPipelineRequest, options?: Configuration): Promise<void> {
-        return this.api.deleteLogsPipeline(param.pipelineId,  options).toPromise();
+        return this.api.deleteLogsPipeline(param.pipelineId, options).toPromise();
     }
 
     /**
@@ -2168,25 +2156,23 @@ export class ObjectLogsPipelinesApi {
      * @param param the request object
      */
     public getLogsPipeline(param: LogsPipelinesApiGetLogsPipelineRequest, options?: Configuration): Promise<LogsPipeline> {
-        return this.api.getLogsPipeline(param.pipelineId,  options).toPromise();
+        return this.api.getLogsPipeline(param.pipelineId, options).toPromise();
     }
 
     /**
      * Get the current order of your pipelines. This endpoint takes no JSON arguments.
      * Get pipeline order
-     * @param param the request object
      */
-    public getLogsPipelineOrder(param: LogsPipelinesApiGetLogsPipelineOrderRequest, options?: Configuration): Promise<LogsPipelinesOrder> {
-        return this.api.getLogsPipelineOrder( options).toPromise();
+    public getLogsPipelineOrder(options?: Configuration): Promise<LogsPipelinesOrder> {
+        return this.api.getLogsPipelineOrder(options).toPromise();
     }
 
     /**
      * Get all pipelines from your organization. This endpoint takes no JSON arguments.
      * Get all pipelines
-     * @param param the request object
      */
-    public listLogsPipelines(param: LogsPipelinesApiListLogsPipelinesRequest, options?: Configuration): Promise<Array<LogsPipeline>> {
-        return this.api.listLogsPipelines( options).toPromise();
+    public listLogsPipelines(options?: Configuration): Promise<Array<LogsPipeline>> {
+        return this.api.listLogsPipelines(options).toPromise();
     }
 
     /**
@@ -2195,7 +2181,7 @@ export class ObjectLogsPipelinesApi {
      * @param param the request object
      */
     public updateLogsPipeline(param: LogsPipelinesApiUpdateLogsPipelineRequest, options?: Configuration): Promise<LogsPipeline> {
-        return this.api.updateLogsPipeline(param.pipelineId, param.body,  options).toPromise();
+        return this.api.updateLogsPipeline(param.pipelineId, param.body, options).toPromise();
     }
 
     /**
@@ -2204,7 +2190,7 @@ export class ObjectLogsPipelinesApi {
      * @param param the request object
      */
     public updateLogsPipelineOrder(param: LogsPipelinesApiUpdateLogsPipelineOrderRequest, options?: Configuration): Promise<LogsPipelinesOrder> {
-        return this.api.updateLogsPipelineOrder(param.body,  options).toPromise();
+        return this.api.updateLogsPipelineOrder(param.body, options).toPromise();
     }
 
 }
@@ -2309,7 +2295,7 @@ export class ObjectMetricsApi {
      * @param param the request object
      */
     public getMetricMetadata(param: MetricsApiGetMetricMetadataRequest, options?: Configuration): Promise<MetricMetadata> {
-        return this.api.getMetricMetadata(param.metricName,  options).toPromise();
+        return this.api.getMetricMetadata(param.metricName, options).toPromise();
     }
 
     /**
@@ -2318,7 +2304,7 @@ export class ObjectMetricsApi {
      * @param param the request object
      */
     public listActiveMetrics(param: MetricsApiListActiveMetricsRequest, options?: Configuration): Promise<MetricsListResponse> {
-        return this.api.listActiveMetrics(param.from, param.host, param.tagFilter,  options).toPromise();
+        return this.api.listActiveMetrics(param.from, param.host, param.tagFilter, options).toPromise();
     }
 
     /**
@@ -2327,7 +2313,7 @@ export class ObjectMetricsApi {
      * @param param the request object
      */
     public listMetrics(param: MetricsApiListMetricsRequest, options?: Configuration): Promise<MetricSearchResponse> {
-        return this.api.listMetrics(param.q,  options).toPromise();
+        return this.api.listMetrics(param.q, options).toPromise();
     }
 
     /**
@@ -2336,7 +2322,7 @@ export class ObjectMetricsApi {
      * @param param the request object
      */
     public queryMetrics(param: MetricsApiQueryMetricsRequest, options?: Configuration): Promise<MetricsQueryResponse> {
-        return this.api.queryMetrics(param.from, param.to, param.query,  options).toPromise();
+        return this.api.queryMetrics(param.from, param.to, param.query, options).toPromise();
     }
 
     /**
@@ -2345,7 +2331,7 @@ export class ObjectMetricsApi {
      * @param param the request object
      */
     public submitMetrics(param: MetricsApiSubmitMetricsRequest, options?: Configuration): Promise<IntakePayloadAccepted> {
-        return this.api.submitMetrics(param.body,  options).toPromise();
+        return this.api.submitMetrics(param.body, options).toPromise();
     }
 
     /**
@@ -2354,7 +2340,7 @@ export class ObjectMetricsApi {
      * @param param the request object
      */
     public updateMetricMetadata(param: MetricsApiUpdateMetricMetadataRequest, options?: Configuration): Promise<MetricMetadata> {
-        return this.api.updateMetricMetadata(param.metricName, param.body,  options).toPromise();
+        return this.api.updateMetricMetadata(param.metricName, param.body, options).toPromise();
     }
 
 }
@@ -2498,7 +2484,7 @@ export class ObjectMonitorsApi {
      * @param param the request object
      */
     public checkCanDeleteMonitor(param: MonitorsApiCheckCanDeleteMonitorRequest, options?: Configuration): Promise<CheckCanDeleteMonitorResponse> {
-        return this.api.checkCanDeleteMonitor(param.monitorIds,  options).toPromise();
+        return this.api.checkCanDeleteMonitor(param.monitorIds, options).toPromise();
     }
 
     /**
@@ -2507,7 +2493,7 @@ export class ObjectMonitorsApi {
      * @param param the request object
      */
     public createMonitor(param: MonitorsApiCreateMonitorRequest, options?: Configuration): Promise<Monitor> {
-        return this.api.createMonitor(param.body,  options).toPromise();
+        return this.api.createMonitor(param.body, options).toPromise();
     }
 
     /**
@@ -2516,7 +2502,7 @@ export class ObjectMonitorsApi {
      * @param param the request object
      */
     public deleteMonitor(param: MonitorsApiDeleteMonitorRequest, options?: Configuration): Promise<DeletedMonitor> {
-        return this.api.deleteMonitor(param.monitorId, param.force,  options).toPromise();
+        return this.api.deleteMonitor(param.monitorId, param.force, options).toPromise();
     }
 
     /**
@@ -2525,7 +2511,7 @@ export class ObjectMonitorsApi {
      * @param param the request object
      */
     public getMonitor(param: MonitorsApiGetMonitorRequest, options?: Configuration): Promise<Monitor> {
-        return this.api.getMonitor(param.monitorId, param.groupStates,  options).toPromise();
+        return this.api.getMonitor(param.monitorId, param.groupStates, options).toPromise();
     }
 
     /**
@@ -2534,7 +2520,7 @@ export class ObjectMonitorsApi {
      * @param param the request object
      */
     public listMonitors(param: MonitorsApiListMonitorsRequest, options?: Configuration): Promise<Array<Monitor>> {
-        return this.api.listMonitors(param.groupStates, param.name, param.tags, param.monitorTags, param.withDowntimes, param.idOffset, param.page, param.pageSize,  options).toPromise();
+        return this.api.listMonitors(param.groupStates, param.name, param.tags, param.monitorTags, param.withDowntimes, param.idOffset, param.page, param.pageSize, options).toPromise();
     }
 
     /**
@@ -2543,7 +2529,7 @@ export class ObjectMonitorsApi {
      * @param param the request object
      */
     public updateMonitor(param: MonitorsApiUpdateMonitorRequest, options?: Configuration): Promise<Monitor> {
-        return this.api.updateMonitor(param.monitorId, param.body,  options).toPromise();
+        return this.api.updateMonitor(param.monitorId, param.body, options).toPromise();
     }
 
     /**
@@ -2552,7 +2538,7 @@ export class ObjectMonitorsApi {
      * @param param the request object
      */
     public validateMonitor(param: MonitorsApiValidateMonitorRequest, options?: Configuration): Promise<any> {
-        return this.api.validateMonitor(param.body,  options).toPromise();
+        return this.api.validateMonitor(param.body, options).toPromise();
     }
 
 }
@@ -2666,7 +2652,7 @@ export class ObjectNotebooksApi {
      * @param param the request object
      */
     public createNotebook(param: NotebooksApiCreateNotebookRequest, options?: Configuration): Promise<NotebookResponse> {
-        return this.api.createNotebook(param.body,  options).toPromise();
+        return this.api.createNotebook(param.body, options).toPromise();
     }
 
     /**
@@ -2675,7 +2661,7 @@ export class ObjectNotebooksApi {
      * @param param the request object
      */
     public deleteNotebook(param: NotebooksApiDeleteNotebookRequest, options?: Configuration): Promise<void> {
-        return this.api.deleteNotebook(param.notebookId,  options).toPromise();
+        return this.api.deleteNotebook(param.notebookId, options).toPromise();
     }
 
     /**
@@ -2684,7 +2670,7 @@ export class ObjectNotebooksApi {
      * @param param the request object
      */
     public getNotebook(param: NotebooksApiGetNotebookRequest, options?: Configuration): Promise<NotebookResponse> {
-        return this.api.getNotebook(param.notebookId,  options).toPromise();
+        return this.api.getNotebook(param.notebookId, options).toPromise();
     }
 
     /**
@@ -2693,7 +2679,7 @@ export class ObjectNotebooksApi {
      * @param param the request object
      */
     public listNotebooks(param: NotebooksApiListNotebooksRequest, options?: Configuration): Promise<NotebooksResponse> {
-        return this.api.listNotebooks(param.authorHandle, param.excludeAuthorHandle, param.start, param.count, param.sortField, param.sortDir, param.query, param.includeCells,  options).toPromise();
+        return this.api.listNotebooks(param.authorHandle, param.excludeAuthorHandle, param.start, param.count, param.sortField, param.sortDir, param.query, param.includeCells, options).toPromise();
     }
 
     /**
@@ -2702,7 +2688,7 @@ export class ObjectNotebooksApi {
      * @param param the request object
      */
     public updateNotebook(param: NotebooksApiUpdateNotebookRequest, options?: Configuration): Promise<NotebookResponse> {
-        return this.api.updateNotebook(param.notebookId, param.body,  options).toPromise();
+        return this.api.updateNotebook(param.notebookId, param.body, options).toPromise();
     }
 
 }
@@ -2774,7 +2760,7 @@ export class ObjectOrganizationsApi {
      * @param param the request object
      */
     public createChildOrg(param: OrganizationsApiCreateChildOrgRequest, options?: Configuration): Promise<OrganizationCreateResponse> {
-        return this.api.createChildOrg(param.body,  options).toPromise();
+        return this.api.createChildOrg(param.body, options).toPromise();
     }
 
     /**
@@ -2783,16 +2769,15 @@ export class ObjectOrganizationsApi {
      * @param param the request object
      */
     public getOrg(param: OrganizationsApiGetOrgRequest, options?: Configuration): Promise<OrganizationResponse> {
-        return this.api.getOrg(param.publicId,  options).toPromise();
+        return this.api.getOrg(param.publicId, options).toPromise();
     }
 
     /**
      * List your managed organizations.
      * List your managed organizations
-     * @param param the request object
      */
-    public listOrgs(param: OrganizationsApiListOrgsRequest, options?: Configuration): Promise<OrganizationListResponse> {
-        return this.api.listOrgs( options).toPromise();
+    public listOrgs(options?: Configuration): Promise<OrganizationListResponse> {
+        return this.api.listOrgs(options).toPromise();
     }
 
     /**
@@ -2801,7 +2786,7 @@ export class ObjectOrganizationsApi {
      * @param param the request object
      */
     public updateOrg(param: OrganizationsApiUpdateOrgRequest, options?: Configuration): Promise<OrganizationResponse> {
-        return this.api.updateOrg(param.publicId, param.body,  options).toPromise();
+        return this.api.updateOrg(param.publicId, param.body, options).toPromise();
     }
 
     /**
@@ -2810,7 +2795,7 @@ export class ObjectOrganizationsApi {
      * @param param the request object
      */
     public uploadIdPForOrg(param: OrganizationsApiUploadIdPForOrgRequest, options?: Configuration): Promise<IdpResponse> {
-        return this.api.uploadIdPForOrg(param.publicId, param.idpFile,  options).toPromise();
+        return this.api.uploadIdPForOrg(param.publicId, param.idpFile, options).toPromise();
     }
 
 }
@@ -2873,7 +2858,7 @@ export class ObjectPagerDutyIntegrationApi {
      * @param param the request object
      */
     public createPagerDutyIntegrationService(param: PagerDutyIntegrationApiCreatePagerDutyIntegrationServiceRequest, options?: Configuration): Promise<PagerDutyServiceName> {
-        return this.api.createPagerDutyIntegrationService(param.body,  options).toPromise();
+        return this.api.createPagerDutyIntegrationService(param.body, options).toPromise();
     }
 
     /**
@@ -2882,7 +2867,7 @@ export class ObjectPagerDutyIntegrationApi {
      * @param param the request object
      */
     public deletePagerDutyIntegrationService(param: PagerDutyIntegrationApiDeletePagerDutyIntegrationServiceRequest, options?: Configuration): Promise<void> {
-        return this.api.deletePagerDutyIntegrationService(param.serviceName,  options).toPromise();
+        return this.api.deletePagerDutyIntegrationService(param.serviceName, options).toPromise();
     }
 
     /**
@@ -2891,7 +2876,7 @@ export class ObjectPagerDutyIntegrationApi {
      * @param param the request object
      */
     public getPagerDutyIntegrationService(param: PagerDutyIntegrationApiGetPagerDutyIntegrationServiceRequest, options?: Configuration): Promise<PagerDutyServiceName> {
-        return this.api.getPagerDutyIntegrationService(param.serviceName,  options).toPromise();
+        return this.api.getPagerDutyIntegrationService(param.serviceName, options).toPromise();
     }
 
     /**
@@ -2900,7 +2885,7 @@ export class ObjectPagerDutyIntegrationApi {
      * @param param the request object
      */
     public updatePagerDutyIntegrationService(param: PagerDutyIntegrationApiUpdatePagerDutyIntegrationServiceRequest, options?: Configuration): Promise<void> {
-        return this.api.updatePagerDutyIntegrationService(param.serviceName, param.body,  options).toPromise();
+        return this.api.updatePagerDutyIntegrationService(param.serviceName, param.body, options).toPromise();
     }
 
 }
@@ -2930,7 +2915,7 @@ export class ObjectServiceChecksApi {
      * @param param the request object
      */
     public submitServiceCheck(param: ServiceChecksApiSubmitServiceCheckRequest, options?: Configuration): Promise<IntakePayloadAccepted> {
-        return this.api.submitServiceCheck(param.body,  options).toPromise();
+        return this.api.submitServiceCheck(param.body, options).toPromise();
     }
 
 }
@@ -2996,7 +2981,7 @@ export class ObjectServiceLevelObjectiveCorrectionsApi {
      * @param param the request object
      */
     public createSLOCorrection(param: ServiceLevelObjectiveCorrectionsApiCreateSLOCorrectionRequest, options?: Configuration): Promise<SLOCorrectionResponse> {
-        return this.api.createSLOCorrection(param.body,  options).toPromise();
+        return this.api.createSLOCorrection(param.body, options).toPromise();
     }
 
     /**
@@ -3005,7 +2990,7 @@ export class ObjectServiceLevelObjectiveCorrectionsApi {
      * @param param the request object
      */
     public deleteSLOCorrection(param: ServiceLevelObjectiveCorrectionsApiDeleteSLOCorrectionRequest, options?: Configuration): Promise<void> {
-        return this.api.deleteSLOCorrection(param.sloCorrectionId,  options).toPromise();
+        return this.api.deleteSLOCorrection(param.sloCorrectionId, options).toPromise();
     }
 
     /**
@@ -3014,16 +2999,15 @@ export class ObjectServiceLevelObjectiveCorrectionsApi {
      * @param param the request object
      */
     public getSLOCorrection(param: ServiceLevelObjectiveCorrectionsApiGetSLOCorrectionRequest, options?: Configuration): Promise<SLOCorrectionResponse> {
-        return this.api.getSLOCorrection(param.sloCorrectionId,  options).toPromise();
+        return this.api.getSLOCorrection(param.sloCorrectionId, options).toPromise();
     }
 
     /**
      * Get all Service Level Objective corrections
      * Get all SLO corrections
-     * @param param the request object
      */
-    public listSLOCorrection(param: ServiceLevelObjectiveCorrectionsApiListSLOCorrectionRequest, options?: Configuration): Promise<SLOCorrectionListResponse> {
-        return this.api.listSLOCorrection( options).toPromise();
+    public listSLOCorrection(options?: Configuration): Promise<SLOCorrectionListResponse> {
+        return this.api.listSLOCorrection(options).toPromise();
     }
 
     /**
@@ -3032,7 +3016,7 @@ export class ObjectServiceLevelObjectiveCorrectionsApi {
      * @param param the request object
      */
     public updateSLOCorrection(param: ServiceLevelObjectiveCorrectionsApiUpdateSLOCorrectionRequest, options?: Configuration): Promise<SLOCorrectionResponse> {
-        return this.api.updateSLOCorrection(param.sloCorrectionId, param.body,  options).toPromise();
+        return this.api.updateSLOCorrection(param.sloCorrectionId, param.body, options).toPromise();
     }
 
 }
@@ -3179,7 +3163,7 @@ export class ObjectServiceLevelObjectivesApi {
      * @param param the request object
      */
     public checkCanDeleteSLO(param: ServiceLevelObjectivesApiCheckCanDeleteSLORequest, options?: Configuration): Promise<CheckCanDeleteSLOResponse> {
-        return this.api.checkCanDeleteSLO(param.ids,  options).toPromise();
+        return this.api.checkCanDeleteSLO(param.ids, options).toPromise();
     }
 
     /**
@@ -3188,7 +3172,7 @@ export class ObjectServiceLevelObjectivesApi {
      * @param param the request object
      */
     public createSLO(param: ServiceLevelObjectivesApiCreateSLORequest, options?: Configuration): Promise<SLOListResponse> {
-        return this.api.createSLO(param.body,  options).toPromise();
+        return this.api.createSLO(param.body, options).toPromise();
     }
 
     /**
@@ -3197,7 +3181,7 @@ export class ObjectServiceLevelObjectivesApi {
      * @param param the request object
      */
     public deleteSLO(param: ServiceLevelObjectivesApiDeleteSLORequest, options?: Configuration): Promise<SLODeleteResponse> {
-        return this.api.deleteSLO(param.sloId, param.force,  options).toPromise();
+        return this.api.deleteSLO(param.sloId, param.force, options).toPromise();
     }
 
     /**
@@ -3206,7 +3190,7 @@ export class ObjectServiceLevelObjectivesApi {
      * @param param the request object
      */
     public deleteSLOTimeframeInBulk(param: ServiceLevelObjectivesApiDeleteSLOTimeframeInBulkRequest, options?: Configuration): Promise<SLOBulkDeleteResponse> {
-        return this.api.deleteSLOTimeframeInBulk(param.body,  options).toPromise();
+        return this.api.deleteSLOTimeframeInBulk(param.body, options).toPromise();
     }
 
     /**
@@ -3215,7 +3199,7 @@ export class ObjectServiceLevelObjectivesApi {
      * @param param the request object
      */
     public getSLO(param: ServiceLevelObjectivesApiGetSLORequest, options?: Configuration): Promise<SLOResponse> {
-        return this.api.getSLO(param.sloId, param.withConfiguredAlertIds,  options).toPromise();
+        return this.api.getSLO(param.sloId, param.withConfiguredAlertIds, options).toPromise();
     }
 
     /**
@@ -3224,7 +3208,7 @@ export class ObjectServiceLevelObjectivesApi {
      * @param param the request object
      */
     public getSLOHistory(param: ServiceLevelObjectivesApiGetSLOHistoryRequest, options?: Configuration): Promise<SLOHistoryResponse> {
-        return this.api.getSLOHistory(param.sloId, param.fromTs, param.toTs, param.target,  options).toPromise();
+        return this.api.getSLOHistory(param.sloId, param.fromTs, param.toTs, param.target, options).toPromise();
     }
 
     /**
@@ -3233,7 +3217,7 @@ export class ObjectServiceLevelObjectivesApi {
      * @param param the request object
      */
     public listSLOs(param: ServiceLevelObjectivesApiListSLOsRequest, options?: Configuration): Promise<SLOListResponse> {
-        return this.api.listSLOs(param.ids, param.query, param.tagsQuery, param.metricsQuery,  options).toPromise();
+        return this.api.listSLOs(param.ids, param.query, param.tagsQuery, param.metricsQuery, options).toPromise();
     }
 
     /**
@@ -3242,7 +3226,7 @@ export class ObjectServiceLevelObjectivesApi {
      * @param param the request object
      */
     public updateSLO(param: ServiceLevelObjectivesApiUpdateSLORequest, options?: Configuration): Promise<SLOListResponse> {
-        return this.api.updateSLO(param.sloId, param.body,  options).toPromise();
+        return this.api.updateSLO(param.sloId, param.body, options).toPromise();
     }
 
 }
@@ -3338,7 +3322,7 @@ export class ObjectSlackIntegrationApi {
      * @param param the request object
      */
     public createSlackIntegrationChannel(param: SlackIntegrationApiCreateSlackIntegrationChannelRequest, options?: Configuration): Promise<SlackIntegrationChannel> {
-        return this.api.createSlackIntegrationChannel(param.accountName, param.body,  options).toPromise();
+        return this.api.createSlackIntegrationChannel(param.accountName, param.body, options).toPromise();
     }
 
     /**
@@ -3347,7 +3331,7 @@ export class ObjectSlackIntegrationApi {
      * @param param the request object
      */
     public getSlackIntegrationChannel(param: SlackIntegrationApiGetSlackIntegrationChannelRequest, options?: Configuration): Promise<SlackIntegrationChannel> {
-        return this.api.getSlackIntegrationChannel(param.accountName, param.channelName,  options).toPromise();
+        return this.api.getSlackIntegrationChannel(param.accountName, param.channelName, options).toPromise();
     }
 
     /**
@@ -3356,7 +3340,7 @@ export class ObjectSlackIntegrationApi {
      * @param param the request object
      */
     public getSlackIntegrationChannels(param: SlackIntegrationApiGetSlackIntegrationChannelsRequest, options?: Configuration): Promise<Array<SlackIntegrationChannel>> {
-        return this.api.getSlackIntegrationChannels(param.accountName,  options).toPromise();
+        return this.api.getSlackIntegrationChannels(param.accountName, options).toPromise();
     }
 
     /**
@@ -3365,7 +3349,7 @@ export class ObjectSlackIntegrationApi {
      * @param param the request object
      */
     public removeSlackIntegrationChannel(param: SlackIntegrationApiRemoveSlackIntegrationChannelRequest, options?: Configuration): Promise<void> {
-        return this.api.removeSlackIntegrationChannel(param.accountName, param.channelName,  options).toPromise();
+        return this.api.removeSlackIntegrationChannel(param.accountName, param.channelName, options).toPromise();
     }
 
     /**
@@ -3374,7 +3358,7 @@ export class ObjectSlackIntegrationApi {
      * @param param the request object
      */
     public updateSlackIntegrationChannel(param: SlackIntegrationApiUpdateSlackIntegrationChannelRequest, options?: Configuration): Promise<SlackIntegrationChannel> {
-        return this.api.updateSlackIntegrationChannel(param.accountName, param.channelName, param.body,  options).toPromise();
+        return this.api.updateSlackIntegrationChannel(param.accountName, param.channelName, param.body, options).toPromise();
     }
 
 }
@@ -3434,7 +3418,7 @@ export class ObjectSnapshotsApi {
      * @param param the request object
      */
     public getGraphSnapshot(param: SnapshotsApiGetGraphSnapshotRequest, options?: Configuration): Promise<GraphSnapshot> {
-        return this.api.getGraphSnapshot(param.start, param.end, param.metricQuery, param.eventQuery, param.graphDef, param.title,  options).toPromise();
+        return this.api.getGraphSnapshot(param.start, param.end, param.metricQuery, param.eventQuery, param.graphDef, param.title, options).toPromise();
     }
 
 }
@@ -3737,7 +3721,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public createGlobalVariable(param: SyntheticsApiCreateGlobalVariableRequest, options?: Configuration): Promise<SyntheticsGlobalVariable> {
-        return this.api.createGlobalVariable(param.body,  options).toPromise();
+        return this.api.createGlobalVariable(param.body, options).toPromise();
     }
 
     /**
@@ -3746,7 +3730,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public createPrivateLocation(param: SyntheticsApiCreatePrivateLocationRequest, options?: Configuration): Promise<SyntheticsPrivateLocationCreationResponse> {
-        return this.api.createPrivateLocation(param.body,  options).toPromise();
+        return this.api.createPrivateLocation(param.body, options).toPromise();
     }
 
     /**
@@ -3755,7 +3739,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public createSyntheticsAPITest(param: SyntheticsApiCreateSyntheticsAPITestRequest, options?: Configuration): Promise<SyntheticsAPITest> {
-        return this.api.createSyntheticsAPITest(param.body,  options).toPromise();
+        return this.api.createSyntheticsAPITest(param.body, options).toPromise();
     }
 
     /**
@@ -3764,7 +3748,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public createSyntheticsBrowserTest(param: SyntheticsApiCreateSyntheticsBrowserTestRequest, options?: Configuration): Promise<SyntheticsBrowserTest> {
-        return this.api.createSyntheticsBrowserTest(param.body,  options).toPromise();
+        return this.api.createSyntheticsBrowserTest(param.body, options).toPromise();
     }
 
     /**
@@ -3773,7 +3757,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public deleteGlobalVariable(param: SyntheticsApiDeleteGlobalVariableRequest, options?: Configuration): Promise<void> {
-        return this.api.deleteGlobalVariable(param.variableId,  options).toPromise();
+        return this.api.deleteGlobalVariable(param.variableId, options).toPromise();
     }
 
     /**
@@ -3782,7 +3766,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public deletePrivateLocation(param: SyntheticsApiDeletePrivateLocationRequest, options?: Configuration): Promise<void> {
-        return this.api.deletePrivateLocation(param.locationId,  options).toPromise();
+        return this.api.deletePrivateLocation(param.locationId, options).toPromise();
     }
 
     /**
@@ -3791,7 +3775,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public deleteTests(param: SyntheticsApiDeleteTestsRequest, options?: Configuration): Promise<SyntheticsDeleteTestsResponse> {
-        return this.api.deleteTests(param.body,  options).toPromise();
+        return this.api.deleteTests(param.body, options).toPromise();
     }
 
     /**
@@ -3800,7 +3784,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public editGlobalVariable(param: SyntheticsApiEditGlobalVariableRequest, options?: Configuration): Promise<SyntheticsGlobalVariable> {
-        return this.api.editGlobalVariable(param.variableId, param.body,  options).toPromise();
+        return this.api.editGlobalVariable(param.variableId, param.body, options).toPromise();
     }
 
     /**
@@ -3809,7 +3793,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public getAPITest(param: SyntheticsApiGetAPITestRequest, options?: Configuration): Promise<SyntheticsAPITest> {
-        return this.api.getAPITest(param.publicId,  options).toPromise();
+        return this.api.getAPITest(param.publicId, options).toPromise();
     }
 
     /**
@@ -3818,7 +3802,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public getAPITestLatestResults(param: SyntheticsApiGetAPITestLatestResultsRequest, options?: Configuration): Promise<SyntheticsGetAPITestLatestResultsResponse> {
-        return this.api.getAPITestLatestResults(param.publicId, param.fromTs, param.toTs, param.probeDc,  options).toPromise();
+        return this.api.getAPITestLatestResults(param.publicId, param.fromTs, param.toTs, param.probeDc, options).toPromise();
     }
 
     /**
@@ -3827,7 +3811,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public getAPITestResult(param: SyntheticsApiGetAPITestResultRequest, options?: Configuration): Promise<SyntheticsAPITestResultFull> {
-        return this.api.getAPITestResult(param.publicId, param.resultId,  options).toPromise();
+        return this.api.getAPITestResult(param.publicId, param.resultId, options).toPromise();
     }
 
     /**
@@ -3836,7 +3820,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public getBrowserTest(param: SyntheticsApiGetBrowserTestRequest, options?: Configuration): Promise<SyntheticsBrowserTest> {
-        return this.api.getBrowserTest(param.publicId,  options).toPromise();
+        return this.api.getBrowserTest(param.publicId, options).toPromise();
     }
 
     /**
@@ -3845,7 +3829,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public getBrowserTestLatestResults(param: SyntheticsApiGetBrowserTestLatestResultsRequest, options?: Configuration): Promise<SyntheticsGetBrowserTestLatestResultsResponse> {
-        return this.api.getBrowserTestLatestResults(param.publicId, param.fromTs, param.toTs, param.probeDc,  options).toPromise();
+        return this.api.getBrowserTestLatestResults(param.publicId, param.fromTs, param.toTs, param.probeDc, options).toPromise();
     }
 
     /**
@@ -3854,7 +3838,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public getBrowserTestResult(param: SyntheticsApiGetBrowserTestResultRequest, options?: Configuration): Promise<SyntheticsBrowserTestResultFull> {
-        return this.api.getBrowserTestResult(param.publicId, param.resultId,  options).toPromise();
+        return this.api.getBrowserTestResult(param.publicId, param.resultId, options).toPromise();
     }
 
     /**
@@ -3863,7 +3847,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public getGlobalVariable(param: SyntheticsApiGetGlobalVariableRequest, options?: Configuration): Promise<SyntheticsGlobalVariable> {
-        return this.api.getGlobalVariable(param.variableId,  options).toPromise();
+        return this.api.getGlobalVariable(param.variableId, options).toPromise();
     }
 
     /**
@@ -3872,7 +3856,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public getPrivateLocation(param: SyntheticsApiGetPrivateLocationRequest, options?: Configuration): Promise<SyntheticsPrivateLocation> {
-        return this.api.getPrivateLocation(param.locationId,  options).toPromise();
+        return this.api.getPrivateLocation(param.locationId, options).toPromise();
     }
 
     /**
@@ -3881,25 +3865,23 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public getTest(param: SyntheticsApiGetTestRequest, options?: Configuration): Promise<SyntheticsTestDetails> {
-        return this.api.getTest(param.publicId,  options).toPromise();
+        return this.api.getTest(param.publicId, options).toPromise();
     }
 
     /**
      * Get the list of public and private locations available for Synthetic tests. No arguments required.
      * Get all locations (public and private)
-     * @param param the request object
      */
-    public listLocations(param: SyntheticsApiListLocationsRequest, options?: Configuration): Promise<SyntheticsLocations> {
-        return this.api.listLocations( options).toPromise();
+    public listLocations(options?: Configuration): Promise<SyntheticsLocations> {
+        return this.api.listLocations(options).toPromise();
     }
 
     /**
      * Get the list of all Synthetic tests.
      * Get the list of all tests
-     * @param param the request object
      */
-    public listTests(param: SyntheticsApiListTestsRequest, options?: Configuration): Promise<SyntheticsListTestsResponse> {
-        return this.api.listTests( options).toPromise();
+    public listTests(options?: Configuration): Promise<SyntheticsListTestsResponse> {
+        return this.api.listTests(options).toPromise();
     }
 
     /**
@@ -3908,7 +3890,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public triggerCITests(param: SyntheticsApiTriggerCITestsRequest, options?: Configuration): Promise<SyntheticsTriggerCITestsResponse> {
-        return this.api.triggerCITests(param.body,  options).toPromise();
+        return this.api.triggerCITests(param.body, options).toPromise();
     }
 
     /**
@@ -3917,7 +3899,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public updateAPITest(param: SyntheticsApiUpdateAPITestRequest, options?: Configuration): Promise<SyntheticsAPITest> {
-        return this.api.updateAPITest(param.publicId, param.body,  options).toPromise();
+        return this.api.updateAPITest(param.publicId, param.body, options).toPromise();
     }
 
     /**
@@ -3926,7 +3908,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public updateBrowserTest(param: SyntheticsApiUpdateBrowserTestRequest, options?: Configuration): Promise<SyntheticsBrowserTest> {
-        return this.api.updateBrowserTest(param.publicId, param.body,  options).toPromise();
+        return this.api.updateBrowserTest(param.publicId, param.body, options).toPromise();
     }
 
     /**
@@ -3935,7 +3917,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public updatePrivateLocation(param: SyntheticsApiUpdatePrivateLocationRequest, options?: Configuration): Promise<SyntheticsPrivateLocation> {
-        return this.api.updatePrivateLocation(param.locationId, param.body,  options).toPromise();
+        return this.api.updatePrivateLocation(param.locationId, param.body, options).toPromise();
     }
 
     /**
@@ -3944,7 +3926,7 @@ export class ObjectSyntheticsApi {
      * @param param the request object
      */
     public updateTestPauseStatus(param: SyntheticsApiUpdateTestPauseStatusRequest, options?: Configuration): Promise<boolean> {
-        return this.api.updateTestPauseStatus(param.publicId, param.body,  options).toPromise();
+        return this.api.updateTestPauseStatus(param.publicId, param.body, options).toPromise();
     }
 
 }
@@ -4046,7 +4028,7 @@ export class ObjectTagsApi {
      * @param param the request object
      */
     public createHostTags(param: TagsApiCreateHostTagsRequest, options?: Configuration): Promise<HostTags> {
-        return this.api.createHostTags(param.hostName, param.body, param.source,  options).toPromise();
+        return this.api.createHostTags(param.hostName, param.body, param.source, options).toPromise();
     }
 
     /**
@@ -4055,7 +4037,7 @@ export class ObjectTagsApi {
      * @param param the request object
      */
     public deleteHostTags(param: TagsApiDeleteHostTagsRequest, options?: Configuration): Promise<void> {
-        return this.api.deleteHostTags(param.hostName, param.source,  options).toPromise();
+        return this.api.deleteHostTags(param.hostName, param.source, options).toPromise();
     }
 
     /**
@@ -4064,7 +4046,7 @@ export class ObjectTagsApi {
      * @param param the request object
      */
     public getHostTags(param: TagsApiGetHostTagsRequest, options?: Configuration): Promise<HostTags> {
-        return this.api.getHostTags(param.hostName, param.source,  options).toPromise();
+        return this.api.getHostTags(param.hostName, param.source, options).toPromise();
     }
 
     /**
@@ -4073,7 +4055,7 @@ export class ObjectTagsApi {
      * @param param the request object
      */
     public listHostTags(param: TagsApiListHostTagsRequest, options?: Configuration): Promise<TagToHosts> {
-        return this.api.listHostTags(param.source,  options).toPromise();
+        return this.api.listHostTags(param.source, options).toPromise();
     }
 
     /**
@@ -4082,7 +4064,7 @@ export class ObjectTagsApi {
      * @param param the request object
      */
     public updateHostTags(param: TagsApiUpdateHostTagsRequest, options?: Configuration): Promise<HostTags> {
-        return this.api.updateHostTags(param.hostName, param.body, param.source,  options).toPromise();
+        return this.api.updateHostTags(param.hostName, param.body, param.source, options).toPromise();
     }
 
 }
@@ -4628,7 +4610,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getDailyCustomReports(param: UsageMeteringApiGetDailyCustomReportsRequest, options?: Configuration): Promise<UsageCustomReportsResponse> {
-        return this.api.getDailyCustomReports(param.pageSize, param.pageNumber, param.sortDir, param.sort,  options).toPromise();
+        return this.api.getDailyCustomReports(param.pageSize, param.pageNumber, param.sortDir, param.sort, options).toPromise();
     }
 
     /**
@@ -4637,7 +4619,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getIncidentManagement(param: UsageMeteringApiGetIncidentManagementRequest, options?: Configuration): Promise<UsageIncidentManagementResponse> {
-        return this.api.getIncidentManagement(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getIncidentManagement(param.startHr, param.endHr, options).toPromise();
     }
 
     /**
@@ -4646,7 +4628,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getIngestedSpans(param: UsageMeteringApiGetIngestedSpansRequest, options?: Configuration): Promise<UsageIngestedSpansResponse> {
-        return this.api.getIngestedSpans(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getIngestedSpans(param.startHr, param.endHr, options).toPromise();
     }
 
     /**
@@ -4655,7 +4637,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getMonthlyCustomReports(param: UsageMeteringApiGetMonthlyCustomReportsRequest, options?: Configuration): Promise<UsageCustomReportsResponse> {
-        return this.api.getMonthlyCustomReports(param.pageSize, param.pageNumber, param.sortDir, param.sort,  options).toPromise();
+        return this.api.getMonthlyCustomReports(param.pageSize, param.pageNumber, param.sortDir, param.sort, options).toPromise();
     }
 
     /**
@@ -4664,7 +4646,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getSpecifiedDailyCustomReports(param: UsageMeteringApiGetSpecifiedDailyCustomReportsRequest, options?: Configuration): Promise<UsageSpecifiedCustomReportsResponse> {
-        return this.api.getSpecifiedDailyCustomReports(param.reportId,  options).toPromise();
+        return this.api.getSpecifiedDailyCustomReports(param.reportId, options).toPromise();
     }
 
     /**
@@ -4673,7 +4655,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getSpecifiedMonthlyCustomReports(param: UsageMeteringApiGetSpecifiedMonthlyCustomReportsRequest, options?: Configuration): Promise<UsageSpecifiedCustomReportsResponse> {
-        return this.api.getSpecifiedMonthlyCustomReports(param.reportId,  options).toPromise();
+        return this.api.getSpecifiedMonthlyCustomReports(param.reportId, options).toPromise();
     }
 
     /**
@@ -4682,7 +4664,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getTracingWithoutLimits(param: UsageMeteringApiGetTracingWithoutLimitsRequest, options?: Configuration): Promise<UsageTracingWithoutLimitsResponse> {
-        return this.api.getTracingWithoutLimits(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getTracingWithoutLimits(param.startHr, param.endHr, options).toPromise();
     }
 
     /**
@@ -4691,7 +4673,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageAnalyzedLogs(param: UsageMeteringApiGetUsageAnalyzedLogsRequest, options?: Configuration): Promise<UsageAnalyzedLogsResponse> {
-        return this.api.getUsageAnalyzedLogs(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getUsageAnalyzedLogs(param.startHr, param.endHr, options).toPromise();
     }
 
     /**
@@ -4700,7 +4682,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageAttribution(param: UsageMeteringApiGetUsageAttributionRequest, options?: Configuration): Promise<UsageAttributionResponse> {
-        return this.api.getUsageAttribution(param.startMonth, param.fields, param.endMonth, param.sortDirection, param.sortName,  options).toPromise();
+        return this.api.getUsageAttribution(param.startMonth, param.fields, param.endMonth, param.sortDirection, param.sortName, options).toPromise();
     }
 
     /**
@@ -4709,7 +4691,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageBillableSummary(param: UsageMeteringApiGetUsageBillableSummaryRequest, options?: Configuration): Promise<UsageBillableSummaryResponse> {
-        return this.api.getUsageBillableSummary(param.month,  options).toPromise();
+        return this.api.getUsageBillableSummary(param.month, options).toPromise();
     }
 
     /**
@@ -4718,7 +4700,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageComplianceMonitoring(param: UsageMeteringApiGetUsageComplianceMonitoringRequest, options?: Configuration): Promise<UsageComplianceResponse> {
-        return this.api.getUsageComplianceMonitoring(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getUsageComplianceMonitoring(param.startHr, param.endHr, options).toPromise();
     }
 
     /**
@@ -4727,7 +4709,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageFargate(param: UsageMeteringApiGetUsageFargateRequest, options?: Configuration): Promise<UsageFargateResponse> {
-        return this.api.getUsageFargate(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getUsageFargate(param.startHr, param.endHr, options).toPromise();
     }
 
     /**
@@ -4736,7 +4718,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageHosts(param: UsageMeteringApiGetUsageHostsRequest, options?: Configuration): Promise<UsageHostsResponse> {
-        return this.api.getUsageHosts(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getUsageHosts(param.startHr, param.endHr, options).toPromise();
     }
 
     /**
@@ -4745,7 +4727,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageIndexedSpans(param: UsageMeteringApiGetUsageIndexedSpansRequest, options?: Configuration): Promise<UsageIndexedSpansResponse> {
-        return this.api.getUsageIndexedSpans(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getUsageIndexedSpans(param.startHr, param.endHr, options).toPromise();
     }
 
     /**
@@ -4754,7 +4736,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageInternetOfThings(param: UsageMeteringApiGetUsageInternetOfThingsRequest, options?: Configuration): Promise<UsageIoTResponse> {
-        return this.api.getUsageInternetOfThings(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getUsageInternetOfThings(param.startHr, param.endHr, options).toPromise();
     }
 
     /**
@@ -4763,7 +4745,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageLambda(param: UsageMeteringApiGetUsageLambdaRequest, options?: Configuration): Promise<UsageLambdaResponse> {
-        return this.api.getUsageLambda(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getUsageLambda(param.startHr, param.endHr, options).toPromise();
     }
 
     /**
@@ -4772,7 +4754,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageLogs(param: UsageMeteringApiGetUsageLogsRequest, options?: Configuration): Promise<UsageLogsResponse> {
-        return this.api.getUsageLogs(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getUsageLogs(param.startHr, param.endHr, options).toPromise();
     }
 
     /**
@@ -4781,7 +4763,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageLogsByIndex(param: UsageMeteringApiGetUsageLogsByIndexRequest, options?: Configuration): Promise<UsageLogsByIndexResponse> {
-        return this.api.getUsageLogsByIndex(param.startHr, param.endHr, param.indexName,  options).toPromise();
+        return this.api.getUsageLogsByIndex(param.startHr, param.endHr, param.indexName, options).toPromise();
     }
 
     /**
@@ -4790,7 +4772,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageLogsByRetention(param: UsageMeteringApiGetUsageLogsByRetentionRequest, options?: Configuration): Promise<UsageLogsByRetentionResponse> {
-        return this.api.getUsageLogsByRetention(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getUsageLogsByRetention(param.startHr, param.endHr, options).toPromise();
     }
 
     /**
@@ -4799,7 +4781,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageNetworkFlows(param: UsageMeteringApiGetUsageNetworkFlowsRequest, options?: Configuration): Promise<UsageNetworkFlowsResponse> {
-        return this.api.getUsageNetworkFlows(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getUsageNetworkFlows(param.startHr, param.endHr, options).toPromise();
     }
 
     /**
@@ -4808,7 +4790,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageNetworkHosts(param: UsageMeteringApiGetUsageNetworkHostsRequest, options?: Configuration): Promise<UsageNetworkHostsResponse> {
-        return this.api.getUsageNetworkHosts(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getUsageNetworkHosts(param.startHr, param.endHr, options).toPromise();
     }
 
     /**
@@ -4817,7 +4799,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageProfiling(param: UsageMeteringApiGetUsageProfilingRequest, options?: Configuration): Promise<UsageProfilingResponse> {
-        return this.api.getUsageProfiling(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getUsageProfiling(param.startHr, param.endHr, options).toPromise();
     }
 
     /**
@@ -4826,7 +4808,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageRumSessions(param: UsageMeteringApiGetUsageRumSessionsRequest, options?: Configuration): Promise<UsageRumSessionsResponse> {
-        return this.api.getUsageRumSessions(param.startHr, param.endHr, param.type,  options).toPromise();
+        return this.api.getUsageRumSessions(param.startHr, param.endHr, param.type, options).toPromise();
     }
 
     /**
@@ -4835,7 +4817,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageSNMP(param: UsageMeteringApiGetUsageSNMPRequest, options?: Configuration): Promise<UsageSNMPResponse> {
-        return this.api.getUsageSNMP(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getUsageSNMP(param.startHr, param.endHr, options).toPromise();
     }
 
     /**
@@ -4844,7 +4826,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageSummary(param: UsageMeteringApiGetUsageSummaryRequest, options?: Configuration): Promise<UsageSummaryResponse> {
-        return this.api.getUsageSummary(param.startMonth, param.endMonth, param.includeOrgDetails,  options).toPromise();
+        return this.api.getUsageSummary(param.startMonth, param.endMonth, param.includeOrgDetails, options).toPromise();
     }
 
     /**
@@ -4853,7 +4835,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageSynthetics(param: UsageMeteringApiGetUsageSyntheticsRequest, options?: Configuration): Promise<UsageSyntheticsResponse> {
-        return this.api.getUsageSynthetics(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getUsageSynthetics(param.startHr, param.endHr, options).toPromise();
     }
 
     /**
@@ -4862,7 +4844,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageSyntheticsAPI(param: UsageMeteringApiGetUsageSyntheticsAPIRequest, options?: Configuration): Promise<UsageSyntheticsAPIResponse> {
-        return this.api.getUsageSyntheticsAPI(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getUsageSyntheticsAPI(param.startHr, param.endHr, options).toPromise();
     }
 
     /**
@@ -4871,7 +4853,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageSyntheticsBrowser(param: UsageMeteringApiGetUsageSyntheticsBrowserRequest, options?: Configuration): Promise<UsageSyntheticsBrowserResponse> {
-        return this.api.getUsageSyntheticsBrowser(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getUsageSyntheticsBrowser(param.startHr, param.endHr, options).toPromise();
     }
 
     /**
@@ -4880,7 +4862,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageTimeseries(param: UsageMeteringApiGetUsageTimeseriesRequest, options?: Configuration): Promise<UsageTimeseriesResponse> {
-        return this.api.getUsageTimeseries(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getUsageTimeseries(param.startHr, param.endHr, options).toPromise();
     }
 
     /**
@@ -4889,7 +4871,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageTopAvgMetrics(param: UsageMeteringApiGetUsageTopAvgMetricsRequest, options?: Configuration): Promise<UsageTopAvgMetricsResponse> {
-        return this.api.getUsageTopAvgMetrics(param.month, param.day, param.names, param.limit, param.nextRecordId,  options).toPromise();
+        return this.api.getUsageTopAvgMetrics(param.month, param.day, param.names, param.limit, param.nextRecordId, options).toPromise();
     }
 
     /**
@@ -4898,7 +4880,7 @@ export class ObjectUsageMeteringApi {
      * @param param the request object
      */
     public getUsageTrace(param: UsageMeteringApiGetUsageTraceRequest, options?: Configuration): Promise<UsageTraceResponse> {
-        return this.api.getUsageTrace(param.startHr, param.endHr,  options).toPromise();
+        return this.api.getUsageTrace(param.startHr, param.endHr, options).toPromise();
     }
 
 }
@@ -4964,7 +4946,7 @@ export class ObjectUsersApi {
      * @param param the request object
      */
     public createUser(param: UsersApiCreateUserRequest, options?: Configuration): Promise<UserResponse> {
-        return this.api.createUser(param.body,  options).toPromise();
+        return this.api.createUser(param.body, options).toPromise();
     }
 
     /**
@@ -4973,7 +4955,7 @@ export class ObjectUsersApi {
      * @param param the request object
      */
     public disableUser(param: UsersApiDisableUserRequest, options?: Configuration): Promise<UserDisableResponse> {
-        return this.api.disableUser(param.userHandle,  options).toPromise();
+        return this.api.disableUser(param.userHandle, options).toPromise();
     }
 
     /**
@@ -4982,16 +4964,15 @@ export class ObjectUsersApi {
      * @param param the request object
      */
     public getUser(param: UsersApiGetUserRequest, options?: Configuration): Promise<UserResponse> {
-        return this.api.getUser(param.userHandle,  options).toPromise();
+        return this.api.getUser(param.userHandle, options).toPromise();
     }
 
     /**
      * List all users for your organization.
      * List all users
-     * @param param the request object
      */
-    public listUsers(param: UsersApiListUsersRequest, options?: Configuration): Promise<UserListResponse> {
-        return this.api.listUsers( options).toPromise();
+    public listUsers(options?: Configuration): Promise<UserListResponse> {
+        return this.api.listUsers(options).toPromise();
     }
 
     /**
@@ -5000,7 +4981,7 @@ export class ObjectUsersApi {
      * @param param the request object
      */
     public updateUser(param: UsersApiUpdateUserRequest, options?: Configuration): Promise<UserResponse> {
-        return this.api.updateUser(param.userHandle, param.body,  options).toPromise();
+        return this.api.updateUser(param.userHandle, param.body, options).toPromise();
     }
 
 }

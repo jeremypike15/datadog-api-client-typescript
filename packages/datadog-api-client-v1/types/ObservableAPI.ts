@@ -611,7 +611,7 @@ export class ObservableAWSIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createAWSAccount(rsp)));
             }));
     }
- 
+
     /**
      * Set an AWS tag filter.
      * Set an AWS tag filter
@@ -635,7 +635,7 @@ export class ObservableAWSIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createAWSTagFilter(rsp)));
             }));
     }
- 
+
     /**
      * Generate a new AWS external ID for a given AWS account ID and role name pair.
      * Generate a new external ID
@@ -659,7 +659,7 @@ export class ObservableAWSIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createNewAWSExternalID(rsp)));
             }));
     }
- 
+
     /**
      * Delete a Datadog-AWS integration matching the specified `account_id` and `role_name parameters`.
      * Delete an AWS integration
@@ -683,7 +683,7 @@ export class ObservableAWSIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteAWSAccount(rsp)));
             }));
     }
- 
+
     /**
      * Delete a tag filtering entry.
      * Delete a tag filtering entry
@@ -707,7 +707,7 @@ export class ObservableAWSIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteAWSTagFilter(rsp)));
             }));
     }
- 
+
     /**
      * List all Datadog-AWS integrations available in your Datadog organization.
      * List all AWS integrations
@@ -733,7 +733,7 @@ export class ObservableAWSIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listAWSAccounts(rsp)));
             }));
     }
- 
+
     /**
      * Get all AWS tag filters.
      * Get all AWS tag filters
@@ -757,7 +757,7 @@ export class ObservableAWSIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listAWSTagFilters(rsp)));
             }));
     }
- 
+
     /**
      * List all namespace rules for a given Datadog-AWS integration. This endpoint takes no arguments.
      * List namespace rules
@@ -780,7 +780,7 @@ export class ObservableAWSIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listAvailableAWSNamespaces(rsp)));
             }));
     }
- 
+
     /**
      * Update a Datadog-Amazon Web Services integration.
      * Update an AWS integration
@@ -807,7 +807,7 @@ export class ObservableAWSIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateAWSAccount(rsp)));
             }));
     }
- 
+
 }
 
 import { AWSLogsIntegrationApiRequestFactory, AWSLogsIntegrationApiResponseProcessor} from "../apis/AWSLogsIntegrationApi";
@@ -849,7 +849,7 @@ export class ObservableAWSLogsIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.checkAWSLogsLambdaAsync(rsp)));
             }));
     }
- 
+
     /**
      * Test if permissions are present to add log-forwarding triggers for the given services and AWS account. Input is the same as for `EnableAWSLogServices`. Done async, so can be repeatedly polled in a non-blocking fashion until the async request completes.  - Returns a status of `created` when it's checking if the permissions exists   in the AWS account. - Returns a status of `waiting` while checking. - Returns a status of `checked and ok` if the Lambda exists. - Returns a status of `error` if the Lambda does not exist.
      * Check permissions for log services
@@ -873,7 +873,7 @@ export class ObservableAWSLogsIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.checkAWSLogsServicesAsync(rsp)));
             }));
     }
- 
+
     /**
      * Attach the Lambda ARN of the Lambda created for the Datadog-AWS log collection to your AWS account ID to enable log collection.
      * Add AWS Log Lambda ARN
@@ -897,7 +897,7 @@ export class ObservableAWSLogsIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createAWSLambdaARN(rsp)));
             }));
     }
- 
+
     /**
      * Delete a Datadog-AWS logs configuration by removing the specific Lambda ARN associated with a given AWS account.
      * Delete an AWS Logs integration
@@ -921,7 +921,7 @@ export class ObservableAWSLogsIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteAWSLambdaARN(rsp)));
             }));
     }
- 
+
     /**
      * Enable automatic log collection for a list of services. This should be run after running `CreateAWSLambdaARN` to save the configuration.
      * Enable an AWS Logs integration
@@ -945,7 +945,7 @@ export class ObservableAWSLogsIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.enableAWSLogServices(rsp)));
             }));
     }
- 
+
     /**
      * List all Datadog-AWS Logs integrations configured in your Datadog account.
      * List all AWS Logs integrations
@@ -968,7 +968,7 @@ export class ObservableAWSLogsIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listAWSLogsIntegrations(rsp)));
             }));
     }
- 
+
     /**
      * Get the list of current AWS services that Datadog offers automatic log collection. Use returned service IDs with the services parameter for the Enable an AWS service log collection API endpoint.
      * Get list of AWS log ready services
@@ -991,7 +991,7 @@ export class ObservableAWSLogsIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listAWSLogsServices(rsp)));
             }));
     }
- 
+
 }
 
 import { AuthenticationApiRequestFactory, AuthenticationApiResponseProcessor} from "../apis/AuthenticationApi";
@@ -1032,7 +1032,7 @@ export class ObservableAuthenticationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.validate(rsp)));
             }));
     }
- 
+
 }
 
 import { AzureIntegrationApiRequestFactory, AzureIntegrationApiResponseProcessor} from "../apis/AzureIntegrationApi";
@@ -1074,7 +1074,7 @@ export class ObservableAzureIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createAzureIntegration(rsp)));
             }));
     }
- 
+
     /**
      * Delete a given Datadog-Azure integration from your Datadog account.
      * Delete an Azure integration
@@ -1098,7 +1098,7 @@ export class ObservableAzureIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteAzureIntegration(rsp)));
             }));
     }
- 
+
     /**
      * List all Datadog-Azure integrations configured in your Datadog account.
      * List all Azure integrations
@@ -1121,7 +1121,7 @@ export class ObservableAzureIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listAzureIntegration(rsp)));
             }));
     }
- 
+
     /**
      * Update the defined list of host filters for a given Datadog-Azure integration.
      * Update Azure integration host filters
@@ -1145,7 +1145,7 @@ export class ObservableAzureIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateAzureHostFilters(rsp)));
             }));
     }
- 
+
     /**
      * Update a Datadog-Azure integration. Requires an existing `tenant_name` and `client_id`. Any other fields supplied will overwrite existing values. To overwrite `tenant_name` or `client_id`, use `new_tenant_name` and `new_client_id`. To leave a field unchanged, do not supply that field in the payload.
      * Update an Azure integration
@@ -1169,7 +1169,7 @@ export class ObservableAzureIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateAzureIntegration(rsp)));
             }));
     }
- 
+
 }
 
 import { DashboardListsApiRequestFactory, DashboardListsApiResponseProcessor} from "../apis/DashboardListsApi";
@@ -1211,7 +1211,7 @@ export class ObservableDashboardListsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createDashboardList(rsp)));
             }));
     }
- 
+
     /**
      * Delete a dashboard list.
      * Delete a dashboard list
@@ -1235,7 +1235,7 @@ export class ObservableDashboardListsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteDashboardList(rsp)));
             }));
     }
- 
+
     /**
      * Fetch an existing dashboard list's definition.
      * Get a dashboard list
@@ -1259,7 +1259,7 @@ export class ObservableDashboardListsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getDashboardList(rsp)));
             }));
     }
- 
+
     /**
      * Fetch all of your existing dashboard list definitions.
      * Get all dashboard lists
@@ -1282,7 +1282,7 @@ export class ObservableDashboardListsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listDashboardLists(rsp)));
             }));
     }
- 
+
     /**
      * Update the name of a dashboard list.
      * Update a dashboard list
@@ -1307,7 +1307,7 @@ export class ObservableDashboardListsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateDashboardList(rsp)));
             }));
     }
- 
+
 }
 
 import { DashboardsApiRequestFactory, DashboardsApiResponseProcessor} from "../apis/DashboardsApi";
@@ -1349,7 +1349,7 @@ export class ObservableDashboardsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createDashboard(rsp)));
             }));
     }
- 
+
     /**
      * Delete a dashboard using the specified ID.
      * Delete a dashboard
@@ -1373,7 +1373,7 @@ export class ObservableDashboardsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteDashboard(rsp)));
             }));
     }
- 
+
     /**
      * Get a dashboard using the specified ID.
      * Get a dashboard
@@ -1397,7 +1397,7 @@ export class ObservableDashboardsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getDashboard(rsp)));
             }));
     }
- 
+
     /**
      * Get all dashboards.  **Note**: This query will only return custom created or cloned dashboards. This query will not return preset dashboards.
      * Get all dashboards
@@ -1421,7 +1421,7 @@ export class ObservableDashboardsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listDashboards(rsp)));
             }));
     }
- 
+
     /**
      * Update a dashboard using the specified ID.
      * Update a dashboard
@@ -1446,7 +1446,7 @@ export class ObservableDashboardsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateDashboard(rsp)));
             }));
     }
- 
+
 }
 
 import { DowntimesApiRequestFactory, DowntimesApiResponseProcessor} from "../apis/DowntimesApi";
@@ -1488,7 +1488,7 @@ export class ObservableDowntimesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.cancelDowntime(rsp)));
             }));
     }
- 
+
     /**
      * Delete all downtimes that match the scope of `X`.
      * Cancel downtimes by scope
@@ -1512,7 +1512,7 @@ export class ObservableDowntimesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.cancelDowntimesByScope(rsp)));
             }));
     }
- 
+
     /**
      * Schedule a downtime.
      * Schedule a downtime
@@ -1536,7 +1536,7 @@ export class ObservableDowntimesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createDowntime(rsp)));
             }));
     }
- 
+
     /**
      * Get downtime detail by `downtime_id`.
      * Get a downtime
@@ -1560,7 +1560,7 @@ export class ObservableDowntimesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getDowntime(rsp)));
             }));
     }
- 
+
     /**
      * Get all scheduled downtimes.
      * Get all downtimes
@@ -1584,7 +1584,7 @@ export class ObservableDowntimesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listDowntimes(rsp)));
             }));
     }
- 
+
     /**
      * Get all downtimes for the specified monitor
      * Get all downtimes for a monitor
@@ -1608,7 +1608,7 @@ export class ObservableDowntimesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listMonitorDowntimes(rsp)));
             }));
     }
- 
+
     /**
      * Update a single downtime by `downtime_id`.
      * Update a downtime
@@ -1633,7 +1633,7 @@ export class ObservableDowntimesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateDowntime(rsp)));
             }));
     }
- 
+
 }
 
 import { EventsApiRequestFactory, EventsApiResponseProcessor} from "../apis/EventsApi";
@@ -1675,7 +1675,7 @@ export class ObservableEventsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createEvent(rsp)));
             }));
     }
- 
+
     /**
      * This endpoint allows you to query for event details.  **Note**: If the event you’re querying contains markdown formatting of any kind, you may see characters such as `%`,`\\`,`n` in your output.
      * Get an event
@@ -1699,7 +1699,7 @@ export class ObservableEventsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getEvent(rsp)));
             }));
     }
- 
+
     /**
      * The event stream can be queried and filtered by time, priority, sources and tags.  **Notes**: - If the event you’re querying contains markdown formatting of any kind, you may see characters such as `%`,`\\`,`n` in your output.  - This endpoint returns a maximum of `1000` most recent results. To return additional results, identify the last timestamp of the last result and set that as the `end` query time to paginate the results. You can also use the page parameter to specify which set of `1000` results to return.
      * Query the event stream
@@ -1730,7 +1730,7 @@ export class ObservableEventsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listEvents(rsp)));
             }));
     }
- 
+
 }
 
 import { GCPIntegrationApiRequestFactory, GCPIntegrationApiResponseProcessor} from "../apis/GCPIntegrationApi";
@@ -1772,7 +1772,7 @@ export class ObservableGCPIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createGCPIntegration(rsp)));
             }));
     }
- 
+
     /**
      * Delete a given Datadog-GCP integration.
      * Delete a GCP integration
@@ -1796,7 +1796,7 @@ export class ObservableGCPIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteGCPIntegration(rsp)));
             }));
     }
- 
+
     /**
      * List all Datadog-GCP integrations configured in your Datadog account.
      * List all GCP integrations
@@ -1819,7 +1819,7 @@ export class ObservableGCPIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listGCPIntegration(rsp)));
             }));
     }
- 
+
     /**
      * Update a Datadog-GCP integrations host_filters and/or auto-mute. Requires a `project_id` and `client_email`, however these fields cannot be updated. If you need to update these fields, delete and use the create (`POST`) endpoint. The unspecified fields will keep their original values.
      * Update a GCP integration
@@ -1843,7 +1843,7 @@ export class ObservableGCPIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateGCPIntegration(rsp)));
             }));
     }
- 
+
 }
 
 import { HostsApiRequestFactory, HostsApiResponseProcessor} from "../apis/HostsApi";
@@ -1885,7 +1885,7 @@ export class ObservableHostsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getHostTotals(rsp)));
             }));
     }
- 
+
     /**
      * This endpoint allows searching for hosts by name, alias, or tag. Hosts live within the past 3 hours are included by default. Retention is 7 days. Results are paginated with a max of 1000 results at a time.
      * Get all hosts for your organization
@@ -1916,7 +1916,7 @@ export class ObservableHostsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listHosts(rsp)));
             }));
     }
- 
+
     /**
      * Mute a host.
      * Mute a host
@@ -1941,7 +1941,7 @@ export class ObservableHostsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.muteHost(rsp)));
             }));
     }
- 
+
     /**
      * Unmutes a host. This endpoint takes no JSON arguments.
      * Unmute a host
@@ -1965,7 +1965,7 @@ export class ObservableHostsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.unmuteHost(rsp)));
             }));
     }
- 
+
 }
 
 import { IPRangesApiRequestFactory, IPRangesApiResponseProcessor} from "../apis/IPRangesApi";
@@ -2006,7 +2006,7 @@ export class ObservableIPRangesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getIPRanges(rsp)));
             }));
     }
- 
+
 }
 
 import { KeyManagementApiRequestFactory, KeyManagementApiResponseProcessor} from "../apis/KeyManagementApi";
@@ -2048,7 +2048,7 @@ export class ObservableKeyManagementApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createAPIKey(rsp)));
             }));
     }
- 
+
     /**
      * Create an application key with a given name.
      * Create an application key
@@ -2072,7 +2072,7 @@ export class ObservableKeyManagementApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createApplicationKey(rsp)));
             }));
     }
- 
+
     /**
      * Delete a given API key.
      * Delete an API key
@@ -2096,7 +2096,7 @@ export class ObservableKeyManagementApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteAPIKey(rsp)));
             }));
     }
- 
+
     /**
      * Delete a given application key.
      * Delete an application key
@@ -2120,7 +2120,7 @@ export class ObservableKeyManagementApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteApplicationKey(rsp)));
             }));
     }
- 
+
     /**
      * Get a given API key.
      * Get API key
@@ -2144,7 +2144,7 @@ export class ObservableKeyManagementApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getAPIKey(rsp)));
             }));
     }
- 
+
     /**
      * Get a given application key.
      * Get an application key
@@ -2168,7 +2168,7 @@ export class ObservableKeyManagementApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getApplicationKey(rsp)));
             }));
     }
- 
+
     /**
      * Get all API keys available for your account.
      * Get all API keys
@@ -2191,7 +2191,7 @@ export class ObservableKeyManagementApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listAPIKeys(rsp)));
             }));
     }
- 
+
     /**
      * Get all application keys available for your Datadog account.
      * Get all application keys
@@ -2214,7 +2214,7 @@ export class ObservableKeyManagementApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listApplicationKeys(rsp)));
             }));
     }
- 
+
     /**
      * Edit an API key name.
      * Edit an API key
@@ -2239,7 +2239,7 @@ export class ObservableKeyManagementApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateAPIKey(rsp)));
             }));
     }
- 
+
     /**
      * Edit an application key name.
      * Edit an application key
@@ -2264,7 +2264,7 @@ export class ObservableKeyManagementApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateApplicationKey(rsp)));
             }));
     }
- 
+
 }
 
 import { LogsApiRequestFactory, LogsApiResponseProcessor} from "../apis/LogsApi";
@@ -2306,7 +2306,7 @@ export class ObservableLogsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listLogs(rsp)));
             }));
     }
- 
+
     /**
      * Send your logs to your Datadog platform over HTTP. Limits per HTTP request are:  - Maximum content size per payload (uncompressed): 5MB - Maximum size for a single log: 1MB - Maximum array size if sending multiple logs in an array: 1000 entries  Any log exceeding 1MB is accepted and truncated by Datadog: - For a single log request, the API truncates the log at 1MB and returns a 2xx. - For a multi-logs request, the API processes all logs, truncates only logs larger than 1MB, and returns a 2xx.  Datadog recommends sending your logs compressed. Add the `Content-Encoding: gzip` header to the request when sending compressed logs.  The status codes answered by the HTTP API are: - 200: OK - 400: Bad request (likely an issue in the payload formatting) - 403: Permission issue (likely using an invalid API Key) - 413: Payload too large (batch is above 5MB uncompressed) - 5xx: Internal error, request should be retried after some time
      * Send logs
@@ -2332,7 +2332,7 @@ export class ObservableLogsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.submitLog(rsp)));
             }));
     }
- 
+
 }
 
 import { LogsIndexesApiRequestFactory, LogsIndexesApiResponseProcessor} from "../apis/LogsIndexesApi";
@@ -2374,7 +2374,7 @@ export class ObservableLogsIndexesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createLogsIndex(rsp)));
             }));
     }
- 
+
     /**
      * Get one log index from your organization. This endpoint takes no JSON arguments.
      * Get an index
@@ -2398,7 +2398,7 @@ export class ObservableLogsIndexesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getLogsIndex(rsp)));
             }));
     }
- 
+
     /**
      * Get the current order of your log indexes. This endpoint takes no JSON arguments.
      * Get indexes order
@@ -2421,7 +2421,7 @@ export class ObservableLogsIndexesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getLogsIndexOrder(rsp)));
             }));
     }
- 
+
     /**
      * The Index object describes the configuration of a log index. This endpoint returns an array of the `LogIndex` objects of your organization.
      * Get all indexes
@@ -2444,7 +2444,7 @@ export class ObservableLogsIndexesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listLogIndexes(rsp)));
             }));
     }
- 
+
     /**
      * Update an index as identified by its name. Returns the Index object passed in the request body when the request is successful.  Using the `PUT` method updates your index’s configuration by **replacing** your current configuration with the new one sent to your Datadog organization.
      * Update an index
@@ -2469,7 +2469,7 @@ export class ObservableLogsIndexesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateLogsIndex(rsp)));
             }));
     }
- 
+
     /**
      * This endpoint updates the index order of your organization. It returns the index order object passed in the request body when the request is successful.
      * Update indexes order
@@ -2493,7 +2493,7 @@ export class ObservableLogsIndexesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateLogsIndexOrder(rsp)));
             }));
     }
- 
+
 }
 
 import { LogsPipelinesApiRequestFactory, LogsPipelinesApiResponseProcessor} from "../apis/LogsPipelinesApi";
@@ -2535,7 +2535,7 @@ export class ObservableLogsPipelinesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createLogsPipeline(rsp)));
             }));
     }
- 
+
     /**
      * Delete a given pipeline from your organization. This endpoint takes no JSON arguments.
      * Delete a pipeline
@@ -2559,7 +2559,7 @@ export class ObservableLogsPipelinesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteLogsPipeline(rsp)));
             }));
     }
- 
+
     /**
      * Get a specific pipeline from your organization. This endpoint takes no JSON arguments.
      * Get a pipeline
@@ -2583,7 +2583,7 @@ export class ObservableLogsPipelinesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getLogsPipeline(rsp)));
             }));
     }
- 
+
     /**
      * Get the current order of your pipelines. This endpoint takes no JSON arguments.
      * Get pipeline order
@@ -2606,7 +2606,7 @@ export class ObservableLogsPipelinesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getLogsPipelineOrder(rsp)));
             }));
     }
- 
+
     /**
      * Get all pipelines from your organization. This endpoint takes no JSON arguments.
      * Get all pipelines
@@ -2629,7 +2629,7 @@ export class ObservableLogsPipelinesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listLogsPipelines(rsp)));
             }));
     }
- 
+
     /**
      * Update a given pipeline configuration to change it’s processors or their order.  **Note**: Using this method updates your pipeline configuration by **replacing** your current configuration with the new one sent to your Datadog organization.
      * Update a pipeline
@@ -2654,7 +2654,7 @@ export class ObservableLogsPipelinesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateLogsPipeline(rsp)));
             }));
     }
- 
+
     /**
      * Update the order of your pipelines. Since logs are processed sequentially, reordering a pipeline may change the structure and content of the data processed by other pipelines and their processors.  **Note**: Using the `PUT` method updates your pipeline order by replacing your current order with the new one sent to your Datadog organization.
      * Update pipeline order
@@ -2678,7 +2678,7 @@ export class ObservableLogsPipelinesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateLogsPipelineOrder(rsp)));
             }));
     }
- 
+
 }
 
 import { MetricsApiRequestFactory, MetricsApiResponseProcessor} from "../apis/MetricsApi";
@@ -2720,7 +2720,7 @@ export class ObservableMetricsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getMetricMetadata(rsp)));
             }));
     }
- 
+
     /**
      * Get the list of actively reporting metrics from a given time until now.
      * Get active metrics list
@@ -2746,7 +2746,7 @@ export class ObservableMetricsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listActiveMetrics(rsp)));
             }));
     }
- 
+
     /**
      * Search for metrics from the last 24 hours in Datadog.
      * Search metrics
@@ -2770,7 +2770,7 @@ export class ObservableMetricsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listMetrics(rsp)));
             }));
     }
- 
+
     /**
      * Query timeseries points.
      * Query timeseries points
@@ -2796,7 +2796,7 @@ export class ObservableMetricsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.queryMetrics(rsp)));
             }));
     }
- 
+
     /**
      * The metrics end-point allows you to post time-series data that can be graphed on Datadog’s dashboards. The maximum payload size is 3.2 megabytes (3200000 bytes). Compressed payloads must have a decompressed size of less than 62 megabytes (62914560 bytes).  If you’re submitting metrics directly to the Datadog API without using DogStatsD, expect:  - 64 bits for the timestamp - 32 bits for the value - 20 bytes for the metric names - 50 bytes for the timeseries - The full payload is approximately 100 bytes. However, with the DogStatsD API, compression is applied, which reduces the payload size.
      * Submit metrics
@@ -2820,7 +2820,7 @@ export class ObservableMetricsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.submitMetrics(rsp)));
             }));
     }
- 
+
     /**
      * Edit metadata of a specific metric. Find out more about [supported types](https://docs.datadoghq.com/developers/metrics).
      * Edit metric metadata
@@ -2845,7 +2845,7 @@ export class ObservableMetricsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateMetricMetadata(rsp)));
             }));
     }
- 
+
 }
 
 import { MonitorsApiRequestFactory, MonitorsApiResponseProcessor} from "../apis/MonitorsApi";
@@ -2887,7 +2887,7 @@ export class ObservableMonitorsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.checkCanDeleteMonitor(rsp)));
             }));
     }
- 
+
     /**
      * Create a monitor using the specified options.  #### Monitor Types  The type of monitor chosen from:  - anomaly: `query alert` - APM: `query alert` or `trace-analytics alert` - composite: `composite` - custom: `service check` - event: `event alert` - forecast: `query alert` - host: `service check` - integration: `query alert` or `service check` - live process: `process alert` - logs: `log alert` - metric: `metric alert` - network: `service check` - outlier: `query alert` - process: `service check` - rum: `rum alert` - SLO: `slo alert` - watchdog: `event alert` - event-v2: `event-v2 alert`  #### Query Types  **Metric Alert Query**  Example: `time_aggr(time_window):space_aggr:metric{tags} [by {key}] operator #`  - `time_aggr`: avg, sum, max, min, change, or pct_change - `time_window`: `last_#m` (with `#` between 1 and 2880 depending on the monitor type) or `last_#h`(with `#` between 1 and 48 depending on the monitor type), or `last_1d` - `space_aggr`: avg, sum, min, or max - `tags`: one or more tags (comma-separated), or * - `key`: a 'key' in key:value tag syntax; defines a separate alert for each tag in the group (multi-alert) - `operator`: <, <=, >, >=, ==, or != - `#`: an integer or decimal number used to set the threshold  If you are using the `_change_` or `_pct_change_` time aggregator, instead use `change_aggr(time_aggr(time_window), timeshift):space_aggr:metric{tags} [by {key}] operator #` with:  - `change_aggr` change, pct_change - `time_aggr` avg, sum, max, min [Learn more](https://docs.datadoghq.com/monitors/monitor_types/#define-the-conditions) - `time_window` last\\_#m (between 1 and 2880 depending on the monitor type), last\\_#h (between 1 and 48 depending on the monitor type), or last_#d (1 or 2) - `timeshift` #m_ago (5, 10, 15, or 30), #h_ago (1, 2, or 4), or 1d_ago  Use this to create an outlier monitor using the following query: `avg(last_30m):outliers(avg:system.cpu.user{role:es-events-data} by {host}, 'dbscan', 7) > 0`  **Service Check Query**  Example: `\"check\".over(tags).last(count).count_by_status()`  - **`check`** name of the check, e.g. `datadog.agent.up` - **`tags`** one or more quoted tags (comma-separated), or \"*\". e.g.: `.over(\"env:prod\", \"role:db\")` - **`count`** must be at greater than or equal to your max threshold (defined in the `options`). It is limited to 100. For example, if you've specified to notify on 1 critical, 3 ok, and 2 warn statuses, `count` should be 3.  **Event Alert Query**  Example: `events('sources:nagios status:error,warning priority:normal tags: \"string query\"').rollup(\"count\").last(\"1h\")\"`  - **`event`**, the event query string: - **`string_query`** free text query to match against event title and text. - **`sources`** event sources (comma-separated). - **`status`** event statuses (comma-separated). Valid options: error, warn, and info. - **`priority`** event priorities (comma-separated). Valid options: low, normal, all. - **`host`** event reporting host (comma-separated). - **`tags`** event tags (comma-separated). - **`excluded_tags`** excluded event tags (comma-separated). - **`rollup`** the stats roll-up method. `count` is the only supported method now. - **`last`** the timeframe to roll up the counts. Examples: 45m, 4h. Supported timeframes: m, h and d. This value should not exceed 48 hours.  **NOTE** Only available on US1 and EU.  **Event V2 Alert Query**  Example: `events(query).rollup(rollup_method[, measure]).last(time_window) operator #`  - **`query`** The search query - following the [Log search syntax](https://docs.datadoghq.com/logs/search_syntax/). - **`rollup_method`** The stats roll-up method - supports `count`, `avg` and `cardinality`. - **`measure`** For `avg` and cardinality `rollup_method` - specify the measure or the facet name you want to use. - **`time_window`** #m (5, 10, 15, or 30), #h (1, 2, or 4, 24). - **`operator`** `<`, `<=`, `>`, `>=`, `==`, or `!=`. - **`#`** an integer or decimal number used to set the threshold.  **NOTE** Only available on US1-FED, US3, and in closed beta on EU and US1.  **Process Alert Query**  Example: `processes(search).over(tags).rollup('count').last(timeframe) operator #`  - **`search`** free text search string for querying processes. Matching processes match results on the [Live Processes](https://docs.datadoghq.com/infrastructure/process/?tab=linuxwindows) page. - **`tags`** one or more tags (comma-separated) - **`timeframe`** the timeframe to roll up the counts. Examples: 10m, 4h. Supported timeframes: s, m, h and d - **`operator`** <, <=, >, >=, ==, or != - **`#`** an integer or decimal number used to set the threshold  **Logs Alert Query**  Example: `logs(query).index(index_name).rollup(rollup_method[, measure]).last(time_window) operator #`  - **`query`** The search query - following the [Log search syntax](https://docs.datadoghq.com/logs/search_syntax/). - **`index_name`** For multi-index organizations, the log index in which the request is performed. - **`rollup_method`** The stats roll-up method - supports `count`, `avg` and `cardinality`. - **`measure`** For `avg` and cardinality `rollup_method` - specify the measure or the facet name you want to use. - **`time_window`** #m (between 1 and 2880), #h (between 1 and 48) - **`operator`** `<`, `<=`, `>`, `>=`, `==`, or `!=`. - **`#`** an integer or decimal number used to set the threshold.  **Composite Query**  Example: `12345 && 67890`, where `12345` and `67890` are the IDs of non-composite monitors  * **`name`** [*required*, *default* = **dynamic, based on query**]: The name of the alert. * **`message`** [*required*, *default* = **dynamic, based on query**]: A message to include with notifications for this monitor. Email notifications can be sent to specific users by using the same '@username' notation as events. * **`tags`** [*optional*, *default* = **empty list**]: A list of tags to associate with your monitor. When getting all monitor details via the API, use the `monitor_tags` argument to filter results by these tags. It is only available via the API and isn't visible or editable in the Datadog UI.  **SLO Alert Query**  Example: `error_budget(\"slo_id\").over(\"time_window\") operator #`  - **`slo_id`**: The alphanumeric SLO ID of the SLO you are configuring the alert for. - **`time_window`**: The time window of the SLO target you wish to alert on. Valid options: `7d`, `30d`, `90d`. - **`operator`**: `>=` or `>`
      * Create a monitor
@@ -2911,7 +2911,7 @@ export class ObservableMonitorsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createMonitor(rsp)));
             }));
     }
- 
+
     /**
      * Delete the specified monitor
      * Delete a monitor
@@ -2936,7 +2936,7 @@ export class ObservableMonitorsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteMonitor(rsp)));
             }));
     }
- 
+
     /**
      * Get details about the specified monitor from your organization.
      * Get a monitor's details
@@ -2961,7 +2961,7 @@ export class ObservableMonitorsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getMonitor(rsp)));
             }));
     }
- 
+
     /**
      * Get details about the specified monitor from your organization.
      * Get all monitor details
@@ -2992,7 +2992,7 @@ export class ObservableMonitorsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listMonitors(rsp)));
             }));
     }
- 
+
     /**
      * Edit the specified monitor.
      * Edit a monitor
@@ -3017,7 +3017,7 @@ export class ObservableMonitorsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateMonitor(rsp)));
             }));
     }
- 
+
     /**
      * Validate the monitor provided in the request.
      * Validate a monitor
@@ -3041,7 +3041,7 @@ export class ObservableMonitorsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.validateMonitor(rsp)));
             }));
     }
- 
+
 }
 
 import { NotebooksApiRequestFactory, NotebooksApiResponseProcessor} from "../apis/NotebooksApi";
@@ -3083,7 +3083,7 @@ export class ObservableNotebooksApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createNotebook(rsp)));
             }));
     }
- 
+
     /**
      * Delete a notebook using the specified ID.
      * Delete a notebook
@@ -3107,7 +3107,7 @@ export class ObservableNotebooksApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteNotebook(rsp)));
             }));
     }
- 
+
     /**
      * Get a notebook using the specified notebook ID.
      * Get a notebook
@@ -3131,7 +3131,7 @@ export class ObservableNotebooksApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getNotebook(rsp)));
             }));
     }
- 
+
     /**
      * Get all notebooks. This can also be used to search for notebooks with a particular `query` in the notebook `name` or author `handle`.
      * Get all notebooks
@@ -3162,7 +3162,7 @@ export class ObservableNotebooksApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listNotebooks(rsp)));
             }));
     }
- 
+
     /**
      * Update a notebook using the specified ID.
      * Update a notebook
@@ -3187,7 +3187,7 @@ export class ObservableNotebooksApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateNotebook(rsp)));
             }));
     }
- 
+
 }
 
 import { OrganizationsApiRequestFactory, OrganizationsApiResponseProcessor} from "../apis/OrganizationsApi";
@@ -3229,7 +3229,7 @@ export class ObservableOrganizationsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createChildOrg(rsp)));
             }));
     }
- 
+
     /**
      * Get organization information.
      * Get organization information
@@ -3253,7 +3253,7 @@ export class ObservableOrganizationsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getOrg(rsp)));
             }));
     }
- 
+
     /**
      * List your managed organizations.
      * List your managed organizations
@@ -3276,7 +3276,7 @@ export class ObservableOrganizationsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listOrgs(rsp)));
             }));
     }
- 
+
     /**
      * Update your organization.
      * Update your organization
@@ -3301,7 +3301,7 @@ export class ObservableOrganizationsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateOrg(rsp)));
             }));
     }
- 
+
     /**
      * There are a couple of options for updating the Identity Provider (IdP) metadata from your SAML IdP.  * **Multipart Form-Data**: Post the IdP metadata file using a form post.  * **XML Body:** Post the IdP metadata file as the body of the request.
      * Upload IdP metadata
@@ -3326,7 +3326,7 @@ export class ObservableOrganizationsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.uploadIdPForOrg(rsp)));
             }));
     }
- 
+
 }
 
 import { PagerDutyIntegrationApiRequestFactory, PagerDutyIntegrationApiResponseProcessor} from "../apis/PagerDutyIntegrationApi";
@@ -3368,7 +3368,7 @@ export class ObservablePagerDutyIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createPagerDutyIntegrationService(rsp)));
             }));
     }
- 
+
     /**
      * Delete a single service object in the Datadog-PagerDuty integration.
      * Delete a single service object
@@ -3392,7 +3392,7 @@ export class ObservablePagerDutyIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deletePagerDutyIntegrationService(rsp)));
             }));
     }
- 
+
     /**
      * Get service name in the Datadog-PagerDuty integration.
      * Get a single service object
@@ -3416,7 +3416,7 @@ export class ObservablePagerDutyIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getPagerDutyIntegrationService(rsp)));
             }));
     }
- 
+
     /**
      * Update a single service object in the Datadog-PagerDuty integration.
      * Update a single service object
@@ -3441,7 +3441,7 @@ export class ObservablePagerDutyIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updatePagerDutyIntegrationService(rsp)));
             }));
     }
- 
+
 }
 
 import { ServiceChecksApiRequestFactory, ServiceChecksApiResponseProcessor} from "../apis/ServiceChecksApi";
@@ -3483,7 +3483,7 @@ export class ObservableServiceChecksApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.submitServiceCheck(rsp)));
             }));
     }
- 
+
 }
 
 import { ServiceLevelObjectiveCorrectionsApiRequestFactory, ServiceLevelObjectiveCorrectionsApiResponseProcessor} from "../apis/ServiceLevelObjectiveCorrectionsApi";
@@ -3525,7 +3525,7 @@ export class ObservableServiceLevelObjectiveCorrectionsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createSLOCorrection(rsp)));
             }));
     }
- 
+
     /**
      * Permanently delete the specified SLO correction object
      * Delete an SLO correction
@@ -3549,7 +3549,7 @@ export class ObservableServiceLevelObjectiveCorrectionsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteSLOCorrection(rsp)));
             }));
     }
- 
+
     /**
      * Get an SLO correction
      * Get an SLO correction for an SLO
@@ -3573,7 +3573,7 @@ export class ObservableServiceLevelObjectiveCorrectionsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getSLOCorrection(rsp)));
             }));
     }
- 
+
     /**
      * Get all Service Level Objective corrections
      * Get all SLO corrections
@@ -3596,7 +3596,7 @@ export class ObservableServiceLevelObjectiveCorrectionsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listSLOCorrection(rsp)));
             }));
     }
- 
+
     /**
      * Update the specified SLO correction object object
      * Update an SLO correction
@@ -3621,7 +3621,7 @@ export class ObservableServiceLevelObjectiveCorrectionsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateSLOCorrection(rsp)));
             }));
     }
- 
+
 }
 
 import { ServiceLevelObjectivesApiRequestFactory, ServiceLevelObjectivesApiResponseProcessor} from "../apis/ServiceLevelObjectivesApi";
@@ -3663,7 +3663,7 @@ export class ObservableServiceLevelObjectivesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.checkCanDeleteSLO(rsp)));
             }));
     }
- 
+
     /**
      * Create a service level objective object.
      * Create an SLO object
@@ -3687,7 +3687,7 @@ export class ObservableServiceLevelObjectivesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createSLO(rsp)));
             }));
     }
- 
+
     /**
      * Permanently delete the specified service level objective object.  If an SLO is used in a dashboard, the `DELETE /v1/slo/` endpoint returns a 409 conflict error because the SLO is referenced in a dashboard.
      * Delete an SLO
@@ -3712,7 +3712,7 @@ export class ObservableServiceLevelObjectivesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteSLO(rsp)));
             }));
     }
- 
+
     /**
      * Delete (or partially delete) multiple service level objective objects.  This endpoint facilitates deletion of one or more thresholds for one or more service level objective objects. If all thresholds are deleted, the service level objective object is deleted as well.
      * Bulk Delete SLO Timeframes
@@ -3736,7 +3736,7 @@ export class ObservableServiceLevelObjectivesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteSLOTimeframeInBulk(rsp)));
             }));
     }
- 
+
     /**
      * Get a service level objective object.
      * Get an SLO's details
@@ -3761,7 +3761,7 @@ export class ObservableServiceLevelObjectivesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getSLO(rsp)));
             }));
     }
- 
+
     /**
      * Get a specific SLO’s history, regardless of its SLO type.  The detailed history data is structured according to the source data type. For example, metric data is included for event SLOs that use the metric source, and monitor SLO types include the monitor transition history.  **Note:** There are different response formats for event based and time based SLOs. Examples of both are shown.
      * Get an SLO's history
@@ -3788,7 +3788,7 @@ export class ObservableServiceLevelObjectivesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getSLOHistory(rsp)));
             }));
     }
- 
+
     /**
      * Get a list of service level objective objects for your organization.
      * Get all SLOs
@@ -3815,7 +3815,7 @@ export class ObservableServiceLevelObjectivesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listSLOs(rsp)));
             }));
     }
- 
+
     /**
      * Update the specified service level objective object.
      * Update an SLO
@@ -3840,7 +3840,7 @@ export class ObservableServiceLevelObjectivesApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateSLO(rsp)));
             }));
     }
- 
+
 }
 
 import { SlackIntegrationApiRequestFactory, SlackIntegrationApiResponseProcessor} from "../apis/SlackIntegrationApi";
@@ -3883,7 +3883,7 @@ export class ObservableSlackIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createSlackIntegrationChannel(rsp)));
             }));
     }
- 
+
     /**
      * Get a channel configured for your Datadog-Slack integration.
      * Get a Slack integration channel
@@ -3908,7 +3908,7 @@ export class ObservableSlackIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getSlackIntegrationChannel(rsp)));
             }));
     }
- 
+
     /**
      * Get a list of all channels configured for your Datadog-Slack integration.
      * Get all channels in a Slack integration
@@ -3932,7 +3932,7 @@ export class ObservableSlackIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getSlackIntegrationChannels(rsp)));
             }));
     }
- 
+
     /**
      * Remove a channel from your Datadog-Slack integration.
      * Remove a Slack integration channel
@@ -3957,7 +3957,7 @@ export class ObservableSlackIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.removeSlackIntegrationChannel(rsp)));
             }));
     }
- 
+
     /**
      * Update a channel used in your Datadog-Slack integration.
      * Update a Slack integration channel
@@ -3983,7 +3983,7 @@ export class ObservableSlackIntegrationApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateSlackIntegrationChannel(rsp)));
             }));
     }
- 
+
 }
 
 import { SnapshotsApiRequestFactory, SnapshotsApiResponseProcessor} from "../apis/SnapshotsApi";
@@ -4030,7 +4030,7 @@ export class ObservableSnapshotsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getGraphSnapshot(rsp)));
             }));
     }
- 
+
 }
 
 import { SyntheticsApiRequestFactory, SyntheticsApiResponseProcessor} from "../apis/SyntheticsApi";
@@ -4072,7 +4072,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createGlobalVariable(rsp)));
             }));
     }
- 
+
     /**
      * Create a new Synthetics private location.
      * Create a private location
@@ -4096,7 +4096,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createPrivateLocation(rsp)));
             }));
     }
- 
+
     /**
      * Create a Synthetic API test.
      * Create an API test
@@ -4120,7 +4120,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createSyntheticsAPITest(rsp)));
             }));
     }
- 
+
     /**
      * Create a Synthetic browser test.
      * Create a browser test
@@ -4144,7 +4144,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createSyntheticsBrowserTest(rsp)));
             }));
     }
- 
+
     /**
      * Delete a Synthetics global variable.
      * Delete a global variable
@@ -4168,7 +4168,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteGlobalVariable(rsp)));
             }));
     }
- 
+
     /**
      * Delete a Synthetics private location.
      * Delete a private location
@@ -4192,7 +4192,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deletePrivateLocation(rsp)));
             }));
     }
- 
+
     /**
      * Delete multiple Synthetic tests by ID.
      * Delete tests
@@ -4216,7 +4216,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteTests(rsp)));
             }));
     }
- 
+
     /**
      * Edit a Synthetics global variable.
      * Edit a global variable
@@ -4241,7 +4241,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.editGlobalVariable(rsp)));
             }));
     }
- 
+
     /**
      * Get the detailed configuration associated with a Synthetic API test.
      * Get an API test
@@ -4265,7 +4265,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getAPITest(rsp)));
             }));
     }
- 
+
     /**
      * Get the last 50 test results summaries for a given Synthetics API test.
      * Get an API test's latest results summaries
@@ -4292,7 +4292,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getAPITestLatestResults(rsp)));
             }));
     }
- 
+
     /**
      * Get a specific full result from a given (API) Synthetic test.
      * Get an API test result
@@ -4317,7 +4317,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getAPITestResult(rsp)));
             }));
     }
- 
+
     /**
      * Get the detailed configuration (including steps) associated with a Synthetic browser test.
      * Get a browser test
@@ -4341,7 +4341,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getBrowserTest(rsp)));
             }));
     }
- 
+
     /**
      * Get the last 50 test results summaries for a given Synthetics Browser test.
      * Get a browser test's latest results summaries
@@ -4368,7 +4368,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getBrowserTestLatestResults(rsp)));
             }));
     }
- 
+
     /**
      * Get a specific full result from a given (browser) Synthetic test.
      * Get a browser test result
@@ -4393,7 +4393,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getBrowserTestResult(rsp)));
             }));
     }
- 
+
     /**
      * Get the detailed configuration of a global variable.
      * Get a global variable
@@ -4417,7 +4417,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getGlobalVariable(rsp)));
             }));
     }
- 
+
     /**
      * Get a Synthetics private location.
      * Get a private location
@@ -4441,7 +4441,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getPrivateLocation(rsp)));
             }));
     }
- 
+
     /**
      * Get the detailed configuration associated with a Synthetics test.
      * Get a test configuration
@@ -4465,7 +4465,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getTest(rsp)));
             }));
     }
- 
+
     /**
      * Get the list of public and private locations available for Synthetic tests. No arguments required.
      * Get all locations (public and private)
@@ -4488,7 +4488,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listLocations(rsp)));
             }));
     }
- 
+
     /**
      * Get the list of all Synthetic tests.
      * Get the list of all tests
@@ -4511,7 +4511,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listTests(rsp)));
             }));
     }
- 
+
     /**
      * Trigger a set of Synthetics tests for continuous integration.
      * Trigger tests from CI/CD pipelines
@@ -4535,7 +4535,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.triggerCITests(rsp)));
             }));
     }
- 
+
     /**
      * Edit the configuration of a Synthetic API test.
      * Edit an API test
@@ -4560,7 +4560,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateAPITest(rsp)));
             }));
     }
- 
+
     /**
      * Edit the configuration of a Synthetic browser test.
      * Edit a browser test
@@ -4585,7 +4585,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateBrowserTest(rsp)));
             }));
     }
- 
+
     /**
      * Edit a Synthetics private location.
      * Edit a private location
@@ -4610,7 +4610,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updatePrivateLocation(rsp)));
             }));
     }
- 
+
     /**
      * Pause or start a Synthetics test by changing the status.
      * Pause or start a test
@@ -4635,7 +4635,7 @@ export class ObservableSyntheticsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateTestPauseStatus(rsp)));
             }));
     }
- 
+
 }
 
 import { TagsApiRequestFactory, TagsApiResponseProcessor} from "../apis/TagsApi";
@@ -4679,7 +4679,7 @@ export class ObservableTagsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createHostTags(rsp)));
             }));
     }
- 
+
     /**
      * This endpoint allows you to remove all user-assigned tags for a single host.
      * Remove host tags
@@ -4704,7 +4704,7 @@ export class ObservableTagsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteHostTags(rsp)));
             }));
     }
- 
+
     /**
      * Return the list of tags that apply to a given host.
      * Get host tags
@@ -4729,7 +4729,7 @@ export class ObservableTagsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getHostTags(rsp)));
             }));
     }
- 
+
     /**
      * Return a mapping of tags to hosts for your whole infrastructure.
      * Get Tags
@@ -4753,7 +4753,7 @@ export class ObservableTagsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listHostTags(rsp)));
             }));
     }
- 
+
     /**
      * This endpoint allows you to update/replace all tags in an integration source with those supplied in the request.
      * Update host tags
@@ -4779,7 +4779,7 @@ export class ObservableTagsApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateHostTags(rsp)));
             }));
     }
- 
+
 }
 
 import { UsageMeteringApiRequestFactory, UsageMeteringApiResponseProcessor} from "../apis/UsageMeteringApi";
@@ -4824,7 +4824,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getDailyCustomReports(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for incident management.
      * Get hourly usage for incident management
@@ -4849,7 +4849,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getIncidentManagement(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for ingested spans.
      * Get hourly usage for ingested spans
@@ -4874,7 +4874,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getIngestedSpans(rsp)));
             }));
     }
- 
+
     /**
      * Get monthly custom reports.
      * Get the list of available monthly custom reports
@@ -4901,7 +4901,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getMonthlyCustomReports(rsp)));
             }));
     }
- 
+
     /**
      * Get specified daily custom reports.
      * Get specified daily custom reports
@@ -4925,7 +4925,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getSpecifiedDailyCustomReports(rsp)));
             }));
     }
- 
+
     /**
      * Get specified monthly custom reports.
      * Get specified monthly custom reports
@@ -4949,7 +4949,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getSpecifiedMonthlyCustomReports(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for tracing without limits.  **Note** This endpoint has been renamed to `/api/v1/usage/ingested-spans`.
      * Get hourly usage for tracing without limits
@@ -4974,7 +4974,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getTracingWithoutLimits(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for analyzed logs (Security Monitoring).
      * Get hourly usage for analyzed logs
@@ -4999,7 +4999,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageAnalyzedLogs(rsp)));
             }));
     }
- 
+
     /**
      * Get Usage Attribution.
      * Get Usage Attribution
@@ -5027,7 +5027,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageAttribution(rsp)));
             }));
     }
- 
+
     /**
      * Get billable usage across your account.
      * Get billable usage across your account
@@ -5051,7 +5051,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageBillableSummary(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for Compliance Monitoring.
      * Get hourly usage for Compliance Monitoring
@@ -5076,7 +5076,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageComplianceMonitoring(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for [Fargate](https://docs.datadoghq.com/integrations/ecs_fargate/).
      * Get hourly usage for Fargate
@@ -5101,7 +5101,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageFargate(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for hosts and containers.
      * Get hourly usage for hosts and containers
@@ -5126,7 +5126,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageHosts(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for indexed spans.
      * Get hourly usage for indexed spans
@@ -5151,7 +5151,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageIndexedSpans(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for IoT.
      * Get hourly usage for IoT
@@ -5176,7 +5176,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageInternetOfThings(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for lambda.
      * Get hourly usage for Lambda
@@ -5201,7 +5201,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageLambda(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for logs.
      * Get hourly usage for Logs
@@ -5226,7 +5226,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageLogs(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for logs by index.
      * Get hourly usage for Logs by Index
@@ -5252,7 +5252,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageLogsByIndex(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for indexed logs by retention period.
      * Get hourly logs usage by retention
@@ -5277,7 +5277,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageLogsByRetention(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for network flows.
      * Get hourly usage for Network Flows
@@ -5302,7 +5302,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageNetworkFlows(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for network hosts.
      * Get hourly usage for Network Hosts
@@ -5327,7 +5327,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageNetworkHosts(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for profiled hosts.
      * Get hourly usage for profiled hosts
@@ -5352,7 +5352,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageProfiling(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for [RUM](https://docs.datadoghq.com/real_user_monitoring/) Sessions.
      * Get hourly usage for RUM Sessions
@@ -5378,7 +5378,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageRumSessions(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for SNMP devices.
      * Get hourly usage for SNMP devices
@@ -5403,7 +5403,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageSNMP(rsp)));
             }));
     }
- 
+
     /**
      * Get usage across your multi-org account. You must have the multi-org feature enabled.
      * Get usage across your multi-org account
@@ -5429,7 +5429,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageSummary(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for [Synthetics checks](https://docs.datadoghq.com/synthetics/).
      * Get hourly usage for Synthetics Checks
@@ -5454,7 +5454,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageSynthetics(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for [synthetics API checks](https://docs.datadoghq.com/synthetics/).
      * Get hourly usage for Synthetics API Checks
@@ -5479,7 +5479,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageSyntheticsAPI(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for synthetics browser checks.
      * Get hourly usage for Synthetics Browser Checks
@@ -5504,7 +5504,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageSyntheticsBrowser(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for [custom metrics](https://docs.datadoghq.com/developers/metrics/custom_metrics/).
      * Get hourly usage for custom metrics
@@ -5529,7 +5529,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageTimeseries(rsp)));
             }));
     }
- 
+
     /**
      * Get all [custom metrics](https://docs.datadoghq.com/developers/metrics/custom_metrics/) by hourly average. Use the month parameter to get a month-to-date data resolution or use the day parameter to get a daily resolution. One of the two is required, and only one of the two is allowed.
      * Get all custom metrics by hourly average
@@ -5557,7 +5557,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageTopAvgMetrics(rsp)));
             }));
     }
- 
+
     /**
      * Get hourly usage for trace search.  **Note** This endpoint has been renamed to `/api/v1/usage/indexed-spans`.
      * Get hourly usage for Trace Search
@@ -5582,7 +5582,7 @@ export class ObservableUsageMeteringApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUsageTrace(rsp)));
             }));
     }
- 
+
 }
 
 import { UsersApiRequestFactory, UsersApiResponseProcessor} from "../apis/UsersApi";
@@ -5624,7 +5624,7 @@ export class ObservableUsersApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createUser(rsp)));
             }));
     }
- 
+
     /**
      * Delete a user from an organization.  **Note**: This endpoint can only be used with application keys belonging to administrators.
      * Disable a user
@@ -5648,7 +5648,7 @@ export class ObservableUsersApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.disableUser(rsp)));
             }));
     }
- 
+
     /**
      * Get a user's details.
      * Get user details
@@ -5672,7 +5672,7 @@ export class ObservableUsersApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getUser(rsp)));
             }));
     }
- 
+
     /**
      * List all users for your organization.
      * List all users
@@ -5695,7 +5695,7 @@ export class ObservableUsersApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listUsers(rsp)));
             }));
     }
- 
+
     /**
      * Update a user information.  **Note**: It can only be used with application keys belonging to administrators.
      * Update a user
@@ -5720,5 +5720,5 @@ export class ObservableUsersApi {
                 return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateUser(rsp)));
             }));
     }
- 
+
 }
