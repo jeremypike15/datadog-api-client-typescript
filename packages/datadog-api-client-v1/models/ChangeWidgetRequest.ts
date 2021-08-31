@@ -8,10 +8,13 @@
  * Do not edit the class manually.
  */
 
+import { FormulaAndFunctionQueryDefinition } from "./FormulaAndFunctionQueryDefinition";
+import { FormulaAndFunctionResponseFormat } from "./FormulaAndFunctionResponseFormat";
 import { LogQueryDefinition } from "./LogQueryDefinition";
 import { ProcessQueryDefinition } from "./ProcessQueryDefinition";
 import { WidgetChangeType } from "./WidgetChangeType";
 import { WidgetCompareTo } from "./WidgetCompareTo";
+import { WidgetFormula } from "./WidgetFormula";
 import { WidgetOrderBy } from "./WidgetOrderBy";
 import { WidgetSort } from "./WidgetSort";
 import { ObjectSerializer } from "./ObjectSerializer";
@@ -26,6 +29,10 @@ export class ChangeWidgetRequest {
   "compareTo"?: WidgetCompareTo;
   "eventQuery"?: LogQueryDefinition;
   /**
+   * List of formulas that operate on queries. **This feature is currently in beta.**
+   */
+  "formulas"?: Array<WidgetFormula>;
+  /**
    * Whether to show increase as good.
    */
   "increaseGood"?: boolean;
@@ -39,6 +46,11 @@ export class ChangeWidgetRequest {
    * Query definition.
    */
   "q"?: string;
+  /**
+   * List of queries that can be returned directly or used in formulas. **This feature is currently in beta.**
+   */
+  "queries"?: Array<FormulaAndFunctionQueryDefinition>;
+  "responseFormat"?: FormulaAndFunctionResponseFormat;
   "rumQuery"?: LogQueryDefinition;
   "securityQuery"?: LogQueryDefinition;
   /**
@@ -71,6 +83,11 @@ export class ChangeWidgetRequest {
     eventQuery: {
       baseName: "event_query",
       type: "LogQueryDefinition",
+      format: "",
+    },
+    formulas: {
+      baseName: "formulas",
+      type: "Array<WidgetFormula>",
       format: "",
     },
     increaseGood: {
@@ -111,6 +128,16 @@ export class ChangeWidgetRequest {
     q: {
       baseName: "q",
       type: "string",
+      format: "",
+    },
+    queries: {
+      baseName: "queries",
+      type: "Array<FormulaAndFunctionQueryDefinition>",
+      format: "",
+    },
+    responseFormat: {
+      baseName: "response_format",
+      type: "FormulaAndFunctionResponseFormat",
       format: "",
     },
     rumQuery: {
@@ -173,6 +200,12 @@ export class ChangeWidgetRequest {
       ""
     );
 
+    res.formulas = ObjectSerializer.deserialize(
+      data.formulas,
+      "Array<WidgetFormula>",
+      ""
+    );
+
     res.increaseGood = ObjectSerializer.deserialize(
       data.increase_good,
       "boolean",
@@ -222,6 +255,20 @@ export class ChangeWidgetRequest {
     );
 
     res.q = ObjectSerializer.deserialize(data.q, "string", "");
+
+    res.queries = ObjectSerializer.deserialize(
+      data.queries,
+      "Array<FormulaAndFunctionQueryDefinition>",
+      ""
+    );
+
+    if (["timeseries", "scalar", undefined].includes(data.response_format)) {
+      res.responseFormat = data.response_format;
+    } else {
+      const raw = new ChangeWidgetRequest();
+      raw.unparsedObject = data;
+      return raw;
+    }
 
     res.rumQuery = ObjectSerializer.deserialize(
       data.rum_query,
@@ -287,6 +334,12 @@ export class ChangeWidgetRequest {
       ""
     );
 
+    res.formulas = ObjectSerializer.serialize(
+      data.formulas,
+      "Array<WidgetFormula>",
+      ""
+    );
+
     res.increase_good = ObjectSerializer.serialize(
       data.increaseGood,
       "boolean",
@@ -332,6 +385,20 @@ export class ChangeWidgetRequest {
     );
 
     res.q = ObjectSerializer.serialize(data.q, "string", "");
+
+    res.queries = ObjectSerializer.serialize(
+      data.queries,
+      "Array<FormulaAndFunctionQueryDefinition>",
+      ""
+    );
+
+    if (["timeseries", "scalar", undefined].includes(data.responseFormat)) {
+      res.response_format = data.responseFormat;
+    } else {
+      throw TypeError(
+        `invalid enum value ${data.responseFormat} for responseFormat`
+      );
+    }
 
     res.rum_query = ObjectSerializer.serialize(
       data.rumQuery,
