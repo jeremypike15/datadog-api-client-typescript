@@ -70,9 +70,13 @@ export class SecurityMonitoringRuleOptions {
     const res = new SecurityMonitoringRuleOptions();
 
     if (
-      ["threshold", "new_value", "anomaly_detection", undefined].includes(
-        data.detectionMethod
-      )
+      [
+        "threshold",
+        "new_value",
+        "anomaly_detection",
+        "no_data",
+        undefined,
+      ].includes(data.detectionMethod)
     ) {
       res.detectionMethod = data.detectionMethod;
     } else {
@@ -162,9 +166,13 @@ export class SecurityMonitoringRuleOptions {
       return data.unparsedObject;
     }
     if (
-      ["threshold", "new_value", "anomaly_detection", undefined].includes(
-        data.detectionMethod
-      )
+      [
+        "threshold",
+        "new_value",
+        "anomaly_detection",
+        "no_data",
+        undefined,
+      ].includes(data.detectionMethod)
     ) {
       res.detectionMethod = data.detectionMethod;
     } else {
