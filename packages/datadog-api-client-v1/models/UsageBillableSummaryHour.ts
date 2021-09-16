@@ -23,7 +23,7 @@ export class UsageBillableSummaryHour {
   /**
    * Shows the last date of usage.
    */
-  "endDate"?: Date;
+  "endDate"?: string;
   /**
    * The number of organizations.
    */
@@ -43,7 +43,7 @@ export class UsageBillableSummaryHour {
   /**
    * Shows the first date of usage.
    */
-  "startDate"?: Date;
+  "startDate"?: string;
   "usage"?: UsageBillableSummaryKeys;
 
   "unparsedObject"?: any;
@@ -60,8 +60,8 @@ export class UsageBillableSummaryHour {
     },
     endDate: {
       baseName: "end_date",
-      type: "Date",
-      format: "date-time",
+      type: "string",
+      format: "date",
     },
     numOrgs: {
       baseName: "num_orgs",
@@ -85,8 +85,8 @@ export class UsageBillableSummaryHour {
     },
     startDate: {
       baseName: "start_date",
-      type: "Date",
-      format: "date-time",
+      type: "string",
+      format: "date",
     },
     usage: {
       baseName: "usage",
@@ -108,11 +108,7 @@ export class UsageBillableSummaryHour {
       ""
     );
 
-    res.endDate = ObjectSerializer.deserialize(
-      data.end_date,
-      "Date",
-      "date-time"
-    );
+    res.endDate = ObjectSerializer.deserialize(data.end_date, "string", "date");
 
     res.numOrgs = ObjectSerializer.deserialize(
       data.num_orgs,
@@ -132,8 +128,8 @@ export class UsageBillableSummaryHour {
 
     res.startDate = ObjectSerializer.deserialize(
       data.start_date,
-      "Date",
-      "date-time"
+      "string",
+      "date"
     );
 
     res.usage = ObjectSerializer.deserialize(
@@ -162,11 +158,7 @@ export class UsageBillableSummaryHour {
       ""
     );
 
-    res.end_date = ObjectSerializer.serialize(
-      data.endDate,
-      "Date",
-      "date-time"
-    );
+    res.end_date = ObjectSerializer.serialize(data.endDate, "string", "date");
 
     res.num_orgs = ObjectSerializer.serialize(data.numOrgs, "number", "int64");
 
@@ -182,8 +174,8 @@ export class UsageBillableSummaryHour {
 
     res.start_date = ObjectSerializer.serialize(
       data.startDate,
-      "Date",
-      "date-time"
+      "string",
+      "date"
     );
 
     res.usage = ObjectSerializer.serialize(
