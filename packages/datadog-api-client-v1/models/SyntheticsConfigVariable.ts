@@ -23,7 +23,7 @@ export class SyntheticsConfigVariable {
   /**
    * ID of the variable for global variables.
    */
-  "id"?: string;
+  "id": string;
   /**
    * Name of the variable.
    */
@@ -77,6 +77,11 @@ export class SyntheticsConfigVariable {
 
     res.example = ObjectSerializer.deserialize(data.example, "string", "");
 
+    if (data.id === undefined) {
+      throw new TypeError(
+        "missing required attribute 'id' on 'SyntheticsConfigVariable' object"
+      );
+    }
     res.id = ObjectSerializer.deserialize(data.id, "string", "");
 
     if (data.name === undefined) {
@@ -117,6 +122,11 @@ export class SyntheticsConfigVariable {
     }
     res.example = ObjectSerializer.serialize(data.example, "string", "");
 
+    if (data.id === undefined) {
+      throw new TypeError(
+        "missing required attribute 'id' on 'SyntheticsConfigVariable' object"
+      );
+    }
     res.id = ObjectSerializer.serialize(data.id, "string", "");
 
     if (data.name === undefined) {
