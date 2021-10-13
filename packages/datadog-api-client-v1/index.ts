@@ -197,6 +197,7 @@ export {
   UsageMeteringApiGetUsageNetworkHostsRequest,
   UsageMeteringApiGetUsageProfilingRequest,
   UsageMeteringApiGetUsageRumSessionsRequest,
+  UsageMeteringApiGetUsageSDSRequest,
   UsageMeteringApiGetUsageSNMPRequest,
   UsageMeteringApiGetUsageSummaryRequest,
   UsageMeteringApiGetUsageSyntheticsRequest,
