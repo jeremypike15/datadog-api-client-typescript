@@ -4,6 +4,7 @@ export { createConfiguration } from "./configuration";
 export { Configuration } from "./configuration";
 export * from "./apis/exception";
 export * from "./servers";
+import { operationServers, server1 } from "./servers";
 
 export { PromiseMiddleware as Middleware } from "./middleware";
 export {
@@ -115,3 +116,19 @@ export {
   UsersApiUpdateUserRequest,
   ObjectUsersApi as UsersApi,
 } from "./types/ObjectParamAPI";
+
+/**
+ * Sets the server variables.
+ * site attribute only support the following values: "datadoghq.com", "us3.datadoghq.com", "datadoghq.eu", "ddog-gov.com".
+ *
+ * @param serverVariables key/value object representing the server variables (site, name, protocol, ...)
+ */
+export function setServerVariables(serverVariables: { [key: string]: string }) {
+  const serverConf = server1.getConfiguration();
+
+  server1.setVariables(serverVariables as typeof serverConf);
+
+  for (const op in operationServers) {
+    (operationServers[op][0] as any).setVariables(serverVariables);
+  }
+}
