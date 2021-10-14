@@ -307,8 +307,10 @@ import { SyntheticsBrowserVariable } from "./SyntheticsBrowserVariable";
 import { SyntheticsCITest } from "./SyntheticsCITest";
 import { SyntheticsCITestBody } from "./SyntheticsCITestBody";
 import { SyntheticsCITestMetadata } from "./SyntheticsCITestMetadata";
-import { SyntheticsCITestMetadataCi } from "./SyntheticsCITestMetadataCi";
+import { SyntheticsCITestMetadataCI } from "./SyntheticsCITestMetadataCI";
 import { SyntheticsCITestMetadataGit } from "./SyntheticsCITestMetadataGit";
+import { SyntheticsCITestMetadataPipeline } from "./SyntheticsCITestMetadataPipeline";
+import { SyntheticsCITestMetadataProvider } from "./SyntheticsCITestMetadataProvider";
 import { SyntheticsConfigVariable } from "./SyntheticsConfigVariable";
 import { SyntheticsCoreWebVitals } from "./SyntheticsCoreWebVitals";
 import { SyntheticsDeleteTestsPayload } from "./SyntheticsDeleteTestsPayload";
@@ -959,8 +961,10 @@ const typeMap: { [index: string]: any } = {
   SyntheticsCITest: SyntheticsCITest,
   SyntheticsCITestBody: SyntheticsCITestBody,
   SyntheticsCITestMetadata: SyntheticsCITestMetadata,
-  SyntheticsCITestMetadataCi: SyntheticsCITestMetadataCi,
+  SyntheticsCITestMetadataCI: SyntheticsCITestMetadataCI,
   SyntheticsCITestMetadataGit: SyntheticsCITestMetadataGit,
+  SyntheticsCITestMetadataPipeline: SyntheticsCITestMetadataPipeline,
+  SyntheticsCITestMetadataProvider: SyntheticsCITestMetadataProvider,
   SyntheticsConfigVariable: SyntheticsConfigVariable,
   SyntheticsCoreWebVitals: SyntheticsCoreWebVitals,
   SyntheticsDeleteTestsPayload: SyntheticsDeleteTestsPayload,

@@ -1526,8 +1526,12 @@ let params: v1.SyntheticsApiTriggerCITestsRequest = {
         locations: ["locations_example"],
         metadata: {
           ci: {
-            pipeline: "pipeline_example",
-            provider: "provider_example",
+            pipeline: {
+              url: "url_example",
+            },
+            provider: {
+              name: "name_example",
+            },
           },
           git: {
             branch: "branch_example",

@@ -11,18 +11,14 @@
 import { ObjectSerializer } from "./ObjectSerializer";
 
 /**
- * Git information.
+ * Description of the CI provider.
  */
 
-export class SyntheticsCITestMetadataGit {
+export class SyntheticsCITestMetadataProvider {
   /**
-   * Branch name.
+   * Name of the CI provider.
    */
-  "branch"?: string;
-  /**
-   * The commit SHA.
-   */
-  "commitSha"?: string;
+  "name"?: string;
 
   "unparsedObject"?: any;
 
@@ -31,36 +27,32 @@ export class SyntheticsCITestMetadataGit {
   static readonly attributeTypeMap: {
     [key: string]: { baseName: string; type: string; format: string };
   } = {
-    branch: {
-      baseName: "branch",
-      type: "string",
-      format: "",
-    },
-    commitSha: {
-      baseName: "commitSha",
+    name: {
+      baseName: "name",
       type: "string",
       format: "",
     },
   };
 
   static getAttributeTypeMap() {
-    return SyntheticsCITestMetadataGit.attributeTypeMap;
+    return SyntheticsCITestMetadataProvider.attributeTypeMap;
   }
 
   static deserialize(data: {
     [key: string]: any;
-  }): SyntheticsCITestMetadataGit {
-    const res = new SyntheticsCITestMetadataGit();
+  }): SyntheticsCITestMetadataProvider {
+    const res = new SyntheticsCITestMetadataProvider();
 
-    res.branch = ObjectSerializer.deserialize(data.branch, "string", "");
-
-    res.commitSha = ObjectSerializer.deserialize(data.commitSha, "string", "");
+    res.name = ObjectSerializer.deserialize(data.name, "string", "");
 
     return res;
   }
 
-  static serialize(data: SyntheticsCITestMetadataGit): { [key: string]: any } {
-    const attributeTypes = SyntheticsCITestMetadataGit.getAttributeTypeMap();
+  static serialize(data: SyntheticsCITestMetadataProvider): {
+    [key: string]: any;
+  } {
+    const attributeTypes =
+      SyntheticsCITestMetadataProvider.getAttributeTypeMap();
     const res: { [index: string]: any } = {};
     for (const [key, value] of Object.entries(data)) {
       if (!(key in attributeTypes)) {
@@ -70,9 +62,7 @@ export class SyntheticsCITestMetadataGit {
     if (data?.unparsedObject !== undefined) {
       return data.unparsedObject;
     }
-    res.branch = ObjectSerializer.serialize(data.branch, "string", "");
-
-    res.commitSha = ObjectSerializer.serialize(data.commitSha, "string", "");
+    res.name = ObjectSerializer.serialize(data.name, "string", "");
 
     return res;
   }

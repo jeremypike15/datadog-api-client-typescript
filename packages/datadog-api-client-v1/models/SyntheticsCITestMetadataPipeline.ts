@@ -11,18 +11,14 @@
 import { ObjectSerializer } from "./ObjectSerializer";
 
 /**
- * Git information.
+ * Description of the CI pipeline.
  */
 
-export class SyntheticsCITestMetadataGit {
+export class SyntheticsCITestMetadataPipeline {
   /**
-   * Branch name.
+   * Name of the pipeline.
    */
-  "branch"?: string;
-  /**
-   * The commit SHA.
-   */
-  "commitSha"?: string;
+  "url"?: string;
 
   "unparsedObject"?: any;
 
@@ -31,36 +27,32 @@ export class SyntheticsCITestMetadataGit {
   static readonly attributeTypeMap: {
     [key: string]: { baseName: string; type: string; format: string };
   } = {
-    branch: {
-      baseName: "branch",
-      type: "string",
-      format: "",
-    },
-    commitSha: {
-      baseName: "commitSha",
+    url: {
+      baseName: "url",
       type: "string",
       format: "",
     },
   };
 
   static getAttributeTypeMap() {
-    return SyntheticsCITestMetadataGit.attributeTypeMap;
+    return SyntheticsCITestMetadataPipeline.attributeTypeMap;
   }
 
   static deserialize(data: {
     [key: string]: any;
-  }): SyntheticsCITestMetadataGit {
-    const res = new SyntheticsCITestMetadataGit();
+  }): SyntheticsCITestMetadataPipeline {
+    const res = new SyntheticsCITestMetadataPipeline();
 
-    res.branch = ObjectSerializer.deserialize(data.branch, "string", "");
-
-    res.commitSha = ObjectSerializer.deserialize(data.commitSha, "string", "");
+    res.url = ObjectSerializer.deserialize(data.url, "string", "");
 
     return res;
   }
 
-  static serialize(data: SyntheticsCITestMetadataGit): { [key: string]: any } {
-    const attributeTypes = SyntheticsCITestMetadataGit.getAttributeTypeMap();
+  static serialize(data: SyntheticsCITestMetadataPipeline): {
+    [key: string]: any;
+  } {
+    const attributeTypes =
+      SyntheticsCITestMetadataPipeline.getAttributeTypeMap();
     const res: { [index: string]: any } = {};
     for (const [key, value] of Object.entries(data)) {
       if (!(key in attributeTypes)) {
@@ -70,9 +62,7 @@ export class SyntheticsCITestMetadataGit {
     if (data?.unparsedObject !== undefined) {
       return data.unparsedObject;
     }
-    res.branch = ObjectSerializer.serialize(data.branch, "string", "");
-
-    res.commitSha = ObjectSerializer.serialize(data.commitSha, "string", "");
+    res.url = ObjectSerializer.serialize(data.url, "string", "");
 
     return res;
   }

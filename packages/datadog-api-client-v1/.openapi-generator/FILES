@@ -480,8 +480,10 @@ models/SyntheticsBrowserVariableType.ts
 models/SyntheticsCITest.ts
 models/SyntheticsCITestBody.ts
 models/SyntheticsCITestMetadata.ts
-models/SyntheticsCITestMetadataCi.ts
+models/SyntheticsCITestMetadataCI.ts
 models/SyntheticsCITestMetadataGit.ts
+models/SyntheticsCITestMetadataPipeline.ts
+models/SyntheticsCITestMetadataProvider.ts
 models/SyntheticsCheckType.ts
 models/SyntheticsConfigVariable.ts
 models/SyntheticsConfigVariableType.ts

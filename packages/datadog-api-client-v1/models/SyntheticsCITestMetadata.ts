@@ -8,16 +8,16 @@
  * Do not edit the class manually.
  */
 
-import { SyntheticsCITestMetadataCi } from "./SyntheticsCITestMetadataCi";
+import { SyntheticsCITestMetadataCI } from "./SyntheticsCITestMetadataCI";
 import { SyntheticsCITestMetadataGit } from "./SyntheticsCITestMetadataGit";
 import { ObjectSerializer } from "./ObjectSerializer";
 
 /**
- * Metadata for the Synthetics tests run
+ * Metadata for the Synthetics tests run.
  */
 
 export class SyntheticsCITestMetadata {
-  "ci"?: SyntheticsCITestMetadataCi;
+  "ci"?: SyntheticsCITestMetadataCI;
   "git"?: SyntheticsCITestMetadataGit;
 
   "unparsedObject"?: any;
@@ -29,7 +29,7 @@ export class SyntheticsCITestMetadata {
   } = {
     ci: {
       baseName: "ci",
-      type: "SyntheticsCITestMetadataCi",
+      type: "SyntheticsCITestMetadataCI",
       format: "",
     },
     git: {
@@ -48,7 +48,7 @@ export class SyntheticsCITestMetadata {
 
     res.ci = ObjectSerializer.deserialize(
       data.ci,
-      "SyntheticsCITestMetadataCi",
+      "SyntheticsCITestMetadataCI",
       ""
     );
 
@@ -74,7 +74,7 @@ export class SyntheticsCITestMetadata {
     }
     res.ci = ObjectSerializer.serialize(
       data.ci,
-      "SyntheticsCITestMetadataCi",
+      "SyntheticsCITestMetadataCI",
       ""
     );
 
