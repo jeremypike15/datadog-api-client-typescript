@@ -61,7 +61,7 @@
   },
   "dependencies": {
     "@types/node": "*",
-    "@types/node-fetch": "^2.5.7",
+    "@types/node-fetch": "^2.5.12",
     "btoa": "^1.2.1",
     "durations": "^3.4.2",
     "es6-promise": "^4.2.4",
